@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark light;
+  
+  /* Brand Luxury Warm Obsidian (Deep Prestige Background & Surfaces) */
+  --brand-obsidian-midnight: #0d0b0a;
+  --brand-obsidian-dark: #120f0d;
+  --brand-obsidian-surface: #161311;
+  --brand-obsidian-card: #1c1815;
+  --brand-obsidian-elevated: #25201b;
+  --brand-obsidian-muted: #3a322b;
+  
+  /* Brand Champagne Gold & Metallic Bronze (Directly extracted from LM Monogram & Crest) */
+  --brand-gold: #d4af7a;
+  --brand-gold-bright: #f5e5cb;
+  --brand-gold-light: #e8ceaa;
+  --brand-gold-pale: #faf4ea;
+  --brand-gold-dark: #9e7543;
+  --brand-gold-deep: #684824;
+  --brand-gold-shadow: #38240f;
+  
+  /* Accent Warm Vermilion / Ruby (Honoring Dra. Luana's iconic presence & "Toda causa importa") */
+  --brand-ruby: #b91c1c;
+  --brand-ruby-dark: #881313;
+  --brand-ruby-glow: rgba(185, 28, 28, 0.35);
+
+  /* Light Editorial Cream / Sand for balanced contrast */
+  --brand-cream-bg: #fbf9f6;
+  --brand-cream-alt: #f4eee5;
+  --brand-cream-surface: #ffffff;
+  --brand-cream-border: #e6ded1;
+  --brand-cream-ink: #171310;
+  --brand-cream-muted: #63574c;
+  
+  /* Borders & Accents */
+  --brand-border-gold: rgba(212, 175, 122, 0.28);
+  --brand-border-gold-subtle: rgba(212, 175, 122, 0.16);
+  --brand-border-gold-strong: rgba(245, 229, 203, 0.65);
+  --brand-border-obsidian: rgba(58, 50, 43, 0.45);
+}
+
+@theme inline {
+  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
+  --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+  
+  --color-brand-midnight: #0d0b0a;
+  --color-brand-obsidian: #120f0d;
+  --color-brand-surface: #161311;
+  --color-brand-card: #1c1815;
+  --color-brand-elevated: #25201b;
+  
+  --color-brand-gold: #d4af7a;
+  --color-brand-gold-bright: #f5e5cb;
+  --color-brand-gold-light: #e8ceaa;
+  --color-brand-gold-dark: #9e7543;
+  --color-brand-ruby: #b91c1c;
+  
+  --color-brand-cream-bg: #fbf9f6;
+  --color-brand-cream-alt: #f4eee5;
+  --color-brand-cream-surface: #ffffff;
+  
+  --shadow-gold: 0 10px 28px -4px rgba(212, 175, 122, 0.3);
+  --shadow-gold-lg: 0 16px 38px -6px rgba(212, 175, 122, 0.42);
+  --shadow-obsidian-card: 0 20px 45px -10px rgba(5, 4, 3, 0.85);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: #0d0b0a;
+  color: #f2ece4;
+  font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+  caret-color: #f5e5cb;
+}
+
+::selection {
+  background: #d4af7a;
+  color: #0d0b0a;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9e7543;
+}
+
+.eyebrow-dark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f5e5cb;
+}
+
+.eyebrow::before,
+.eyebrow-dark::before {
+  width: 1.75rem;
+  height: 2px;
+  flex: none;
+  background: #d4af7a;
+  content: "";
+}
+
+.nav-link {
+  position: relative;
+  padding-block: 0.5rem;
+  color: #5c5044;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #d4af7a;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover {
+  color: #d4af7a;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link-dark {
+  position: relative;
+  padding-block: 0.5rem;
+  color: #d8cec3;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.nav-link-dark::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #f5e5cb;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link-dark:hover {
+  color: #f5e5cb;
+}
+
+.nav-link-dark:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-link {
+  transition: color 180ms ease;
+}
+
+.footer-link:hover {
+  color: #f5e5cb;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0b0a;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #0d0b0a;
+  border-radius: 999px;
+  background: #1c1815;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af7a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
