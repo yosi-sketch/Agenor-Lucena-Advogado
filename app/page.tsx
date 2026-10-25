@@ -22,7 +22,6 @@ import {
   FileText,
   BadgeCheck,
   CheckCircle2,
-  Calendar,
   ChevronDown,
   ChevronUp,
   ExternalLink,
@@ -30,16 +29,15 @@ import {
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533991136870";
-const PHONE_DISPLAY = "(33) 99113-6870";
-const EMAIL_CONTACT = "contato@luanamoreira.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/luanamoreiraadv/";
-const INSTAGRAM_HANDLE = "@luanamoreiraadv";
-const LINKTREE_URL = "https://linktr.ee/draluanadvogada";
+const WHATSAPP_NUMBER = "5531994818783";
+const PHONE_DISPLAY = "(31) 99481-8783";
+const EMAIL_CONTACT = "contato@moraisragone.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/rithianemoraisragone/";
+const INSTAGRAM_HANDLE = "@rithianemoraisragone";
 
-const ADDRESS_TEXT = "R. Gov. Valadares, 1429 - Maria Lúcia, Capelinha - MG, 39680-000";
+const ADDRESS_TEXT = "Av. Santos Dumont, 194 - Sl 4 - Centro, Nanuque - MG, 39860-000";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Luana+Moreira+%E2%80%94+Advogada+Previdenci%C3%A1ria%0ACapelinha+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Morais+Ragone+Advocacia%0ANanuque+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_EMBLEM_SRC = "/logo-emblem.png";
@@ -51,7 +49,7 @@ function getWhatsAppUrl(
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Luana Moreira! Gostaria de agendar uma consulta jurídica sobre o meu caso.";
+    "Olá, Dra. Rithiane Morais Ragone! Gostaria de agendar uma consulta jurídica sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -162,88 +160,88 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-previdenciario",
-    title: "Direito Previdenciário & Aposentadorias (INSS)",
-    category: "Previdenciário · Aposentadorias · BPC/LOAS · Auxílios · Revisões",
-    icon: Award,
-    tag: "Aposentadoria por Idade · Rural & Urbana · BPC/LOAS · Auxílio-Doença · INSS",
-    summary:
-      "Planejamento minucioso e atuação firme contra o INSS para desbloquear o benefício a que você tem direito, garantindo o melhor valor mensal e recebimento dos retroativos.",
-    details:
-      "A conquista do benefício do INSS representa a segurança financeira da sua vida e da sua família. A Dra. Luana Moreira é especialista dedicada com mais de 10 anos de experiência na área previdenciária. Atuamos desde a conferência minuciosa do CNIS e planejamento previdenciário preventivo até recursos administrativos e ações judiciais combativas contra indeferimentos indevidos.",
-    topics: [
-      "Planejamento Previdenciário Estratégico para conquistar a maior renda mensal permitida por lei",
-      "Aposentadoria por Idade Urbana e Rural (reconhecimento de atividade rural e agricultura familiar em Capelinha e região)",
-      "Aposentadoria por Tempo de Contribuição e aplicação das melhores regras de transição da Reforma",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos com 65+ anos e pessoas com deficiência de qualquer idade",
-      "Auxílio por Incapacidade Temporária (auxílio-doença) e Aposentadoria por Incapacidade Permanente (invalidez)",
-      "Pensão por morte, salário-maternidade, auxílio-reclusão e reversão de benefícios cessados indevidamente",
-    ],
-    whatsAppText:
-      "Olá, Dra. Luana Moreira! Gostaria de uma análise detalhada sobre a minha aposentadoria ou benefício do INSS.",
-  },
-  {
-    id: "direito-familia-sucessoes",
+    id: "direito-de-familia",
     title: "Direito de Família & Sucessões",
-    category: "Família · Inventários · Divórcio · Pensão · Guarda · Partilha",
+    category: "Divórcio · Guarda · Pensão Alimentícia · Inventário · Partilha de Bens",
     icon: HeartHandshake,
-    tag: "Inventário em Cartório · Partilhas de Bens · Divórcio Consensual & Litigioso",
+    tag: "Divórcio Consensual & Litigioso · Inventário em Cartório · Alimentos",
     summary:
-      "Condução sensível, técnica e equilibrada para momentos decisivos da vida familiar, assegurando proteção aos filhos, acordos justos e tranquilidade patrimonial.",
+      "Condução humanizada, técnica e resolutiva para proteger o seu patrimônio, garantir a segurança dos filhos e transformar impasses familiares em soluções justas e pacificadas.",
     details:
-      "Questões familiares demandam profundo acolhimento humano aliado a um rigor jurídico absoluto. Conduzimos inventários extrajudiciais em cartório de forma célere e econômica, inventários judiciais, divórcios com partilha equilibrada, fixação e execução de alimentos, resguardando sempre a dignidade e a paz da sua família.",
+      "Questões familiares demandam acolhimento humano genuíno aliado a uma capacidade técnica e estratégica de alto nível. A Dra. Rithiane Morais Ragone atua na condução de divórcios consensuais e litigiosos, fixação e execução de pensão alimentícia, guarda compartilhada, regime de convivência e inventários extrajudiciais em cartório de forma célere, econômica e sem desgastes emocionais desnecessários.",
     topics: [
-      "Inventários Extrajudiciais em cartório: transmissão rápida de herança e partilha com economia tributária",
-      "Inventários judiciais, partilha litigiosa e alvarás para liberação célere de valores",
-      "Divórcio consensual e litigioso com partilha justa e proteção do patrimônio construído",
-      "Fixação, revisão, exoneração e cobrança/execução de pensão alimentícia atrasada",
-      "Guarda compartilhada, regulamentação de visitas e convivência com foco no bem-estar dos filhos",
-      "Reconhecimento e dissolução de união estável, contratos de convivência e pactos patrimoniais",
+      "Inventários em Cartório (Extrajudiciais): transmissão rápida de herança com economia tributária e máxima celeridade",
+      "Inventários Judiciais, partilhas litigiosas e proteção do patrimônio familiar construído ao longo da vida",
+      "Divórcio Consensual e Litigioso com partilha estratégica de bens e prevenção de litígios futuros",
+      "Pensão Alimentícia: fixação justa, revisão para aumento ou redução, exoneração e execução ágil de parcelas atrasadas",
+      "Guarda de Filhos e Regulamentação de Convivência com prioridade absoluta para o melhor interesse da criança",
+      "Reconhecimento e Dissolução de União Estável, contratos pré-nupciais e pactos patrimoniais de convivência",
     ],
     whatsAppText:
-      "Olá, Dra. Luana Moreira! Gostaria de conversar com sigilo sobre uma questão de Família / Inventário / Divórcio.",
+      "Olá, Dra. Rithiane! Gostaria de conversar com discrição sobre uma questão de Direito de Família / Divórcio / Inventário.",
   },
   {
-    id: "direito-civel",
-    title: "Direito Cível & Defesa Patrimonial",
-    category: "Cível · Contratos · Indenizações · Cobranças · Consumidor",
+    id: "contratos-negocios",
+    title: "Contratos & Negócios Jurídicos",
+    category: "Elaboração · Análise de Riscos · Rescisão Segura · Blindagem Patrimonial",
+    icon: FileText,
+    tag: "Contratos Civis & Comerciais · Compra e Venda · Locação · Rescisões",
+    summary:
+      "Segurança jurídica preventiva e contratual para blindar transações pessoais e patrimoniais, evitando prejuízos financeiros e cláusulas abusivas.",
+    details:
+      "Um contrato bem estruturado é a maior salvaguarda contra litígios caros e dores de cabeça futuras. A Morais Ragone Advocacia atua na elaboração e revisão minuciosa de contratos cíveis, imobiliários, comerciais e de prestação de serviços, assegurando cláusulas equilibradas, termos precisos e máxima força executiva perante a Justiça.",
+    topics: [
+      "Elaboração e revisão minuciosa de contratos imobiliários (compra e venda, promessa, locação comercial e residencial)",
+      "Análise de riscos contratuais prévia a assinaturas de alto impacto patrimonial",
+      "Rescisão contratual segura, cobrança e execução judicial e extrajudicial de cláusulas, dívidas e multas",
+      "Contratos de prestação de serviços, parcerias comerciais e instrumentos negociais para empresas e profissionais",
+      "Notificações extrajudiciais estratégicas para cumprimento forçado de obrigações ou distrato amigável",
+      "Blindagem e segurança jurídica patrimonial na celebração de transações civis e mercantis",
+    ],
+    whatsAppText:
+      "Olá, Dra. Rithiane! Gostaria de uma consultoria jurídica sobre elaboração ou revisão de contratos.",
+  },
+  {
+    id: "direito-do-consumidor",
+    title: "Direito do Consumidor & Defesa Patrimonial",
+    category: "Negativação Indevida · Fraudes Bancárias · Danos Morais · Práticas Abusivas",
     icon: Scale,
-    tag: "Ações Indenizatórias · Contratos · Danos Morais & Materiais · Recuperação de Crédito",
+    tag: "Limpeza de Nome SPC/Serasa · Danos Morais & Materiais · Abusos Bancários",
     summary:
-      "Atuação contenciosa e consultiva com alta precisão técnica para resguardar seus direitos civis, recuperar valores e solucionar conflitos com segurança jurídica.",
+      "Atuação enérgica e combativa contra instituições financeiras, operadoras e fornecedores que lesam seus direitos, buscando indenizações e reparação integral.",
     details:
-      "As relações civis e contratuais exigem rigor técnico e estratégia firme. Defendemos pessoas físicas e jurídicas em ações de indenização por perdas, danos morais e materiais, elaboração e revisão de contratos, recuperação de créditos e resolução de litígios perante a Justiça comum com combatividade.",
+      "As relações de consumo frequentemente colocam o consumidor em posição de desvantagem perante bancos e corporações. Defendemos você com combatividade dentro da lei contra negativações indevidas, fraudes bancárias, empréstimos consignados não autorizados, compras não entregues e cobranças abusivas, buscando a restauração imediata do seu crédito e a justa indenização moral e material.",
     topics: [
-      "Ações indenizatórias por danos morais, materiais e prejuízos financeiros",
-      "Elaboração, análise e rescisão segura de contratos civis e comerciais",
-      "Cobrança judicial e extrajudicial de títulos de crédito, notas e dívidas",
-      "Defesa dos direitos do consumidor contra abusos bancários, fraudes e negativações indevidas",
-      "Conflitos imobiliários, locações, despejos e litígios de posse e propriedade",
-      "Notificações extrajudiciais, medidas cautelares e acordos amigáveis para evitar litígios longos",
+      "Ações contra negativação indevida no SPC/Serasa com pedido de liminar para exclusão imediata e indenização por dano moral",
+      "Reparação por fraudes bancárias, clonagem de cartões, golpes do PIX e empréstimos consignados não solicitados",
+      "Indenizações por danos morais e materiais decorrentes de falhas graves de prestação de serviços e descumprimento de prazos",
+      "Revisão e cancelamento de cobranças abusivas, tarifas ilegais e juros extorsivos aplicados indevidamente",
+      "Problemas com compras e serviços: atrasos na entrega, produtos defeituosos sem assistência técnica e recusa de garantia",
+      "Defesa integral dos direitos do consumidor com fundamentação sólida no Código de Defesa do Consumidor",
     ],
     whatsAppText:
-      "Olá, Dra. Luana Moreira! Gostaria de consultar sobre uma questão de Direito Cível / Contratos / Indenização.",
+      "Olá, Dra. Rithiane! Gostaria de uma avaliação sobre uma questão de Direito do Consumidor / Negativação / Indenização.",
   },
   {
-    id: "consultoria-preventiva",
-    title: "Consultoria Jurídica Preventiva & Resoluções Extrajudiciais",
-    category: "Consultoria · Acordos · Prevenção de Litígios · Suporte Contínuo",
+    id: "consultoria-estrategica",
+    title: "Consultoria Estratégica & Resolução de Conflitos",
+    category: "Prevenção de Litígios · Acordos Extrajudiciais · Notificações · Pareceres",
     icon: Shield,
-    tag: "Mediação · Notificações Extrajudiciais · Pareceres · Atendimento com Sigilo",
+    tag: "Mediação · Acordos com Eficácia Executiva · Atuação Preventiva · Sigilo",
     summary:
-      "Orientação estratégica preventiva para antecipar problemas, blindar acordos e resolver impasses antes que se tornem processos custosos e demorados.",
+      "Orientação jurídica preventiva de excelência para pacificar conflitos, celebrar acordos seguros e evitar litígios judiciais longos e onerosos.",
     details:
-      "Evitar o litígio costuma ser o caminho mais rápido, inteligente e econômico para proteger seus interesses. Oferecemos assessoria consultiva personalizada, emissão de pareceres jurídicos, condução de acordos extrajudiciais e assessoria jurídica contínua com máxima discrição e proximidade.",
+      "A melhor vitória jurídica costuma ser aquela que soluciona o impasse antes que ele se transforme em um processo de anos na Justiça. Conduzimos mediações técnicas, negociações entre partes, elaboração de termos de acordo com eficácia executiva e orientações consultivas personalizadas, poupando seu tempo, recursos e desgaste emocional.",
     topics: [
-      "Análise preventiva de riscos contratuais e patrimoniais antes de assinaturas importantes",
-      "Mediação e negociação extrajudicial para celebração de acordos com validade de título executivo",
-      "Envio e resposta a notificações extrajudiciais estratégicas",
-      "Assessoria jurídica consultiva para empresas e profissionais de Capelinha e região",
-      "Revisão de documentos e orientação para tomadas de decisão de alto impacto patrimonial",
-      "Atendimento direto e descomplicado, com total clareza em cada orientação",
+      "Mediação e negociação extrajudicial para celebração de acordos seguros com validade de título executivo",
+      "Emissão e resposta a notificações extrajudiciais estratégicas com fundamentação jurídica precisa",
+      "Pareceres jurídicos para tomada de decisões patrimoniais, familiares ou empresariais de grande relevância",
+      "Atuação consultiva preventiva para mitigar passivos e prevenir contingências judiciais",
+      "Auditoria preventiva de riscos em documentações, escrituras, acordos e transações",
+      "Atendimento humanizado, direto e descomplicado, com total clareza e transparência em cada etapa",
     ],
     whatsAppText:
-      "Olá, Dra. Luana Moreira! Gostaria de solicitar uma consultoria jurídica preventiva para o meu caso.",
+      "Olá, Dra. Rithiane! Gostaria de solicitar uma consultoria jurídica estratégica preventiva para o meu caso.",
   },
 ];
 
@@ -257,100 +255,100 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Marcelo de Freitas",
-    badge: "Local Guide · 52 avaliações · 20 fotos · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Fará todo o possível para atender suas necessidades e chegar a uma boa solução",
+    name: "Francisco Araujo Junior",
+    badge: "Local Guide · 17 avaliações · 4 fotos · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Profissional muito competente, muita dedicação e cumplicidade na parceria!",
     content:
-      "Ótima profissional. Recomendo. Cada caso é único e sabemos como a justiça pode ser frustrante as vezes. Já conheço o trabalho dela e posso dizer que fará todo o possível para atender as suas necessidades e chegar a uma boa solução. Local de fácil acesso e não há problemas para estacionar por perto. Telefone acessível e trata os casos com boa discrição.",
+      "A Dra Rithiane Morais me foi indicada por outros advogados. Profissional muito competente e a atuação de seu escritório mostrou-me até agora muita dedicação e cumplicidade na parceria ! Parabéns e super indico !",
   },
   {
-    name: "Mayara Neres",
+    name: "Alice Assis",
+    badge: "Avaliação no Google · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Notável capacidade técnica, competência ímpar e seriedade. Recomendo de olhos fechados!",
+    content:
+      "Tive uma experiência maravilhosa no escritório. A dra. Rithiane é uma profissional extremamente dedicada, com notável capacidade técnica e um nível de competência ímpar. Atua com seriedade, clareza e segurança, transmitindo total confiança ao cliente. Recomendo de olhos fechados!",
+  },
+  {
+    name: "Júlia Vidal",
     badge: "2 avaliações · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Sempre disponível para nos atender! Simplesmente a melhor!",
+    date: "Avaliação Verificada no Google",
+    highlight: "Ética, responsabilidade e muita competência. Atendimento impecável!",
     content:
-      "Excelente profissional, está sempre disponível para nos atender!! Simplesmente a melhor!",
+      "A Dra Rithiane é uma excelente profissional, atua com ética, responsabilidade e muita competência. O atendimento é impecável, com atenção aos detalhes, clareza nas orientações e verdadeiro comprometimento. Recomendo sempre!",
   },
   {
-    name: "Karine Carvalho",
+    name: "Camila Lopes Sathler",
+    badge: "5 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Competente e humana quando a gente mais precisa. Obrigada por tudo Dra. Rithiane!",
+    content:
+      "É tão bom contar com uma profissional competente e humana quando a gente mais precisa. Obrigada por tudo Dra. Rithiane.",
+  },
+  {
+    name: "Ramon Camargo",
     badge: "2 avaliações · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Atenciosa e sempre prestativa com seus clientes",
+    date: "Avaliação Verificada no Google",
+    highlight: "Uma das melhores advogadas na região! Gosta da verdade e vai pra briga dentro da lei!",
     content:
-      "Excelente profissional, atenciosa e sempre prestativa cm seus clientes.",
+      "A Rithiane hoje é uma das melhores advogadas não só na cidade mas na região ! Elogiada por quem já foi cliente e por profissionais da própria área dela ! Uma advogada que gosta da verdade , e que vai pra briga dentro da lei !",
   },
   {
-    name: "Edvaldo Sousa",
+    name: "Vania Lamas",
+    badge: "5 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Atendimento de excelência. Organização, dedicação, presteza e acolhimento!",
+    content:
+      "Atendimento de excelência. Competência, conhecimento, organização, dedicação, presteza, acolhimento. Encantada com os serviços prestados, principalmente na pessoa da Dra Rhitiane.",
+  },
+  {
+    name: "Escritório Jucilene Fontoura Advocacia",
+    badge: "4 avaliações · 1 foto · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Escritório referência! Qualidade, responsabilidade e respeito ao cliente.",
+    content:
+      "Escritório referência! Recomendo fortemente para quem busca um serviço jurídico de qualidade, com responsabilidade e respeito ao cliente.",
+  },
+  {
+    name: "Melissa Bastos",
+    badge: "11 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Advogada exemplar; muito esclarecedora e capacitada tecnicamente!",
+    content:
+      "Excelente profissional! Ambiente agradável e advogada exemplar; muito esclarecedora e capacitada tecnicamente!",
+  },
+  {
+    name: "Edinilton Chaves",
     badge: "Avaliação no Google · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "O carinho e esclarecimento sobre as dúvidas foi 100% proveitoso",
+    date: "Avaliação Verificada no Google",
+    highlight: "Seriedade e competência fundamentais para a resolução deste caso!",
     content:
-      "Maravilhosa o carinho e esclarecimento sobre as minhas dúvidas foi 100% a proveitoso.",
+      "Sua seriedade e competência foram fundamentais para a resolução deste caso . Que o Senhor continue iluminando os seus caminhos... Recomendo, uma ótima profissional . Muito obrigado , Dra Rithiane .",
   },
   {
-    name: "Francielle Martins",
+    name: "Danilo Silva Oliveira",
     badge: "Avaliação no Google · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Atendimento de excelência! Ótima profissional!",
+    date: "Avaliação Verificada no Google",
+    highlight: "Humanismo, muita segurança, transparência, agilidade e comprometimento!",
     content:
-      "Atendimento de excelência! Ótima profissional!!!",
+      "Excelente. Humanismo ,Muita segurança,transparência, agilidade,atenção, comprometimento,dentre outros fatores.",
   },
   {
-    name: "Agência Imperial BR",
-    badge: "2 avaliações · 1 foto · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Com certeza é a melhor profissional que poderia atender nossa empresa!",
+    name: "Elaine Barcelos de Assis",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight: "Entendimento do caso, argumentação e atendimento de prazos com excelência!",
     content:
-      "Com certeza é a melhor profissional que poderia atender nossa empresa!",
+      "Excelente assessoria: dedicação, entendimento do caso, argumentação e atendimento de prazos! Tudo com excelência!",
   },
   {
-    name: "Cesar Paranhos",
-    badge: "6 avaliações · 13 fotos · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Grande profissional, recomendadíssima. Muito competente no que faz",
-    content:
-      "Grande profissional, recomendadíssima. Muito competente no que faz.",
-  },
-  {
-    name: "Vanilde Fernandes",
+    name: "Elis Leôncio",
     badge: "3 avaliações · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Atendimento atencioso e trabalho diligente. Recomendo!",
+    date: "Avaliação Verificada no Google",
+    highlight: "Ética, acolhedora, investigativa, cumpre prazos e extremamente confiável!",
     content:
-      "Atendimento atencioso e trabalho diligente. Ótima advogada! Recomendo.",
-  },
-  {
-    name: "Andreia Cristina",
-    badge: "Avaliação no Google · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Indico sempre a Dra. Luana Moreira, faz um ótimo trabalho!",
-    content:
-      "Indico sempre a Advogada Luana Moreira e uma excelente advogada ela faz um ótimo trabalho parabéns Doutora pelo seu trabalho e continue sempre assim Bjs",
-  },
-  {
-    name: "Maria Aparecida",
-    badge: "Local Guide · 47 avaliações · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "ÓTIMA, HONESTA, INTELIGENTE e Competente",
-    content:
-      "OTIMA HONESTA INTELIGENTE Competente",
-  },
-  {
-    name: "Cristiane Camargos",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Super recomendo, grande profissional!",
-    content:
-      "Super recomendo, grande profissional!",
-  },
-  {
-    name: "Frederico Lopes Santos",
-    badge: "7 avaliações · 1 foto · 5 Estrelas",
-    date: "2 anos atrás",
-    highlight: "Excelente advogada de alta confiança",
-    content:
-      "Excelente advogada",
+      "Ética, acolhedora, investigativa, cumpre prazos e extremamente confiável!",
   },
 ];
 
@@ -361,34 +359,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "O INSS negou ou cessou meu benefício. Ainda é possível reverter?",
+    question: "Como funciona a primeira consulta com a Dra. Rithiane Morais Ragone?",
     answer:
-      "Sim, absolutamente. É muito frequente que o INSS indefira pedidos de aposentadoria, auxílio-doença ou BPC por falhas na análise de documentos ou perícias superficiais. Analisamos detalhadamente a negativa e ingressamos com ação judicial fundamentada na Justiça Federal, onde a perícia é realizada por perito neutro e há possibilidade real de reverter a decisão e receber os retroativos devidos desde o dia do primeiro pedido.",
+      "O atendimento inicial começa através do nosso WhatsApp. Você nos relata o seu caso de forma segura e com total sigilo. Analisamos a situação jurídica e agendamos a consulta (presencial em nossa sede em Nanuque ou online por videoconferência para qualquer localidade do país). Durante a conversa, você recebe orientações claras, sem juridiquês, sobre a viabilidade e os próximos passos estratégicos.",
   },
   {
-    question: "Moro em outra cidade ou estado. É possível ser atendido(a) online?",
+    question: "Moro em outra cidade ou estado. Posso ser atendido(a) de forma 100% online?",
     answer:
-      "Sim! Embora tenhamos nossa sede física na Rua Gov. Valadares em Capelinha - MG, todo o nosso processo de atendimento pode ser realizado de forma 100% digital com total segurança e comodidade. Realizamos consultas por WhatsApp, envio seguro de documentos em PDF ou fotos, e audiências virtuais diretamente com a Dra. Luana Moreira.",
+      "Sim, perfeitamente! Atendemos clientes de todo o Brasil e brasileiros no exterior. Todo o procedimento — desde a consulta inicial e envio seguro de documentos até a assinatura eletrônica e o protocolo das ações — é realizado digitalmente com total segurança jurídica, conforto e a mesma proximidade de uma reunião presencial.",
   },
   {
-    question: "O que é o Planejamento Previdenciário e por que ele é tão vantajoso?",
+    question: "Quanto tempo demora um inventário em cartório e quais os requisitos?",
     answer:
-      "O Planejamento Previdenciário é um estudo minucioso de toda a sua vida contributiva (CNIS, carteiras de trabalho, carnês e períodos rurais). Ele calcula a melhor data para você se aposentar e simula os diferentes cenários após a Reforma da Previdência, evitando que você perca dinheiro pedindo o benefício na regra errada ou pague contribuições desnecessárias.",
+      "O inventário extrajudicial (em cartório) é muito mais rápido e econômico do que a via judicial, podendo ser finalizado em poucas semanas. Os requisitos legais são: todos os herdeiros devem ser maiores e capazes, haver consenso sobre a divisão dos bens e a assistência obrigatória de um advogado. Cuidamos de todo o levantamento de certidões, tributos e minutas para assegurar celeridade e economia tributária.",
   },
   {
-    question: "Trabalhei na roça/agricultura familiar. Esse tempo conta para minha aposentadoria?",
+    question: "Como funciona a ação de divórcio e partilha de bens?",
     answer:
-      "Sim! O tempo de trabalho na atividade rural em regime de economia familiar pode ser reconhecido tanto para aposentadoria rural pura quanto para a modalidade híbrida (tempo rural somado ao urbano). Ajudamos você a reunir e formalizar as provas documentais exigidas pela lei para garantir esse direito.",
+      "Se houver consenso entre o casal e não houver filhos menores ou incapazes, o divórcio pode ser homologado em cartório em curto prazo. Havendo filhos menores ou divergência quanto à partilha, conduzimos o procedimento judicial com firmeza e sensibilidade, resguardando os alimentos, o regime de convivência dos filhos e a justa divisão patrimonial.",
   },
   {
-    question: "Como funciona o inventário em cartório e quando ele pode ser feito?",
+    question: "Tive meu nome negativado indevidamente ou caí em fraude bancária. O que fazer?",
     answer:
-      "O inventário extrajudicial (em cartório) pode ser realizado quando todos os herdeiros forem maiores, capazes e estiverem de comum acordo quanto à divisão dos bens, sem testamento pendente. É um procedimento consideravelmente mais rápido que o judicial, economizando tempo, desgaste emocional e custos.",
+      "A negativação indevida nos órgãos de proteção ao crédito (SPC/Serasa) e fraudes bancárias (golpes do PIX, clonagem, empréstimos não contratados) geram direito a pedido de liminar para imediata exclusão da restrição, cancelamento da dívida e indenização por danos morais e materiais. Nossa atuação é célere e focada na reparação integral dos prejuízos sofridos.",
   },
   {
-    question: "Como é feita a primeira consulta com a Dra. Luana Moreira?",
+    question: "Por que investir em consultoria jurídica preventiva para contratos?",
     answer:
-      "O primeiro contato é realizado diretamente pelo nosso WhatsApp. Você relata a situação, analisamos a documentação necessária e agendamos a consulta (presencial em Capelinha ou online). Você terá uma conversa clara, transparente e acolhedora, com orientação objetiva sobre as reais possibilidades jurídicas do seu caso.",
+      "A consultoria preventiva evita que você assine instrumentos com cláusulas abusivas, penalidades ocultas ou falta de garantias que poderiam gerar litígios judiciais desgastantes de dezenas ou centenas de milhares de reais. Analisamos contratos imobiliários, locações comerciais e parcerias, blindando seus interesses patrimoniais antes de qualquer assinatura.",
   },
 ];
 
@@ -412,7 +410,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl leading-[1.14] tracking-[-0.02em] font-bold sm:text-4xl lg:text-[2.65rem] ${
-          dark ? "text-white" : "text-[#171310]"
+          dark ? "text-white" : "text-[#1a1412]"
         }`}
       >
         {children}
@@ -420,7 +418,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-sm leading-7 ${
-            dark ? "text-[#d8cec3]" : "text-[#5c5044]"
+            dark ? "text-[#dacdc5]" : "text-[#6b5c53]"
           }`}
         >
           {description}
@@ -456,36 +454,36 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen bg-[#0d0b0a] text-[#f2ece4]">
+      <main className="relative min-h-screen bg-[#0c0a09] text-[#f7f3ee]">
         {/* Top Notification Strip */}
-        <div className="relative z-50 border-b border-[#d4af7a]/25 bg-[#14100d] px-4 py-2 text-xs text-[#d8cec3]">
+        <div className="relative z-50 border-b border-[#d99778]/25 bg-[#14100e] px-4 py-2 text-xs text-[#dacdc5]">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-2 sm:px-6">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f5e5cb] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#d4af7a]" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#fce0d2] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#d99778]" />
               </span>
-              <span className="text-[11px] sm:text-xs text-[#f5e5cb] font-semibold">
-                Dra. Luana Moreira · Toda causa importa! ⚖️ Mais de 10 anos de compromisso em Capelinha - MG
+              <span className="text-[11px] sm:text-xs text-[#fce0d2] font-semibold">
+                Morais Ragone Advocacia · Transformamos conflitos em soluções jurídicas claras e eficazes ⚖️ Nanuque - MG
               </span>
             </div>
 
-            <div className="flex items-center gap-4 text-[11px] text-[#e8ceaa]">
+            <div className="flex items-center gap-4 text-[11px] text-[#f3c2a9]">
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
-                <Star size={12} className="fill-[#f5e5cb] text-[#d4af7a]" />
-                <span className="font-bold text-white">5,0 ★</span> (31 avaliações no Google)
+                <Star size={12} className="fill-[#fce0d2] text-[#d99778]" />
+                <span className="font-bold text-white">5,0 ★</span> (28 avaliações no Google)
               </a>
-              <span className="hidden h-3 w-px bg-[#d4af7a]/30 sm:inline-block" />
+              <span className="hidden h-3 w-px bg-[#d99778]/30 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de um atendimento.")}
+                href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de um atendimento jurídico.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[#f5e5cb] sm:inline-flex"
+                className="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[#fce0d2] sm:inline-flex"
               >
                 <WhatsAppIcon size={13} className="text-[#25D366]" />
                 {PHONE_DISPLAY}
@@ -498,69 +496,70 @@ export default function Home() {
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
             scrolled
-              ? "border-b border-[#d4af7a]/30 bg-[#0d0b0a]/95 py-3 shadow-xl backdrop-blur-md"
-              : "border-b border-[#d4af7a]/15 bg-[#0d0b0a]/80 py-4 backdrop-blur-sm"
+              ? "border-b border-[#d99778]/30 bg-[#0c0a09]/95 py-3 shadow-xl backdrop-blur-md"
+              : "border-b border-[#d99778]/15 bg-[#0c0a09]/80 py-4 backdrop-blur-sm"
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             {/* Logo Link */}
             <a
               href="#"
-              className="group flex items-center gap-3 transition-opacity hover:opacity-95"
-              aria-label="Luana Moreira Advocacia e Consultoria Jurídica - Início"
+              className="group flex shrink-0 items-center transition-opacity hover:opacity-95"
+              aria-label="Morais Ragone Advocacia e Consultoria Jurídica - Início"
             >
-              <div className="relative h-12 w-32 sm:h-14 sm:w-44 md:w-52">
+              <div className="relative flex items-center py-1">
                 <Image
                   src={LOGO_SRC}
-                  alt="Luana Moreira Advocacia e Consultoria Jurídica"
-                  fill
-                  sizes="(max-width: 768px) 180px, 240px"
-                  className="object-contain object-left"
+                  alt="Morais Ragone Advocacia e Consultoria Jurídica"
+                  width={240}
+                  height={48}
+                  className="h-9 sm:h-10 md:h-11 w-auto max-w-[200px] sm:max-w-[230px] md:max-w-[250px] object-contain object-left"
                   priority
                 />
               </div>
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden items-center gap-7 lg:flex">
-              <a href="#especialidades" className="nav-link-dark text-[11px]">
+            <nav className="hidden items-center gap-4 xl:gap-6 2xl:gap-7 lg:flex">
+              <a href="#especialidades" className="nav-link-dark text-[11px] whitespace-nowrap">
                 Especialidades
               </a>
-              <a href="#sobre" className="nav-link-dark text-[11px]">
-                Sobre a Dra. Luana
+              <a href="#sobre" className="nav-link-dark text-[11px] whitespace-nowrap">
+                Sobre
               </a>
-              <a href="#diferenciais" className="nav-link-dark text-[11px]">
+              <a href="#diferenciais" className="nav-link-dark text-[11px] whitespace-nowrap">
                 Diferenciais
               </a>
-              <a href="#depoimentos" className="nav-link-dark text-[11px]">
-                Avaliações Google (5,0 ★)
+              <a href="#depoimentos" className="nav-link-dark text-[11px] whitespace-nowrap">
+                Avaliações (5,0 ★)
               </a>
-              <a href="#duvidas" className="nav-link-dark text-[11px]">
+              <a href="#duvidas" className="nav-link-dark text-[11px] whitespace-nowrap">
                 Dúvidas
               </a>
-              <a href="#contato" className="nav-link-dark text-[11px]">
-                Sede & Contato
+              <a href="#contato" className="nav-link-dark text-[11px] whitespace-nowrap">
+                Contato
               </a>
             </nav>
 
             {/* Right Action */}
-            <div className="flex items-center gap-3">
+            <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de consultar sobre meus direitos.")}
+                href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de consultar sobre meus direitos.")}
                 target="_blank"
-                variant="gold"
+                variant="rosegold"
                 size="sm"
-                className="hidden sm:inline-flex"
+                className="hidden sm:inline-flex whitespace-nowrap"
               >
                 <WhatsAppIcon size={14} />
-                <span>Atendimento WhatsApp</span>
+                <span className="hidden xl:inline">Atendimento WhatsApp</span>
+                <span className="xl:hidden">WhatsApp</span>
               </GlowingButton>
 
               {/* Mobile menu toggle */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-[#d4af7a]/30 bg-[#161311] text-[#f5e5cb] transition-colors hover:border-[#d4af7a] hover:text-white lg:hidden"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-[#d99778]/30 bg-[#171210] text-[#fce0d2] transition-colors hover:border-[#d99778] hover:text-white lg:hidden"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -575,63 +574,63 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="border-b border-[#d4af7a]/30 bg-[#120f0d] px-5 py-6 lg:hidden"
+                className="border-b border-[#d99778]/30 bg-[#14100e] px-5 py-6 lg:hidden"
               >
                 <div className="flex flex-col gap-4">
                   <a
                     href="#especialidades"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#d8cec3] uppercase transition-colors hover:text-[#f5e5cb]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#dacdc5] uppercase transition-colors hover:text-[#fce0d2]"
                   >
                     <span>Especialidades</span>
-                    <ArrowRight size={14} className="text-[#d4af7a]" />
+                    <ArrowRight size={14} className="text-[#d99778]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#d8cec3] uppercase transition-colors hover:text-[#f5e5cb]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#dacdc5] uppercase transition-colors hover:text-[#fce0d2]"
                   >
-                    <span>Sobre a Dra. Luana Moreira</span>
-                    <ArrowRight size={14} className="text-[#d4af7a]" />
+                    <span>Sobre a Dra. Rithiane</span>
+                    <ArrowRight size={14} className="text-[#d99778]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#d8cec3] uppercase transition-colors hover:text-[#f5e5cb]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#dacdc5] uppercase transition-colors hover:text-[#fce0d2]"
                   >
                     <span>Diferenciais</span>
-                    <ArrowRight size={14} className="text-[#d4af7a]" />
+                    <ArrowRight size={14} className="text-[#d99778]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#d8cec3] uppercase transition-colors hover:text-[#f5e5cb]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#dacdc5] uppercase transition-colors hover:text-[#fce0d2]"
                   >
                     <span>Avaliações Google (5,0 ★)</span>
-                    <ArrowRight size={14} className="text-[#d4af7a]" />
+                    <ArrowRight size={14} className="text-[#d99778]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#d8cec3] uppercase transition-colors hover:text-[#f5e5cb]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#dacdc5] uppercase transition-colors hover:text-[#fce0d2]"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#d4af7a]" />
+                    <ArrowRight size={14} className="text-[#d99778]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#d8cec3] uppercase transition-colors hover:text-[#f5e5cb]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#dacdc5] uppercase transition-colors hover:text-[#fce0d2]"
                   >
                     <span>Sede & Contato</span>
-                    <ArrowRight size={14} className="text-[#d4af7a]" />
+                    <ArrowRight size={14} className="text-[#d99778]" />
                   </a>
 
-                  <div className="pt-4 border-t border-[#d4af7a]/20">
+                  <div className="pt-4 border-t border-[#d99778]/20">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Luana Moreira! Gostaria de um atendimento.")}
+                      href={getWhatsAppUrl("Olá, Dra. Rithiane Morais Ragone! Gostaria de um atendimento.")}
                       target="_blank"
-                      variant="gold"
+                      variant="rosegold"
                       size="md"
                       className="w-full"
                     >
@@ -648,10 +647,10 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 1: HERO SECTION + FAIXA DE MÉTRICAS (DARK)        */}
         {/* ======================================================== */}
-        <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#0d0b0a]">
-          {/* Subtle Ambient Gold Glow Background */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-radial from-[#d4af7a]/14 via-[#8c673b]/6 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-96 w-96 rounded-full bg-[#b91c1c]/10 blur-3xl" />
+        <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#0c0a09]">
+          {/* Subtle Ambient Rose Gold & Bronze Glow Background */}
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-radial from-[#d99778]/14 via-[#b36f52]/6 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-96 w-96 rounded-full bg-[#9f1d24]/10 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -664,9 +663,9 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-4">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#d4af7a]/40 bg-[#161311] px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#f5e5cb] shadow-sm">
-                    <span className="size-1.5 rounded-full bg-[#d4af7a]" />
-                    Toda Causa Importa · Advocacia Previdenciária & Cível
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#d99778]/40 bg-[#171210] px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#fce0d2] shadow-sm">
+                    <span className="size-1.5 rounded-full bg-[#d99778]" />
+                    Morais Ragone Advocacia · Direito de Família · Contratos · Consumidor
                   </span>
                 </motion.div>
 
@@ -675,23 +674,23 @@ export default function Home() {
                   variants={reveal}
                   className="font-serif text-3xl leading-[1.12] font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Garantindo seus direitos com{" "}
-                  <span className="bg-gradient-to-r from-[#f5e5cb] via-[#d4af7a] to-[#e8ceaa] bg-clip-text text-transparent">
-                    firmeza técnica
+                  Transformamos Conflitos em{" "}
+                  <span className="bg-gradient-to-r from-[#fce0d2] via-[#d99778] to-[#f3c2a9] bg-clip-text text-transparent">
+                    Soluções Jurídicas Claras
                   </span>
-                  , humanidade e mais de 10 anos de experiência.
+                  , Seguras e Eficazes.
                 </motion.h1>
 
                 {/* Subtitle / Value Proposition */}
                 <motion.p
                   variants={reveal}
-                  className="mt-6 max-w-2xl text-base leading-relaxed text-[#d8cec3] sm:text-lg"
+                  className="mt-6 max-w-2xl text-base leading-relaxed text-[#dacdc5] sm:text-lg"
                 >
-                  Conquiste sua aposentadoria ou benefício do INSS com quem realmente
-                  domina a lei e luta por você. A <strong className="text-white font-semibold">Dra. Luana Moreira</strong> oferece
-                  atuação combativa e transparente em Direito Previdenciário, Família e Cível,
-                  com atendimento presencial acolhedor em <strong className="text-[#f5e5cb] font-semibold">Capelinha - MG</strong> e
-                  digital com máxima discrição para todo o Brasil.
+                  Advocacia de excelência com capacidade técnica ímpar, seriedade e dedicação. A{" "}
+                  <strong className="text-white font-semibold">Dra. Rithiane Morais Ragone</strong> atua
+                  com combatividade dentro da lei e zelo irrepreensível em Direito de Família, Contratos e Consumidor —
+                  com atendimento acolhedor presencial em{" "}
+                  <strong className="text-[#fce0d2] font-semibold">Nanuque - MG</strong> e online com máximo sigilo para todo o Brasil.
                 </motion.p>
 
                 {/* CTAs */}
@@ -700,9 +699,9 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de consultar a viabilidade do meu benefício/aposentadoria.")}
+                    href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de consultar sobre o meu caso.")}
                     target="_blank"
-                    variant="gold"
+                    variant="rosegold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
@@ -722,7 +721,7 @@ export default function Home() {
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Visual Frame (Dra. Luana Moreira at desk) */}
+              {/* Right Column: Hero Visual Frame (Dra. Rithiane standing in white blazer) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -731,40 +730,40 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Decorative Metallic Border Box */}
-                  <div className="relative overflow-hidden rounded-2xl border border-[#d4af7a]/45 bg-[#161311] p-2 shadow-2xl shadow-black/80">
-                    <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-[#1c1815]">
+                  <div className="relative overflow-hidden rounded-2xl border border-[#d99778]/45 bg-[#171210] p-2 shadow-2xl shadow-black/85">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#1d1714]">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dra. Luana Moreira em seu escritório de advocacia"
+                        alt="Dra. Rithiane Morais Ragone - Morais Ragone Advocacia"
                         fill
                         sizes="(max-width: 768px) 100vw, 500px"
-                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                        className="object-cover object-top transition-transform duration-700 hover:scale-105"
                         priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0d0b0a] via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent opacity-65" />
                     </div>
 
                     {/* Subtle Overlay Label */}
-                    <div className="absolute right-5 bottom-5 left-5 rounded-xl border border-[#d4af7a]/30 bg-[#0d0b0a]/90 p-4 shadow-lg backdrop-blur-md">
+                    <div className="absolute right-5 bottom-5 left-5 rounded-xl border border-[#d99778]/30 bg-[#0c0a09]/90 p-4 shadow-lg backdrop-blur-md">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="font-serif text-sm font-bold text-[#f5e5cb]">
-                            Dra. Luana Moreira
+                          <p className="font-serif text-sm font-bold text-[#fce0d2]">
+                            Dra. Rithiane Morais Ragone
                           </p>
-                          <p className="text-[11px] text-[#d8cec3]">
-                            Advogada Previdenciária & Consultora Jurídica
+                          <p className="text-[11px] text-[#dacdc5]">
+                            Advogada & Consultora Jurídica
                           </p>
                         </div>
-                        <span className="rounded-md border border-[#d4af7a]/40 bg-[#1e1916] px-2.5 py-1 text-[10px] font-bold text-[#f5e5cb]">
-                          Capelinha · MG
+                        <span className="rounded-md border border-[#d99778]/40 bg-[#261f1c] px-2.5 py-1 text-[10px] font-bold text-[#fce0d2]">
+                          Nanuque · MG
                         </span>
                       </div>
                     </div>
                   </div>
 
                   {/* Floating Stat Badge 1 (Google 5.0 Rating) */}
-                  <div className="absolute -top-5 -left-5 hidden rounded-xl border border-[#d4af7a]/50 bg-[#161311]/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-lg bg-[#25201b] border border-[#d4af7a]/30">
+                  <div className="absolute -top-5 -left-5 hidden rounded-xl border border-[#d99778]/50 bg-[#171210]/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
+                    <div className="flex size-10 items-center justify-center rounded-lg bg-[#261f1c] border border-[#d99778]/30">
                       <GoogleIcon size={20} />
                     </div>
                     <div>
@@ -773,21 +772,21 @@ export default function Home() {
                           <Star
                             key={i}
                             size={12}
-                            className="fill-[#f5e5cb] text-[#d4af7a]"
+                            className="fill-[#fce0d2] text-[#d99778]"
                           />
                         ))}
                       </div>
                       <p className="text-[11px] font-bold text-white mt-0.5">
-                        5,0 no Google · 31 Avaliações
+                        5,0 no Google · 28 Avaliações
                       </p>
                     </div>
                   </div>
 
-                  {/* Floating Stat Badge 2 (Toda causa importa) */}
-                  <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-[#d4af7a]/50 bg-[#161311]/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
-                    <Scale size={16} className="text-[#f5e5cb]" />
+                  {/* Floating Stat Badge 2 (Soluções Claras) */}
+                  <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-[#d99778]/50 bg-[#171210]/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
+                    <Scale size={16} className="text-[#fce0d2]" />
                     <span className="text-xs font-bold tracking-wide text-white">
-                      Toda causa importa! ⚖️
+                      Soluções Jurídicas Claras ⚖️
                     </span>
                   </div>
                 </div>
@@ -795,38 +794,38 @@ export default function Home() {
             </div>
 
             {/* INTEGRATED AUTHORITY BAR WITHIN DOBRA 1 (DARK) */}
-            <div className="mt-14 border-t border-[#d4af7a]/20 pt-8">
+            <div className="mt-14 border-t border-[#d99778]/20 pt-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <div className="rounded-xl border border-[#d4af7a]/25 bg-[#161311]/80 p-4 backdrop-blur-sm">
-                  <span className="font-serif text-2xl font-bold text-[#f5e5cb]">
+                <div className="rounded-xl border border-[#d99778]/25 bg-[#171210]/80 p-4 backdrop-blur-sm">
+                  <span className="font-serif text-2xl font-bold text-[#fce0d2]">
                     5,0 ★
                   </span>
                   <p className="text-xs font-semibold text-white mt-1">Google Meu Negócio</p>
-                  <p className="text-[11px] text-[#a89b8f]">31 avaliações de clientes reais</p>
+                  <p className="text-[11px] text-[#aa9a90]">28 avaliações de clientes reais</p>
                 </div>
 
-                <div className="rounded-xl border border-[#d4af7a]/25 bg-[#161311]/80 p-4 backdrop-blur-sm">
-                  <span className="font-serif text-2xl font-bold text-[#f5e5cb]">
-                    +10 Anos
+                <div className="rounded-xl border border-[#d99778]/25 bg-[#171210]/80 p-4 backdrop-blur-sm">
+                  <span className="font-serif text-2xl font-bold text-[#fce0d2]">
+                    Referência
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Experiência Jurídica</p>
-                  <p className="text-[11px] text-[#a89b8f]">Atuação firme e dedicada</p>
+                  <p className="text-xs font-semibold text-white mt-1">Nanuque & Região</p>
+                  <p className="text-[11px] text-[#aa9a90]">Atuação reconhecida por pares e clientes</p>
                 </div>
 
-                <div className="rounded-xl border border-[#d4af7a]/25 bg-[#161311]/80 p-4 backdrop-blur-sm">
-                  <span className="font-serif text-2xl font-bold text-[#f5e5cb]">
+                <div className="rounded-xl border border-[#d99778]/25 bg-[#171210]/80 p-4 backdrop-blur-sm">
+                  <span className="font-serif text-2xl font-bold text-[#fce0d2]">
                     100%
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Esclarecimento Total</p>
-                  <p className="text-[11px] text-[#a89b8f]">Dúvidas explicadas com clareza</p>
+                  <p className="text-xs font-semibold text-white mt-1">Clareza & Ética</p>
+                  <p className="text-[11px] text-[#aa9a90]">Orientações seguras e sem juridiquês</p>
                 </div>
 
-                <div className="rounded-xl border border-[#d4af7a]/25 bg-[#161311]/80 p-4 backdrop-blur-sm">
-                  <span className="font-serif text-2xl font-bold text-[#f5e5cb]">
-                    Capelinha
+                <div className="rounded-xl border border-[#d99778]/25 bg-[#171210]/80 p-4 backdrop-blur-sm">
+                  <span className="font-serif text-2xl font-bold text-[#fce0d2]">
+                    Nanuque
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Sede de Fácil Acesso</p>
-                  <p className="text-[11px] text-[#a89b8f]">Rua Gov. Valadares c/ estacionamento</p>
+                  <p className="text-xs font-semibold text-white mt-1">Sede no Centro</p>
+                  <p className="text-[11px] text-[#aa9a90]">Av. Santos Dumont, 194 - Sl 4</p>
                 </div>
               </div>
             </div>
@@ -836,7 +835,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 2: ESPECIALIDADES & ÁREAS DE ATUAÇÃO (LIGHT)      */}
         {/* ======================================================== */}
-        <section id="especialidades" className="border-t border-[#e6ded1] bg-[#fbf9f6] text-[#171310] py-20 lg:py-28">
+        <section id="especialidades" className="border-t border-[#e8ded4] bg-[#fcf9f6] text-[#1a1412] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <Heading
@@ -848,9 +847,9 @@ export default function Home() {
               </Heading>
 
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de uma avaliação jurídica para o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de uma avaliação jurídica para o meu caso.")}
                 target="_blank"
-                variant="gold"
+                variant="rosegold"
                 size="md"
               >
                 <WhatsAppIcon size={14} />
@@ -866,36 +865,36 @@ export default function Home() {
                   <div
                     key={area.id}
                     onClick={() => setActiveArea(area)}
-                    className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#e4ded4] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-xl hover:shadow-[#d4af7a]/15"
+                    className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#e8ded4] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-xl hover:shadow-[#d99778]/15"
                   >
                     <div className="flex items-start justify-between gap-4">
-                      <div className="flex size-14 items-center justify-center rounded-xl border border-[#d4af7a]/35 bg-[#faf4ea] text-[#9e7543] transition-colors group-hover:border-[#d4af7a] group-hover:bg-[#d4af7a] group-hover:text-[#0d0b0a]">
+                      <div className="flex size-14 items-center justify-center rounded-xl border border-[#d99778]/35 bg-[#fdf8f4] text-[#b36f52] transition-colors group-hover:border-[#d99778] group-hover:bg-[#d99778] group-hover:text-[#0c0a09]">
                         <IconComponent size={26} />
                       </div>
-                      <span className="rounded-full border border-[#d4af7a]/35 bg-[#faf4ea] px-3 py-1 text-[10px] font-bold tracking-wider uppercase text-[#8c673b]">
+                      <span className="rounded-full border border-[#d99778]/35 bg-[#fdf8f4] px-3 py-1 text-[10px] font-bold tracking-wider uppercase text-[#8e4f35]">
                         {area.tag.split("·")[0].trim()}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-serif text-xl font-bold text-[#171310] transition-colors group-hover:text-[#9e7543]">
+                    <h3 className="mt-6 font-serif text-xl font-bold text-[#1a1412] transition-colors group-hover:text-[#b36f52]">
                       {area.title}
                     </h3>
 
-                    <p className="mt-2 text-xs font-semibold text-[#9e7543]">
+                    <p className="mt-2 text-xs font-semibold text-[#b36f52]">
                       {area.category}
                     </p>
 
-                    <p className="mt-3 text-sm leading-relaxed text-[#5c5044]">
+                    <p className="mt-3 text-sm leading-relaxed text-[#6b5c53]">
                       {area.summary}
                     </p>
 
-                    <div className="mt-6 flex items-center justify-between border-t border-[#e8e0d5] pt-4">
-                      <span className="text-xs font-semibold text-[#8c673b] group-hover:underline">
+                    <div className="mt-6 flex items-center justify-between border-t border-[#f0e7dd] pt-4">
+                      <span className="text-xs font-semibold text-[#8e4f35] group-hover:underline">
                         Ver detalhes & situações atendidas
                       </span>
                       <ArrowUpRight
                         size={16}
-                        className="text-[#9e7543] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        className="text-[#b36f52] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                       />
                     </div>
                   </div>
@@ -924,18 +923,18 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
                 transition={{ duration: 0.25 }}
-                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#d4af7a]/50 bg-[#14100d] p-6 shadow-2xl sm:p-8 text-[#f2ece4]"
+                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#d99778]/50 bg-[#14100e] p-6 shadow-2xl sm:p-8 text-[#f7f3ee]"
               >
                 <button
                   type="button"
                   onClick={() => setActiveArea(null)}
-                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-full border border-[#d4af7a]/30 bg-[#1c1815] text-[#d8cec3] transition-colors hover:border-[#f5e5cb] hover:text-white"
+                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-full border border-[#d99778]/30 bg-[#1d1714] text-[#dacdc5] transition-colors hover:border-[#fce0d2] hover:text-white"
                   aria-label="Fechar modal de detalhes"
                 >
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center gap-3 text-xs font-bold tracking-widest uppercase text-[#d4af7a]">
+                <div className="flex items-center gap-3 text-xs font-bold tracking-widest uppercase text-[#d99778]">
                   <Scale size={15} />
                   <span>Área de Atuação Especializada</span>
                 </div>
@@ -943,35 +942,35 @@ export default function Home() {
                 <h3 className="mt-2 font-serif text-2xl font-bold text-white sm:text-3xl">
                   {activeArea.title}
                 </h3>
-                <p className="mt-1 text-xs text-[#a89b8f]">
+                <p className="mt-1 text-xs text-[#aa9a90]">
                   {activeArea.category}
                 </p>
 
-                <div className="mt-5 border-t border-[#d4af7a]/20 pt-4">
-                  <p className="text-sm leading-relaxed text-[#d8cec3]">
+                <div className="mt-5 border-t border-[#d99778]/20 pt-4">
+                  <p className="text-sm leading-relaxed text-[#dacdc5]">
                     {activeArea.details}
                   </p>
                 </div>
 
                 <div className="mt-6">
-                  <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[#f5e5cb]">
+                  <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[#fce0d2]">
                     Situações & Ações Frequentes
                   </h4>
                   <ul className="mt-3 space-y-2.5">
                     {activeArea.topics.map((topic, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs leading-relaxed text-[#d8cec3]">
-                        <CheckCircle2 size={15} className="shrink-0 text-[#d4af7a] mt-0.5" />
+                      <li key={idx} className="flex items-start gap-2.5 text-xs leading-relaxed text-[#dacdc5]">
+                        <CheckCircle2 size={15} className="shrink-0 text-[#d99778] mt-0.5" />
                         <span>{topic}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end border-t border-[#d4af7a]/20 pt-6">
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end border-t border-[#d99778]/20 pt-6">
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#a89b8f] transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#aa9a90] transition-colors hover:text-white"
                   >
                     Voltar
                   </button>
@@ -979,7 +978,7 @@ export default function Home() {
                   <GlowingButton
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
-                    variant="gold"
+                    variant="rosegold"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
@@ -992,19 +991,19 @@ export default function Home() {
         </AnimatePresence>
 
         {/* ======================================================== */}
-        {/* DOBRA 3: SOBRE A DRA. LUANA MOREIRA (DARK)              */}
+        {/* DOBRA 3: SOBRE A DRA. RITHIANE MORAIS RAGONE (DARK)     */}
         {/* ======================================================== */}
-        <section id="sobre" className="relative border-t border-[#d4af7a]/20 bg-[#120f0d] py-20 lg:py-28 text-[#f2ece4]">
+        <section id="sobre" className="relative border-t border-[#d99778]/20 bg-[#120e0d] py-20 lg:py-28 text-[#f7f3ee]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Image: Studio Portrait of Dra. Luana Moreira */}
+              {/* Left Image: Dra. Rithiane seated in camel suit */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-sm lg:max-w-none">
-                  <div className="overflow-hidden rounded-2xl border-2 border-[#d4af7a]/45 bg-[#161311] p-2.5 shadow-2xl">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#1c1815]">
+                  <div className="overflow-hidden rounded-2xl border-2 border-[#d99778]/45 bg-[#171210] p-2.5 shadow-2xl">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#1d1714]">
                       <Image
                         src={FOTO_ABOUT_SRC}
-                        alt="Dra. Luana Moreira - Advogada Previdenciária"
+                        alt="Dra. Rithiane Morais Ragone - Morais Ragone Advocacia"
                         fill
                         sizes="(max-width: 768px) 100vw, 450px"
                         className="object-cover object-top"
@@ -1013,12 +1012,12 @@ export default function Home() {
                   </div>
 
                   {/* Experience Badge */}
-                  <div className="absolute -bottom-6 -right-4 rounded-xl border border-[#d4af7a]/50 bg-[#0d0b0a] p-4 shadow-xl">
-                    <p className="font-serif text-3xl font-bold text-[#f5e5cb]">
-                      +10 Anos
+                  <div className="absolute -bottom-6 -right-4 rounded-xl border border-[#d99778]/50 bg-[#0c0a09] p-4 shadow-xl">
+                    <p className="font-serif text-3xl font-bold text-[#fce0d2]">
+                      Nota 5,0 ★
                     </p>
-                    <p className="text-[11px] font-semibold text-[#a89b8f]">
-                      De compromisso jurídico
+                    <p className="text-[11px] font-semibold text-[#aa9a90]">
+                      Reconhecimento Máximo Google
                     </p>
                   </div>
                 </div>
@@ -1029,80 +1028,79 @@ export default function Home() {
                 <Heading
                   eyebrow="Sobre a Advogada"
                   dark={true}
-                  description="Uma trajetória pautada pela ética inabalável, técnica refinada e atendimento genuinamente humano."
+                  description="Uma trajetória pautada pela ética inabalável, rigor técnico e atendimento genuinamente humano."
                 >
-                  Toda Causa Importa: Advocacia que Cuida dos Seus Interesses
+                  Compromisso, Verdade e Excelência Jurídica em Cada Causa
                 </Heading>
 
-                <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#d8cec3]">
+                <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#dacdc5]">
                   <p>
-                    Com mais de uma década de dedicação exclusiva aos direitos dos seus clientes, a{" "}
-                    <strong className="text-white font-semibold">Dra. Luana Moreira</strong> construiu uma reputação
-                    sólida no Vale do Jequitinhonha e em Minas Gerais, destacando-se pelo domínio técnico aprofundado em{" "}
-                    <strong className="text-[#f5e5cb] font-semibold">Direito Previdenciário (INSS)</strong>, além de sólida
-                    atuação em matérias de Família e Direito Cível.
+                    Fundadora da Morais Ragone Advocacia e Consultoria Jurídica, a{" "}
+                    <strong className="text-white font-semibold">Dra. Rithiane Morais Ragone</strong> consolidou
+                    seu nome como uma das principais referências da advocacia em Nanuque e no Leste de Minas Gerais,
+                    sendo constantemente elogiada por clientes e por colegas da própria área jurídica por sua
+                    competência técnica, presteza e postura ética irretocável.
                   </p>
                   <p>
-                    O manifesto do escritório é direto e verdadeiro:{" "}
-                    <em className="text-[#f5e5cb] font-serif not-italic font-bold">
-                      &ldquo;Toda causa importa!&rdquo;
-                    </em>{" "}
-                    Por trás de cada processo previdenciário ou familiar, existem anos de trabalho árduo, esforço e a
-                    esperança de um futuro seguro. É por isso que cada caso é estudado de maneira única e personalizada,
-                    sem fórmulas genéricas.
+                    Com atuação sólida e estratégica em{" "}
+                    <strong className="text-[#fce0d2] font-semibold">Direito de Família, Contratos e Direito do Consumidor</strong>,
+                    a Dra. Rithiane alia profundo conhecimento da lei a uma escuta empática e cuidadosa.
+                    Seu posicionamento é transparente: transformar conflitos complexos em soluções claras, seguras e eficazes,
+                    lutando pelos direitos de cada cliente com combatividade estrita dentro da lei.
                   </p>
                   <p>
-                    Como atestam os mais de 30 clientes satisfeitos com nota máxima no Google, o grande diferencial da Dra. Luana
-                    está no acolhimento, na paciência para esclarecer cada dúvida em linguagem acessível e no tratamento com máxima discrição.
+                    O reconhecimento com <strong className="text-white font-semibold">nota 5,0 no Google com 28 avaliações</strong> comprova
+                    a dedicação diária a cada processo, o cumprimento rigoroso de prazos e o acolhimento acolhedor que faz toda a diferença
+                    nos momentos mais decisivos da vida dos nossos clientes.
                   </p>
                 </div>
 
                 {/* 4 Highlights */}
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="flex items-start gap-3 rounded-xl border border-[#d4af7a]/20 bg-[#161311] p-4">
-                    <Shield size={20} className="text-[#d4af7a] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#d99778]/20 bg-[#171210] p-4">
+                    <Shield size={20} className="text-[#d99778] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Transparência Radical
+                        Verdade & Ética
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#a89b8f]">
-                        Análise realista da viabilidade jurídica, sem falsas promessas.
+                      <p className="mt-1 text-[11px] text-[#aa9a90]">
+                        Análise realista da viabilidade jurídica, atuando com seriedade e retidão.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-[#d4af7a]/20 bg-[#161311] p-4">
-                    <Briefcase size={20} className="text-[#d4af7a] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#d99778]/20 bg-[#171210] p-4">
+                    <Briefcase size={20} className="text-[#d99778] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Atendimento Direto
+                        Atendimento Próximo & Direto
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#a89b8f]">
+                      <p className="mt-1 text-[11px] text-[#aa9a90]">
                         Você conversa e é orientado(a) diretamente pela própria advogada.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-[#d4af7a]/20 bg-[#161311] p-4">
-                    <Lock size={20} className="text-[#d4af7a] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#d99778]/20 bg-[#171210] p-4">
+                    <Lock size={20} className="text-[#d99778] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
                         Sigilo & Discrição
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#a89b8f]">
+                      <p className="mt-1 text-[11px] text-[#aa9a90]">
                         Total reserva e proteção aos dados e informações do seu caso.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-[#d4af7a]/20 bg-[#161311] p-4">
-                    <FileText size={20} className="text-[#d4af7a] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#d99778]/20 bg-[#171210] p-4">
+                    <FileText size={20} className="text-[#d99778] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Acompanhamento Diligente
+                        Cumprimento Rigoroso de Prazos
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#a89b8f]">
-                        Informação constante sobre o andamento e cumprimento de prazos.
+                      <p className="mt-1 text-[11px] text-[#aa9a90]">
+                        Acompanhamento investigativo, diligente e transparente em todas as fases.
                       </p>
                     </div>
                   </div>
@@ -1110,20 +1108,20 @@ export default function Home() {
 
                 <div className="mt-8 flex items-center gap-4">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de falar sobre o meu processo.")}
+                    href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de falar sobre o meu processo.")}
                     target="_blank"
-                    variant="gold"
+                    variant="rosegold"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Falar com a Dra. Luana</span>
+                    <span>Falar com a Dra. Rithiane</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#d8cec3] transition-colors hover:text-[#f5e5cb]"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#dacdc5] transition-colors hover:text-[#fce0d2]"
                   >
                     <InstagramIcon size={15} />
                     <span>{INSTAGRAM_HANDLE}</span>
@@ -1137,75 +1135,75 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 4: DIFERENCIAIS DO ESCRITÓRIO (LIGHT)             */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="border-t border-[#e6ded1] bg-[#f5efe6] text-[#171310] py-20 lg:py-28">
+        <section id="diferenciais" className="border-t border-[#e8ded4] bg-[#f5efe8] text-[#1a1412] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <p className="eyebrow justify-center mb-3">
-                Por que Escolher Nosso Escritório
+                Por que Escolher Morais Ragone Advocacia
               </p>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#171310] sm:text-4xl">
-                O Padrão de Atendimento Reconhecido com Nota Máxima
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#1a1412] sm:text-4xl">
+                O Padrão de Atendimento Reconhecido com Nota Máxima 5,0 ★
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#63574c]">
-                Princípios que orientam cada consulta, parecer e ação jurídica defendida pela Dra. Luana Moreira.
+              <p className="mt-3 text-sm leading-relaxed text-[#6b5c53]">
+                Pilares que fundamentam cada consulta, orientação e defesa conduzida pela Dra. Rithiane Morais Ragone.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#e2d9cd] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#faf4ea] text-[#9e7543] border border-[#d4af7a]/30">
+              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fdf8f4] text-[#b36f52] border border-[#d99778]/30">
                   <Scale size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#171310]">
-                  Especialização em INSS
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1a1412]">
+                  Soluções Claras & Eficazes
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Conhecimento profundo das regras da Reforma, jurisprudência recente e cálculos precisos para conquistar o melhor benefício.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Desmistificamos o juridiquês para entregar caminhos jurídicos diretos, objetivos e verdadeiramente resolutivos.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e2d9cd] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#faf4ea] text-[#9e7543] border border-[#d4af7a]/30">
+              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fdf8f4] text-[#b36f52] border border-[#d99778]/30">
                   <HeartHandshake size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#171310]">
-                  Escuta Atenta e Humana
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1a1412]">
+                  Humanismo & Acolhimento
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Tratamos o seu caso como único. Você recebe esclarecimento 100% didático sobre cada dúvida jurídica.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Tratamos cada cliente com empatia genuína e respeito aos detalhes, oferecendo serenidade nos momentos difíceis.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e2d9cd] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#faf4ea] text-[#9e7543] border border-[#d4af7a]/30">
+              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fdf8f4] text-[#b36f52] border border-[#d99778]/30">
                   <BadgeCheck size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#171310]">
-                  Sede com Fácil Acesso
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1a1412]">
+                  Pontualidade & Prazos
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Localização privilegiada na R. Gov. Valadares em Capelinha, com facilidade de estacionamento e conforto.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Rigor absoluto com prazos judiciais e administrativos, com acompanhamento investigativo constante de cada ato processual.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e2d9cd] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#faf4ea] text-[#9e7543] border border-[#d4af7a]/30">
+              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fdf8f4] text-[#b36f52] border border-[#d99778]/30">
                   <Lock size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#171310]">
-                  Absoluta Discrição
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1a1412]">
+                  Sigilo & Segurança
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Tratamento reservado e ético para assuntos sensíveis de previdência, partilhas de família e disputas patrimoniais.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Tratamento confidencial e resguardado para questões sensíveis de família, patrimônio e litígios contratuais.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de tirar algumas dúvidas sobre meu caso.")}
+                href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de tirar algumas dúvidas sobre meu caso.")}
                 target="_blank"
-                variant="gold"
+                variant="rosegold"
                 size="md"
               >
                 <WhatsAppIcon size={15} />
@@ -1218,7 +1216,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 5,0 ★ (DARK)      */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="border-t border-[#d4af7a]/25 bg-[#0d0b0a] py-20 lg:py-28 text-[#f2ece4]">
+        <section id="depoimentos" className="border-t border-[#d99778]/25 bg-[#0c0a09] py-20 lg:py-28 text-[#f7f3ee]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <div>
@@ -1234,13 +1232,13 @@ export default function Home() {
                       <Star
                         key={i}
                         size={16}
-                        className="fill-[#f5e5cb] text-[#d4af7a]"
+                        className="fill-[#fce0d2] text-[#d99778]"
                       />
                     ))}
                   </div>
                   <span className="text-sm font-bold text-white">5,0 de 5,0</span>
-                  <span className="text-xs text-[#a89b8f]">
-                    · 31 avaliações no Google Meu Negócio
+                  <span className="text-xs text-[#aa9a90]">
+                    · 28 avaliações no Google Meu Negócio
                   </span>
                 </div>
               </div>
@@ -1249,7 +1247,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-[#d4af7a]/40 bg-[#161311] px-4 py-2.5 text-xs font-bold text-[#f5e5cb] transition-colors hover:border-[#f5e5cb] hover:bg-[#25201b]"
+                className="inline-flex items-center gap-2 rounded-lg border border-[#d99778]/40 bg-[#171210] px-4 py-2.5 text-xs font-bold text-[#fce0d2] transition-colors hover:border-[#fce0d2] hover:bg-[#261f1c]"
               >
                 <GoogleIcon size={14} />
                 <span>Ver no Google Maps</span>
@@ -1262,7 +1260,7 @@ export default function Home() {
               {clientReviews.map((review, idx) => (
                 <div
                   key={idx}
-                  className="relative flex flex-col justify-between rounded-2xl border border-[#d4af7a]/25 bg-[#161311] p-6 shadow-md transition-all duration-300 hover:border-[#d4af7a] hover:bg-[#1d1815]"
+                  className="relative flex flex-col justify-between rounded-2xl border border-[#d99778]/25 bg-[#171210] p-6 shadow-md transition-all duration-300 hover:border-[#d99778] hover:bg-[#1f1815]"
                 >
                   <div>
                     {/* Stars */}
@@ -1271,27 +1269,27 @@ export default function Home() {
                         <Star
                           key={i}
                           size={13}
-                          className="fill-[#f5e5cb] text-[#d4af7a]"
+                          className="fill-[#fce0d2] text-[#d99778]"
                         />
                       ))}
                     </div>
 
                     {/* Highlight Quote */}
-                    <p className="mt-3 font-serif text-sm font-bold text-[#f5e5cb] leading-snug">
+                    <p className="mt-3 font-serif text-sm font-bold text-[#fce0d2] leading-snug">
                       &ldquo;{review.highlight}&rdquo;
                     </p>
 
                     {/* Full Review Text */}
-                    <p className="mt-3 text-xs leading-relaxed text-[#d8cec3]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#dacdc5]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
-                  <div className="mt-6 border-t border-[#d4af7a]/15 pt-4">
+                  <div className="mt-6 border-t border-[#d99778]/15 pt-4">
                     <p className="font-serif text-xs font-bold text-white">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#a89b8f]">
+                    <p className="text-[10px] text-[#aa9a90]">
                       {review.badge} · {review.date}
                     </p>
                   </div>
@@ -1299,22 +1297,22 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#d4af7a]/35 bg-[#161311] p-6 text-center sm:p-8">
+            <div className="mt-12 rounded-2xl border border-[#d99778]/35 bg-[#171210] p-6 text-center sm:p-8">
               <h3 className="font-serif text-lg font-bold text-white sm:text-xl">
-                Precisa de auxílio com a sua aposentadoria, pensão ou direito de família?
+                Precisa de orientação jurídica segura em Família, Contratos ou Consumidor?
               </h3>
-              <p className="mt-2 text-xs text-[#a89b8f] max-w-xl mx-auto">
-                Não deixe para depois. Pequenos detalhes em datas ou documentos podem adiantar seu benefício e garantir valores retroativos significativos.
+              <p className="mt-2 text-xs text-[#aa9a90] max-w-xl mx-auto">
+                Não enfrente conflitos sem o respaldo de quem entende a fundo a lei e se dedica com combatividade e humanismo pela sua causa.
               </p>
               <div className="mt-6 flex justify-center">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dra. Luana! Li os depoimentos e gostaria de avaliar meu caso com você.")}
+                  href={getWhatsAppUrl("Olá, Dra. Rithiane! Li as avaliações no site e gostaria de avaliar meu caso com você.")}
                   target="_blank"
-                  variant="gold"
+                  variant="rosegold"
                   size="md"
                 >
                   <WhatsAppIcon size={15} />
-                  <span>Falar com a Dra. Luana Moreira Agora</span>
+                  <span>Falar com a Dra. Rithiane Morais Ragone Agora</span>
                 </GlowingButton>
               </div>
             </div>
@@ -1324,66 +1322,66 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: COMO FUNCIONA O ATENDIMENTO (LIGHT)             */}
         {/* ======================================================== */}
-        <section className="border-t border-[#e6ded1] bg-[#f8f4ed] text-[#171310] py-20 lg:py-24">
+        <section className="border-t border-[#e8ded4] bg-[#fbf9f6] text-[#1a1412] py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <span className="eyebrow justify-center mb-3">
                 Processo Transparente
               </span>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#171310] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#1a1412] sm:text-4xl">
                 Como Funciona o Seu Atendimento
               </h2>
-              <p className="mt-3 text-sm text-[#63574c]">
-                Passo a passo simples, ágil e descomplicado desde o primeiro contato até a solução.
+              <p className="mt-3 text-sm text-[#6b5c53]">
+                Passo a passo simples, ágil e descomplicado desde o primeiro contato até a solução eficaz.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#9e7543]">
+              <div className="rounded-2xl border border-[#e8ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#b36f52]">
                   01
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#171310]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1a1412]">
                   Contato Inicial
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Envie uma mensagem no WhatsApp relatando brevemente sua situação e tire dúvidas preliminares.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Envie uma mensagem no WhatsApp relatando brevemente sua situação e esclareça dúvidas preliminares.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#9e7543]">
+              <div className="rounded-2xl border border-[#e8ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#b36f52]">
                   02
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#171310]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1a1412]">
                   Análise Documental
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Conferimos seu CNIS, carteira de trabalho, laudos médicos ou certidões para mapear todas as possibilidades.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Analisamos contratos, certidões, notificações ou extratos para mapear todas as possibilidades legais.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#9e7543]">
+              <div className="rounded-2xl border border-[#e8ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#b36f52]">
                   03
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#171310]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1a1412]">
                   Estratégia Jurídica
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Apresentamos com clareza o caminho mais seguro e vantajoso (administrativo ou judicial) para o seu caso.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Apresentamos com clareza o caminho mais seguro e vantajoso (extrajudicial ou judicial) para o seu caso.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e4ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d4af7a] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#9e7543]">
+              <div className="rounded-2xl border border-[#e8ded4] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d99778] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#b36f52]">
                   04
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#171310]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1a1412]">
                   Acompanhamento Total
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#63574c]">
-                  Atuação diligente em cada petição, perícia ou audiência, mantendo você informado(a) constantemente.
+                <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
+                  Atuação diligente em cada petição, negociação ou audiência, mantendo você informado(a) constantemente.
                 </p>
               </div>
             </div>
@@ -1393,7 +1391,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: DÚVIDAS FREQUENTES / FAQ (DARK)                 */}
         {/* ======================================================== */}
-        <section id="duvidas" className="border-t border-[#d4af7a]/25 bg-[#120f0d] py-20 lg:py-28 text-[#f2ece4]">
+        <section id="duvidas" className="border-t border-[#d99778]/25 bg-[#120e0d] py-20 lg:py-28 text-[#f7f3ee]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="eyebrow-dark mb-3.5 justify-center">
@@ -1402,7 +1400,7 @@ export default function Home() {
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Perguntas Frequentes
               </h2>
-              <p className="mt-3 text-sm text-[#d8cec3]">
+              <p className="mt-3 text-sm text-[#dacdc5]">
                 Respostas diretas para as dúvidas mais comuns dos nossos clientes.
               </p>
             </div>
@@ -1413,18 +1411,18 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className="overflow-hidden rounded-xl border border-[#d4af7a]/25 bg-[#161311] transition-colors"
+                    className="overflow-hidden rounded-xl border border-[#d99778]/25 bg-[#171210] transition-colors"
                   >
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-white transition-colors hover:text-[#f5e5cb]"
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-white transition-colors hover:text-[#fce0d2]"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#d4af7a]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#d99778]" />
                       ) : (
-                        <ChevronDown size={18} className="shrink-0 text-[#d4af7a]" />
+                        <ChevronDown size={18} className="shrink-0 text-[#d99778]" />
                       )}
                     </button>
 
@@ -1435,7 +1433,7 @@ export default function Home() {
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="border-t border-[#d4af7a]/15 px-5 pt-3 pb-5 text-xs leading-relaxed text-[#d8cec3]"
+                          className="border-t border-[#d99778]/15 px-5 pt-3 pb-5 text-xs leading-relaxed text-[#dacdc5]"
                         >
                           {faq.answer}
                         </motion.div>
@@ -1447,18 +1445,18 @@ export default function Home() {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-xs text-[#a89b8f]">
+              <p className="text-xs text-[#aa9a90]">
                 Sua dúvida não está listada acima?
               </p>
               <div className="mt-3">
                 <a
-                  href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de esclarecer uma dúvida que não vi no site.")}
+                  href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de esclarecer uma dúvida que não vi no site.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#f5e5cb] hover:underline"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#fce0d2] hover:underline"
                 >
                   <WhatsAppIcon size={14} className="text-[#25D366]" />
-                  <span>Pergunte diretamente à Dra. Luana Moreira no WhatsApp</span>
+                  <span>Pergunte diretamente à Dra. Rithiane Morais Ragone no WhatsApp</span>
                   <ArrowRight size={12} />
                 </a>
               </div>
@@ -1469,53 +1467,53 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: LOCALIZAÇÃO, SEDE & CONTATO (LIGHT)            */}
         {/* ======================================================== */}
-        <section id="contato" className="border-t border-[#e6ded1] bg-[#fbf9f6] text-[#171310] py-20 lg:py-28">
+        <section id="contato" className="border-t border-[#e8ded4] bg-[#fcf9f6] text-[#1a1412] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Sede info (LIGHT STYLING) */}
               <div className="lg:col-span-5">
                 <span className="eyebrow mb-3.5">Sede & Atendimento</span>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#171310] sm:text-4xl">
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#1a1412] sm:text-4xl">
                   Estamos Prontos para Ouvir Você
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-[#5c5044]">
-                  Venha tomar um café em nosso escritório em Capelinha ou faça sua consulta digital com todo o sigilo e segurança jurídica.
+                <p className="mt-4 text-sm leading-relaxed text-[#6b5c53]">
+                  Venha nos visitar em nosso escritório no centro de Nanuque ou agende sua consulta digital com todo o sigilo e segurança jurídica.
                 </p>
 
                 <div className="mt-8 space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d4af7a]/35 bg-[#faf4ea] text-[#9e7543]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d99778]/35 bg-[#fdf8f4] text-[#b36f52]">
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#171310] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1a1412] uppercase tracking-wider">
                         Endereço da Sede
                       </p>
-                      <p className="mt-1 text-xs leading-relaxed text-[#5c5044]">
+                      <p className="mt-1 text-xs leading-relaxed text-[#6b5c53]">
                         {ADDRESS_TEXT}
                       </p>
-                      <p className="text-[11px] text-[#8c673b] font-medium mt-0.5">
-                        Local de fácil acesso com facilidade para estacionar por perto.
+                      <p className="text-[11px] text-[#8e4f35] font-medium mt-0.5">
+                        Centro de Nanuque - MG · Atendimento com agendamento prévio.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d4af7a]/35 bg-[#faf4ea] text-[#9e7543]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d99778]/35 bg-[#fdf8f4] text-[#b36f52]">
                       <Phone size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#171310] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1a1412] uppercase tracking-wider">
                         Telefone & WhatsApp
                       </p>
-                      <p className="mt-1 text-xs text-[#5c5044]">
+                      <p className="mt-1 text-xs text-[#6b5c53]">
                         {PHONE_DISPLAY}
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de agendar uma consulta.")}
+                        href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de agendar uma consulta.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-bold text-[#9e7543] hover:underline"
+                        className="text-[11px] font-bold text-[#b36f52] hover:underline"
                       >
                         Clique para enviar mensagem no WhatsApp
                       </a>
@@ -1523,46 +1521,46 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d4af7a]/35 bg-[#faf4ea] text-[#9e7543]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d99778]/35 bg-[#fdf8f4] text-[#b36f52]">
                       <Clock size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#171310] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1a1412] uppercase tracking-wider">
                         Horário de Funcionamento
                       </p>
-                      <p className="mt-1 text-xs text-[#5c5044]">
+                      <p className="mt-1 text-xs text-[#6b5c53]">
                         Segunda a Sexta: 09:00 às 18:00
                       </p>
-                      <p className="text-[11px] text-[#8c673b]">
-                        Atendimento presencial com agendamento prévio.
+                      <p className="text-[11px] text-[#8e4f35]">
+                        Atendimento presencial e online em todo o Brasil.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d4af7a]/35 bg-[#faf4ea] text-[#9e7543]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d99778]/35 bg-[#fdf8f4] text-[#b36f52]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#171310] uppercase tracking-wider">
-                        Redes Sociais & Conteúdo
+                      <p className="text-xs font-bold text-[#1a1412] uppercase tracking-wider">
+                        Redes Sociais & Perfil
                       </p>
                       <div className="mt-1 flex flex-col gap-1 text-xs">
                         <a
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#5c5044] hover:text-[#9e7543]"
+                          className="text-[#6b5c53] hover:text-[#b36f52]"
                         >
                           Instagram: <span className="font-bold">{INSTAGRAM_HANDLE}</span>
                         </a>
                         <a
-                          href={LINKTREE_URL}
+                          href={GOOGLE_SEARCH_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#8c673b] hover:underline"
+                          className="text-[#8e4f35] hover:underline"
                         >
-                          Links úteis: {LINKTREE_URL}
+                          Perfil Google: Morais Ragone Advocacia (5,0 ★)
                         </a>
                       </div>
                     </div>
@@ -1572,73 +1570,73 @@ export default function Home() {
 
               {/* Right Column: Interactive Consultation Card (LIGHT STYLING) */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-[#e4ded4] bg-white p-8 shadow-xl shadow-stone-200/50">
+                <div className="rounded-2xl border border-[#e8ded4] bg-white p-8 shadow-xl shadow-stone-200/50">
                   <div className="flex items-center gap-3">
                     <span className="flex size-2 rounded-full bg-[#25D366]" />
-                    <span className="text-xs font-bold tracking-wider uppercase text-[#9e7543]">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#b36f52]">
                       Canal de Atendimento Direto
                     </span>
                   </div>
 
-                  <h3 className="mt-4 font-serif text-2xl font-bold text-[#171310] sm:text-3xl">
-                    Inicie sua Consulta com a Dra. Luana Moreira
+                  <h3 className="mt-4 font-serif text-2xl font-bold text-[#1a1412] sm:text-3xl">
+                    Inicie sua Consulta com a Dra. Rithiane Morais Ragone
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#5c5044]">
+                  <p className="mt-2 text-xs leading-relaxed text-[#6b5c53]">
                     Selecione o assunto do seu caso para ser direcionado(a) com a mensagem adequada ao WhatsApp oficial do escritório:
                   </p>
 
                   <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de consultar sobre Aposentadoria / INSS.")}
+                      href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de consultar sobre Direito de Família / Divórcio / Pensão.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e4ded4] bg-[#faf7f2] p-4 text-xs font-bold text-[#171310] transition-all hover:border-[#d4af7a] hover:bg-[#faf4ea]"
+                      className="flex items-center justify-between rounded-xl border border-[#e8ded4] bg-[#fcf9f6] p-4 text-xs font-bold text-[#1a1412] transition-all hover:border-[#d99778] hover:bg-[#fdf8f4]"
                     >
-                      <span>Aposentadoria / INSS</span>
-                      <ArrowRight size={14} className="text-[#9e7543]" />
+                      <span>Direito de Família & Divórcio</span>
+                      <ArrowRight size={14} className="text-[#b36f52]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de orientação sobre BPC / LOAS ou Auxílio.")}
+                      href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de orientação sobre Inventário & Partilha de Bens.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e4ded4] bg-[#faf7f2] p-4 text-xs font-bold text-[#171310] transition-all hover:border-[#d4af7a] hover:bg-[#faf4ea]"
+                      className="flex items-center justify-between rounded-xl border border-[#e8ded4] bg-[#fcf9f6] p-4 text-xs font-bold text-[#1a1412] transition-all hover:border-[#d99778] hover:bg-[#fdf8f4]"
                     >
-                      <span>BPC/LOAS ou Auxílio</span>
-                      <ArrowRight size={14} className="text-[#9e7543]" />
+                      <span>Inventário & Herança</span>
+                      <ArrowRight size={14} className="text-[#b36f52]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de orientação sobre Inventário ou Divórcio.")}
+                      href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de orientação sobre Contratos & Negócios Jurídicos.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e4ded4] bg-[#faf7f2] p-4 text-xs font-bold text-[#171310] transition-all hover:border-[#d4af7a] hover:bg-[#faf4ea]"
+                      className="flex items-center justify-between rounded-xl border border-[#e8ded4] bg-[#fcf9f6] p-4 text-xs font-bold text-[#1a1412] transition-all hover:border-[#d99778] hover:bg-[#fdf8f4]"
                     >
-                      <span>Inventário & Família</span>
-                      <ArrowRight size={14} className="text-[#9e7543]" />
+                      <span>Contratos & Negócios</span>
+                      <ArrowRight size={14} className="text-[#b36f52]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Luana! Gostaria de orientação sobre Contratos ou Ação Cível.")}
+                      href={getWhatsAppUrl("Olá, Dra. Rithiane! Gostaria de orientação sobre Direito do Consumidor / Negativação / Indenização.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e4ded4] bg-[#faf7f2] p-4 text-xs font-bold text-[#171310] transition-all hover:border-[#d4af7a] hover:bg-[#faf4ea]"
+                      className="flex items-center justify-between rounded-xl border border-[#e8ded4] bg-[#fcf9f6] p-4 text-xs font-bold text-[#1a1412] transition-all hover:border-[#d99778] hover:bg-[#fdf8f4]"
                     >
-                      <span>Direito Cível & Contratos</span>
-                      <ArrowRight size={14} className="text-[#9e7543]" />
+                      <span>Direito do Consumidor</span>
+                      <ArrowRight size={14} className="text-[#b36f52]" />
                     </a>
                   </div>
 
-                  <div className="mt-8 border-t border-[#e8e0d5] pt-6">
+                  <div className="mt-8 border-t border-[#f0e7dd] pt-6">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Luana Moreira! Gostaria de conversar com você sobre meus direitos.")}
+                      href={getWhatsAppUrl("Olá, Dra. Rithiane Morais Ragone! Gostaria de conversar com você sobre meus direitos.")}
                       target="_blank"
-                      variant="gold"
+                      variant="rosegold"
                       size="lg"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com a Dra. Luana</span>
+                      <span>Falar no WhatsApp com a Dra. Rithiane</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -1650,39 +1648,39 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: FOOTER INSTITUCIONAL (DARK)                    */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#d4af7a]/25 bg-[#0d0b0a] pt-16 pb-12 text-[#a89b8f]">
+        <footer className="border-t border-[#d99778]/25 bg-[#0c0a09] pt-16 pb-12 text-[#aa9a90]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
               {/* Brand Column */}
               <div className="lg:col-span-5">
-                <div className="relative h-14 w-52">
+                <div className="relative py-1">
                   <Image
                     src={LOGO_SRC}
-                    alt="Luana Moreira Advocacia e Consultoria Jurídica"
-                    fill
-                    sizes="220px"
-                    className="object-contain object-left"
+                    alt="Morais Ragone Advocacia e Consultoria Jurídica"
+                    width={260}
+                    height={52}
+                    className="h-10 sm:h-12 w-auto max-w-[240px] sm:max-w-[270px] object-contain object-left"
                   />
                 </div>
-                <p className="mt-4 text-xs leading-relaxed text-[#d8cec3] max-w-md">
-                  ⚖️ Toda causa importa! Há mais de 10 anos comprometida com a defesa incansável dos direitos previdenciários, cíveis e familiares de nossos clientes. Atendimento presencial em Capelinha - MG e online para todo o Brasil.
+                <p className="mt-4 text-xs leading-relaxed text-[#dacdc5] max-w-md">
+                  ⚖️ Morais Ragone Advocacia e Consultoria Jurídica. Transformamos conflitos em soluções jurídicas claras, seguras e eficazes. Atendimento humanizado e resolutivo presencial em Nanuque - MG e online para todo o Brasil.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#d4af7a]/30 bg-[#161311] text-[#f5e5cb] transition-colors hover:border-[#f5e5cb] hover:text-white"
-                    aria-label="Instagram da Dra. Luana Moreira"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#d99778]/30 bg-[#171210] text-[#fce0d2] transition-colors hover:border-[#fce0d2] hover:text-white"
+                    aria-label="Instagram da Dra. Rithiane Morais Ragone"
                   >
                     <InstagramIcon size={16} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Luana Moreira!")}
+                    href={getWhatsAppUrl("Olá, Dra. Rithiane Morais Ragone!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#d4af7a]/30 bg-[#161311] text-[#f5e5cb] transition-colors hover:border-[#f5e5cb] hover:text-white"
-                    aria-label="WhatsApp da Dra. Luana Moreira"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#d99778]/30 bg-[#171210] text-[#fce0d2] transition-colors hover:border-[#fce0d2] hover:text-white"
+                    aria-label="WhatsApp da Dra. Rithiane Morais Ragone"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1690,7 +1688,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#d4af7a]/30 bg-[#161311] text-[#f5e5cb] transition-colors hover:border-[#f5e5cb] hover:text-white"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#d99778]/30 bg-[#171210] text-[#fce0d2] transition-colors hover:border-[#fce0d2] hover:text-white"
                     aria-label="Avaliações do Google"
                   >
                     <GoogleIcon size={16} />
@@ -1711,7 +1709,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="footer-link">
-                      Sobre a Dra. Luana Moreira
+                      Sobre a Dra. Rithiane
                     </a>
                   </li>
                   <li>
@@ -1731,7 +1729,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="footer-link">
-                      Sede em Capelinha - MG
+                      Sede em Nanuque - MG
                     </a>
                   </li>
                 </ul>
@@ -1743,13 +1741,13 @@ export default function Home() {
                   Informações Institucionais & OAB
                 </p>
                 <p className="mt-4 text-[11px] leading-relaxed text-[#8c8075]">
-                  Este site tem finalidade estritamente institucional e informativa, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação de clientela nem substitui consulta jurídica formal.
+                  Este site tem finalidade estritamente institucional e informativa, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
                 </p>
-                <div className="mt-4 rounded-lg border border-[#d4af7a]/20 bg-[#161311] p-3 text-[11px] text-[#d8cec3]">
-                  <p className="font-bold text-[#f5e5cb]">
-                    Luana Moreira Advocacia e Consultoria Jurídica
+                <div className="mt-4 rounded-lg border border-[#d99778]/20 bg-[#171210] p-3 text-[11px] text-[#dacdc5]">
+                  <p className="font-bold text-[#fce0d2]">
+                    Morais Ragone Advocacia e Consultoria Jurídica
                   </p>
-                  <p className="mt-0.5 text-[#a89b8f]">
+                  <p className="mt-0.5 text-[#aa9a90]">
                     {ADDRESS_TEXT}
                   </p>
                 </div>
@@ -1757,12 +1755,12 @@ export default function Home() {
             </div>
 
             {/* Bottom Copyright */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#d4af7a]/15 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
+            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#d99778]/15 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
               <p>
-                © {new Date().getFullYear()} LUANA MOREIRA ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
+                © {new Date().getFullYear()} MORAIS RAGONE ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
               </p>
               <p className="text-[#8c8075]">
-                Capelinha · Minas Gerais · Brasil
+                Nanuque · Minas Gerais · Brasil
               </p>
             </div>
           </div>
@@ -1771,15 +1769,15 @@ export default function Home() {
         {/* FLOATING WHATSAPP CTA BUTTON */}
         <div className="fixed right-5 bottom-5 z-50 flex items-center gap-2">
           <a
-            href={getWhatsAppUrl("Olá, Dra. Luana Moreira! Gostaria de consultar sobre meus direitos.")}
+            href={getWhatsAppUrl("Olá, Dra. Rithiane Morais Ragone! Gostaria de consultar sobre meus direitos.")}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Luana Moreira"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Rithiane Morais Ragone"
             className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/60 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
           >
             <WhatsAppIcon size={19} />
             <span className="hidden sm:inline tracking-wide font-bold">
-              Falar com a Dra. Luana
+              Falar com a Dra. Rithiane
             </span>
           </a>
         </div>

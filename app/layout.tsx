@@ -28,62 +28,61 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0d0b0a",
+  themeColor: "#0c0a09",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.luanamoreira.adv.br"),
+  metadataBase: new URL("https://www.moraisragone.adv.br"),
   title:
-    "Luana Moreira — Advogada Previdenciária | Capelinha - MG · Toda causa importa",
+    "Morais Ragone Advocacia — Dra. Rithiane Morais Ragone | Nanuque - MG · Direito de Família, Contratos e Consumidor",
   description:
-    "Dra. Luana Moreira Advocacia e Consultoria Jurídica em Capelinha - MG. Toda causa importa! Mais de 10 anos garantindo seus direitos em ações previdenciárias (INSS), cíveis e família. Nota Máxima 5,0 ★ com 31 avaliações no Google. Atendimento presencial e online para todo o Brasil.",
+    "Dra. Rithiane Morais Ragone — Morais Ragone Advocacia e Consultoria Jurídica em Nanuque - MG. Transformamos conflitos em soluções jurídicas claras e eficazes em Direito de Família, Contratos e Consumidor. Nota Máxima 5,0 ★ com 28 avaliações no Google. Atendimento presencial e online para todo o Brasil.",
   keywords: [
-    "Luana Moreira Advogada",
-    "Luana Moreira Advogada Previdenciária",
-    "Advogada em Capelinha MG",
-    "Advocacia Capelinha",
-    "Dra Luana Moreira",
-    "Direito Previdenciário Capelinha",
-    "Aposentadoria INSS Capelinha MG",
-    "Aposentadoria Rural Capelinha",
-    "BPC LOAS Capelinha",
-    "Direito de Família Capelinha",
-    "Inventário Capelinha MG",
-    "Advogado Vale do Jequitinhonha",
+    "Morais Ragone Advocacia",
+    "Dra Rithiane Morais Ragone",
+    "Advogada em Nanuque MG",
+    "Advocacia Nanuque",
+    "Direito de Família Nanuque",
+    "Divórcio Nanuque MG",
+    "Inventário Nanuque MG",
+    "Pensão Alimentícia Nanuque",
+    "Direito do Consumidor Nanuque",
+    "Contratos Nanuque",
+    "Advogado Vale do Mucuri",
     "Advogada Minas Gerais",
   ],
-  authors: [{ name: "Luana Moreira Advocacia e Consultoria Jurídica" }],
-  creator: "Luana Moreira Advocacia e Consultoria Jurídica",
-  publisher: "Luana Moreira Advocacia e Consultoria Jurídica",
+  authors: [{ name: "Morais Ragone Advocacia e Consultoria Jurídica" }],
+  creator: "Morais Ragone Advocacia e Consultoria Jurídica",
+  publisher: "Morais Ragone Advocacia e Consultoria Jurídica",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=lm1", sizes: "any" },
-      { url: "/icon-32x32.png?v=lm1", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=lm1", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=lm1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=mr1", sizes: "any" },
+      { url: "/icon-32x32.png?v=mr1", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=mr1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=mr1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=lm1",
-    apple: [{ url: "/apple-icon.png?v=lm1", sizes: "180x180" }],
+    shortcut: "/icon-32x32.png?v=mr1",
+    apple: [{ url: "/apple-icon.png?v=mr1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.luanamoreira.adv.br",
+    url: "https://www.moraisragone.adv.br",
     title:
-      "Luana Moreira — Advogada Previdenciária | Capelinha - MG",
+      "Morais Ragone Advocacia — Dra. Rithiane Morais Ragone | Nanuque - MG",
     description:
-      "Toda causa importa! Mais de 10 anos comprometida a garantir seus direitos em ações previdenciárias, cíveis e família. Nota Máxima 5,0 ★ no Google em Capelinha - MG.",
-    siteName: "Luana Moreira Advocacia e Consultoria Jurídica",
+      "Transformamos conflitos em soluções jurídicas claras e eficazes. Especialistas em Direito de Família, Contratos e Consumidor. Nota Máxima 5,0 ★ no Google em Nanuque - MG.",
+    siteName: "Morais Ragone Advocacia e Consultoria Jurídica",
     images: [
       {
         url: "/logo.png",
-        width: 886,
-        height: 471,
-        alt: "Luana Moreira Advocacia e Consultoria Jurídica - Logotipo Oficial",
+        width: 986,
+        height: 208,
+        alt: "Morais Ragone Advocacia e Consultoria Jurídica - Logotipo Oficial",
       },
     ],
   },
@@ -97,34 +96,34 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Luana Moreira Advocacia e Consultoria Jurídica",
-    alternateName: "Luana Moreira — Advogada Previdenciária",
-    telephone: "+55-33-99113-6870",
-    url: "https://www.luanamoreira.adv.br",
-    image: "https://www.luanamoreira.adv.br/logo.png",
+    name: "Morais Ragone Advocacia e Consultoria Jurídica",
+    alternateName: "Dra. Rithiane Morais Ragone — Advogada em Nanuque",
+    telephone: "+55-31-99481-8783",
+    url: "https://www.moraisragone.adv.br",
+    image: "https://www.moraisragone.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Gov. Valadares, 1429 - Maria Lúcia",
-      addressLocality: "Capelinha",
+      streetAddress: "Av. Santos Dumont, 194 - Sl 4 - Centro",
+      addressLocality: "Nanuque",
       addressRegion: "MG",
-      postalCode: "39680-000",
+      postalCode: "39860-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "31",
+      reviewCount: "28",
     },
     areaServed: [
-      "Capelinha",
-      "Minas Novas",
-      "Água Boa",
-      "Aricanduva",
-      "Turmalina",
-      "Itamarandiba",
-      "Diamantina",
-      "Vale do Jequitinhonha",
+      "Nanuque",
+      "Serra dos Aimorés",
+      "Carlos Chagas",
+      "Teófilo Otoni",
+      "Mucuri",
+      "Posto da Mata",
+      "Montanha",
+      "Vale do Mucuri",
       "Minas Gerais",
       "Brasil",
     ],
@@ -143,30 +142,33 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://wa.me/5533991136870",
-      "https://www.instagram.com/luanamoreiraadv/",
-      "https://linktr.ee/draluanadvogada",
-      "https://www.google.com/search?q=Luana+Moreira+%E2%80%94+Advogada+Previdenci%C3%A1ria%0ACapelinha+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5531994818783",
+      "https://www.instagram.com/rithianemoraisragone/",
+      "https://www.google.com/search?q=Morais+Ragone+Advocacia%0ANanuque+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
   return (
     <html
       lang="pt-BR"
+      suppressHydrationWarning
       className={`${bodyFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=lm1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=lm1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=lm1" />
-        <link rel="shortcut icon" href="/icon-32x32.png?v=lm1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=lm1" />
+        <link rel="icon" href="/favicon.ico?v=mr1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=mr1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=mr1" />
+        <link rel="shortcut icon" href="/icon-32x32.png?v=mr1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=mr1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0d0b0a] font-sans text-[#f2ece4] antialiased selection:bg-[#d4af7a] selection:text-[#0d0b0a]">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen overflow-x-clip bg-[#0c0a09] font-sans text-[#f7f3ee] antialiased selection:bg-[#d99778] selection:text-[#0c0a09]"
+      >
         {children}
       </body>
     </html>

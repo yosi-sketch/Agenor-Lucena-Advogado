@@ -34,28 +34,37 @@ function createIco(pngBuffers, outputPath) {
 }
 
 async function run() {
-  const logoUpload = 'C:/Users/matheus/.gemini/antigravity/brain/bb6bc9c1-58e6-4e1f-a407-43f698982d32/.user_uploaded/media_1792925315616_e502eb3d.png';
-  const photoDesk = 'C:/Users/matheus/.gemini/antigravity/brain/bb6bc9c1-58e6-4e1f-a407-43f698982d32/.user_uploaded/media_1792925422549_2d78aa31.jpg';
-  const photoPortrait = 'C:/Users/matheus/.gemini/antigravity/brain/bb6bc9c1-58e6-4e1f-a407-43f698982d32/.user_uploaded/media_1792925561875_9e442362.jpg';
+  const uploadDir = 'C:/Users/matheus/.gemini/antigravity/brain/57467f1a-7108-4fe5-ad6a-f95aa8e59f3e/.user_uploaded';
+  const logoUpload = path.join(uploadDir, 'media_1792944981982_4b4c419e.png');
+  const photoHero = path.join(uploadDir, 'media_1792948913146_58c11e36.jpg');
+  const photoAbout = path.join(uploadDir, 'media_1792949261718_ea8beb50.jpg');
 
   if (!fs.existsSync('public')) {
     fs.mkdirSync('public', { recursive: true });
+  }
+  if (!fs.existsSync('app')) {
+    fs.mkdirSync('app', { recursive: true });
   }
 
   console.log('1. Processing Full Brand Logo...');
   const trimmed = await sharp(logoUpload).trim().png({ quality: 100 }).toBuffer();
   fs.writeFileSync('public/logo.png', trimmed);
-  fs.writeFileSync('public/logo-luana-moreira.png', trimmed);
-  console.log('Full logo saved.');
+  fs.writeFileSync('public/logo-morais-ragone.png', trimmed);
+  console.log('Full logo saved (public/logo.png).');
 
-  console.log('2. Extracting Monogram LM Emblem...');
-  // minX = 285, maxX = 753, minY = 15, maxY = 360
-  const emblemCrop = await sharp(logoUpload)
-    .extract({ left: 285, top: 15, width: 468, height: 346 })
+  console.log('2. Extracting Monogram MR Emblem...');
+  // Monogram bounding box: left: 30, top: 70, width: 290, height: 195
+  const rawCrop = await sharp(logoUpload)
+    .extract({ left: 30, top: 70, width: 290, height: 195 })
+    .png()
+    .toBuffer();
+    
+  const emblemCrop = await sharp(rawCrop)
     .trim()
+    .png()
     .toBuffer({ resolveWithObject: true });
     
-  console.log('Emblem trimmed:', emblemCrop.info.width, 'x', emblemCrop.info.height);
+  console.log('Monogram MR trimmed size:', emblemCrop.info.width, 'x', emblemCrop.info.height);
   
   // Transparent 512x512 emblem
   const emblemTrans = await sharp({
@@ -67,32 +76,34 @@ async function run() {
     }
   })
     .composite([{
-      input: await sharp(emblemCrop.data).resize(440, 440, { fit: 'contain' }).toBuffer(),
+      input: await sharp(emblemCrop.data).resize(440, 290, { fit: 'inside' }).toBuffer(),
       gravity: 'center'
     }])
     .png()
     .toBuffer();
   fs.writeFileSync('public/logo-emblem.png', emblemTrans);
 
-  // Badge icon for Browser Favicon & Apple Icon with dark obsidian & gold border
+  // Badge icon for Browser Favicon & Apple Icon with deep luxury obsidian & rose gold metallic border
   const badgeSvg = Buffer.from(`
     <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#1c1712" />
-          <stop offset="100%" stop-color="#0c0a08" />
-        </linearGradient>
+        <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+          <stop offset="0%" stop-color="#221a17" />
+          <stop offset="65%" stop-color="#120e0d" />
+          <stop offset="100%" stop-color="#0a0807" />
+        </radialGradient>
         <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#e2c299" />
-          <stop offset="50%" stop-color="#b89269" />
-          <stop offset="100%" stop-color="#5a402a" />
+          <stop offset="0%" stop-color="#fcc8ad" />
+          <stop offset="40%" stop-color="#e0a689" />
+          <stop offset="80%" stop-color="#c58265" />
+          <stop offset="100%" stop-color="#794f39" />
         </linearGradient>
       </defs>
-      <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="14" />
+      <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
     </svg>
   `);
   
-  const emblemInner = await sharp(emblemCrop.data).resize(360, 360, { fit: 'contain' }).png().toBuffer();
+  const emblemInner = await sharp(emblemCrop.data).resize(360, 240, { fit: 'inside' }).png().toBuffer();
   
   const appIconBuffer = await sharp(badgeSvg)
     .composite([{
@@ -120,15 +131,18 @@ async function run() {
   ];
   createIco(icoBuffers, 'public/favicon.ico');
   createIco(icoBuffers, 'app/favicon.ico');
+  console.log('Favicons (.ico, .png, apple-icon) created in public/ and app/.');
 
   console.log('3. Processing Photos...');
-  await sharp(photoDesk).jpeg({ quality: 95 }).toFile('public/hero.jpg');
-  await sharp(photoDesk).jpeg({ quality: 95 }).toFile('public/dra-luana-escritorio.jpg');
+  await sharp(photoHero).jpeg({ quality: 94 }).toFile('public/hero.jpg');
+  await sharp(photoHero).jpeg({ quality: 94 }).toFile('public/dra-rithiane-hero.jpg');
+  console.log('Hero photo saved (public/hero.jpg, public/dra-rithiane-hero.jpg)');
   
-  await sharp(photoPortrait).jpeg({ quality: 95 }).toFile('public/about.jpg');
-  await sharp(photoPortrait).jpeg({ quality: 95 }).toFile('public/dra-luana-moreira.jpg');
+  await sharp(photoAbout).jpeg({ quality: 94 }).toFile('public/about.jpg');
+  await sharp(photoAbout).jpeg({ quality: 94 }).toFile('public/dra-rithiane-about.jpg');
+  console.log('About photo saved (public/about.jpg, public/dra-rithiane-about.jpg)');
 
-  console.log('All brand assets, icons and photos generated successfully!');
+  console.log('SUCCESS: All Morais Ragone Advocacia brand assets, icons and photos generated!');
 }
 
 run().catch(console.error);

@@ -4,40 +4,47 @@
   color-scheme: dark light;
   
   /* Brand Luxury Warm Obsidian (Deep Prestige Background & Surfaces) */
-  --brand-obsidian-midnight: #0d0b0a;
-  --brand-obsidian-dark: #120f0d;
-  --brand-obsidian-surface: #161311;
-  --brand-obsidian-card: #1c1815;
-  --brand-obsidian-elevated: #25201b;
-  --brand-obsidian-muted: #3a322b;
+  --brand-obsidian-midnight: #0c0a09;
+  --brand-obsidian-dark: #120e0d;
+  --brand-obsidian-surface: #171210;
+  --brand-obsidian-card: #1d1714;
+  --brand-obsidian-elevated: #261f1c;
+  --brand-obsidian-muted: #3a2e28;
   
-  /* Brand Champagne Gold & Metallic Bronze (Directly extracted from LM Monogram & Crest) */
-  --brand-gold: #d4af7a;
-  --brand-gold-bright: #f5e5cb;
-  --brand-gold-light: #e8ceaa;
-  --brand-gold-pale: #faf4ea;
-  --brand-gold-dark: #9e7543;
-  --brand-gold-deep: #684824;
-  --brand-gold-shadow: #38240f;
-  
-  /* Accent Warm Vermilion / Ruby (Honoring Dra. Luana's iconic presence & "Toda causa importa") */
-  --brand-ruby: #b91c1c;
-  --brand-ruby-dark: #881313;
-  --brand-ruby-glow: rgba(185, 28, 28, 0.35);
+  /* Brand Rose Gold Metallic & Bronze (Directly extracted from Morais Ragone Monogram MR & Logo) */
+  --brand-gold: #d99778;
+  --brand-gold-bright: #fce0d2;
+  --brand-gold-light: #f3c2a9;
+  --brand-gold-pale: #fdf8f4;
+  --brand-gold-dark: #b36f52;
+  --brand-gold-deep: #794f39;
+  --brand-gold-shadow: #4d2f20;
 
-  /* Light Editorial Cream / Sand for balanced contrast */
-  --brand-cream-bg: #fbf9f6;
-  --brand-cream-alt: #f4eee5;
+  /* Rose Gold aliases */
+  --brand-rosegold: #d99778;
+  --brand-rosegold-bright: #fce0d2;
+  --brand-rosegold-light: #f3c2a9;
+  --brand-rosegold-dark: #b36f52;
+  --brand-rosegold-deep: #794f39;
+  
+  /* Accent Warm Ruby / Crimson (Inspired by Dra. Rithiane's iconic velvet armchair presence) */
+  --brand-ruby: #9f1d24;
+  --brand-ruby-dark: #731318;
+  --brand-ruby-glow: rgba(159, 29, 36, 0.35);
+
+  /* Light Editorial Cashmere Cream / Sand for balanced contrast */
+  --brand-cream-bg: #fcf9f6;
+  --brand-cream-alt: #f5efe8;
   --brand-cream-surface: #ffffff;
-  --brand-cream-border: #e6ded1;
-  --brand-cream-ink: #171310;
-  --brand-cream-muted: #63574c;
+  --brand-cream-border: #e8ded4;
+  --brand-cream-ink: #1a1412;
+  --brand-cream-muted: #6b5c53;
   
   /* Borders & Accents */
-  --brand-border-gold: rgba(212, 175, 122, 0.28);
-  --brand-border-gold-subtle: rgba(212, 175, 122, 0.16);
-  --brand-border-gold-strong: rgba(245, 229, 203, 0.65);
-  --brand-border-obsidian: rgba(58, 50, 43, 0.45);
+  --brand-border-gold: rgba(217, 151, 120, 0.3);
+  --brand-border-gold-subtle: rgba(217, 151, 120, 0.18);
+  --brand-border-gold-strong: rgba(252, 224, 210, 0.7);
+  --brand-border-obsidian: rgba(58, 46, 40, 0.5);
 }
 
 @theme inline {
@@ -45,25 +52,25 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-brand-midnight: #0d0b0a;
-  --color-brand-obsidian: #120f0d;
-  --color-brand-surface: #161311;
-  --color-brand-card: #1c1815;
-  --color-brand-elevated: #25201b;
+  --color-brand-midnight: #0c0a09;
+  --color-brand-obsidian: #120e0d;
+  --color-brand-surface: #171210;
+  --color-brand-card: #1d1714;
+  --color-brand-elevated: #261f1c;
   
-  --color-brand-gold: #d4af7a;
-  --color-brand-gold-bright: #f5e5cb;
-  --color-brand-gold-light: #e8ceaa;
-  --color-brand-gold-dark: #9e7543;
-  --color-brand-ruby: #b91c1c;
+  --color-brand-gold: #d99778;
+  --color-brand-gold-bright: #fce0d2;
+  --color-brand-gold-light: #f3c2a9;
+  --color-brand-gold-dark: #b36f52;
+  --color-brand-ruby: #9f1d24;
   
-  --color-brand-cream-bg: #fbf9f6;
-  --color-brand-cream-alt: #f4eee5;
+  --color-brand-cream-bg: #fcf9f6;
+  --color-brand-cream-alt: #f5efe8;
   --color-brand-cream-surface: #ffffff;
   
-  --shadow-gold: 0 10px 28px -4px rgba(212, 175, 122, 0.3);
-  --shadow-gold-lg: 0 16px 38px -6px rgba(212, 175, 122, 0.42);
-  --shadow-obsidian-card: 0 20px 45px -10px rgba(5, 4, 3, 0.85);
+  --shadow-gold: 0 10px 28px -4px rgba(217, 151, 120, 0.3);
+  --shadow-gold-lg: 0 16px 38px -6px rgba(217, 151, 120, 0.42);
+  --shadow-obsidian-card: 0 20px 45px -10px rgba(8, 6, 5, 0.88);
 }
 
 html {
@@ -72,15 +79,15 @@ html {
 }
 
 body {
-  background: #0d0b0a;
-  color: #f2ece4;
+  background: #0c0a09;
+  color: #f7f3ee;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #f5e5cb;
+  caret-color: #fce0d2;
 }
 
 ::selection {
-  background: #d4af7a;
-  color: #0d0b0a;
+  background: #d99778;
+  color: #0c0a09;
 }
 
 .font-cinzel {
@@ -94,9 +101,9 @@ body {
   font-size: 0.68rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #9e7543;
+  color: #b36f52;
 }
 
 .eyebrow-dark {
@@ -106,9 +113,9 @@ body {
   font-size: 0.68rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #f5e5cb;
+  color: #fce0d2;
 }
 
 .eyebrow::before,
@@ -116,17 +123,17 @@ body {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: #d4af7a;
+  background: #d99778;
   content: "";
 }
 
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #5c5044;
+  color: #635248;
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 180ms ease;
 }
@@ -137,7 +144,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #d4af7a;
+  background: #d99778;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -145,7 +152,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #d4af7a;
+  color: #d99778;
 }
 
 .nav-link:hover::after {
@@ -155,10 +162,10 @@ body {
 .nav-link-dark {
   position: relative;
   padding-block: 0.5rem;
-  color: #d8cec3;
+  color: #dacdc5;
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 180ms ease;
 }
@@ -169,7 +176,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #f5e5cb;
+  background: #fce0d2;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -177,7 +184,7 @@ body {
 }
 
 .nav-link-dark:hover {
-  color: #f5e5cb;
+  color: #fce0d2;
 }
 
 .nav-link-dark:hover::after {
@@ -189,7 +196,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #f5e5cb;
+  color: #fce0d2;
 }
 
 ::-webkit-scrollbar {
@@ -197,17 +204,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d0b0a;
+  background: #0c0a09;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0d0b0a;
+  border: 2px solid #0c0a09;
   border-radius: 999px;
-  background: #1c1815;
+  background: #1d1714;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af7a;
+  background: #d99778;
 }
 
 @media (prefers-reduced-motion: reduce) {

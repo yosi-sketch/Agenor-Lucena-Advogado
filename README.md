@@ -1,16 +1,16 @@
-# LUANA MOREIRA ADVOCACIA E CONSULTORIA JURÍDICA
-## Advocacia Previdenciária · Família & Sucessões · Cível · Capelinha - MG & Atendimento Nacional
+# MORAIS RAGONE ADVOCACIA E CONSULTORIA JURÍDICA
+## Direito de Família · Contratos & Negócios · Consumidor · Nanuque - MG & Atendimento Nacional
 
-Site institucional e landing page responsiva de altíssimo padrão da **Dra. Luana Moreira**, advogada com mais de 10 anos de experiência especializada em Direito Previdenciário (INSS), Direito de Família & Sucessões e Direito Cível, com nota máxima de 5,0 estrelas e 31 avaliações no Google Meu Negócio em Capelinha - MG.
+Site institucional e landing page responsiva de altíssimo padrão da **Morais Ragone Advocacia e Consultoria Jurídica**, liderada pela **Dra. Rithiane Morais Ragone**, advogada com capacidade técnica reconhecida, postura ética irretocável e atendimento humanizado. Com nota máxima 5,0 ★ e 28 avaliações reais no Google Meu Negócio em Nanuque - MG e Vale do Mucuri.
 
 ### Destaques do Projeto
-- **Identidade Visual Sofisticada:** Paleta extraída diretamente do novo logotipo em ouro champagne (`#d4af7a`, `#f5e5cb`, `#9e7543`), fundos em obsidian luxuoso (`#0d0b0a`) e seções em linho/marfim editorial (`#fbf9f6`).
-- **Tipografia Nobre:** Combinação harmônica entre as fontes `Cinzel` (monumental romana), `Playfair Display` (serifada editorial) e `Plus Jakarta Sans` (leitura cristalina).
-- **Prova Social no Google Meu Negócio:** 5,0 estrelas com 31 avaliações reais de clientes satisfeitos em Capelinha, Vale do Jequitinhonha e em todo o Brasil.
-- **Contato Imediato:** WhatsApp (33) 99113-6870 com links parametrizados por assunto e botão flutuante.
-- **Atendimento Presencial e Online:** Sede na R. Gov. Valadares, 1429 - Maria Lúcia, Capelinha - MG, 39680-000, com suporte digital seguro para todo o território nacional.
-- **Instagram Oficial:** [@luanamoreiraadv](https://www.instagram.com/luanamoreiraadv/).
-- **Conformidade OAB:** Estruturado em estrita conformidade com o Código de Ética e Disciplina da OAB e o Provimento nº 205/2021.
+- **Identidade Visual Sofisticada:** Paleta extraída diretamente do logotipo oficial em ouro rosé e bronze metálico nobre (`#d99778`, `#fce0d2`, `#b36f52`, `#794f39`), fundos em obsidiana luxuosa e espresso noturno (`#0c0a09`, `#120e0d`, `#171210`) e seções em marfim cashmere editorial (`#fcf9f6`, `#f5efe8`).
+- **Tipografia Alinhada à Marca:** Combinação harmônica entre as fontes `Cinzel` (romana clássica), `Playfair Display` (serifada editorial sofisticada) e `Plus Jakarta Sans` (leitura cristalina e clean).
+- **Prova Social no Google Meu Negócio:** 5,0 estrelas com 28 avaliações autênticas de clientes satisfeitos em Nanuque e todo o Brasil.
+- **Contato Imediato:** WhatsApp (31) 99481-8783 com links parametrizados por assunto e botão flutuante ativo.
+- **Atendimento Presencial e Online:** Sede física na Av. Santos Dumont, 194 - Sl 4 - Centro, Nanuque - MG, 39860-000, com atendimento remoto seguro para todo o território nacional.
+- **Instagram Oficial:** [@rithianemoraisragone](https://www.instagram.com/rithianemoraisragone/).
+- **Conformidade OAB:** Estruturado em estrita conformidade com o Código de Ética e Disciplina da OAB e o Provimento nº 205/2021 do CFOAB.
 
 ### Como Executar
 ```bash
