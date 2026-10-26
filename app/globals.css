@@ -3,48 +3,47 @@
 :root {
   color-scheme: dark light;
   
-  /* Brand Luxury Warm Obsidian (Deep Prestige Background & Surfaces) */
-  --brand-obsidian-midnight: #0c0a09;
-  --brand-obsidian-dark: #120e0d;
-  --brand-obsidian-surface: #171210;
-  --brand-obsidian-card: #1d1714;
-  --brand-obsidian-elevated: #261f1c;
-  --brand-obsidian-muted: #3a2e28;
+  /* Brand Luxury Midnight Obsidian & Liquid Slate (Deep Prestige Background & Surfaces) */
+  --brand-midnight: #07090e;
+  --brand-slate-dark: #0c0f17;
+  --brand-slate-surface: #111622;
+  --brand-slate-card: #161d2c;
+  --brand-slate-elevated: #1e2738;
+  --brand-slate-muted: #334155;
   
-  /* Brand Rose Gold Metallic & Bronze (Directly extracted from Morais Ragone Monogram MR & Logo) */
-  --brand-gold: #d99778;
-  --brand-gold-bright: #fce0d2;
-  --brand-gold-light: #f3c2a9;
-  --brand-gold-pale: #fdf8f4;
-  --brand-gold-dark: #b36f52;
-  --brand-gold-deep: #794f39;
-  --brand-gold-shadow: #4d2f20;
+  /* Brand Platinum & Metallic Chrome (Directly extracted from Alves e Fragoso AF Monogram & Logo) */
+  --brand-silver-highlight: #ffffff;
+  --brand-silver-bright: #f8fafc;
+  --brand-silver-light: #e2e8f0;
+  --brand-silver: #cbd5e1;
+  --brand-silver-dark: #94a3b8;
+  --brand-silver-deep: #64748b;
+  --brand-silver-shadow: #334155;
 
-  /* Rose Gold aliases */
-  --brand-rosegold: #d99778;
-  --brand-rosegold-bright: #fce0d2;
-  --brand-rosegold-light: #f3c2a9;
-  --brand-rosegold-dark: #b36f52;
-  --brand-rosegold-deep: #794f39;
-  
-  /* Accent Warm Ruby / Crimson (Inspired by Dra. Rithiane's iconic velvet armchair presence) */
-  --brand-ruby: #9f1d24;
-  --brand-ruby-dark: #731318;
-  --brand-ruby-glow: rgba(159, 29, 36, 0.35);
+  /* Aliases for compatibility */
+  --brand-gold: #cbd5e1;
+  --brand-gold-bright: #ffffff;
+  --brand-gold-light: #e2e8f0;
+  --brand-gold-dark: #94a3b8;
 
-  /* Light Editorial Cashmere Cream / Sand for balanced contrast */
-  --brand-cream-bg: #fcf9f6;
-  --brand-cream-alt: #f5efe8;
+  /* Subtle Warm Titanium / Champagne Accent for Real Estate Prestige */
+  --brand-titanium: #c5a059;
+  --brand-titanium-bright: #e8d5ab;
+  --brand-titanium-dark: #937233;
+
+  /* Light Editorial Slate / Pure White for balanced sections */
+  --brand-cream-bg: #f8fafc;
+  --brand-cream-alt: #f1f5f9;
   --brand-cream-surface: #ffffff;
-  --brand-cream-border: #e8ded4;
-  --brand-cream-ink: #1a1412;
-  --brand-cream-muted: #6b5c53;
+  --brand-cream-border: #e2e8f0;
+  --brand-cream-ink: #0f172a;
+  --brand-cream-muted: #475569;
   
   /* Borders & Accents */
-  --brand-border-gold: rgba(217, 151, 120, 0.3);
-  --brand-border-gold-subtle: rgba(217, 151, 120, 0.18);
-  --brand-border-gold-strong: rgba(252, 224, 210, 0.7);
-  --brand-border-obsidian: rgba(58, 46, 40, 0.5);
+  --brand-border-silver: rgba(226, 232, 240, 0.28);
+  --brand-border-silver-subtle: rgba(203, 213, 225, 0.18);
+  --brand-border-silver-strong: rgba(255, 255, 255, 0.75);
+  --brand-border-slate: rgba(51, 65, 85, 0.45);
 }
 
 @theme inline {
@@ -52,25 +51,25 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-brand-midnight: #0c0a09;
-  --color-brand-obsidian: #120e0d;
-  --color-brand-surface: #171210;
-  --color-brand-card: #1d1714;
-  --color-brand-elevated: #261f1c;
+  --color-brand-midnight: #07090e;
+  --color-brand-obsidian: #0c0f17;
+  --color-brand-surface: #111622;
+  --color-brand-card: #161d2c;
+  --color-brand-elevated: #1e2738;
   
-  --color-brand-gold: #d99778;
-  --color-brand-gold-bright: #fce0d2;
-  --color-brand-gold-light: #f3c2a9;
-  --color-brand-gold-dark: #b36f52;
-  --color-brand-ruby: #9f1d24;
+  --color-brand-silver: #cbd5e1;
+  --color-brand-silver-bright: #ffffff;
+  --color-brand-silver-light: #e2e8f0;
+  --color-brand-silver-dark: #94a3b8;
+  --color-brand-titanium: #c5a059;
   
-  --color-brand-cream-bg: #fcf9f6;
-  --color-brand-cream-alt: #f5efe8;
+  --color-brand-cream-bg: #f8fafc;
+  --color-brand-cream-alt: #f1f5f9;
   --color-brand-cream-surface: #ffffff;
   
-  --shadow-gold: 0 10px 28px -4px rgba(217, 151, 120, 0.3);
-  --shadow-gold-lg: 0 16px 38px -6px rgba(217, 151, 120, 0.42);
-  --shadow-obsidian-card: 0 20px 45px -10px rgba(8, 6, 5, 0.88);
+  --shadow-silver: 0 10px 28px -4px rgba(226, 232, 240, 0.25);
+  --shadow-silver-lg: 0 16px 38px -6px rgba(255, 255, 255, 0.35);
+  --shadow-slate-card: 0 20px 45px -10px rgba(5, 7, 12, 0.88);
 }
 
 html {
@@ -79,15 +78,15 @@ html {
 }
 
 body {
-  background: #0c0a09;
-  color: #f7f3ee;
+  background: #07090e;
+  color: #f8fafc;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #fce0d2;
+  caret-color: #ffffff;
 }
 
 ::selection {
-  background: #d99778;
-  color: #0c0a09;
+  background: #cbd5e1;
+  color: #07090e;
 }
 
 .font-cinzel {
@@ -103,7 +102,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #b36f52;
+  color: #64748b;
 }
 
 .eyebrow-dark {
@@ -115,7 +114,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #fce0d2;
+  color: #e2e8f0;
 }
 
 .eyebrow::before,
@@ -123,14 +122,14 @@ body {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: #d99778;
+  background: linear-gradient(90deg, #94a3b8, #cbd5e1);
   content: "";
 }
 
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #635248;
+  color: #475569;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -144,7 +143,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #d99778;
+  background: #0f172a;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -152,7 +151,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #d99778;
+  color: #0f172a;
 }
 
 .nav-link:hover::after {
@@ -162,7 +161,7 @@ body {
 .nav-link-dark {
   position: relative;
   padding-block: 0.5rem;
-  color: #dacdc5;
+  color: #cbd5e1;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -176,7 +175,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #fce0d2;
+  background: #ffffff;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -184,7 +183,7 @@ body {
 }
 
 .nav-link-dark:hover {
-  color: #fce0d2;
+  color: #ffffff;
 }
 
 .nav-link-dark:hover::after {
@@ -196,7 +195,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #fce0d2;
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -204,17 +203,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0c0a09;
+  background: #07090e;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0c0a09;
+  border: 2px solid #07090e;
   border-radius: 999px;
-  background: #1d1714;
+  background: #161d2c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d99778;
+  background: #475569;
 }
 
 @media (prefers-reduced-motion: reduce) {
