@@ -26,26 +26,28 @@ import {
   ChevronUp,
   ExternalLink,
   Lock,
-  Home as HomeIcon,
   Building2,
-  ScrollText,
+  UserCheck,
+  Users,
+  Heart,
   Landmark,
-  FileCheck,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533998277799";
-const PHONE_DISPLAY = "(33) 99827-7799";
-const EMAIL_CONTACT = "contato@fabriciafragoso.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/fabriciafragoso/";
-const INSTAGRAM_HANDLE = "@fabriciafragoso";
+const WHATSAPP_NUMBER = "5535998098019";
+const PHONE_DISPLAY = "(35) 99809-8019";
+const EMAIL_CONTACT = "contato@yanrezende.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/yanrezende.adv/";
+const INSTAGRAM_HANDLE = "@yanrezende.adv";
+const LINKTREE_URL = "https://linktr.ee/yanrezende.adv";
 
 const ADDRESS_TEXT =
-  "Galeria Ebal Franco - R. Morais de Carvalho, 653 - Sl 03 - Centro, Resplendor - MG, 35230-000";
+  "Galeria Pan América - R. Conselheiro Mayrink, n° 217 - Sala 6 (1ª sala à direita) - Centro, Caxambu - MG, 37440-000";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Fabr%C3%ADcia+Fragoso+Advocacia%0AResplendor+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Yan+Rezende+%E2%80%94+Advocacia+e+Consultoria+Jur%C3%ADdica%0ACaxambu+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
-const LOGO_SRC = "/logo.png";
+const LOGO_SRC = "/logo-white.png";
+const LOGO_ORIGINAL_SRC = "/logo.png";
 const LOGO_EMBLEM_SRC = "/logo-emblem.png";
 const FOTO_HERO_SRC = "/hero.jpg";
 const FOTO_ABOUT_SRC = "/about.jpg";
@@ -55,7 +57,7 @@ function getWhatsAppUrl(
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Fabrícia Fragoso! Gostaria de uma orientação jurídica sobre regularização de imóvel / meu caso.";
+    "Olá, Dr. Yan Rezende! Gostaria de uma orientação jurídica sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -166,172 +168,151 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "regularizacao-de-imoveis",
-    title: "Regularização de Imóveis & Escrituras",
-    category: "Cartório de Imóveis · Prefeitura · Receita Federal (CND) · Habite-se",
-    icon: Building2,
-    tag: "Regularização Fundiária · Matrícula Definitiva · Sem Burocracia",
-    summary:
-      "Transforme contratos de gaveta ou posses em escritura pública definitiva registrada. Atuação completa e ágil perante Cartórios, Prefeituras e Receita Federal para valorizar e proteger seu patrimônio.",
-    details:
-      "Um imóvel sem registro ou com pendências documentais perde até 40% de seu valor de mercado, não pode ser financiado nem transmitido com segurança jurídica a herdeiros. A equipe de Fabrícia Fragoso Advocacia atua com metodologia técnica avançada para desembaraçar documentações pendentes, unificar ou desmembrar matrículas, emitir certidões negativas de débitos (CND de obra) e habite-se, garantindo a matrícula definitiva em seu nome.",
-    topics: [
-      "Regularização de imóveis urbanos e rurais sem escritura ou com pendências documentais históricas",
-      "Averbação de construções residenciais e comerciais junto à Prefeitura e Cartório de Registro de Imóveis",
-      "Emissão de CND (Certidão Negativa de Débitos) de obra junto à Receita Federal (SERO / DCTFWeb)",
-      "Desdobro, desmembramento e unificação de lotes e áreas territoriais",
-      "Regularização fundiária urbana (REURB) de interesse social ou específico",
-      "Retificação amigável e judicial de área, confrontações e averbações de medidas",
-    ],
-    whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de consultar sobre a regularização do meu imóvel e obtenção de escritura definitiva.",
-  },
-  {
-    id: "usucapiao-extrajudicial-judicial",
-    title: "Usucapião em Cartório & Judicial",
-    category: "Posse Mansa e Pacífica · Propriedade Plena · Agilidade em Cartório",
-    icon: HomeIcon,
-    tag: "Usucapião Extrajudicial · Urbano & Rural · Registro Definitivo",
-    summary:
-      "Conquiste a propriedade definitiva do seu imóvel através da usucapião. Procedimento rápido realizado diretamente no Cartório de Registro de Imóveis ou pela via judicial com máxima solidez técnica.",
-    details:
-      "Quem detém a posse contínua e sem oposição de um imóvel tem o direito legal de convertê-la em propriedade formal e definitiva por meio da usucapião. Realizamos o levantamento minucioso do tempo de posse, documentação histórica, confrontantes e notificações formais, priorizando a via extrajudicial em Cartório de Registro de Imóveis para máxima rapidez sem desgaste judicial.",
-    topics: [
-      "Usucapião Extrajudicial direto em Cartório de Registro de Imóveis (muito mais rápido e sem processo demorado)",
-      "Usucapião Urbano e Rural (extraordinário, ordinário, constitucional e familiar)",
-      "Mapeamento e auditoria da cadeia de posse, recibos históricos e provas documentais",
-      "Notificação formal e coleta de anuência de confrontantes e antigos proprietários",
-      "Acompanhamento técnico integrado com agrimensores e engenheiros credenciados",
-      "Abertura de nova matrícula individualizada e registro de propriedade no Cartório",
-    ],
-    whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de avaliar a viabilidade de Usucapião para o meu imóvel.",
-  },
-  {
-    id: "contratos-due-diligence",
-    title: "Contratos Imobiliários & Compra Segura (Due Diligence)",
-    category: "Auditoria de Riscos · Compra e Venda · Permuta · Locação Comercial",
-    icon: FileText,
-    tag: "Due Diligence Imobiliária · Blindagem Contratual · Prevenção de Fraudes",
-    summary:
-      "Segurança patrimonial prévia para compra, venda e locação de imóveis. Auditoria preventiva rigorosa para blindar você contra fraudes, dívidas ocultas e penhoras sobre o imóvel.",
-    details:
-      "Comprar ou vender um imóvel sem auditoria jurídica prévia é assumir o risco de perder todo o dinheiro investido. Analisamos detalhadamente a vida pregressa dos vendedores, certidões cíveis, fiscais, trabalhistas e de falência em âmbito estadual e federal, além da cadeia dominial da matrícula, elaborando instrumentos contratuais sólidos com cláusulas de blindagem patrimonial.",
-    topics: [
-      "Due Diligence Imobiliária completa: investigação de certidões judiciais, execuções e risco de fraude à execução",
-      "Elaboração e revisão minuciosa de contratos de promessa, compra e venda de imóveis urbanos e rurais",
-      "Contratos de locação comercial e residencial com cláusulas de garantia robustas",
-      "Instrumentos de permuta imobiliária física e financeira, dação em pagamento e cessão de direitos",
-      "Notificações extrajudiciais estratégicas para cumprimento de obrigações e constituição em mora",
-      "Blindagem preventiva contra perdas financeiras de sinal/arras e cláusulas abusivas",
-    ],
-    whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de uma consultoria jurídica para compra e venda segura de imóvel / análise contratual.",
-  },
-  {
-    id: "adjudicacao-compulsoria-desdobro",
-    title: "Adjudicação Compulsória & Desdobro de Lotes",
-    category: "Vendedor Ausente ou Falecido · Escritura Forçada · Divisão de Matrícula",
-    icon: ScrollText,
-    tag: "Adjudicação em Cartório (Lei 14.382) · Desdobro de Terrenos · Escritura",
-    summary:
-      "Comprou o imóvel, quitou o valor e o vendedor sumiu, faleceu ou não outorga a escritura? Conquistamos sua escritura forçada direto em Cartório ou na Justiça, além do desdobro regular de terrenos.",
-    details:
-      "A adjudicação compulsória extrajudicial permite obter a escritura definitiva diretamente no Cartório de Registro de Imóveis, sem a necessidade de um longo processo judicial, caso o vendedor tenha falecido, desaparecido ou se recuse injustificadamente a assinar a escritura. Atuamos com agilidade para titularizar seu bem de forma definitiva.",
-    topics: [
-      "Adjudicação Compulsória Extrajudicial em Cartório de Registro de Imóveis (Lei 14.382)",
-      "Ação judicial de adjudicação compulsória contra vendedores em paradeiro ignorado ou espólios",
-      "Regularização de imóveis adquiridos de loteadoras ou empresas já extintas/baixadas",
-      "Desdobro e individualização de matrícula para fracionamento de terrenos e venda de lotes",
-      "Demarcação e divisão de terras particulares e extinção amigável de condomínio",
-      "Cancelamento de hipotecas antigas, cauções e gravames indevidos na matrícula",
-    ],
-    whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de consultar sobre Adjudicação Compulsória / Vendedor que não passa a escritura.",
-  },
-  {
-    id: "inventario-partilha-imoveis",
-    title: "Inventário & Bens Imóveis de Família",
-    category: "Inventário em Cartório · Imóveis sem Escritura · Partilha Justa · Economia de ITCMD",
-    icon: Landmark,
-    tag: "Inventário Extrajudicial em Cartório · Planejamento Sucessório · Celeridade",
-    summary:
-      "Desembaraço e regularização de imóveis herdados em inventários extrajudiciais ou judiciais. Soluções céleres para partilha de patrimônio com planejamento tributário e segurança aos herdeiros.",
-    details:
-      "Inventários familiares frequentemente ficam travados por pendências na documentação dos imóveis herdados ou falta de consenso entre herdeiros. O escritório conduz inventários em cartório de notas com extrema rapidez, solucionando as pendências do acervo imobiliário e viabilizando a transferência legal dos bens com planejamento tributário para redução de custos.",
-    topics: [
-      "Inventário Extrajudicial em Cartório de Notas: celeridade e conclusão em poucas semanas quando há consenso",
-      "Regularização prévia de imóveis rurais e urbanos deixados de herança sem escritura registrada",
-      "Planejamento sucessório patrimonial e doações em vida com reserva de usufruto",
-      "Ações de inventário judicial para espólios complexos ou que demandem alvarás judiciais",
-      "Extinção amigável de condomínio entre coerdeiros e alienação judicial de quinhões",
-      "Assessoria para cálculo correto e redução lícita do imposto sobre herança (ITCMD)",
-    ],
-    whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de orientação jurídica sobre inventário e partilha de bens imóveis da família.",
-  },
-  {
-    id: "acoes-possessorias-despejo",
-    title: "Ações Possessórias, Reintegração de Posse & Despejo",
-    category: "Reintegração de Posse · Manutenção · Despejo Rápido · Defesa da Propriedade",
+    id: "direito-do-consumidor",
+    title: "Direito do Consumidor & Defesa de Direitos",
+    category: "Bancos · Planos de Saúde · Companhias Aéreas · SPC/Serasa · Reparação de Danos",
     icon: Shield,
-    tag: "Liminar Urgente · Defesa da Posse · Despejo por Inadimplência",
+    tag: "Defesa Ativa do Consumidor · Indenizações Justas · Danos Morais",
     summary:
-      "Defesa imediata da posse contra invasões, turbações e litígios de vizinhança. Ações de despejo ágeis para locadores recuperarem a posse do imóvel e aluguéis atrasados.",
+      "Atuação enérgica contra abusos de instituições financeiras, empresas de telefonia, companhias aéreas, planos de saúde e concessionárias. Busca de reparação integral e cessação de cobranças indevidas.",
     details:
-      "A posse e a propriedade exigem defesa enérgica e imediata dentro da lei. Ingressamos com pedidos liminares urgentes de reintegração ou manutenção da posse para cessar esbulhos e invasões em áreas urbanas ou rurais, bem como ações de despejo com pedido liminar para retomada rápida do imóvel alugado e cobrança integral dos encargos.",
+      "Relações de consumo exigem proteção rigorosa da lei para restabelecer o equilíbrio e punir práticas abusivas. O escritório de Yan Rezende atua com combatividade na exclusão de negativações ilegais no SPC/Serasa, cancelamento de juros e tarifas bancárias abusivas, restituição em dobro de quantias cobradas indevidamente, e obtenção de indenizações por danos morais decorrentes de descaso, cancelamento de voos ou recusa de cobertura médica.",
     topics: [
-      "Ação de Reintegração de Posse com pedido de medida liminar urgente",
-      "Ação de Manutenção de Posse e Interdito Proibitório contra ameaças de invasão ou esbulho",
-      "Ação de Despejo por falta de pagamento com pedido de desocupação liminar rápida",
-      "Execução e cobrança de aluguéis em atraso, multas, IPTU e reparação de danos ao imóvel",
-      "Ações de nunciação de obra nova e resolução de conflitos de limites territoriais e vizinhança",
-      "Ação reivindicatória para o proprietário reaver a posse de quem injustamente a detenha",
+      "Ações indenizatórias por negativação indevida nos cadastros de proteção ao crédito (SPC/Serasa)",
+      "Revisão de contratos bancários, combate a juros extorsivos, golpes do PIX e fraudes financeiras",
+      "Defesa contra planos de saúde: negativas de cirurgias, medicamentos de alto custo e reajustes abusivos",
+      "Direito aeronáutico: cancelamentos de voos, atrasos excessivos, overbooking e extravio de bagagens",
+      "Processos contra concessionárias de energia, água e telecomunicações por corte ou falha na prestação",
+      "Ações por defeitos e vícios ocultos em produtos, devolução de valores e reparação de danos",
     ],
     whatsAppText:
-      "Olá, Dra. Fabrícia! Preciso de orientação jurídica urgente sobre defesa da posse / reintegração / despejo.",
+      "Olá, Dr. Yan Rezende! Gostaria de uma consultoria sobre uma questão de Direito do Consumidor / cobrança indevida.",
   },
   {
-    id: "indenizacoes-consumidor-imobiliario",
-    title: "Indenizações Imobiliárias & Defesa do Adquirente",
-    category: "Atraso de Obras · Distrato Imobiliário · Defeitos de Construção · Danos Morais",
+    id: "direito-trabalhista",
+    title: "Direito Trabalhista & Causas Laborais",
+    category: "Rescisão Indireta · Horas Extras · Vínculo · Insalubridade · Assédio Moral",
+    icon: Briefcase,
+    tag: "Defesa dos Direitos do Trabalhador · Sensibilidade · Reparação Integral",
+    summary:
+      "Defesa minuciosa e humana dos direitos trabalhistas. Atuação estratégica para garantir o recebimento integral de verbas rescisórias, horas extras, adicionais e indenizações por assédio no ambiente de trabalho.",
+    details:
+      "Com amplo reconhecimento em causas trabalhistas e um olhar sensível e acolhedor para as particularidades de cada trabalhador, Dr. Yan Rezende analisa detalhadamente holerites, folhas de ponto e condições de trabalho. Atuamos com extrema clareza para que você entenda cada direito violado, buscando na Justiça do Trabalho a justa reparação sem desgaste desnecessário.",
+    topics: [
+      "Ação trabalhista para pagamento integral de verbas rescisórias, aviso prévio, 13º e férias",
+      "Cobrança de horas extras não computadas, intervalos suprimidos e banco de horas irregular",
+      "Reconhecimento de vínculo de emprego sem carteira assinada (CLT) e recolhimento de FGTS",
+      "Ação de Rescisão Indireta do contrato de trabalho (quando a empresa comete falta grave)",
+      "Pedidos de adicionais de periculosidade e insalubridade para atividades expostas a riscos",
+      "Ações de indenização por assédio moral, perseguição no trabalho e discriminação",
+    ],
+    whatsAppText:
+      "Olá, Dr. Yan Rezende! Gostaria de consultar sobre os meus direitos trabalhistas / rescisão.",
+  },
+  {
+    id: "direito-previdenciario",
+    title: "Direito Previdenciário & Benefícios INSS",
+    category: "Aposentadorias · Auxílio-Doença · BPC/LOAS · Pensão por Morte · Planejamento",
+    icon: Landmark,
+    tag: "Concessão & Revisão de Benefícios · Reversão de Indeferimentos · INSS",
+    summary:
+      "Orientação técnica segura e planejamento previdenciário para obter o melhor benefício possível. Reversão de pedidos negados pelo INSS na via administrativa e judicial com agilidade.",
+    details:
+      "A aposentadoria é a conquista de uma vida inteira de trabalho e dedicação. Muitas vezes, o INSS comete equívocos ao não reconhecer períodos trabalhados, tempo rural ou atividades especiais insalubres. Dr. Yan Rezende realiza cálculos previdenciários minuciosos, atuando para destravar benefícios por incapacidade (auxílio-doença), BPC/LOAS para idosos e PCD, pensões e aposentadorias justas.",
+    topics: [
+      "Planejamento Previdenciário personalizado para garantir o melhor valor e momento de aposentadoria",
+      "Concessão e revisão de Aposentadoria por Idade, Tempo de Contribuição, Especial e Rural",
+      "Reversão judicial de indeferimento de Auxílio por Incapacidade Temporária (auxílio-doença)",
+      "Pedidos de BPC/LOAS (Benefício de Prestação Continuada) para pessoas com deficiência e idosos",
+      "Reconhecimento de atividade especial (insalubre/perigosa) para conversão em tempo comum",
+      "Concessão de Pensão por Morte e regularização de tempo de contribuição pendente (CNIS)",
+    ],
+    whatsAppText:
+      "Olá, Dr. Yan Rezende! Gostaria de orientação sobre minha aposentadoria / benefício do INSS.",
+  },
+  {
+    id: "direito-civel-contratos",
+    title: "Direito Cível, Contratos & Indenizações",
+    category: "Contratos · Cobranças · Responsabilidade Civil · Obrigações · Reparação de Danos",
     icon: Scale,
-    tag: "Distrato Imobiliário · Atraso na Entrega · Vícios de Construção",
+    tag: "Segurança Contratual · Cobranças Eficazes · Blindagem Jurídica",
     summary:
-      "Atuação combativa na defesa de compradores contra construtoras, incorporadoras e loteadoras por atraso de obras, vícios de construção, cobranças abusivas e rescisão contratual com devolução justa.",
+      "Soluções jurídicas para disputas cíveis, cobrança de créditos inadimplidos, revisão de contratos e ações indenizatórias. Atuação preventiva e contenciosa com alta precisão técnica.",
     details:
-      "Compradores de imóveis na planta ou em loteamentos frequentemente enfrentam atrasos injustificados na entrega, cobranças indevidas de comissão ou evolução de obra e vícios construtivos. Atuamos com base no Código de Defesa do Consumidor e na Lei do Distrato para rescindir contratos abusivos com devolução dos valores pagos e buscar justa indenização.",
+      "As relações civis e contratuais demandam instrumentos claros e segurança jurídica impecável. O escritório conduz ações de execução de títulos de crédito, recuperação de ativos, resolução de controvérsias entre particulares e elaboração de contratos personalizados com cláusulas de proteção que evitam litígios futuros e garantem a eficácia executiva do negócio.",
     topics: [
-      "Ações contra atraso abusivo na entrega de imóveis na planta, condomínios e loteamentos",
-      "Rescisão contratual (distrato imobiliário) com devolução justa dos valores pagos corrigidos",
-      "Cobrança de indenização por lucros cessantes (aluguéis não auferidos durante o atraso)",
-      "Ações reparatórias por vícios de construção, infiltrações, trincas e defeitos estruturais",
-      "Restituição de taxa de evolução de obra indevida e comissões de corretagem abusivas",
-      "Responsabilização de incorporadoras por descumprimento de memorial descritivo",
+      "Elaboração, análise e revisão minuciosa de contratos cíveis, comerciais e de prestação de serviços",
+      "Ações de cobrança de dívidas, execução de títulos extrajudiciais e recuperação de créditos",
+      "Ações de obrigação de fazer e não fazer, descumprimento contratual e rescisão com perdas e danos",
+      "Ações indenizatórias por danos morais, materiais, estéticos e lucros cessantes",
+      "Resolução de conflitos de vizinhança, propriedade e perturbação do sossego",
+      "Medidas cautelares urgentes e liminares para resguardo de direitos e preservação de patrimônio",
     ],
     whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de consultar sobre problemas com loteamento / construtora / distrato imobiliário.",
+      "Olá, Dr. Yan Rezende! Gostaria de consultar sobre uma questão cível / análise de contrato / cobrança.",
   },
   {
-    id: "consultoria-estrategica-imobiliaria",
-    title: "Consultoria Estratégica & Mediação de Conflitos",
-    category: "Prevenção de Litígios · Acordos Extrajudiciais · Notificações · Pareceres",
-    icon: HeartHandshake,
-    tag: "Solução Extrajudicial · Eficácia Executiva · Atuação Preventiva · Discrição",
+    id: "consultoria-empresarial",
+    title: "Consultoria Jurídica Empresarial & Negócios",
+    category: "Assessoria Preventiva · Contratos Empresariais · Gestão de Passivos · Resolução Rápida",
+    icon: Building2,
+    tag: "Soluções Corporativas Ágeis · Redução de Riscos · Parceria Estratégica",
     summary:
-      "Orientação jurídica preventiva de alto nível para solucionar impasses imobiliários, celebrar acordos seguros e evitar litígios judiciais longos e custosos.",
+      "Assessoria jurídica ágil e resolutiva para empresas, microempreendedores e negócios locais. Prevenção de passivos, adequação contratual e solução de entraves em prazos recordes.",
     details:
-      "A melhor vitória patrimonial é resolver o conflito antes que ele se transforme em um processo judicial desgastante de anos. Conduzimos mediações técnicas entre herdeiros, vizinhos, sócios ou contratantes, elaborando termos de acordo com plena eficácia executiva e emitindo notificações extrajudiciais estratégicas perante cartórios.",
+      "Empresas modernas precisam de agilidade e decisões respaldadas pela lei para crescer com sustentabilidade. Conforme comprovado na prática com clientes corporativos que tiveram três atividades jurídicas resolvidas em tempo menor que o prazo estipulado, Dr. Yan Rezende atua como parceiro estratégico das empresas, blindando operações comerciais e reduzindo riscos trabalhistas e de consumo.",
     topics: [
-      "Mediação e negociação extrajudicial para celebração de acordos imobiliários seguros",
-      "Elaboração e resposta técnica a notificações extrajudiciais perante Cartório de Títulos e Documentos",
-      "Auditoria preventiva de riscos documentais e contratuais para investidores e famílias",
-      "Pareceres jurídicos para tomada de decisões patrimoniais de grande porte",
-      "Assessoria jurídica preventiva para transações rurais, glebas e loteamentos",
-      "Atendimento humanizado, direto e descomplicado, com total clareza em cada etapa",
+      "Consultoria jurídica preventiva contínua para micro, pequenas e médias empresas do Sul de Minas",
+      "Elaboração de contratos com fornecedores, clientes, prestadores de serviços e parceiros comerciais",
+      "Auditoria trabalhista preventiva para mitigação de riscos de passivos e reclamações laborais",
+      "Adequação de práticas comerciais e termos de serviço ao Código de Defesa do Consumidor",
+      "Recuperação extrajudicial e judicial de créditos inadimplidos corporativos",
+      "Resolução célere de demandas societárias, notificações e acordos comerciais estratégicos",
     ],
     whatsAppText:
-      "Olá, Dra. Fabrícia! Gostaria de solicitar uma consultoria jurídica estratégica preventiva para o meu caso.",
+      "Olá, Dr. Yan Rezende! Gostaria de uma assessoria jurídica empresarial para a minha empresa.",
+  },
+  {
+    id: "direito-de-familia-sucessoes",
+    title: "Direito de Família, Sucessões & Inventários",
+    category: "Inventário Extrajudicial · Divórcio · Partilha · Pensão · Planejamento Familiar",
+    icon: Users,
+    tag: "Condução Ética & Paciente · Mediação de Conflitos · Preservação do Diálogo",
+    summary:
+      "Atendimento sensível e discreto para questões familiares e sucessórias. Inventários ágeis em cartório de notas, partilhas justas de patrimônio e acordos consensuais que preservam a paz da família.",
+    details:
+      "Momentos delicados na vida familiar exigem um advogado que alie profundo domínio técnico a extrema empatia e didática. Dr. Yan Rezende prioriza soluções consensuais e céleres em cartório de notas para inventários e divórcios, evitando desgastes emocionais prolongados e garantindo a correta partilha dos bens com segurança tributária.",
+    topics: [
+      "Inventário Extrajudicial em Cartório de Notas: rapidez na partilha quando há consenso entre herdeiros",
+      "Inventário Judicial e arrolamento de bens para espólios com particularidades específicas",
+      "Divórcio consensual em cartório e judicial, com definição justa de partilha patrimonial",
+      "Ações de alimentos (fixação, revisão e exoneração de pensão alimentícia)",
+      "Regulamentação de guarda compartilhada, visitas e convivência familiar",
+      "Planejamento sucessório patrimonial e doações com reserva de usufruto",
+    ],
+    whatsAppText:
+      "Olá, Dr. Yan Rezende! Gostaria de orientação sobre inventário / questão familiar / divórcio.",
+  },
+  {
+    id: "atendimento-humanizado-inclusivo",
+    title: "Atendimento Inclusivo, Humanizado & Causas Sensíveis",
+    category: "Direitos LGBTQIA+ · Retificação de Nome e Gênero · Não Discriminação · Empatia",
+    icon: Heart,
+    tag: "Acolhimento Integral · Respeito à Diversidade · Cidadania & Dignidade",
+    summary:
+      "Advocacia pioneira, ética e humanizada com olhar sensível para causas diversas, direitos civis e garantia de dignidade à comunidade LGBTQIA+ e grupos vulneráveis.",
+    details:
+      "Reconhecido pela sensibilidade e respeito com que atende cada pessoa, Dr. Yan Rezende oferece um espaço seguro, acolhedor e livre de preconceitos. Realizamos com discrição procedimentos de retificação de prenome e gênero diretamente em cartório, formalização de uniões estáveis homoafetivas, planejamento familiar e combate rigoroso a qualquer forma de discriminação social ou institucional.",
+    topics: [
+      "Retificação de prenome e gênero de pessoas trans e travestis direto no Registro Civil (extrajudicial)",
+      "Reconhecimento e formalização jurídica de União Estável e Casamento Homoafetivo",
+      "Adoção por casais homoafetivos e registro de dupla parentalidade (socioafetiva e biológica)",
+      "Ações indenizatórias e medidas protetivas contra homofobia, transfobia e discriminação",
+      "Defesa de direitos de grupos vulneráveis perante órgãos públicos e instituições privadas",
+      "Atendimento com escuta ativa, linguagem acolhedora, respeito integral e total sigilo",
+    ],
+    whatsAppText:
+      "Olá, Dr. Yan Rezende! Gostaria de conversar com você sobre uma causa com atendimento acolhedor / direitos civis.",
   },
 ];
 
@@ -345,144 +326,139 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "André Vinicius Keys",
-    badge: "Local Guide · 26 avaliações · 1 foto · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Profissional extremamente competente, atenciosa e comprometida com cada etapa do processo!",
-    content:
-      "Tive uma excelente experiência com a Dra. Fabrícia Fragoso. Profissional extremamente competente, atenciosa e comprometida com cada etapa do processo. É segura e resolutiva, sempre trazendo clareza e confiança em suas orientações. Recomendo fortemente seus serviços a todos que buscam uma advocacia especializada, ética e eficiente. Gratidão pelo cuidado e profissionalismo!",
-  },
-  {
-    name: "Maria Eduarda Vieira de Souza Batista",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Ótimo atendimento, super atenciosos e super recomendo. Débora, Paulo e Fabrícia!",
-    content:
-      "Ótimo atendimento, super atenciosos e super recomendo. Obg a todos, Deus abençoe a vida de vcs: Débora, Paulo e Fabrícia!!!!",
-  },
-  {
-    name: "Ana Paula da Costa Ferreira",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Profissionalismo e dedicação durante todo o processo que resultou na conquista da minha indenização!",
-    content:
-      "Agradeço imensamente a advogada Fabrícia e a toda a equipe envolvida. Fico muito satisfeita pelo excelente e competente trabalho desenvolvido pelo escritório, pelo profissionalismo e pela dedicação durante todo o processo que resultou na conquista da minha indenização.",
-  },
-  {
-    name: "Weliton Fonseca",
-    badge: "2 avaliações · 1 foto · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Ambiente onde o cliente é recebido com total ética, profissionalismo, mas acima de tudo humanitário!",
-    content:
-      "Muito satisfeito como um todo, um ambiente onde o cliente é recebido com total ética, profissionalismo mas acima de tudo humanitário. Imensamente grato a Fabrícia e toda sua equipe na excelência exemplar pelo atendimento, que Deus continue abençoando sempre esses profissionais que foram colocados a disposição da cidadania.",
-  },
-  {
-    name: "Renuzia Pereira",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Trabalho impecável, excelente profissional. Nota 1000 competente, corretíssima!",
-    content:
-      "Trabalho impecável, excelente profissional. Nota 1000 competente, corretíssima. Deus te abençoe sempre 😘😘😘😘😘. Pensou em advogada, Fabrícia e a melhor opção.",
-  },
-  {
-    name: "Kedma Kedma",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Todas as minhas dúvidas foram esclarecidas. Atendimento maravilhoso, ótimos profissionais!",
-    content:
-      "Fui muito bem atendida, todas a minha dúvidas foram esclarecidas. Um atendimento maravilhoso, ótimos profissionais. Fiquei muito satisfeita.",
-  },
-  {
-    name: "Zuleica Pereira de Assis",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Excelente conhecimento técnico, criatividade, comunicação adequada com vocabulário acessível!",
-    content:
-      "Profissional com excelente conhecimento técnico, criatividade e bom desempenho na solução de problemas, comunicação adequada com vocabulário acessível, proativa, dedicada e prestativa.",
-  },
-  {
-    name: "Fernanda Soares",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Fabrícia super atenciosa, não mede esforços. Equipe nota mil!",
-    content: "Fábricia super atenciosa, não mede esforços. Equipe nota mil.",
-  },
-  {
-    name: "Thiago Fernandes",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Ótima profissional, e sempre a disposição para trabalhar!",
-    content: "Ótima profissional , e sempre a disposição para trabalhar .",
-  },
-  {
-    name: "Fabrícia Barbosa",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Ótima advogada muito competente, excelente profissional!",
-    content: "Ótima advogada muito competente, excelente profissional.",
-  },
-  {
-    name: "Rosimary Medeiros",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Ótima advogada. Excelente profissional. Parabéns 👏",
-    content: "Ótima advogada. Excelente profissional. Parabéns 👏",
-  },
-  {
-    name: "Déborah Pazini",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Equipe extremamente qualificada! Advogados muito atenciosos e capacitados!",
-    content: "Equipe extremamente qualificada! Advogados muito atenciosos e capacitados!",
-  },
-  {
-    name: "Elza Ferreira",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Estou feliz, fui bem representada, recomendo muito!",
-    content: "Estou feliz fui bem representada recomendo muito.",
-  },
-  {
-    name: "Adelson Bento De Souza",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Experiência e competência caminham juntos com FABRICIA FRAGOSO Advocacia!",
-    content: "Experiência e Competência , caminham juntos com FABRICIA FRAGOSO Advocacia. Gratidão.",
-  },
-  {
-    name: "SIMONE PEREIRA BARROS",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight: "Fabrícia, uma excelente profissional, honesta, muito atenciosa. ❤️",
-    content: "Fabrícia, uma excelente profissional, honesta, muito atenciosa. ❤️",
-  },
-  {
-    name: "Joelder Louro",
+    name: "Bianca Coelho Scaglioni",
     badge: "3 avaliações · 1 foto · 5 Estrelas",
     date: "Avaliação Verificada no Google",
-    highlight: "Profissional ágil, recomendo para quem estiver precisando de uma boa advogada!",
-    content: "Profissional ágil recomendo para quem estiver precisando de uma boa advogada.",
+    highlight:
+      "Advogado super atencioso, extremamente competente e humano. Tem um olhar muito sensível e explica tudo com clareza!",
+    content:
+      "Advogado super atencioso, extremamente competente e humano. Demonstra muito conhecimento em direito trabalhista e tem um olhar muito sensível para causas LGBT+, o que faz toda diferença no atendimento. Explica tudo com clareza e passa muita confiança. Recomendo muito!",
   },
   {
-    name: "Oseias Silva",
-    badge: "5 avaliações · 1 foto · 5 Estrelas",
+    name: "Giovani Castro",
+    badge: "4 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google",
-    highlight: "A melhor, segurança e comodidade para os clientes 🙏🏻",
-    content: "A melhor , segurança e comodidade para os clientes🙏🏻",
+    highlight:
+      "Conseguiu resolver as três atividades jurídicas da minha empresa em um tempo menor que o prazo estipulado!",
+    content:
+      "Experiência excelente, Yan conseguiu resolver as três atividades jurídicas da minha empresa em um tempo menor que o prazo estipulado. Com certeza será minha primeira opção sempre.",
   },
   {
-    name: "Simony Paula",
+    name: "Beatriz Maria Barbosa de Souza",
+    badge: "5 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Sanou todas as minhas dúvidas de uma maneira muito didática e prática! Teve muita paciência, um profissional fora da curva!",
+    content:
+      "Yan é um excelente profissional, quando eu precisei me ajudou e sanou todas as minhas dúvidas de uma maneira muito didática e prática! Teve muita paciência e foi um profissional fora da curva. Indico o seu trabalho de olhos fechados!",
+  },
+  {
+    name: "Sabrina Reis",
+    badge: "4 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Melhor advogado do sul de minas, tenho muita confiança nele! Apenas recomendo 🙏🏻",
+    content:
+      "Melhor advogado do sul de minas, tenho muita confiança nele! Apenas recomendo 🙏🏻",
+  },
+  {
+    name: "Fernanda Segurasse de Moraes",
     badge: "1 avaliação · 5 Estrelas",
     date: "Avaliação Verificada no Google",
-    highlight: "Trabalho confiável e competente. Foi um prazer!",
-    content: "Trabalho confiável e competente.",
+    highlight:
+      "Além da competência técnica, o que mais admiro é a empatia e o respeito com que atende seus clientes!",
+    content:
+      "Tive a alegria de acompanhar a trajetória desse profissional. Um advogado extremamente dedicado, comprometido com aquilo que faz e sempre muito atualizado. Além da competência técnica, o que mais admiro é a empatia e o respeito com que atende.",
   },
   {
-    name: "Mauricio Batista santos",
+    name: "Thiago Pádua",
     badge: "1 avaliação · 5 Estrelas",
     date: "Avaliação Verificada no Google",
-    highlight: "Excelente profissional!",
-    content: "Excelente profissional!",
+    highlight:
+      "Atendimento extremamente profissional, com seriedade, ética e grande conhecimento técnico!",
+    content:
+      "Atendimento extremamente profissional, com seriedade, ética e grande conhecimento técnico. Recomendo.",
+  },
+  {
+    name: "Letícia Gonçalves Maciel",
+    badge: "5 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Profissional super inteligente, atencioso e cuidadoso. Foi extremamente detalhista, me ajudou no início, sim e pós!",
+    content:
+      "O Yan é um profissional super inteligente, atencioso e cuidadoso. Todas as vezes que eu o acionei, ele foi extremamente detalhista, me ajudou no início, sim e pós. Recomendo!",
+  },
+  {
+    name: "Thaís Silva",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Excelente advogado. Muito comprometido, responsável e sempre disposto a ajudar com profissionalismo!",
+    content:
+      "Além de um grande amigo, é um excelente advogado. Muito comprometido, responsável e sempre disposto a ajudar com conhecimento e profissionalismo.",
+  },
+  {
+    name: "Mariana Leão",
+    badge: "3 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Advogado responsável, diligente e com uma grande sensibilidade com a situação de seus clientes!",
+    content:
+      "Advogado responsável, comprometido com o trabalho, diligente e com uma grande sensibilidade com a situação de seus clientes. Recomendo muito!",
+  },
+  {
+    name: "Ana Flávia Safady",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Excelente profissional! Dedicado, inteligente e esforçado. Recomendo a todos!",
+    content:
+      "Excelente profissional! Dedicado, inteligente e esforçado. Recomendo a todos!",
+  },
+  {
+    name: "Juliana Rosental",
+    badge: "9 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Yan é um profissional super competente e capacitado. Me ajudou, orientou e senti muita confiança!",
+    content:
+      "Muito boa!! Yan é um profissional super competente e capacitado. Me ajudou, orientou e senti muita confiança! Recomendo!!",
+  },
+  {
+    name: "Alice Siqueira dos Santos",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Profissional extremamente competente e atencioso. Atendimento sempre respeitoso, sério e muito dedicado!",
+    content:
+      "Profissional extremamente competente e atencioso. Atendimento sempre respeitoso, sério e muito dedicado. Recomendo!",
+  },
+  {
+    name: "Maria Eduarda Pereira Alvares",
+    badge: "3 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Excelente profissional!! Competente e atencioso com seus clientes.",
+    content:
+      "Excelente profissional!! Competente e atencioso com seus clientes.",
+  },
+  {
+    name: "Raquel Pereira",
+    badge: "10 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Excelente profissional! Atencioso e super competente! Recomendo a todos!",
+    content:
+      "Excelente profissional! Atencioso e super competente! Recomendo a todos!",
+  },
+  {
+    name: "Mariana Rodrigues",
+    badge: "3 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Um excelente profissional, confiável e responsável com seus clientes. ❤️",
+    content:
+      "Um excelente profissional, confiável e responsável com seus clientes. ❤️",
   },
 ];
 
@@ -493,39 +469,39 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "Como funciona a primeira consulta com a Dra. Fabrícia Fragoso e equipe?",
+    question: "Como funciona o primeiro atendimento com o Dr. Yan Rezende?",
     answer:
-      "O atendimento inicial começa diretamente através do nosso WhatsApp oficial. Você nos envia um relato seguro do seu caso e, se houver, fotos ou cópias de documentos (contratos, recibos, certidões ou notificações). Analisamos a viabilidade jurídica preliminar e agendamos a consulta — que pode ser presencial em nossa sede na Galeria Ebal Franco em Resplendor - MG ou 100% online por videoconferência com total sigilo para clientes em qualquer lugar do Brasil.",
+      "O atendimento inicial começa diretamente pelo nosso WhatsApp oficial. Você nos envia um relato seguro do seu caso e documentos que possuir (contratos, comprovantes, holerites, extratos ou notificações). O Dr. Yan Rezende analisa a situação com didática, transparência e sem juridiquês, apresentando com clareza a viabilidade e os caminhos legais disponíveis — presencialmente em nosso escritório na Galeria Pan América em Caxambu - MG ou online por videoconferência com total sigilo para qualquer lugar do Brasil.",
   },
   {
-    question: "Comprei um imóvel com 'contrato de gaveta'. É possível conseguir a escritura definitiva?",
+    question: "Moro em outra cidade ou estado. Posso ser atendido(a) à distância?",
     answer:
-      "Sim, perfeitamente! Grande parte dos imóveis no Brasil ainda se encontra em situação irregular por meio de contratos particulares ('de gaveta'). Dependendo da situação da cadeia de vendedores e do tempo em que você ocupa o bem, podemos regularizar através de Adjudicação Compulsória em cartório, Usucapião Extrajudicial ou pela lavratura da escritura definitiva após o devido saneamento cadastral na Prefeitura e no Cartório de Registro de Imóveis.",
+      "Sim, perfeitamente! Grande parte dos processos jurídicos no Brasil hoje tramita de forma 100% eletrônica perante a Justiça Estadual, Federal e do Trabalho. Realizamos atendimentos por videochamada, envio seguro de documentos digitalizados e assinaturas eletrônicas com validade jurídica pelo celular. Você acompanha cada etapa do seu caso com total comodidade e atualizações constantes.",
   },
   {
-    question: "Moro em outra cidade, estado ou no exterior. Posso regularizar meu imóvel à distância?",
+    question: "Tive meu benefício negado pelo INSS. Ainda é possível reverter?",
     answer:
-      "Sim, com total comodidade e segurança jurídica! Atendemos proprietários de imóveis localizados em Minas Gerais e em todo o Brasil que residem em outras cidades, estados ou países. Toda a coleta de documentos, reuniões estratégicas, assinaturas eletrônicas e protocolos perante Cartórios e Prefeituras são conduzidos de forma digital e transparente.",
+      "Sim! O INSS frequentemente indefere pedidos de aposentadoria, auxílio por incapacidade temporária (auxílio-doença) ou BPC/LOAS por falhas de análise de documentos ou perícias médicas superficiais. Nós realizamos uma auditoria do seu processo administrativo no INSS e ingressamos com Ação Judicial Previdenciária perante a Justiça Federal, onde uma perícia judicial imparcial e especializada analisa a sua real condição de saúde ou histórico de contribuições.",
   },
   {
-    question: "Como saber se o meu caso é de usucapião em cartório (extrajudicial) ou judicial?",
+    question: "Tive problemas com um banco, compra ou cobrança indevida. O que fazer?",
     answer:
-      "A Usucapião Extrajudicial é realizada diretamente no Cartório de Registro de Imóveis e é muito mais rápida, sendo cabível quando a posse é mansa e pacífica e não há oposição ou litígio formal dos proprietários originais ou confrontantes. Caso haja discordância ou dificuldade de localização dos antigos titulares, ingressamos com a Ação de Usucapião Judicial fundamentada perante o Poder Judiciário.",
+      "Guarde todos os comprovantes, protocolos de atendimento, extratos e prints de mensagens. Com esses documentos, podemos notificá-los formalmente ou ingressar com Ação no Juizado Especial Cível ou Justiça Comum, exigindo o cancelamento imediato da cobrança, a exclusão do seu nome de cadastros negativos (SPC/Serasa) e a devida indenização por danos morais e materiais decorrentes do transtorno.",
   },
   {
-    question: "O que é adjudicação compulsória e quando ela é aplicada?",
+    question: "Fui demitido ou estou sofrendo abusos no trabalho. Quais são meus direitos?",
     answer:
-      "A adjudicação compulsória é o instrumento jurídico utilizado quando o comprador já quitou o valor integral do imóvel, possui o contrato ou promessa de compra e venda, mas o vendedor faleceu, desapareceu ou se recusa injustificadamente a assinar a escritura pública. Hoje, com a Lei 14.382, é possível obter a escritura diretamente no Cartório de Registro de Imóveis com extrema agilidade.",
+      "Todo trabalhador tem direito ao recebimento rigoroso e pontual de suas verbas rescisórias, horas extras trabalhadas, adicionais de periculosidade ou insalubridade e a um ambiente de trabalho digno e respeitoso. Se você estiver sofrendo perseguição, assédio moral ou atrasos graves de salário, é possível solicitar a rescisão indireta (a demissão do patrão por falta grave, com recebimento de todas as indenizações como se tivesse sido demitido sem justa causa).",
   },
   {
-    question: "Herdei um imóvel sem escritura ou inventário. O que devo fazer?",
+    question: "Como a consultoria jurídica pode ajudar a minha empresa?",
     answer:
-      "Imóveis herdados sem escritura necessitam de uma análise prévia: verificamos se há consenso entre os herdeiros para realizar o inventário extrajudicial em cartório de notas (muito mais econômico e rápido) e regularizamos a titularidade do bem perante a Receita Federal, Prefeitura e Registro de Imóveis, evitando que o patrimônio da família fique bloqueado ou perca valor de mercado.",
+      "A consultoria jurídica atua como um escudo preventivo para sua empresa. Analisamos contratos com fornecedores e clientes, adequamos práticas ao Código de Defesa do Consumidor, revisamos a rotina trabalhista para evitar passivos e solucionamos impasses burocráticos e cobranças em prazos ágeis, permitindo que você foque no crescimento do seu negócio com segurança patrimonial.",
   },
   {
-    question: "Quais são os passos perante Prefeitura e Receita Federal para regularizar obra ou lote?",
+    question: "Como é feito o atendimento para causas de direitos civis e comunidade LGBTQIA+?",
     answer:
-      "Para averbar uma construção ou individualizar um lote, é necessário obter o projeto aprovado e o Habite-se junto à Prefeitura Municipal, recolher os tributos devidos e emitir a Certidão Negativa de Débitos (CND) previdenciária da obra perante a Receita Federal (via SERO). Com esses documentos em mãos, realizamos o registro e a averbação definitiva na matrícula do Cartório de Imóveis.",
+      "Oferecemos um atendimento estritamente confidencial, acolhedor e humanizado, garantindo que você se sinta respeitado(a) e seguro(a) em todas as fases. Conduzimos procedimentos de retificação de prenome e gênero em cartório, formalização de união estável homoafetiva, adoção e ações judiciais contra qualquer forma de preconceito ou violação de direitos.",
   },
 ];
 
@@ -548,16 +524,16 @@ function Heading({
         </p>
       )}
       <h2
-        className={`font-serif text-3xl leading-[1.14] tracking-[-0.02em] font-bold sm:text-4xl lg:text-[2.65rem] ${
-          dark ? "text-white" : "text-[#0f172a]"
+        className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
+          dark ? "text-white" : "text-[#1f0b15]"
         }`}
       >
         {children}
       </h2>
       {description && (
         <p
-          className={`mt-4 text-sm leading-7 ${
-            dark ? "text-[#cbd5e1]" : "text-[#475569]"
+          className={`mt-4 text-sm leading-relaxed sm:text-base ${
+            dark ? "text-[#f2d6de]" : "text-[#644452]"
           }`}
         >
           {description}
@@ -569,60 +545,52 @@ function Heading({
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeArea, setActiveArea] = useState<PracticeArea | null>(null);
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedPractice, setSelectedPractice] = useState<PracticeArea | null>(
+    null
+  );
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveArea(null);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen bg-[#07090e] text-[#f8fafc]">
-        {/* Top Notification Strip */}
-        <div className="relative z-50 border-b border-slate-700/40 bg-[#0a0d15] px-4 py-2 text-xs text-[#cbd5e1]">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-2 sm:px-6">
+      <main className="min-h-screen bg-[#0d040a] text-[#fbf5f7] selection:bg-[#9f526c] selection:text-white">
+        {/* TOP ANNOUNCEMENT BAR (DARK LUXURY PLUM) */}
+        <div className="border-b border-[#7e3a53]/40 bg-[#15050e] py-2 text-xs">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-slate-300 opacity-75" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#e3bcc4] opacity-75" />
                 <span className="relative inline-flex size-2 rounded-full bg-white" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                Fabrícia Fragoso Advocacia · Especializada em Direito Imobiliário · Resplendor - MG ⚖️
+                Yan Rezende — Advocacia e Consultoria Jurídica · Caxambu - MG ⚖️
               </span>
             </div>
 
-            <div className="flex items-center gap-4 text-[11px] text-[#cbd5e1]">
+            <div className="flex items-center gap-4 text-[11px] text-[#f2d6de]">
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
-                <Star size={12} className="fill-[#cbd5e1] text-white" />
-                <span className="font-bold text-white">5,0 ★</span> (25 avaliações no Google)
+                <Star size={12} className="fill-[#e3bcc4] text-white" />
+                <span className="font-bold text-white">5,0 ★</span> (24 avaliações no Google)
               </a>
-              <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
+              <span className="hidden h-3 w-px bg-[#7e3a53]/50 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de uma consultoria sobre meu imóvel.")}
+                href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de uma consultoria sobre o meu caso.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[#cbd5e1] sm:inline-flex"
+                className="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[#f2d6de] sm:inline-flex"
               >
                 <WhatsAppIcon size={13} className="text-[#25D366]" />
                 {PHONE_DISPLAY}
@@ -635,61 +603,64 @@ export default function Home() {
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
             scrolled
-              ? "border-b border-slate-700/50 bg-[#07090e]/95 py-3 shadow-xl backdrop-blur-md"
-              : "border-b border-slate-800 bg-[#07090e]/85 py-4 backdrop-blur-sm"
+              ? "border-b border-[#7e3a53]/50 bg-[#0d040a]/95 py-3 shadow-xl shadow-black/80 backdrop-blur-md"
+              : "border-b border-[#7e3a53]/35 bg-[#0d040a]/90 py-4 backdrop-blur-sm"
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            {/* Logo Link */}
-            <a
-              href="#"
-              className="group flex shrink-0 items-center transition-opacity hover:opacity-95"
-              aria-label="Fabrícia Fragoso Advocacia - Alves e Fragoso Advogados Associados - Início"
-            >
-              <div className="relative flex items-center py-1">
-                <Image
-                  src={LOGO_SRC}
-                  alt="Alves e Fragoso Advogados Associados - Dra. Fabrícia Fragoso"
-                  width={312}
-                  height={62}
-                  className="h-12 sm:h-[52px] md:h-[58px] w-auto max-w-[260px] sm:max-w-[300px] md:max-w-[340px] object-contain object-left transition-transform duration-200"
-                  priority
-                />
-              </div>
-            </a>
+            {/* Left: Logo + Desktop Navigation grouped with generous breathing room */}
+            <div className="flex items-center gap-8 lg:gap-12 xl:gap-16">
+              {/* Logo Link */}
+              <a
+                href="#"
+                className="group flex shrink-0 items-center transition-opacity hover:opacity-95"
+                aria-label="Yan Rezende Advocacia e Consultoria Jurídica - Início"
+              >
+                <div className="relative flex items-center py-1">
+                  <Image
+                    src={LOGO_SRC}
+                    alt="Yan Rezende Advocacia e Consultoria Jurídica - Logotipo Oficial"
+                    width={260}
+                    height={52}
+                    className="h-9 sm:h-10 md:h-11 w-auto max-w-[180px] sm:max-w-[210px] md:max-w-[240px] object-contain object-left drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)] transition-transform duration-200"
+                    priority
+                  />
+                </div>
+              </a>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden items-center gap-4 xl:gap-6 2xl:gap-7 lg:flex">
-              <a href="#especialidades" className="nav-link-dark text-[11px] whitespace-nowrap">
-                Especialidades
-              </a>
-              <a href="#sobre" className="nav-link-dark text-[11px] whitespace-nowrap">
-                Sobre a Equipe
-              </a>
-              <a href="#diferenciais" className="nav-link-dark text-[11px] whitespace-nowrap">
-                Diferenciais
-              </a>
-              <a href="#depoimentos" className="nav-link-dark text-[11px] whitespace-nowrap">
-                Avaliações (5,0 ★)
-              </a>
-              <a href="#duvidas" className="nav-link-dark text-[11px] whitespace-nowrap">
-                Dúvidas Frequentes
-              </a>
-              <a href="#contato" className="nav-link-dark text-[11px] whitespace-nowrap">
-                Sede & Contato
-              </a>
-            </nav>
+              {/* Desktop Navigation */}
+              <nav className="hidden items-center gap-4 lg:gap-5 xl:gap-7 lg:flex">
+                <a href="#atuacao" className="nav-link-dark text-[11px] whitespace-nowrap">
+                  Áreas de Atuação
+                </a>
+                <a href="#sobre" className="nav-link-dark text-[11px] whitespace-nowrap">
+                  Sobre o Advogado
+                </a>
+                <a href="#diferenciais" className="nav-link-dark text-[11px] whitespace-nowrap">
+                  Diferenciais
+                </a>
+                <a href="#depoimentos" className="nav-link-dark text-[11px] whitespace-nowrap">
+                  Avaliações (5,0 ★)
+                </a>
+                <a href="#duvidas" className="nav-link-dark text-[11px] whitespace-nowrap">
+                  Dúvidas Frequentes
+                </a>
+                <a href="#contato" className="nav-link-dark text-[11px] whitespace-nowrap">
+                  Sede & Contato
+                </a>
+              </nav>
+            </div>
 
             {/* Right Action */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de consultar sobre a situação do meu imóvel.")}
+                href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de consultar sobre a viabilidade do meu caso.")}
                 target="_blank"
                 variant="platinum"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#07090e]" />
+                <WhatsAppIcon size={14} className="text-[#1f0b15]" />
                 <span className="hidden xl:inline">Atendimento WhatsApp</span>
                 <span className="xl:hidden">WhatsApp</span>
               </GlowingButton>
@@ -698,7 +669,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-700 bg-[#111622] text-[#f8fafc] transition-colors hover:border-slate-400 hover:text-white lg:hidden"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-[#7e3a53]/60 bg-[#1a0b15] text-[#fbf5f7] transition-colors hover:border-[#e3bcc4] hover:text-white lg:hidden"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -713,68 +684,68 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="border-b border-slate-800 bg-[#0c0f17] px-5 py-6 lg:hidden"
+                className="border-b border-[#7e3a53]/60 bg-[#13070f] px-5 py-6 lg:hidden"
               >
                 <div className="flex flex-col gap-4">
                   <a
-                    href="#especialidades"
+                    href="#atuacao"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#cbd5e1] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#f2d6de] uppercase transition-colors hover:text-white"
                   >
-                    <span>Especialidades Imobiliárias</span>
-                    <ArrowRight size={14} className="text-slate-400" />
+                    <span>Áreas de Atuação</span>
+                    <ArrowRight size={14} className="text-[#c88ea0]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#cbd5e1] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#f2d6de] uppercase transition-colors hover:text-white"
                   >
-                    <span>Sobre a Dra. Fabrícia & Equipe</span>
-                    <ArrowRight size={14} className="text-slate-400" />
+                    <span>Sobre o Dr. Yan Rezende</span>
+                    <ArrowRight size={14} className="text-[#c88ea0]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#cbd5e1] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#f2d6de] uppercase transition-colors hover:text-white"
                   >
                     <span>Diferenciais</span>
-                    <ArrowRight size={14} className="text-slate-400" />
+                    <ArrowRight size={14} className="text-[#c88ea0]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#cbd5e1] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#f2d6de] uppercase transition-colors hover:text-white"
                   >
                     <span>Avaliações Google (5,0 ★)</span>
-                    <ArrowRight size={14} className="text-slate-400" />
+                    <ArrowRight size={14} className="text-[#c88ea0]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#cbd5e1] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#f2d6de] uppercase transition-colors hover:text-white"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-slate-400" />
+                    <ArrowRight size={14} className="text-[#c88ea0]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#cbd5e1] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#f2d6de] uppercase transition-colors hover:text-white"
                   >
                     <span>Sede & Contato</span>
-                    <ArrowRight size={14} className="text-slate-400" />
+                    <ArrowRight size={14} className="text-[#c88ea0]" />
                   </a>
 
-                  <div className="pt-4 border-t border-slate-800">
+                  <div className="pt-4 border-t border-[#7e3a53]/40">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Fabrícia Fragoso! Gostaria de agendar um atendimento.")}
+                      href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de agendar um atendimento.")}
                       target="_blank"
                       variant="platinum"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp</span>
+                      <span>Falar no WhatsApp com o Dr. Yan</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -786,25 +757,25 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 1: HERO SECTION + FAIXA DE MÉTRICAS (DARK LUXURY)  */}
         {/* ======================================================== */}
-        <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#07090e]">
-          {/* Subtle Ambient Platinum & Chrome Glow Background */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-radial from-slate-400/10 via-slate-600/5 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-96 w-96 rounded-full bg-slate-500/10 blur-3xl" />
+        <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#0d040a]">
+          {/* Subtle Ambient Metallic Rose-Mauve Glow Background */}
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-radial from-[#9f526c]/18 via-[#5e263c]/10 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-96 w-96 rounded-full bg-[#c88ea0]/12 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
-              {/* Left Column: Headline & Value Proposition */}
+              {/* Left Column: Copy & Authority */}
               <motion.div
-                variants={stagger}
                 initial="hidden"
                 animate="visible"
+                variants={stagger}
                 className="lg:col-span-7"
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-4">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-[#111622] px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-white shadow-sm">
-                    <span className="size-1.5 rounded-full bg-white animate-pulse" />
-                    Fabrícia Fragoso Advocacia · Especializada em Direito Imobiliário
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#9f526c]/50 bg-[#1a0b15] px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-white shadow-sm">
+                    <span className="size-1.5 rounded-full bg-[#e3bcc4] animate-pulse" />
+                    Yan Rezende · Advocacia & Consultoria Jurídica
                   </span>
                 </motion.div>
 
@@ -813,23 +784,22 @@ export default function Home() {
                   variants={reveal}
                   className="font-serif text-3xl leading-[1.12] font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Segurança Jurídica e{" "}
-                  <span className="bg-gradient-to-r from-white via-[#cbd5e1] to-[#94a3b8] bg-clip-text text-transparent">
-                    Regularização Definitiva
+                  Advocacia Estratégica, Humana e de{" "}
+                  <span className="bg-gradient-to-r from-white via-[#f2d6de] to-[#c88ea0] bg-clip-text text-transparent">
+                    Alta Resolutividade
                   </span>{" "}
-                  para o Seu Imóvel.
+                  para Defender Seus Direitos.
                 </motion.h1>
 
                 {/* Subtitle / Value Proposition */}
                 <motion.p
                   variants={reveal}
-                  className="mt-6 max-w-2xl text-base leading-relaxed text-[#cbd5e1] sm:text-lg"
+                  className="mt-6 max-w-2xl text-base leading-relaxed text-[#f2d6de] sm:text-lg"
                 >
-                  Proteja seu patrimônio e conquiste a escritura definitiva. A{" "}
-                  <strong className="text-white font-semibold">Dra. Fabrícia Fragoso</strong> e a equipe da{" "}
-                  <strong className="text-white font-semibold">Alves e Fragoso Advogados Associados</strong> atuam
-                  com excelência técnica e resolutividade perante Cartórios de Imóveis, Prefeituras e Receita Federal em{" "}
-                  <strong className="text-white font-semibold">Resplendor - MG</strong> e online para todo o Brasil.
+                  Segurança jurídica, clareza didática e empatia no atendimento. O advogado{" "}
+                  <strong className="text-white font-semibold">Yan Rezende</strong> atua com excelência técnica e dedicação irrestrita nas áreas{" "}
+                  <strong className="text-white font-semibold">Cível, Consumidor, Previdenciário (INSS), Trabalhista e Empresarial</strong>{" "}
+                  em <strong className="text-white font-semibold">Caxambu, Sul de Minas</strong> e online para todo o Brasil.
                 </motion.p>
 
                 {/* CTAs */}
@@ -838,7 +808,7 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de consultar sobre a regularização do meu imóvel.")}
+                    href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de consultar sobre a situação do meu caso.")}
                     target="_blank"
                     variant="platinum"
                     size="lg"
@@ -849,18 +819,18 @@ export default function Home() {
                   </GlowingButton>
 
                   <GlowingButton
-                    href="#especialidades"
+                    href="#atuacao"
                     variant="dark"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
-                    <span>Conhecer Especialidades</span>
+                    <span>Conhecer Áreas de Atuação</span>
                     <ArrowRight size={15} />
                   </GlowingButton>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Visual Frame (Dra. Fabrícia Fragoso portrait) */}
+              {/* Right Column: Hero Visual Frame (Dr. Yan Rezende portrait) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -869,40 +839,40 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Decorative Metallic Border Box */}
-                  <div className="relative overflow-hidden rounded-2xl border border-slate-700/80 bg-[#111622] p-2 shadow-2xl shadow-black/85">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#0c0f17]">
+                  <div className="relative overflow-hidden rounded-2xl border border-[#9f526c]/60 bg-[#1a0b15] p-2 shadow-2xl shadow-black/95">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#12070e]">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dra. Fabrícia Fragoso - Fabrícia Fragoso Advocacia Especializada em Direito Imobiliário"
+                        alt="Dr. Yan Rezende - Advogado e Consultor Jurídico em Caxambu - MG"
                         fill
                         sizes="(max-width: 768px) 100vw, 500px"
                         className="object-cover object-top transition-transform duration-700 hover:scale-105"
                         priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#07090e] via-transparent to-transparent opacity-65" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0d040a] via-transparent to-transparent opacity-65" />
                     </div>
 
                     {/* Subtle Overlay Label */}
-                    <div className="absolute right-5 bottom-5 left-5 rounded-xl border border-slate-700 bg-[#07090e]/92 p-4 shadow-lg backdrop-blur-md">
+                    <div className="absolute right-5 bottom-5 left-5 rounded-xl border border-[#9f526c]/60 bg-[#13070f]/95 p-4 shadow-lg backdrop-blur-md">
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="font-serif text-sm font-bold text-white">
-                            Dra. Fabrícia Fragoso
+                            Yan Rezende
                           </p>
-                          <p className="text-[11px] text-[#cbd5e1]">
-                            Advocacia Imobiliária & Regularização
+                          <p className="text-[11px] text-[#f2d6de]">
+                            Advocacia & Consultoria Jurídica
                           </p>
                         </div>
-                        <span className="rounded-md border border-slate-700 bg-[#161d2c] px-2.5 py-1 text-[10px] font-bold text-white">
-                          Resplendor · MG
+                        <span className="rounded-md border border-[#9f526c]/50 bg-[#220e1c] px-2.5 py-1 text-[10px] font-bold text-[#f2d6de]">
+                          Caxambu · MG
                         </span>
                       </div>
                     </div>
                   </div>
 
                   {/* Floating Stat Badge 1 (Google 5.0 Rating) */}
-                  <div className="absolute -top-5 -left-5 hidden rounded-xl border border-slate-700 bg-[#111622]/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-lg bg-[#161d2c] border border-slate-700">
+                  <div className="absolute -top-5 -left-5 hidden rounded-xl border border-[#9f526c]/60 bg-[#1a0b15]/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
+                    <div className="flex size-10 items-center justify-center rounded-lg bg-[#220e1c] border border-[#7e3a53]/60">
                       <GoogleIcon size={20} />
                     </div>
                     <div>
@@ -911,21 +881,21 @@ export default function Home() {
                           <Star
                             key={i}
                             size={12}
-                            className="fill-[#cbd5e1] text-white"
+                            className="fill-[#e3bcc4] text-white"
                           />
                         ))}
                       </div>
                       <p className="text-[11px] font-bold text-white mt-0.5">
-                        5,0 no Google · 25 Avaliações
+                        5,0 no Google · 24 Avaliações
                       </p>
                     </div>
                   </div>
 
-                  {/* Floating Stat Badge 2 (Imóveis Regulares) */}
-                  <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-slate-700 bg-[#111622]/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
-                    <HomeIcon size={16} className="text-white" />
+                  {/* Floating Stat Badge 2 (Especialidades) */}
+                  <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-[#9f526c]/60 bg-[#1a0b15]/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
+                    <Scale size={16} className="text-[#e3bcc4]" />
                     <span className="text-xs font-bold tracking-wide text-white">
-                      Direito Imobiliário Especializado ⚖️
+                      Cível · Consumidor · INSS · Trabalho ⚖️
                     </span>
                   </div>
                 </div>
@@ -933,38 +903,38 @@ export default function Home() {
             </div>
 
             {/* INTEGRATED AUTHORITY BAR WITHIN DOBRA 1 (DARK) */}
-            <div className="mt-14 border-t border-slate-800 pt-8">
+            <div className="mt-14 border-t border-[#7e3a53]/35 pt-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <div className="rounded-xl border border-slate-800 bg-[#111622]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
                     5,0 ★
                   </span>
                   <p className="text-xs font-semibold text-white mt-1">Google Meu Negócio</p>
-                  <p className="text-[11px] text-[#94a3b8]">25 avaliações 100% 5 estrelas</p>
+                  <p className="text-[11px] text-[#e3bcc4]">24 avaliações 100% 5 estrelas</p>
                 </div>
 
-                <div className="rounded-xl border border-slate-800 bg-[#111622]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
                     Referência
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Direito Imobiliário</p>
-                  <p className="text-[11px] text-[#94a3b8]">Cartório, Prefeitura e Receita Federal</p>
+                  <p className="text-xs font-semibold text-white mt-1">Sul de Minas Gerais</p>
+                  <p className="text-[11px] text-[#e3bcc4]">Sede em Caxambu & Região</p>
                 </div>
 
-                <div className="rounded-xl border border-slate-800 bg-[#111622]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
-                    100%
+                    Humanizado
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Clareza & Ética</p>
-                  <p className="text-[11px] text-[#94a3b8]">Comunicação acessível e segura</p>
+                  <p className="text-xs font-semibold text-white mt-1">Atendimento Acolhedor</p>
+                  <p className="text-[11px] text-[#e3bcc4]">Sem juridiquês, didática clara</p>
                 </div>
 
-                <div className="rounded-xl border border-slate-800 bg-[#111622]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
-                    Resplendor
+                    DNE
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Galeria Ebal Franco</p>
-                  <p className="text-[11px] text-[#94a3b8]">R. Morais de Carvalho, 653 - Sl 03</p>
+                  <p className="text-xs font-semibold text-white mt-1">Direito na Escola</p>
+                  <p className="text-[11px] text-[#e3bcc4]">Membro atuante em Caxambu</p>
                 </div>
               </div>
             </div>
@@ -972,69 +942,71 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 2: ESPECIALIDADES & ÁREAS DE ATUAÇÃO (LIGHT)      */}
+        {/* DOBRA 2: PILARES & ÁREAS DE ATUAÇÃO (LIGHT ALABASTER)    */}
         {/* ======================================================== */}
-        <section id="especialidades" className="border-t border-[#e2e8f0] bg-[#f8fafc] text-[#0f172a] py-20 lg:py-28">
+        <section id="atuacao" className="border-t border-[#ebd9df] bg-[#fdfbfb] text-[#1f0b15] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                eyebrow="Especialidades & Atuação"
-                dark={false}
-                description="Conheça nossas principais áreas de concentração no Direito Imobiliário. Clique em qualquer especialidade para ver detalhes, situações atendidas e consultar diretamente."
+                eyebrow="Especialidades & Pilares de Atuação"
+                description="Soluções jurídicas estruturadas para pessoas físicas e empresas. Da consultoria preventiva às demandas contenciosas de alta complexidade."
               >
-                Soluções Jurídicas e Segurança Patrimonial Definitiva
+                Atuação Jurídica Completa e Especializada
               </Heading>
 
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de consultar sobre a regularização do meu imóvel.")}
+                href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de consultar sobre a minha situação jurídica.")}
                 target="_blank"
-                variant="platinum"
+                variant="rosegold"
                 size="md"
               >
-                <WhatsAppIcon size={14} />
-                <span>Consultar Meu Caso</span>
+                <WhatsAppIcon size={15} />
+                <span>Consultar Minha Demanda</span>
               </GlowingButton>
             </div>
 
-            {/* Grid of Practice Cards (LIGHT STYLING) */}
-            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {/* Practice Areas Grid */}
+            <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {practiceAreas.map((area) => {
                 const IconComponent = area.icon;
                 return (
                   <div
                     key={area.id}
-                    onClick={() => setActiveArea(area)}
-                    className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-xl hover:shadow-slate-300/40"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-[#ebd9df] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-lg hover:shadow-[#9f526c]/10"
                   >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex size-14 items-center justify-center rounded-xl border border-slate-200 bg-[#f1f5f9] text-[#0f172a] transition-colors group-hover:border-[#0f172a] group-hover:bg-[#0f172a] group-hover:text-white">
-                        <IconComponent size={26} />
+                    <div>
+                      {/* Icon & Category */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8f1f4] text-[#7e3a53] border border-[#ebd9df] transition-colors group-hover:bg-[#7e3a53] group-hover:text-white">
+                          <IconComponent size={22} />
+                        </div>
+                        <span className="rounded-full bg-[#f8f1f4] px-3 py-1 text-[10px] font-bold text-[#7e3a53] uppercase tracking-wider">
+                          Especialidade
+                        </span>
                       </div>
-                      <span className="rounded-full border border-slate-200 bg-[#f1f5f9] px-3 py-1 text-[10px] font-bold tracking-wider uppercase text-slate-700">
-                        {area.tag.split("·")[0].trim()}
-                      </span>
+
+                      <h3 className="mt-5 font-serif text-xl font-bold text-[#1f0b15] group-hover:text-[#7e3a53] transition-colors">
+                        {area.title}
+                      </h3>
+
+                      <p className="mt-2 text-xs font-semibold text-[#9f526c]">
+                        {area.tag}
+                      </p>
+
+                      <p className="mt-3 text-xs leading-relaxed text-[#644452]">
+                        {area.summary}
+                      </p>
                     </div>
 
-                    <h3 className="mt-6 font-serif text-xl font-bold text-[#0f172a] transition-colors group-hover:text-slate-700">
-                      {area.title}
-                    </h3>
-
-                    <p className="mt-2 text-xs font-semibold text-slate-500">
-                      {area.category}
-                    </p>
-
-                    <p className="mt-3 text-sm leading-relaxed text-[#475569]">
-                      {area.summary}
-                    </p>
-
-                    <div className="mt-6 flex items-center justify-between border-t border-[#f1f5f9] pt-4">
-                      <span className="text-xs font-semibold text-[#0f172a] group-hover:underline">
-                        Ver detalhes & situações atendidas
-                      </span>
-                      <ArrowUpRight
-                        size={16}
-                        className="text-[#0f172a] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      />
+                    <div className="mt-6 border-t border-[#ebd9df] pt-4">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedPractice(area)}
+                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#7e3a53] transition-colors hover:text-[#1f0b15] cursor-pointer"
+                      >
+                        <span>Ver Detalhes & Tópicos Atendidos</span>
+                        <ArrowUpRight size={15} />
+                      </button>
                     </div>
                   </div>
                 );
@@ -1043,106 +1015,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* MODAL INTERATIVO DE ESPECIALIDADES */}
-        <AnimatePresence>
-          {activeArea && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setActiveArea(null)}
-                className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-              />
-
-              {/* Modal Box */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 15 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 15 }}
-                transition={{ duration: 0.25 }}
-                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-700 bg-[#0c0f17] p-6 shadow-2xl sm:p-8 text-[#f8fafc]"
-              >
-                <button
-                  type="button"
-                  onClick={() => setActiveArea(null)}
-                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-full border border-slate-700 bg-[#161d2c] text-[#cbd5e1] transition-colors hover:border-white hover:text-white"
-                  aria-label="Fechar modal de detalhes"
-                >
-                  <X size={18} />
-                </button>
-
-                <div className="flex items-center gap-3 text-xs font-bold tracking-widest uppercase text-slate-400">
-                  <Scale size={15} />
-                  <span>Área de Atuação Especializada</span>
-                </div>
-
-                <h3 className="mt-2 font-serif text-2xl font-bold text-white sm:text-3xl">
-                  {activeArea.title}
-                </h3>
-                <p className="mt-1 text-xs text-[#94a3b8]">
-                  {activeArea.category}
-                </p>
-
-                <div className="mt-5 border-t border-slate-800 pt-4">
-                  <p className="text-sm leading-relaxed text-[#cbd5e1]">
-                    {activeArea.details}
-                  </p>
-                </div>
-
-                <div className="mt-6">
-                  <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-white">
-                    Situações & Ações Frequentes
-                  </h4>
-                  <ul className="mt-3 space-y-2.5">
-                    {activeArea.topics.map((topic, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs leading-relaxed text-[#cbd5e1]">
-                        <CheckCircle2 size={15} className="shrink-0 text-white mt-0.5" />
-                        <span>{topic}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end border-t border-slate-800 pt-6">
-                  <button
-                    type="button"
-                    onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#94a3b8] transition-colors hover:text-white"
-                  >
-                    Voltar
-                  </button>
-
-                  <GlowingButton
-                    href={getWhatsAppUrl(activeArea.whatsAppText)}
-                    target="_blank"
-                    variant="platinum"
-                    size="md"
-                  >
-                    <WhatsAppIcon size={15} />
-                    <span>Consultar no WhatsApp</span>
-                  </GlowingButton>
-                </div>
-              </motion.div>
-            </div>
-          )}
-        </AnimatePresence>
-
         {/* ======================================================== */}
-        {/* DOBRA 3: SOBRE A DRA. FABRÍCIA & EQUIPE (DARK)           */}
+        {/* DOBRA 3: SOBRE O ADVOGADO (DARK LUXURY OBSIDIAN PLUM)    */}
         {/* ======================================================== */}
-        <section id="sobre" className="relative border-t border-slate-800 bg-[#0c0f17] py-20 lg:py-28 text-[#f8fafc]">
+        <section id="sobre" className="relative border-t border-[#7e3a53]/40 bg-[#13070f] py-20 lg:py-28 text-[#fbf5f7]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Image: Team Photo (Fabrícia seated with Débora and Paulo) */}
+              {/* Left Image: Yan Rezende sitting in modern armchair with light blazer */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-sm lg:max-w-none">
-                  <div className="overflow-hidden rounded-2xl border-2 border-slate-700 bg-[#111622] p-2.5 shadow-2xl">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#161d2c]">
+                  <div className="overflow-hidden rounded-2xl border-2 border-[#9f526c]/60 bg-[#1a0b15] p-2.5 shadow-2xl">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#220e1c]">
                       <Image
                         src={FOTO_ABOUT_SRC}
-                        alt="Alves e Fragoso Advogados Associados - Dra. Fabrícia Fragoso, Débora e Paulo"
+                        alt="Dr. Yan Rezende - Advocacia e Consultoria Jurídica em Caxambu - MG"
                         fill
                         sizes="(max-width: 768px) 100vw, 450px"
                         className="object-cover object-top"
@@ -1151,11 +1037,11 @@ export default function Home() {
                   </div>
 
                   {/* Experience Badge */}
-                  <div className="absolute -bottom-6 -right-4 rounded-xl border border-slate-700 bg-[#07090e] p-4 shadow-xl">
+                  <div className="absolute -bottom-6 -right-4 rounded-xl border border-[#9f526c]/60 bg-[#0d040a] p-4 shadow-xl">
                     <p className="font-serif text-3xl font-bold text-white">
                       Nota 5,0 ★
                     </p>
-                    <p className="text-[11px] font-semibold text-[#94a3b8]">
+                    <p className="text-[11px] font-semibold text-[#e3bcc4]">
                       Reconhecimento Máximo no Google
                     </p>
                   </div>
@@ -1165,95 +1051,92 @@ export default function Home() {
               {/* Right Content */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre o Escritório & Equipe"
+                  eyebrow="Sobre o Advogado"
                   dark={true}
-                  description="Uma trajetória pautada pela dedicação irrestrita, conhecimento técnico especializado e atendimento genuinamente humano."
+                  description="Uma trajetória pautada pela dedicação irrestrita, comunicação clara e acessível, e compromisso genuíno com a justiça."
                 >
-                  Alves e Fragoso Advogados Associados: Excelência em Direito Imobiliário
+                  Yan Rezende: Advocacia Estratégica & Atendimento Humano
                 </Heading>
 
-                <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#cbd5e1]">
+                <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#f2d6de]">
                   <p>
-                    Liderada pela <strong className="text-white font-semibold">Dra. Fabrícia Fragoso</strong> e contando com os advogados associados{" "}
-                    <strong className="text-white font-semibold">Débora e Paulo</strong>, a{" "}
-                    <strong className="text-white font-semibold">Alves e Fragoso Advogados Associados</strong> consolidou-se como a principal referência em Direito Imobiliário e Regularização de Imóveis em Resplendor e em toda a região do Vale do Rio Doce.
+                    Com escritório sediado na <strong className="text-white font-semibold">Galeria Pan América, no Centro de Caxambu - MG</strong>, o advogado <strong className="text-white font-semibold">Yan Rezende</strong> consolidou uma reputação admirável no Sul de Minas pela seriedade técnica, ética irretocável e atendimento acolhedor.
                   </p>
                   <p>
-                    O escritório é amplamente reconhecido por sua atuação resolutiva e ágil perante{" "}
-                    <strong className="text-white font-semibold">Cartórios de Registro de Imóveis, Prefeituras Municipais, Receita Federal e Tribunais de Justiça</strong>, descomplicando procedimentos burocráticos para que cidadãos e famílias conquistem a escritura e o registro definitivo de seus bens.
+                    Mais do que processos, lidamos com a vida, o patrimônio e a tranquilidade de pessoas e famílias. Por isso, a marca registrada da atuação de Yan Rezende é a <strong className="text-white font-semibold">didática descomplicada</strong> — explicando cada etapa do processo em linguagem clara, tirando dúvidas com paciência e fornecendo suporte detalhado do início até o pós-processo.
                   </p>
                   <p>
-                    Com a expressiva marca de <strong className="text-white font-semibold">nota máxima 5,0 ★ com 25 avaliações no Google Meu Negócio</strong>, a equipe se destaca pelo tratamento humanitário, comunicação transparente em linguagem acessível (sem juridiquês) e acompanhamento próximo em cada fase do processo.
+                    Com <strong className="text-white font-semibold">nota máxima 5,0 ★ com 24 avaliações unânimes no Google</strong>, o escritório é amplamente recomendado pela empatia, sensibilidade em causas delicadas e pela agilidade em demandas empresariais e previdenciárias. Além disso, Yan Rezende é membro atuante do projeto <strong className="text-white font-semibold">Direito na Escola (@dne.caxambu)</strong>, reforçando seu compromisso com a educação e a cidadania.
                   </p>
                 </div>
 
                 {/* 4 Highlights */}
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="flex items-start gap-3 rounded-xl border border-slate-800 bg-[#111622] p-4">
-                    <Shield size={20} className="text-slate-300 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15] p-4">
+                    <HeartHandshake size={20} className="text-[#e3bcc4] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Ética & Humanismo
+                        Empatia & Acolhimento
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#94a3b8]">
-                        Atendimento acolhedor e transparente, priorizando a segurança e o bem-estar do cliente.
+                      <p className="mt-1 text-[11px] text-[#e3bcc4]">
+                        Atendimento humanizado, sensível e respeitoso para causas particulares e delicadas.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-slate-800 bg-[#111622] p-4">
-                    <Briefcase size={20} className="text-slate-300 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15] p-4">
+                    <FileText size={20} className="text-[#e3bcc4] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Especialização Imobiliária
+                        Comunicação Didática
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#94a3b8]">
-                        Domínio completo dos trâmites em Cartórios de Imóveis, Prefeituras e Receita Federal.
+                      <p className="mt-1 text-[11px] text-[#e3bcc4]">
+                        Explicações claras e práticas sem juridiquês, tirando dúvidas com paciência ímpar.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-slate-800 bg-[#111622] p-4">
-                    <Lock size={20} className="text-slate-300 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15] p-4">
+                    <BadgeCheck size={20} className="text-[#e3bcc4] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Sigilo & Discrição
+                        Celeridade Comprovada
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#94a3b8]">
-                        Proteção rigorosa de dados patrimoniais e documentos confidenciais da sua família.
+                      <p className="mt-1 text-[11px] text-[#e3bcc4]">
+                        Resolução ágil de demandas jurídicas e empresariais em prazos recordes.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-slate-800 bg-[#111622] p-4">
-                    <FileText size={20} className="text-slate-300 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15] p-4">
+                    <Lock size={20} className="text-[#e3bcc4] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Agilidade & Prazos
+                        Sigilo & Confiabilidade
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#94a3b8]">
-                        Condução célere com acompanhamento diário de protocolos e certidões.
+                      <p className="mt-1 text-[11px] text-[#e3bcc4]">
+                        Total confidencialidade, acompanhamento atencioso no início, durante e no pós-processo.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 flex items-center gap-4">
+                <div className="mt-8 flex flex-wrap items-center gap-4">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Fabrícia e equipe! Gostaria de conversar sobre a situação do meu imóvel.")}
+                    href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Li sobre sua trajetória e gostaria de conversar sobre o meu caso.")}
                     target="_blank"
                     variant="platinum"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Falar com a Dra. Fabrícia Fragoso</span>
+                    <span>Falar com o Dr. Yan Rezende</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#cbd5e1] transition-colors hover:text-white"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#f2d6de] transition-colors hover:text-white"
                   >
                     <InstagramIcon size={15} />
                     <span>{INSTAGRAM_HANDLE}</span>
@@ -1265,77 +1148,77 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 4: DIFERENCIAIS DO ESCRITÓRIO (LIGHT)             */}
+        {/* DOBRA 4: DIFERENCIAIS BASEADOS NAS AVALIAÇÕES (LIGHT)    */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="border-t border-[#e2e8f0] bg-[#f1f5f9] text-[#0f172a] py-20 lg:py-28">
+        <section id="diferenciais" className="border-t border-[#ebd9df] bg-[#f8f1f4] text-[#1f0b15] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <p className="eyebrow justify-center mb-3">
-                Por que Escolher Fabrícia Fragoso Advocacia
+                Por que Escolher Yan Rezende Advocacia
               </p>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#1f0b15] sm:text-4xl">
                 O Padrão de Excelência com Nota Máxima 5,0 ★ no Google
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#475569]">
-                Pilares que fundamentam cada atendimento, regularização fundiária e defesa conduzida por nossa equipe.
+              <p className="mt-3 text-sm leading-relaxed text-[#644452]">
+                Pilares comprovados por quem já vivenciou o atendimento e teve seus direitos garantidos.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8fafc] text-[#0f172a] border border-slate-200">
-                  <Scale size={22} />
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8f1f4] text-[#7e3a53] border border-[#ebd9df]">
+                  <Sparkles size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0f172a]">
-                  Soluções Claras & Seguras
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1f0b15]">
+                  Profissional Fora da Curva
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Desmistificamos o juridiquês e a burocracia cartorária para entregar soluções definitivas e seguras.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Paciência ímpar e capacidade de explicar o direito de forma prática, sanando todas as dúvidas com tranquilidade.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8fafc] text-[#0f172a] border border-slate-200">
-                  <HeartHandshake size={22} />
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8f1f4] text-[#7e3a53] border border-[#ebd9df]">
+                  <Clock size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0f172a]">
-                  Atendimento Humanitário
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1f0b15]">
+                  Agilidade e Prazos Recordes
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Recepção ética, calorosa e empática, entendendo o valor afetivo e financeiro que o seu imóvel representa.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Resolução de atividades jurídicas e empresariais com rapidez superior à média, priorizando a celeridade.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8fafc] text-[#0f172a] border border-slate-200">
-                  <BadgeCheck size={22} />
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8f1f4] text-[#7e3a53] border border-[#ebd9df]">
+                  <Heart size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0f172a]">
-                  Resolutividade & Agilidade
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1f0b15]">
+                  Sensibilidade & Inclusão
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Priorização de vias extrajudiciais em cartório para acelerar a conquista do documento legítimo.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Olhar humano e sensível para causas trabalhistas, direitos da comunidade LGBT+ e questões civis complexas.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8fafc] text-[#0f172a] border border-slate-200">
-                  <Lock size={22} />
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f8f1f4] text-[#7e3a53] border border-[#ebd9df]">
+                  <Shield size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0f172a]">
-                  Blindagem do Patrimônio
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#1f0b15]">
+                  Suporte Início, Meio e Pós
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Proteção jurídica de contratos e títulos contra riscos de fraude, nulidades e perdas financeiras.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Cuidado detalhista e acompanhamento permanente, mantendo você informado em cada passo até o desfecho.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de esclarecer algumas dúvidas sobre meu imóvel.")}
+                href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de esclarecer algumas dúvidas sobre o meu caso.")}
                 target="_blank"
-                variant="platinum"
+                variant="rosegold"
                 size="md"
               >
                 <WhatsAppIcon size={15} />
@@ -1348,7 +1231,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 5,0 ★ (DARK)      */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="border-t border-slate-800 bg-[#07090e] py-20 lg:py-28 text-[#f8fafc]">
+        <section id="depoimentos" className="border-t border-[#7e3a53]/40 bg-[#0d040a] py-20 lg:py-28 text-[#fbf5f7]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <div>
@@ -1364,13 +1247,13 @@ export default function Home() {
                       <Star
                         key={i}
                         size={16}
-                        className="fill-[#cbd5e1] text-white"
+                        className="fill-[#e3bcc4] text-white"
                       />
                     ))}
                   </div>
                   <span className="text-sm font-bold text-white">5,0 de 5,0</span>
-                  <span className="text-xs text-[#94a3b8]">
-                    · 25 avaliações no Google Meu Negócio
+                  <span className="text-xs text-[#e3bcc4]">
+                    · 24 avaliações 100% cinco estrelas no Google
                   </span>
                 </div>
               </div>
@@ -1379,10 +1262,10 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-[#111622] px-4 py-2.5 text-xs font-bold text-white transition-colors hover:border-white hover:bg-[#161d2c]"
+                className="inline-flex items-center gap-2 rounded-lg border border-[#9f526c]/60 bg-[#1a0b15] px-4 py-2.5 text-xs font-bold text-white transition-colors hover:border-[#e3bcc4] hover:bg-[#2d1326]"
               >
                 <GoogleIcon size={14} />
-                <span>Ver no Google Maps</span>
+                <span>Ver Perfil no Google Maps</span>
                 <ExternalLink size={12} />
               </a>
             </div>
@@ -1392,7 +1275,7 @@ export default function Home() {
               {clientReviews.map((review, idx) => (
                 <div
                   key={idx}
-                  className="relative flex flex-col justify-between rounded-2xl border border-slate-800 bg-[#111622] p-6 shadow-md transition-all duration-300 hover:border-slate-500 hover:bg-[#161d2c]"
+                  className="relative flex flex-col justify-between rounded-2xl border border-[#7e3a53]/40 bg-[#1a0b15] p-6 shadow-md transition-all duration-300 hover:border-[#c88ea0] hover:bg-[#220e1c]"
                 >
                   <div>
                     {/* Stars */}
@@ -1401,7 +1284,7 @@ export default function Home() {
                         <Star
                           key={i}
                           size={13}
-                          className="fill-[#cbd5e1] text-white"
+                          className="fill-[#e3bcc4] text-white"
                         />
                       ))}
                     </div>
@@ -1412,16 +1295,16 @@ export default function Home() {
                     </p>
 
                     {/* Full Review Text */}
-                    <p className="mt-3 text-xs leading-relaxed text-[#cbd5e1]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#f2d6de]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
-                  <div className="mt-6 border-t border-slate-800 pt-4">
+                  <div className="mt-6 border-t border-[#7e3a53]/40 pt-4">
                     <p className="font-serif text-xs font-bold text-white">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#94a3b8]">
+                    <p className="text-[10px] text-[#e3bcc4]">
                       {review.badge} · {review.date}
                     </p>
                   </div>
@@ -1429,22 +1312,22 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-slate-700 bg-[#111622] p-6 text-center sm:p-8">
+            <div className="mt-12 rounded-2xl border border-[#9f526c]/50 bg-[#1a0b15] p-6 text-center sm:p-8">
               <h3 className="font-serif text-lg font-bold text-white sm:text-xl">
-                Precisa regularizar seu imóvel ou resolver uma questão imobiliária?
+                Precisa de orientação jurídica profissional e segura?
               </h3>
-              <p className="mt-2 text-xs text-[#94a3b8] max-w-xl mx-auto">
-                Não arrisque o patrimônio mais importante da sua vida sem o respaldo de quem entende a fundo o Direito Imobiliário e atua com ética e dedicação total.
+              <p className="mt-2 text-xs text-[#f2d6de] max-w-xl mx-auto">
+                Não enfrente dúvidas ou litígios sem o respaldo de quem atua com seriedade, ética, rapidez e total dedicação ao seu caso.
               </p>
               <div className="mt-6 flex justify-center">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dra. Fabrícia! Li as avaliações no site e gostaria de avaliar a situação do meu imóvel com você.")}
+                  href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Li as avaliações no site e gostaria de conversar com você sobre o meu caso.")}
                   target="_blank"
                   variant="platinum"
                   size="md"
                 >
                   <WhatsAppIcon size={15} />
-                  <span>Falar com a Dra. Fabrícia Fragoso Agora</span>
+                  <span>Falar com o Dr. Yan Rezende Agora</span>
                 </GlowingButton>
               </div>
             </div>
@@ -1454,66 +1337,66 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: COMO FUNCIONA O ATENDIMENTO (LIGHT)             */}
         {/* ======================================================== */}
-        <section className="border-t border-[#e2e8f0] bg-[#f8fafc] text-[#0f172a] py-20 lg:py-24">
+        <section className="border-t border-[#ebd9df] bg-[#fdfbfb] text-[#1f0b15] py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <span className="eyebrow justify-center mb-3">
                 Processo Transparente
               </span>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#1f0b15] sm:text-4xl">
                 Como Funciona o Seu Atendimento
               </h2>
-              <p className="mt-3 text-sm text-[#475569]">
-                Passo a passo simples, ágil e descomplicado desde o primeiro contato até a escritura definitiva registrada.
+              <p className="mt-3 text-sm text-[#644452]">
+                Passo a passo simples, ágil e descomplicado desde a primeira mensagem até o desfecho da sua questão jurídica.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#0f172a]">
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#7e3a53]">
                   01
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0f172a]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1f0b15]">
                   Contato Inicial
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Envie uma mensagem no WhatsApp relatando a situação do imóvel e esclareça suas primeiras dúvidas.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Envie uma mensagem no WhatsApp relatando a sua situação e esclareça as primeiras dúvidas diretamente com o escritório.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#0f172a]">
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#7e3a53]">
                   02
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0f172a]">
-                  Auditoria Documental
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1f0b15]">
+                  Análise Documental
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Analisamos contratos de compra e venda, certidões de matrícula, IPTU e histórico de posse do imóvel.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Avaliamos detalhadamente contratos, extratos, notificações ou processos para verificar a viabilidade jurídica do caso.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#0f172a]">
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#7e3a53]">
                   03
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0f172a]">
-                  Estratégia mais Ágil
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1f0b15]">
+                  Estratégia Sob Medida
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Definimos o caminho mais econômico e rápido (cartório extrajudicial ou judicial) para o seu caso.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Definimos o caminho mais econômico e rápido (acordo extrajudicial em cartório ou ação judicial fundamentada).
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#0f172a]">
+              <div className="rounded-2xl border border-[#ebd9df] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c88ea0] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#7e3a53]">
                   04
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0f172a]">
-                  Escritura & Matrícula
+                <h3 className="mt-3 font-serif text-base font-bold text-[#1f0b15]">
+                  Acompanhamento Ativo
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                  Conduzimos todo o processo perante Cartório e Prefeitura até a entrega da matrícula definitiva registrada.
+                <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                  Condução zelosa em todas as instâncias com atualizações frequentes e suporte contínuo até a conclusão definitiva.
                 </p>
               </div>
             </div>
@@ -1523,7 +1406,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: DÚVIDAS FREQUENTES / FAQ (DARK)                 */}
         {/* ======================================================== */}
-        <section id="duvidas" className="border-t border-slate-800 bg-[#0c0f17] py-20 lg:py-28 text-[#f8fafc]">
+        <section id="duvidas" className="border-t border-[#7e3a53]/40 bg-[#13070f] py-20 lg:py-28 text-[#fbf5f7]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="eyebrow-dark mb-3.5 justify-center">
@@ -1532,8 +1415,8 @@ export default function Home() {
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Perguntas Frequentes
               </h2>
-              <p className="mt-3 text-sm text-[#cbd5e1]">
-                Respostas diretas para as dúvidas mais comuns sobre regularização de imóveis, usucapião e cartórios.
+              <p className="mt-3 text-sm text-[#f2d6de]">
+                Respostas diretas e didáticas para as principais dúvidas sobre atendimento jurídico, processos e prazos.
               </p>
             </div>
 
@@ -1543,18 +1426,18 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className="overflow-hidden rounded-xl border border-slate-800 bg-[#111622] transition-colors"
+                    className="overflow-hidden rounded-xl border border-[#7e3a53]/40 bg-[#1a0b15] transition-colors"
                   >
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-white transition-colors hover:text-slate-300"
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-white transition-colors hover:text-[#f2d6de] cursor-pointer"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-slate-400" />
+                        <ChevronUp size={18} className="shrink-0 text-[#c88ea0]" />
                       ) : (
-                        <ChevronDown size={18} className="shrink-0 text-slate-400" />
+                        <ChevronDown size={18} className="shrink-0 text-[#c88ea0]" />
                       )}
                     </button>
 
@@ -1565,7 +1448,7 @@ export default function Home() {
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="border-t border-slate-800/80 px-5 pt-3 pb-5 text-xs leading-relaxed text-[#cbd5e1]"
+                          className="border-t border-[#7e3a53]/35 px-5 pt-3 pb-5 text-xs leading-relaxed text-[#f2d6de]"
                         >
                           {faq.answer}
                         </motion.div>
@@ -1577,18 +1460,18 @@ export default function Home() {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-xs text-[#94a3b8]">
+              <p className="text-xs text-[#e3bcc4]">
                 Sua dúvida específica não está listada acima?
               </p>
               <div className="mt-3">
                 <a
-                  href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de esclarecer uma dúvida sobre meu imóvel que não vi no site.")}
+                  href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de esclarecer uma dúvida que não encontrei no site.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold text-white hover:underline"
                 >
                   <WhatsAppIcon size={14} className="text-[#25D366]" />
-                  <span>Pergunte diretamente à Dra. Fabrícia Fragoso no WhatsApp</span>
+                  <span>Pergunte diretamente ao Dr. Yan Rezende no WhatsApp</span>
                   <ArrowRight size={12} />
                 </a>
               </div>
@@ -1599,53 +1482,53 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: LOCALIZAÇÃO, SEDE & CONTATO (LIGHT)            */}
         {/* ======================================================== */}
-        <section id="contato" className="border-t border-[#e2e8f0] bg-[#f8fafc] text-[#0f172a] py-20 lg:py-28">
+        <section id="contato" className="border-t border-[#ebd9df] bg-[#fdfbfb] text-[#1f0b15] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Sede info (LIGHT STYLING) */}
               <div className="lg:col-span-5">
                 <span className="eyebrow mb-3.5">Sede & Atendimento</span>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#1f0b15] sm:text-4xl">
                   Estamos Prontos para Atender Você
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-[#475569]">
-                  Venha nos visitar em nosso escritório na Galeria Ebal Franco, no Centro de Resplendor - MG, ou agende sua consulta digital com todo o sigilo e segurança jurídica.
+                <p className="mt-4 text-sm leading-relaxed text-[#644452]">
+                  Venha tomar um café em nosso escritório na Galeria Pan América, no Centro de Caxambu - MG, ou agende sua consulta online com total comodidade e segurança jurídica de onde você estiver.
                 </p>
 
                 <div className="mt-8 space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0f172a]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#ebd9df] bg-[#f8f1f4] text-[#7e3a53]">
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0f172a] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1f0b15] uppercase tracking-wider">
                         Endereço da Sede
                       </p>
-                      <p className="mt-1 text-xs leading-relaxed text-[#475569]">
+                      <p className="mt-1 text-xs leading-relaxed text-[#644452]">
                         {ADDRESS_TEXT}
                       </p>
-                      <p className="text-[11px] text-slate-500 font-medium mt-0.5">
-                        Centro de Resplendor - MG · Galeria Ebal Franco, Sala 03.
+                      <p className="text-[11px] text-[#9f526c] font-medium mt-0.5">
+                        Centro de Caxambu - MG · Galeria Edifício Pan América, Sala 6 (1ª sala à direita).
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0f172a]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#ebd9df] bg-[#f8f1f4] text-[#7e3a53]">
                       <Phone size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0f172a] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1f0b15] uppercase tracking-wider">
                         Telefone & WhatsApp
                       </p>
-                      <p className="mt-1 text-xs text-[#475569]">
+                      <p className="mt-1 text-xs text-[#644452]">
                         {PHONE_DISPLAY}
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de agendar uma consulta imobiliária.")}
+                        href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de agendar uma consulta jurídica.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-bold text-[#0f172a] hover:underline"
+                        className="text-[11px] font-bold text-[#7e3a53] hover:underline"
                       >
                         Clique para enviar mensagem no WhatsApp
                       </a>
@@ -1653,28 +1536,28 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0f172a]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#ebd9df] bg-[#f8f1f4] text-[#7e3a53]">
                       <Clock size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0f172a] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1f0b15] uppercase tracking-wider">
                         Horário de Funcionamento
                       </p>
-                      <p className="mt-1 text-xs text-[#475569]">
+                      <p className="mt-1 text-xs text-[#644452]">
                         Segunda a Sexta: 09:00 às 18:00
                       </p>
-                      <p className="text-[11px] text-slate-500">
-                        Atendimento presencial com agendamento e online para todo o Brasil.
+                      <p className="text-[11px] text-[#9f526c]">
+                        Atendimento presencial com agendamento prévio e online para todo o Brasil.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#0f172a]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#ebd9df] bg-[#f8f1f4] text-[#7e3a53]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0f172a] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#1f0b15] uppercase tracking-wider">
                         Redes Sociais & Perfil
                       </p>
                       <div className="mt-1 flex flex-col gap-1 text-xs">
@@ -1682,17 +1565,25 @@ export default function Home() {
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#475569] hover:text-[#0f172a]"
+                          className="text-[#644452] hover:text-[#1f0b15]"
                         >
                           Instagram: <span className="font-bold">{INSTAGRAM_HANDLE}</span>
+                        </a>
+                        <a
+                          href={LINKTREE_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#644452] hover:text-[#1f0b15]"
+                        >
+                          Linktree: <span className="font-bold">linktr.ee/yanrezende.adv</span>
                         </a>
                         <a
                           href={GOOGLE_SEARCH_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-slate-600 hover:underline"
+                          className="text-[#9f526c] hover:underline"
                         >
-                          Perfil Google: Fabrícia Fragoso Advocacia (5,0 ★)
+                          Perfil Google: Yan Rezende Advocacia (5,0 ★)
                         </a>
                       </div>
                     </div>
@@ -1702,73 +1593,73 @@ export default function Home() {
 
               {/* Right Column: Interactive Consultation Card (LIGHT STYLING) */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50">
+                <div className="rounded-2xl border border-[#ebd9df] bg-white p-8 shadow-xl shadow-[#9f526c]/10">
                   <div className="flex items-center gap-3">
                     <span className="flex size-2 rounded-full bg-[#25D366]" />
-                    <span className="text-xs font-bold tracking-wider uppercase text-slate-700">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#7e3a53]">
                       Canal de Atendimento Direto
                     </span>
                   </div>
 
-                  <h3 className="mt-4 font-serif text-2xl font-bold text-[#0f172a] sm:text-3xl">
-                    Inicie sua Consulta com a Dra. Fabrícia Fragoso
+                  <h3 className="mt-4 font-serif text-2xl font-bold text-[#1f0b15] sm:text-3xl">
+                    Inicie seu Atendimento com o Dr. Yan Rezende
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#475569]">
-                    Selecione a situação do seu imóvel para ser direcionado(a) com a mensagem adequada ao WhatsApp oficial do escritório:
+                  <p className="mt-2 text-xs leading-relaxed text-[#644452]">
+                    Selecione a área da sua necessidade para ser direcionado(a) com a mensagem adequada ao WhatsApp oficial do escritório:
                   </p>
 
                   <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de consultar sobre Regularização de Imóvel / Escritura / Cartório.")}
+                      href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de consultar sobre uma questão de Direito do Consumidor / bancos / danos.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-200 bg-[#f8fafc] p-4 text-xs font-bold text-[#0f172a] transition-all hover:border-slate-400 hover:bg-[#f1f5f9]"
+                      className="flex items-center justify-between rounded-xl border border-[#ebd9df] bg-[#f8f1f4] p-4 text-xs font-bold text-[#1f0b15] transition-all hover:border-[#c88ea0] hover:bg-[#f2d6de]/30"
                     >
-                      <span>Regularização & Escritura</span>
-                      <ArrowRight size={14} className="text-slate-700" />
+                      <span>Direito do Consumidor</span>
+                      <ArrowRight size={14} className="text-[#7e3a53]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de orientação sobre Usucapião em Cartório / Judicial.")}
+                      href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de orientação sobre Causas Trabalhistas / rescisão / horas extras.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-200 bg-[#f8fafc] p-4 text-xs font-bold text-[#0f172a] transition-all hover:border-slate-400 hover:bg-[#f1f5f9]"
+                      className="flex items-center justify-between rounded-xl border border-[#ebd9df] bg-[#f8f1f4] p-4 text-xs font-bold text-[#1f0b15] transition-all hover:border-[#c88ea0] hover:bg-[#f2d6de]/30"
                     >
-                      <span>Usucapião em Cartório</span>
-                      <ArrowRight size={14} className="text-slate-700" />
+                      <span>Direito Trabalhista</span>
+                      <ArrowRight size={14} className="text-[#7e3a53]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de orientação sobre Compra Segura / Due Diligence / Contrato Imobiliário.")}
+                      href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de orientação sobre Aposentadoria / Benefício Previdenciário (INSS).")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-200 bg-[#f8fafc] p-4 text-xs font-bold text-[#0f172a] transition-all hover:border-slate-400 hover:bg-[#f1f5f9]"
+                      className="flex items-center justify-between rounded-xl border border-[#ebd9df] bg-[#f8f1f4] p-4 text-xs font-bold text-[#1f0b15] transition-all hover:border-[#c88ea0] hover:bg-[#f2d6de]/30"
                     >
-                      <span>Contratos & Compra Segura</span>
-                      <ArrowRight size={14} className="text-slate-700" />
+                      <span>Previdenciário (INSS)</span>
+                      <ArrowRight size={14} className="text-[#7e3a53]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Fabrícia! Gostaria de orientação sobre Inventário / Partilha de Imóveis da Família.")}
+                      href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de orientação sobre Direito Cível / Contratos / Consultoria Empresarial.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-200 bg-[#f8fafc] p-4 text-xs font-bold text-[#0f172a] transition-all hover:border-slate-400 hover:bg-[#f1f5f9]"
+                      className="flex items-center justify-between rounded-xl border border-[#ebd9df] bg-[#f8f1f4] p-4 text-xs font-bold text-[#1f0b15] transition-all hover:border-[#c88ea0] hover:bg-[#f2d6de]/30"
                     >
-                      <span>Inventário & Partilha de Imóveis</span>
-                      <ArrowRight size={14} className="text-slate-700" />
+                      <span>Cível & Consultoria Empresarial</span>
+                      <ArrowRight size={14} className="text-[#7e3a53]" />
                     </a>
                   </div>
 
-                  <div className="mt-8 border-t border-slate-100 pt-6">
+                  <div className="mt-8 border-t border-[#ebd9df] pt-6">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Fabrícia Fragoso! Gostaria de conversar com você sobre a situação do meu imóvel.")}
+                      href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de conversar com você sobre a minha situação jurídica.")}
                       target="_blank"
-                      variant="platinum"
+                      variant="rosegold"
                       size="lg"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com a Dra. Fabrícia Fragoso</span>
+                      <span>Falar no WhatsApp com o Dr. Yan Rezende</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -1780,7 +1671,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: FOOTER INSTITUCIONAL (DARK)                    */}
         {/* ======================================================== */}
-        <footer className="border-t border-slate-800 bg-[#07090e] pt-16 pb-12 text-[#94a3b8]">
+        <footer className="border-t border-[#7e3a53]/40 bg-[#0d040a] pt-16 pb-12 text-[#e3bcc4]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
               {/* Brand Column */}
@@ -1788,31 +1679,31 @@ export default function Home() {
                 <div className="relative py-1">
                   <Image
                     src={LOGO_SRC}
-                    alt="Alves e Fragoso Advogados Associados - Dra. Fabrícia Fragoso"
-                    width={260}
-                    height={52}
+                    alt="Yan Rezende Advocacia e Consultoria Jurídica"
+                    width={280}
+                    height={56}
                     className="h-10 sm:h-12 w-auto max-w-[240px] sm:max-w-[280px] object-contain object-left"
                   />
                 </div>
-                <p className="mt-4 text-xs leading-relaxed text-[#cbd5e1] max-w-md">
-                  ⚖️ Fabrícia Fragoso Advocacia — Alves e Fragoso Advogados Associados. Advocacia especializada em Direito Imobiliário e Regularização Fundiária. Atendimento humanizado, ético e resolutivo presencial em Resplendor - MG e online para todo o Brasil.
+                <p className="mt-4 text-xs leading-relaxed text-[#f2d6de] max-w-md">
+                  ⚖️ Yan Rezende — Advocacia e Consultoria Jurídica. Atuação especializada em Direito Cível, Consumidor, Previdenciário (INSS), Trabalhista e Assessoria Empresarial. Atendimento humanizado, ético e resolutivo presencial em Caxambu - MG e online para todo o Brasil.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#111622] text-[#cbd5e1] transition-colors hover:border-white hover:text-white"
-                    aria-label="Instagram da Dra. Fabrícia Fragoso"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#7e3a53]/60 bg-[#1a0b15] text-[#f2d6de] transition-colors hover:border-white hover:text-white"
+                    aria-label="Instagram do Dr. Yan Rezende"
                   >
                     <InstagramIcon size={16} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Fabrícia Fragoso!")}
+                    href={getWhatsAppUrl("Olá, Dr. Yan Rezende!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#111622] text-[#cbd5e1] transition-colors hover:border-white hover:text-white"
-                    aria-label="WhatsApp da Dra. Fabrícia Fragoso"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#7e3a53]/60 bg-[#1a0b15] text-[#f2d6de] transition-colors hover:border-white hover:text-white"
+                    aria-label="WhatsApp do Dr. Yan Rezende"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1820,7 +1711,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#111622] text-[#cbd5e1] transition-colors hover:border-white hover:text-white"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#7e3a53]/60 bg-[#1a0b15] text-[#f2d6de] transition-colors hover:border-white hover:text-white"
                     aria-label="Avaliações do Google"
                   >
                     <GoogleIcon size={16} />
@@ -1835,13 +1726,13 @@ export default function Home() {
                 </p>
                 <ul className="mt-4 space-y-2.5 text-xs">
                   <li>
-                    <a href="#especialidades" className="footer-link">
-                      Especialidades Imobiliárias
+                    <a href="#atuacao" className="footer-link">
+                      Áreas de Atuação
                     </a>
                   </li>
                   <li>
                     <a href="#sobre" className="footer-link">
-                      Sobre a Dra. Fabrícia & Equipe
+                      Sobre o Dr. Yan Rezende
                     </a>
                   </li>
                   <li>
@@ -1861,7 +1752,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="footer-link">
-                      Sede em Resplendor - MG
+                      Sede em Caxambu - MG
                     </a>
                   </li>
                 </ul>
@@ -1872,14 +1763,14 @@ export default function Home() {
                 <p className="font-serif text-xs font-bold uppercase tracking-wider text-white">
                   Informações Institucionais & OAB
                 </p>
-                <p className="mt-4 text-[11px] leading-relaxed text-[#64748b]">
+                <p className="mt-4 text-[11px] leading-relaxed text-[#c88ea0]">
                   Este site tem finalidade estritamente institucional e informativa, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
                 </p>
-                <div className="mt-4 rounded-lg border border-slate-800 bg-[#111622] p-3 text-[11px] text-[#cbd5e1]">
+                <div className="mt-4 rounded-lg border border-[#7e3a53]/40 bg-[#1a0b15] p-3 text-[11px] text-[#f2d6de]">
                   <p className="font-bold text-white">
-                    Alves e Fragoso Advogados Associados
+                    Yan Rezende — Advocacia e Consultoria Jurídica
                   </p>
-                  <p className="mt-0.5 text-[#94a3b8]">
+                  <p className="mt-0.5 text-[#e3bcc4]">
                     {ADDRESS_TEXT}
                   </p>
                 </div>
@@ -1887,12 +1778,12 @@ export default function Home() {
             </div>
 
             {/* Bottom Copyright */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
+            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#7e3a53]/40 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
               <p>
-                © {new Date().getFullYear()} ALVES E FRAGOSO ADVOGADOS ASSOCIADOS. Todos os direitos reservados.
+                © {new Date().getFullYear()} YAN REZENDE — ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
               </p>
-              <p className="text-[#64748b]">
-                Galeria Ebal Franco · Resplendor · Minas Gerais · Brasil
+              <p className="text-[#c88ea0]">
+                Galeria Pan América · Caxambu · Minas Gerais · Brasil
               </p>
             </div>
           </div>
@@ -1901,18 +1792,98 @@ export default function Home() {
         {/* FLOATING WHATSAPP CTA BUTTON */}
         <div className="fixed right-5 bottom-5 z-50 flex items-center gap-2">
           <a
-            href={getWhatsAppUrl("Olá, Dra. Fabrícia Fragoso! Gostaria de consultar sobre meu imóvel.")}
+            href={getWhatsAppUrl("Olá, Dr. Yan Rezende! Gostaria de tirar uma dúvida sobre o meu caso.")}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Fabrícia Fragoso"
-            className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/60 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
+            aria-label="Falar agora pelo WhatsApp com o Dr. Yan Rezende"
+            className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/80 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
           >
             <WhatsAppIcon size={19} />
             <span className="hidden sm:inline tracking-wide font-bold">
-              Falar com a Dra. Fabrícia
+              Falar com o Dr. Yan
             </span>
           </a>
         </div>
+
+        {/* PRACTICE AREA MODAL */}
+        <AnimatePresence>
+          {selectedPractice && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 15 }}
+                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#9f526c]/60 bg-[#13070f] p-6 text-white shadow-2xl sm:p-8"
+              >
+                <button
+                  type="button"
+                  onClick={() => setSelectedPractice(null)}
+                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-[#7e3a53]/60 bg-[#1a0b15] text-[#f2d6de] hover:border-white hover:text-white cursor-pointer"
+                  aria-label="Fechar modal"
+                >
+                  <X size={18} />
+                </button>
+
+                <div className="flex items-center gap-2 text-xs font-bold text-[#e3bcc4] uppercase tracking-wider">
+                  <span>Especialidade Jurídica</span>
+                </div>
+
+                <h3 className="mt-3 font-serif text-2xl font-bold text-white sm:text-3xl">
+                  {selectedPractice.title}
+                </h3>
+
+                <p className="mt-2 text-xs font-medium text-[#c88ea0]">
+                  {selectedPractice.category}
+                </p>
+
+                <p className="mt-4 text-xs leading-relaxed text-[#f2d6de] sm:text-sm">
+                  {selectedPractice.details}
+                </p>
+
+                <div className="mt-6 border-t border-[#7e3a53]/40 pt-4">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+                    Principais Demandas & Procedimentos Atendidos:
+                  </h4>
+                  <ul className="mt-3 space-y-2">
+                    {selectedPractice.topics.map((topic, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2.5 text-xs text-[#f2d6de]"
+                      >
+                        <CheckCircle2
+                          size={15}
+                          className="text-[#e3bcc4] shrink-0 mt-0.5"
+                        />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <GlowingButton
+                    href={getWhatsAppUrl(selectedPractice.whatsAppText)}
+                    target="_blank"
+                    variant="platinum"
+                    size="md"
+                    className="w-full sm:w-auto"
+                  >
+                    <WhatsAppIcon size={15} />
+                    <span>Consultar Dr. Yan Rezende nesta Área</span>
+                  </GlowingButton>
+
+                  <button
+                    type="button"
+                    onClick={() => setSelectedPractice(null)}
+                    className="w-full rounded-lg border border-[#7e3a53]/50 bg-[#1a0b15] px-5 py-3 text-xs font-bold text-[#f2d6de] hover:bg-[#220e1c] hover:text-white sm:w-auto cursor-pointer"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
       </main>
     </MotionConfig>
   );

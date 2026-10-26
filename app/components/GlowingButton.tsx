@@ -18,7 +18,7 @@ interface GlowingButtonProps {
     | "outline"
     | "emerald"
     | "champagne"
-    | "titanium"
+    | "crimson"
     | "white";
 }
 
@@ -37,29 +37,29 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Alves e Fragoso Advogados Associados / Dra. Fabrícia Fragoso
-  // Metallic Platinum Silver & Obsidian Slate Prestige
+  // Visual identity based on Yan Rezende — Advocacia e Consultoria Jurídica
+  // Metallic Rose Mauve, Wine & Obsidian Plum Prestige
   const variantClasses = {
     platinum:
-      "border border-white/90 bg-gradient-to-r from-[#cbd5e1] via-[#f8fafc] to-[#ffffff] text-[#07090e] font-black shadow-md shadow-white/20 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(255,255,255,0.35)]",
+      "border border-[#f2d6de] bg-gradient-to-r from-[#e3bcc4] via-[#fbf5f7] to-[#ffffff] text-[#1f0b15] font-black shadow-md shadow-[#c88ea0]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(227,188,196,0.45)]",
     silver:
-      "border border-white/90 bg-gradient-to-r from-[#cbd5e1] via-[#f8fafc] to-[#ffffff] text-[#07090e] font-black shadow-md shadow-white/20 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(255,255,255,0.35)]",
+      "border border-[#f2d6de] bg-gradient-to-r from-[#e3bcc4] via-[#fbf5f7] to-[#ffffff] text-[#1f0b15] font-black shadow-md shadow-[#c88ea0]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(227,188,196,0.45)]",
     gold:
-      "border border-white/90 bg-gradient-to-r from-[#cbd5e1] via-[#f8fafc] to-[#ffffff] text-[#07090e] font-black shadow-md shadow-white/20 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(255,255,255,0.35)]",
+      "border border-[#e3bcc4]/80 bg-gradient-to-r from-[#8f415c] via-[#b65877] to-[#d8849e] text-white font-black shadow-md shadow-[#8f415c]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(182,88,119,0.5)]",
     rosegold:
-      "border border-white/90 bg-gradient-to-r from-[#cbd5e1] via-[#f8fafc] to-[#ffffff] text-[#07090e] font-black shadow-md shadow-white/20 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(255,255,255,0.35)]",
+      "border border-[#e3bcc4]/80 bg-gradient-to-r from-[#7e3a53] via-[#9f526c] to-[#c88ea0] text-white font-black shadow-md shadow-[#7e3a53]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(159,82,108,0.5)]",
     dark:
-      "border border-slate-600/60 bg-[#111622] text-[#f8fafc] font-bold shadow-md hover:-translate-y-0.5 hover:border-white hover:bg-[#1a2234] hover:text-white",
+      "border border-[#9f526c]/50 bg-[#1a0b15] text-[#fbf5f7] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#e3bcc4] hover:bg-[#2d1326] hover:text-white",
     outline:
-      "border border-slate-300/60 bg-transparent text-[#f8fafc] font-bold hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white",
+      "border border-[#e3bcc4]/60 bg-transparent text-[#fbf5f7] font-bold hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white",
     emerald:
       "border border-[#25D366] bg-gradient-to-r from-[#1ea952] to-[#25D366] text-white font-black shadow-md shadow-[#25D366]/25 hover:-translate-y-0.5 hover:brightness-105",
-    titanium:
-      "border border-[#e8d5ab] bg-gradient-to-r from-[#a6823c] via-[#c5a059] to-[#e8d5ab] text-[#07090e] font-black shadow-md shadow-[#c5a059]/25 hover:-translate-y-0.5 hover:brightness-105",
+    crimson:
+      "border border-[#e63946] bg-gradient-to-r from-[#9e121a] to-[#c81d25] text-white font-black shadow-md shadow-[#c81d25]/30 hover:-translate-y-0.5 hover:brightness-110",
     champagne:
-      "border border-slate-300 bg-[#f8fafc] text-[#0f172a] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-slate-500",
+      "border border-[#ebd9df] bg-[#fdfbfb] text-[#1f0b15] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#c88ea0]",
     white:
-      "border border-slate-200 bg-white text-[#0f172a] font-bold shadow-xs hover:-translate-y-0.5 hover:border-slate-400 hover:text-slate-900",
+      "border border-slate-200 bg-white text-[#1f0b15] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#c88ea0] hover:text-black",
   }[variant];
 
   const classes =

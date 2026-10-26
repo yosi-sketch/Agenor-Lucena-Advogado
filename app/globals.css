@@ -3,47 +3,52 @@
 :root {
   color-scheme: dark light;
   
-  /* Brand Luxury Midnight Obsidian & Liquid Slate (Deep Prestige Background & Surfaces) */
-  --brand-midnight: #07090e;
-  --brand-slate-dark: #0c0f17;
-  --brand-slate-surface: #111622;
-  --brand-slate-card: #161d2c;
-  --brand-slate-elevated: #1e2738;
-  --brand-slate-muted: #334155;
+  /* Brand Luxury Deep Obsidian Plum & Velvet Night (Prestige Background & Surfaces) */
+  --brand-obsidian: #0d040a;
+  --brand-midnight: #13070f;
+  --brand-surface: #1a0b15;
+  --brand-card: #220e1c;
+  --brand-elevated: #2d1326;
+  --brand-slate-muted: #5e3a4b;
   
-  /* Brand Platinum & Metallic Chrome (Directly extracted from Alves e Fragoso AF Monogram & Logo) */
-  --brand-silver-highlight: #ffffff;
-  --brand-silver-bright: #f8fafc;
-  --brand-silver-light: #e2e8f0;
-  --brand-silver: #cbd5e1;
-  --brand-silver-dark: #94a3b8;
-  --brand-silver-deep: #64748b;
-  --brand-silver-shadow: #334155;
+  /* Brand Metallic Rose Mauve & Wine (Directly extracted from Yan Rezende YR Monogram & Logo) */
+  --brand-rose-highlight: #ffffff;
+  --brand-rose-bright: #fbf5f7;
+  --brand-rose-light: #f2d6de;
+  --brand-rose-champagne: #e3bcc4;
+  --brand-rose-metallic: #c88ea0;
+  --brand-rose-mauve: #9f526c;
+  --brand-rose-wine: #7e3a53;
+  --brand-rose-deep: #5e263c;
+  --brand-rose-shadow: #3a1424;
 
-  /* Aliases for compatibility */
-  --brand-gold: #cbd5e1;
+  /* Aliases for backwards compatibility */
+  --brand-silver: #c88ea0;
+  --brand-silver-bright: #ffffff;
+  --brand-silver-light: #f2d6de;
+  --brand-silver-dark: #9f526c;
+  --brand-gold: #e3bcc4;
   --brand-gold-bright: #ffffff;
-  --brand-gold-light: #e2e8f0;
-  --brand-gold-dark: #94a3b8;
+  --brand-gold-light: #fbf5f7;
+  --brand-gold-dark: #c88ea0;
 
-  /* Subtle Warm Titanium / Champagne Accent for Real Estate Prestige */
-  --brand-titanium: #c5a059;
-  --brand-titanium-bright: #e8d5ab;
-  --brand-titanium-dark: #937233;
+  /* Vibrant Leadership Red Accent (Yan Rezende Signature Portrait Tie) */
+  --brand-crimson: #c81d25;
+  --brand-crimson-bright: #e63946;
 
-  /* Light Editorial Slate / Pure White for balanced sections */
-  --brand-cream-bg: #f8fafc;
-  --brand-cream-alt: #f1f5f9;
+  /* Light Editorial Rose-Alabaster / Warm Ivory for balanced sections */
+  --brand-cream-bg: #fdfbfb;
+  --brand-cream-alt: #f8f1f4;
   --brand-cream-surface: #ffffff;
-  --brand-cream-border: #e2e8f0;
-  --brand-cream-ink: #0f172a;
-  --brand-cream-muted: #475569;
+  --brand-cream-border: #ebd9df;
+  --brand-cream-ink: #1f0b15;
+  --brand-cream-muted: #644452;
   
   /* Borders & Accents */
-  --brand-border-silver: rgba(226, 232, 240, 0.28);
-  --brand-border-silver-subtle: rgba(203, 213, 225, 0.18);
-  --brand-border-silver-strong: rgba(255, 255, 255, 0.75);
-  --brand-border-slate: rgba(51, 65, 85, 0.45);
+  --brand-border-rose: rgba(227, 188, 196, 0.28);
+  --brand-border-rose-subtle: rgba(200, 142, 160, 0.16);
+  --brand-border-rose-strong: rgba(255, 255, 255, 0.85);
+  --brand-border-plum: rgba(94, 38, 60, 0.45);
 }
 
 @theme inline {
@@ -51,25 +56,27 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-brand-midnight: #07090e;
-  --color-brand-obsidian: #0c0f17;
-  --color-brand-surface: #111622;
-  --color-brand-card: #161d2c;
-  --color-brand-elevated: #1e2738;
+  --color-brand-obsidian: #0d040a;
+  --color-brand-midnight: #13070f;
+  --color-brand-surface: #1a0b15;
+  --color-brand-card: #220e1c;
+  --color-brand-elevated: #2d1326;
   
-  --color-brand-silver: #cbd5e1;
-  --color-brand-silver-bright: #ffffff;
-  --color-brand-silver-light: #e2e8f0;
-  --color-brand-silver-dark: #94a3b8;
-  --color-brand-titanium: #c5a059;
+  --color-brand-rose: #c88ea0;
+  --color-brand-rose-bright: #ffffff;
+  --color-brand-rose-light: #f2d6de;
+  --color-brand-rose-champagne: #e3bcc4;
+  --color-brand-rose-mauve: #9f526c;
+  --color-brand-rose-wine: #7e3a53;
+  --color-brand-crimson: #c81d25;
   
-  --color-brand-cream-bg: #f8fafc;
-  --color-brand-cream-alt: #f1f5f9;
+  --color-brand-cream-bg: #fdfbfb;
+  --color-brand-cream-alt: #f8f1f4;
   --color-brand-cream-surface: #ffffff;
   
-  --shadow-silver: 0 10px 28px -4px rgba(226, 232, 240, 0.25);
-  --shadow-silver-lg: 0 16px 38px -6px rgba(255, 255, 255, 0.35);
-  --shadow-slate-card: 0 20px 45px -10px rgba(5, 7, 12, 0.88);
+  --shadow-rose: 0 10px 28px -4px rgba(200, 142, 160, 0.25);
+  --shadow-rose-lg: 0 16px 38px -6px rgba(227, 188, 196, 0.35);
+  --shadow-plum-card: 0 20px 45px -10px rgba(13, 4, 10, 0.88);
 }
 
 html {
@@ -78,15 +85,15 @@ html {
 }
 
 body {
-  background: #07090e;
-  color: #f8fafc;
+  background: #0d040a;
+  color: #fbf5f7;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #ffffff;
+  caret-color: #f2d6de;
 }
 
 ::selection {
-  background: #cbd5e1;
-  color: #07090e;
+  background: #9f526c;
+  color: #ffffff;
 }
 
 .font-cinzel {
@@ -102,7 +109,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #64748b;
+  color: #7e3a53;
 }
 
 .eyebrow-dark {
@@ -114,7 +121,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #e2e8f0;
+  color: #f2d6de;
 }
 
 .eyebrow::before,
@@ -122,14 +129,14 @@ body {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: linear-gradient(90deg, #94a3b8, #cbd5e1);
+  background: linear-gradient(90deg, #9f526c, #e3bcc4);
   content: "";
 }
 
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #475569;
+  color: #644452;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -143,7 +150,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #0f172a;
+  background: #7e3a53;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -151,7 +158,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #0f172a;
+  color: #1f0b15;
 }
 
 .nav-link:hover::after {
@@ -161,7 +168,7 @@ body {
 .nav-link-dark {
   position: relative;
   padding-block: 0.5rem;
-  color: #cbd5e1;
+  color: #e3bcc4;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -175,7 +182,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #ffffff;
+  background: #fbf5f7;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -203,17 +210,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #07090e;
+  background: #0d040a;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #07090e;
+  border: 2px solid #0d040a;
   border-radius: 999px;
-  background: #161d2c;
+  background: #220e1c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #5e263c;
 }
 
 @media (prefers-reduced-motion: reduce) {

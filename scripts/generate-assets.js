@@ -17,12 +17,12 @@ function createIco(pngBuffers, outputPath) {
     const entry = Buffer.alloc(16);
     entry.writeUInt8(item.width >= 256 ? 0 : item.width, 0);
     entry.writeUInt8(item.height >= 256 ? 0 : item.height, 1);
-    entry.writeUInt8(0, 2);
-    entry.writeUInt8(0, 3);
-    entry.writeUInt16LE(1, 4);
-    entry.writeUInt16LE(32, 6);
-    entry.writeUInt32LE(item.buffer.length, 8);
-    entry.writeUInt32LE(offset, 12);
+    entry.writeUInt8(0, 2); // color palette
+    entry.writeUInt8(0, 3); // reserved
+    entry.writeUInt16LE(1, 4); // color planes
+    entry.writeUInt16LE(32, 6); // bits per pixel
+    entry.writeUInt32LE(item.buffer.length, 8); // size
+    entry.writeUInt32LE(offset, 12); // offset
 
     entries.push(entry);
     imageBuffers.push(item.buffer);
@@ -34,10 +34,10 @@ function createIco(pngBuffers, outputPath) {
 }
 
 async function run() {
-  const uploadDir = 'C:/Users/matheus/.gemini/antigravity/brain/f2513213-8ddb-4592-a48b-9ce4b7fd7194/.user_uploaded';
-  const logoUpload = path.join(uploadDir, 'media_1793013187084_b872c273.png');
-  const photoFabricia = path.join(uploadDir, 'media_1793013068412_cfde8e7c.jpg');
-  const photoTeam = path.join(uploadDir, 'media_1793013138056_686a86a6.jpg');
+  const uploadDir = 'C:/Users/matheus/.gemini/antigravity/brain/dbc6c40e-4d29-4637-b632-ae46deca393e/.user_uploaded';
+  const logoUpload = path.join(uploadDir, 'media_1793046310674_d9c364ca.png');
+  const photoSitting = path.join(uploadDir, 'media_1793046161565_5e91cf99.jpg');
+  const photoStandingSuit = path.join(uploadDir, 'media_1793046318435_9b61aa9d.jpg');
 
   if (!fs.existsSync('public')) {
     fs.mkdirSync('public', { recursive: true });
@@ -49,22 +49,22 @@ async function run() {
   console.log('1. Processing Full Brand Logo...');
   const trimmed = await sharp(logoUpload).trim().png({ quality: 100 }).toBuffer();
   fs.writeFileSync('public/logo.png', trimmed);
-  fs.writeFileSync('public/logo-alves-fragoso.png', trimmed);
-  console.log('Full logo saved (public/logo.png, public/logo-alves-fragoso.png).');
+  fs.writeFileSync('public/logo-yan-rezende.png', trimmed);
+  console.log('Full logo saved (public/logo.png, public/logo-yan-rezende.png).');
 
-  console.log('2. Extracting Monogram AF Emblem...');
-  // Emblem bounds: left=296, top=19, width=436, height=318
-  const rawCrop = await sharp(logoUpload)
-    .extract({ left: 290, top: 15, width: 448, height: 326 })
+  console.log('2. Extracting Monogram YR Emblem...');
+  // The monogram square frame spans from x=36 to x=282, y=30 to y=308
+  const cropStep1 = await sharp(logoUpload)
+    .extract({ left: 35, top: 28, width: 250, height: 280 })
     .png()
     .toBuffer();
-    
-  const emblemCrop = await sharp(rawCrop)
+
+  const rawCrop = await sharp(cropStep1)
     .trim()
     .png()
     .toBuffer({ resolveWithObject: true });
     
-  console.log('Monogram AF trimmed size:', emblemCrop.info.width, 'x', emblemCrop.info.height);
+  console.log('Monogram YR trimmed size:', rawCrop.info.width, 'x', rawCrop.info.height);
   
   // Transparent 512x512 emblem
   const emblemTrans = await sharp({
@@ -76,73 +76,93 @@ async function run() {
     }
   })
     .composite([{
-      input: await sharp(emblemCrop.data).resize(430, 310, { fit: 'inside' }).toBuffer(),
+      input: await sharp(rawCrop.data).resize(400, 400, { fit: 'inside' }).toBuffer(),
       gravity: 'center'
     }])
     .png()
     .toBuffer();
   fs.writeFileSync('public/logo-emblem.png', emblemTrans);
+  fs.writeFileSync('public/logo-monogram.png', emblemTrans);
+  console.log('Emblem saved (public/logo-emblem.png, public/logo-monogram.png).');
 
-  // Badge icon for Browser Favicon & Apple Icon with deep luxury midnight obsidian & silver metallic border
+  // Badge icon for Browser Favicon & Apple Icon with deep luxury obsidian plum & metallic rose-wine gradient border
   const badgeSvg = Buffer.from(`
     <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
-          <stop offset="0%" stop-color="#1a202c" />
-          <stop offset="60%" stop-color="#0f141d" />
-          <stop offset="100%" stop-color="#07090e" />
+          <stop offset="0%" stop-color="#240c19" />
+          <stop offset="55%" stop-color="#15050e" />
+          <stop offset="100%" stop-color="#090206" />
         </radialGradient>
         <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="#ffffff" />
-          <stop offset="35%" stop-color="#e2e8f0" />
-          <stop offset="70%" stop-color="#94a3b8" />
-          <stop offset="100%" stop-color="#475569" />
+          <stop offset="25%" stop-color="#f2d6de" />
+          <stop offset="60%" stop-color="#c992a2" />
+          <stop offset="85%" stop-color="#8f415c" />
+          <stop offset="100%" stop-color="#4a192c" />
         </linearGradient>
       </defs>
-      <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="14" />
+      <!-- Squircle rounded background -->
+      <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
     </svg>
   `);
-  
-  const emblemInner = await sharp(emblemCrop.data).resize(360, 260, { fit: 'inside' }).png().toBuffer();
-  
-  const appIconBuffer = await sharp(badgeSvg)
-    .composite([{
-      input: emblemInner,
-      gravity: 'center'
-    }])
+
+  const emblemForBadge = await sharp(rawCrop.data)
+    .resize(320, 320, { fit: 'inside' })
+    .toBuffer();
+
+  const badge512 = await sharp(badgeSvg)
+    .composite([{ input: emblemForBadge, gravity: 'center' }])
     .png()
     .toBuffer();
-    
-  fs.writeFileSync('public/icon.png', appIconBuffer);
-  fs.writeFileSync('app/icon.png', appIconBuffer);
-  fs.writeFileSync('public/apple-icon.png', appIconBuffer);
-  fs.writeFileSync('app/apple-icon.png', appIconBuffer);
 
-  const icon32 = await sharp(appIconBuffer).resize(32, 32).png().toBuffer();
+  fs.writeFileSync('public/icon.png', badge512);
+  fs.writeFileSync('app/icon.png', badge512);
+
+  const apple180 = await sharp(badge512).resize(180, 180).png().toBuffer();
+  fs.writeFileSync('public/apple-icon.png', apple180);
+  fs.writeFileSync('app/apple-icon.png', apple180);
+
+  const icon32 = await sharp(badge512).resize(32, 32).png().toBuffer();
   fs.writeFileSync('public/icon-32x32.png', icon32);
-  const icon16 = await sharp(appIconBuffer).resize(16, 16).png().toBuffer();
-  fs.writeFileSync('public/icon-16x16.png', icon16);
-  const icon48 = await sharp(appIconBuffer).resize(48, 48).png().toBuffer();
 
-  const icoBuffers = [
+  const icon16 = await sharp(badge512).resize(16, 16).png().toBuffer();
+  fs.writeFileSync('public/icon-16x16.png', icon16);
+
+  const icon48 = await sharp(badge512).resize(48, 48).png().toBuffer();
+
+  createIco([
     { width: 16, height: 16, buffer: icon16 },
     { width: 32, height: 32, buffer: icon32 },
     { width: 48, height: 48, buffer: icon48 }
-  ];
-  createIco(icoBuffers, 'public/favicon.ico');
-  createIco(icoBuffers, 'app/favicon.ico');
-  console.log('Favicons (.ico, .png, apple-icon) created in public/ and app/.');
+  ], 'public/favicon.ico');
 
-  console.log('3. Processing Photos...');
-  await sharp(photoFabricia).jpeg({ quality: 95 }).toFile('public/hero.jpg');
-  await sharp(photoFabricia).jpeg({ quality: 95 }).toFile('public/dra-fabricia-hero.jpg');
-  console.log('Hero photo saved (public/hero.jpg, public/dra-fabricia-hero.jpg)');
-  
-  await sharp(photoTeam).jpeg({ quality: 95 }).toFile('public/about.jpg');
-  await sharp(photoTeam).jpeg({ quality: 95 }).toFile('public/equipe-alves-fragoso.jpg');
-  console.log('About/Team photo saved (public/about.jpg, public/equipe-alves-fragoso.jpg)');
+  createIco([
+    { width: 16, height: 16, buffer: icon16 },
+    { width: 32, height: 32, buffer: icon32 },
+    { width: 48, height: 48, buffer: icon48 }
+  ], 'app/favicon.ico');
 
-  console.log('SUCCESS: All Alves e Fragoso Advocacia brand assets, icons and photos generated!');
+  console.log('Favicons and App Icons created in public/ and app/.');
+
+  console.log('3. Processing Photos of Yan Rezende...');
+  // Standing suit with red tie -> Hero Photo (public/hero.jpg)
+  const heroJpg = await sharp(photoStandingSuit)
+    .jpeg({ quality: 92, mozjpeg: true })
+    .toBuffer();
+  fs.writeFileSync('public/hero.jpg', heroJpg);
+  fs.writeFileSync('public/yan-rezende-hero.jpg', heroJpg);
+  console.log('Hero photo saved (public/hero.jpg, public/yan-rezende-hero.jpg).');
+
+  // Sitting in chair with light blazer -> About / Bio Photo (public/about.jpg)
+  const aboutJpg = await sharp(photoSitting)
+    .jpeg({ quality: 92, mozjpeg: true })
+    .toBuffer();
+  fs.writeFileSync('public/about.jpg', aboutJpg);
+  fs.writeFileSync('public/yan-rezende-about.jpg', aboutJpg);
+  console.log('About photo saved (public/about.jpg, public/yan-rezende-about.jpg).');
+
+  console.log('ALL ASSETS SUCCESSFULLY GENERATED!');
 }
 
 run().catch(console.error);
