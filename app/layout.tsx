@@ -28,61 +28,61 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b1320",
+  themeColor: "#0b1322",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jessicabernardes.adv.br"),
+  metadataBase: new URL("https://www.mairagomesadvocacia.com.br"),
   title:
-    "Jéssica Bernardes — Advogada | OAB/MG 231.560 · Direito do Consumidor, Cível & Previdenciário · Luz - MG",
+    "Escritório de Advocacia Maira Gomes de Oliveira | OAB/MG 166.714 · Espera Feliz - MG",
   description:
-    "Dra. Jéssica Oliveira Bernardes Nunes — Advocacia de alto padrão em Luz - MG. Atuação especializada em Direito do Consumidor, combate a golpes e fraudes bancárias, Direito Cível, Família e Previdenciário (INSS). Nota Máxima 5,0 ★ com 21 avaliações no Google. Atendimento presencial no Centro-Oeste de Minas e online para todo o Brasil.",
+    "Dra. Maira Gomes de Oliveira — Advocacia de alto padrão em Espera Feliz - MG e online para todo o Brasil. Mais de 7 anos de experiência jurídica. Nota Máxima 5,0 ★ com 16 avaliações no Google. Atendimento humanizado, ético e resolutivo em Direito Civil, Previdenciário (INSS), Família & Sucessões, Consumidor e Trabalhista.",
   keywords: [
-    "Jéssica Bernardes Advogada",
-    "Jéssica Oliveira Bernardes Nunes",
-    "Advogada em Luz MG",
-    "Advocacia Luz Minas Gerais",
-    "Direito do Consumidor Luz MG",
-    "Golpe do Pix Advogada",
-    "Fraudes Bancárias Advogado",
-    "Direito Cível Luz MG",
-    "Direito Previdenciário INSS Luz MG",
-    "Direito de Família e Sucessões Luz MG",
-    "OAB MG 231560",
-    "Advogada Centro-Oeste MG",
+    "Maira Gomes de Oliveira Advogada",
+    "Escritório de Advocacia Maira Gomes de Oliveira",
+    "MR Advocacia",
+    "Dra Maira Gomes",
+    "Advogada em Espera Feliz MG",
+    "Advocacia Espera Feliz Minas Gerais",
+    "OAB MG 166714",
+    "OAB MG 306195",
+    "Direito Previdenciário INSS Espera Feliz",
+    "Inventário e Família Espera Feliz MG",
+    "Direito Cível e Contratos Espera Feliz",
+    "Advogada Região do Caparaó MG",
   ],
-  authors: [{ name: "Jéssica Bernardes — Advogada (OAB/MG 231.560)" }],
-  creator: "Jéssica Bernardes — Advogada",
-  publisher: "Jéssica Bernardes — Advogada",
+  authors: [{ name: "Dra. Maira Gomes de Oliveira (OAB/MG 166.714)" }],
+  creator: "Escritório de Advocacia Maira Gomes de Oliveira",
+  publisher: "Escritório de Advocacia Maira Gomes de Oliveira",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=jb1", sizes: "any" },
-      { url: "/icon-32x32.png?v=jb1", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=jb1", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=jb1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=mg1", sizes: "any" },
+      { url: "/icon-32x32.png?v=mg1", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=mg1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=mg1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=jb1",
-    apple: [{ url: "/apple-icon.png?v=jb1", sizes: "180x180" }],
+    shortcut: "/icon-32x32.png?v=mg1",
+    apple: [{ url: "/apple-icon.png?v=mg1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.jessicabernardes.adv.br",
+    url: "https://www.mairagomesadvocacia.com.br",
     title:
-      "Jéssica Bernardes — Advogada | OAB/MG 231.560 · Luz - MG",
+      "Escritório de Advocacia Maira Gomes de Oliveira | OAB/MG 166.714 · Espera Feliz - MG",
     description:
-      "Advocacia humana, ética, ágil e de alta resolutividade. Especialista em Direito do Consumidor, Defesa contra Golpes, Cível, Família e Previdenciário. Nota Máxima 5,0 ★ no Google.",
-    siteName: "Jéssica Bernardes — Advogada",
+      "Advocacia humanizada, ética, ágil e de alta resolutividade. Mais de 7 anos de experiência. Nota Máxima 5,0 ★ no Google.",
+    siteName: "Escritório de Advocacia Maira Gomes de Oliveira",
     images: [
       {
-        url: "/jessica-bernardes-logo-oficial.png",
-        width: 1024,
-        height: 349,
-        alt: "Jéssica Bernardes Advogada OAB/MG 231.560 - Logotipo Oficial",
+        url: "/logo.png",
+        width: 973,
+        height: 466,
+        alt: "Escritório de Advocacia Maira Gomes de Oliveira OAB/MG 166.714 - Logotipo Oficial",
       },
     ],
   },
@@ -96,34 +96,35 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Jéssica Bernardes — Advogada",
-    alternateName: "Jéssica Oliveira Bernardes Nunes — Advocacia",
-    telephone: "+55-37-99186-9585",
-    url: "https://www.jessicabernardes.adv.br",
-    image: "https://www.jessicabernardes.adv.br/jessica-bernardes-logo-oficial.png",
+    name: "Escritório de Advocacia Maira Gomes de Oliveira",
+    alternateName: "MR Advocacia — Dra. Maira Gomes de Oliveira",
+    telephone: "+55-32-98495-6780",
+    url: "https://www.mairagomesadvocacia.com.br",
+    image: "https://www.mairagomesadvocacia.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Cel. José Tomás, 200 - Centro",
-      addressLocality: "Luz",
+      streetAddress: "R. Pedro Dias Neto, 03 - Centro",
+      addressLocality: "Espera Feliz",
       addressRegion: "MG",
-      postalCode: "35595-000",
+      postalCode: "36830-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "21",
+      reviewCount: "16",
     },
     areaServed: [
-      "Luz",
-      "Bom Despacho",
-      "Santo Antônio do Monte",
-      "Lagoa da Prata",
-      "Dores do Indaiá",
-      "Arcos",
-      "Formiga",
-      "Centro-Oeste de Minas",
+      "Espera Feliz",
+      "Carangola",
+      "Manhumirim",
+      "Manhuaçu",
+      "Alto Caparaó",
+      "Caparaó",
+      "Divino",
+      "Dores do Rio Preto",
+      "Zona da Mata Mineira",
       "Minas Gerais",
       "Brasil",
     ],
@@ -142,9 +143,9 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://wa.me/5537991869585",
-      "https://www.instagram.com/jessicaobernardes.adv",
-      "https://www.google.com/search?q=J%C3%A9ssica+Oliveira+Bernardes+Nunes+%E2%80%94+Advogada%0ALuz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5532984956780",
+      "https://www.instagram.com/dramairagomes_/",
+      "https://www.google.com/search?q=Maira+Gomes+de+Oliveira+%E2%80%94+Advocacia%0AEspera+Feliz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -154,16 +155,16 @@ export default function RootLayout({
       className={`${cinzelFont.variable} ${playfairFont.variable} ${bodyFont.variable}`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=jb1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=jb1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=jb1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=jb1" />
+        <link rel="icon" href="/favicon.ico?v=mg1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=mg1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=mg1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=mg1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased min-h-screen selection:bg-[#c4a287] selection:text-[#0b1320]">
+      <body className="antialiased min-h-screen selection:bg-[#df9e32] selection:text-[#060a12]">
         {children}
       </body>
     </html>

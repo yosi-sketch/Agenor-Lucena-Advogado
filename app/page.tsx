@@ -30,33 +30,33 @@ import {
   Users,
   Heart,
   Landmark,
-  AlertTriangle,
+  Compass,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5537991869585";
-const PHONE_DISPLAY = "(37) 99186-9585";
-const EMAIL_CONTACT = "contato@jessicabernardes.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/jessicaobernardes.adv";
-const INSTAGRAM_HANDLE = "@jessicaobernardes.adv";
+const WHATSAPP_NUMBER = "5532984956780";
+const PHONE_DISPLAY = "(32) 98495-6780";
+const PHONE_LANDLINE = "(32) 3552-0939";
+const EMAIL_CONTACT = "contato@mairagomesadvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/dramairagomes_/";
+const INSTAGRAM_HANDLE = "@dramairagomes_";
 
 const ADDRESS_TEXT =
-  "R. Cel. José Tomás, 200 - Centro, Luz - MG, 35595-000, Brasil";
+  "R. Pedro Dias Neto, 03 - Centro, Espera Feliz - MG, 36830-000, Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=J%C3%A9ssica+Oliveira+Bernardes+Nunes+%E2%80%94+Advogada%0ALuz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Maira+Gomes+de+Oliveira+%E2%80%94+Advocacia%0AEspera+Feliz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
-const LOGO_SRC = "/jessica-bernardes-logo-oficial.png";
-const LOGO_WHITE_SRC = "/jessica-bernardes-logo-oficial.png";
-const LOGO_EMBLEM_SRC = "/jessica-bernardes-emblem-balanca.png";
-const FOTO_HERO_SRC = "/jessica-bernardes-hero-foto.jpg";
-const FOTO_ABOUT_SRC = "/jessica-bernardes-about-foto.jpg";
+const LOGO_SRC = "/logo.png";
+const LOGO_EMBLEM_SRC = "/logo-emblem.png";
+const FOTO_HERO_SRC = "/dra-maira-gomes.jpg";
+const FOTO_ABOUT_SRC = "/escritorio-sede.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Jéssica Bernardes! Gostaria de uma orientação jurídica sobre o meu caso.";
+    "Olá, Dra. Maira Gomes! Gostaria de uma orientação jurídica sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -167,130 +167,130 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-do-consumidor-golpes",
-    title: "Direito do Consumidor & Defesa contra Golpes",
-    category: "Golpe do Pix · Fraudes Bancárias · SPC/Serasa · Planos de Saúde · Cobranças Abusivas",
-    icon: Shield,
-    tag: "Defesa Ativa · Indenizações por Danos Morais · Recuperação de Valores",
-    summary:
-      "Atuação implacável contra golpes financeiros, fraudes do Pix, clonagem de cartões, descontos indevidos em aposentadorias, negativações injustas e abusos de bancos, operadoras e planos de saúde.",
-    details:
-      "Relações de consumo desiguais e o avanço de golpes digitais exigem resposta jurídica rápida e enérgica. Conforme reconhecido por clientes atendidos em momentos de angústia após serem vítimas de fraudes, a Dra. Jéssica Bernardes atua com dedicação integral para suspender cobranças ilegais, retirar restrições no SPC/Serasa, buscar a devolução de quantias debitadas indevidamente e exigir as devidas reparações por danos morais.",
-    topics: [
-      "Ações judiciais por Golpe do Pix, fraudes eletrônicas, clonagem e empréstimos consignados não autorizados",
-      "Exclusão liminar de negativação indevida nos cadastros de inadimplentes (SPC e Serasa) com pedido de indenização",
-      "Combate a juros abusivos, tarifas bancárias indevidas e descontos não autorizados em benefícios do INSS",
-      "Defesa do consumidor contra planos de saúde: negativas de cobertura médica, cirurgias e remédios de alto custo",
-      "Ações contra companhias aéreas por atrasos excessivos, cancelamento de voos e extravio de bagagens",
-      "Reparação por vícios ocultos e defeitos em produtos, cancelamento de compras enganosas e restituição em dobro",
-    ],
-    whatsAppText:
-      "Olá, Dra. Jéssica Bernardes! Fui vítima de um golpe / cobrança indevida e preciso de orientação jurídica urgente.",
-  },
-  {
     id: "direito-civel-contratos",
-    title: "Direito Cível, Contratos & Resolução de Conflitos",
-    category: "Resolução & Prevenção · Contratos Seguros · Cobranças · Responsabilidade Civil",
+    title: "Direito Cível, Contratos & Resolução de Litígios",
+    category: "Contratos Seguros · Indenizações · Cobranças · Responsabilidade Civil · Posse e Propriedade",
     icon: Scale,
-    tag: "Prevenção Eficaz · Resolução Ágil · Blindagem Jurídica",
+    tag: "Prevenção Eficaz · Resolução Ágil · Rigor Técnico",
     summary:
-      "Como destacam os clientes: 'O difícil é decidir se ela é melhor resolvendo problemas ou evitando que eles aconteçam.' Atuação preventiva e contenciosa de excelência em contratos, cobranças e indenizações.",
+      "Atuação preventiva e contenciosa de excelência em elaboração e revisão contratual, cobrança e recuperação de créditos, indenizações por danos materiais e morais, e litígios cíveis em geral.",
     details:
-      "A segurança jurídica nas relações civis depende de clareza e solidez técnica. A Dra. Jéssica Bernardes analisa e redige contratos blindados para evitar litígios futuros, conduz execuções de títulos de crédito e ações de cobrança com rigor estratégico, e atua firmemente na reparação de danos morais, materiais e estéticos decorrentes de descumprimentos de acordos e obrigações.",
+      "A segurança jurídica nas relações civis exige técnica minuciosa e visão estratégica. A Dra. Maira Gomes de Oliveira atua com sólida experiência na confecção e auditoria de contratos blindados, recuperação de títulos e créditos inadimplidos, ações possessórias e reparação integral por danos materiais, morais e estéticos, priorizando soluções rápidas e assertivas.",
     topics: [
       "Elaboração, análise e revisão criteriosa de contratos civis, comerciais e de prestação de serviços",
-      "Ações de cobrança, recuperação de créditos e execução de títulos extrajudiciais (cheques, notas e contratos)",
+      "Ações de cobrança, recuperação de créditos e execução de títulos judiciais e extrajudiciais",
       "Ações indenizatórias por perdas e danos, danos morais, materiais e lucros cessantes",
-      "Rescisão contratual motivada com apuração de penalidades, multas e devolução de valores",
-      "Medidas cautelares urgentes, liminares e notificações extrajudiciais estratégicas",
-      "Resolução pacífica e mediação de conflitos patrimoniais entre particulares e vizinhança",
+      "Rescisão contratual motivada com apuração de penalidades, multas e restituição de valores",
+      "Ações de reintegração de posse, usucapião, regularização de imóveis e conflitos imobiliários",
+      "Notificações extrajudiciais estratégicas e acordos para evitar litígios prolongados",
     ],
     whatsAppText:
-      "Olá, Dra. Jéssica Bernardes! Gostaria de consultar sobre uma questão cível / análise de contrato / cobrança.",
+      "Olá, Dra. Maira Gomes! Gostaria de consultar sobre uma questão cível / contrato / cobrança.",
+  },
+  {
+    id: "direito-previdenciario-inss",
+    title: "Direito Previdenciário & Benefícios do INSS",
+    category: "Aposentadorias · Auxílio-Incapacidade · BPC/LOAS · Pensão por Morte · Planejamento Previdenciário",
+    icon: Landmark,
+    tag: "Concessão Justa · Reversão de Indeferimentos · Proteção Social",
+    summary:
+      "Assessoria completa para aposentadorias rurais e urbanas, auxílio por incapacidade temporária (auxílio-doença), BPC/LOAS e reversão de benefícios negados pelo INSS perante a Justiça Federal.",
+    details:
+      "A garantia do benefício previdenciário correto exige contagem minuciosa de tempo de contribuição, análise de vínculos no CNIS e comprovação idônea de atividade rural e urbana. O escritório da Dra. Maira Gomes atua com profundo zelo técnico para destravar pedidos represados, reverter indeferimentos indevidos e planejar a sua aposentadoria com o melhor valor legal possível.",
+    topics: [
+      "Planejamento Previdenciário completo para identificar a melhor regra e o valor máximo do benefício",
+      "Aposentadoria por Idade Urbana e Rural, Tempo de Contribuição e Regras de Transição",
+      "Ação judicial para reversão de indeferimento de Auxílio por Incapacidade Temporária (auxílio-doença)",
+      "Concessão de BPC/LOAS (Benefício de Prestação Continuada) para idosos de 65+ anos e pessoas com deficiência",
+      "Reconhecimento de atividade rural, tempo especial e acerto de divergências no CNIS",
+      "Pensão por Morte, Auxílio-Reclusão e Salário-Maternidade para segurados do campo e da cidade",
+    ],
+    whatsAppText:
+      "Olá, Dra. Maira Gomes! Gostaria de auxílio com meu benefício previdenciário do INSS / aposentadoria.",
   },
   {
     id: "direito-de-familia-sucessoes",
     title: "Direito de Família, Sucessões & Inventários",
     category: "Inventário em Cartório · Partilha de Bens · Divórcio · Pensão Alimentícia · Guarda",
     icon: Users,
-    tag: "Condução Ética, Paciente & Humanizada · Preservação do Patrimônio Familiar",
+    tag: "Atendimento Humanizado · Agilidade em Cartório · Preservação Patrimonial",
     summary:
-      "Atendimento sensível, acolhedor e resolutivo para questões familiares e sucessórias. Inventários ágeis em cartório de notas, partilhas justas e divórcios com foco na preservação da tranquilidade.",
+      "Condução sensível, ética e resolutiva para inventários em cartório (extrajudiciais) ágeis, partilha justa de bens familiares, divórcios consensuais e regulamentação de guarda e alimentos.",
     details:
-      "Questões de família exigem tato humano aliado a rigor técnico. A Dra. Jéssica Bernardes prioriza soluções céleres e menos desgastantes, como inventários extrajudiciais em cartório de notas quando há consenso, partilhas equitativas de bens, formalização de acordos de guarda e fixação justa de alimentos, garantindo que os direitos de todos sejam respeitados com total discrição e ética.",
+      "Demandas familiares exigem acolhimento humano aliado a firmeza técnica. A Dra. Maira Gomes prioriza métodos ágeis e menos desgastantes, promovendo inventários extrajudiciais em cartório de notas para rápida transmissão patrimonial, divórcios equilibrados, proteção aos direitos de menores e fixação responsável de pensão alimentícia.",
     topics: [
-      "Inventário Extrajudicial em Cartório de Notas: partilha célere, econômica e sem burocracia para os herdeiros",
-      "Inventário Judicial e arrolamento de bens para heranças com particularidades ou menores de idade",
-      "Divórcio consensual e litigioso, partilha de patrimônio e dissolução de união estável",
-      "Ações de pensão alimentícia (fixação, revisão, execução de débitos e exoneração)",
-      "Regulamentação de guarda compartilhada, visitas e convivência com filhos menores",
-      "Planejamento sucessório, testamentos e doações com cláusulas de usufruto protetivo",
+      "Inventário Extrajudicial em Cartório de Notas: partilha célere, econômica e sem desgastes para herdeiros",
+      "Inventário Judicial e arrolamento de bens quando há menores ou necessidade de partilha judicial",
+      "Divórcio consensual e litigioso, partilha de bens e dissolução de união estável",
+      "Ações de fixação, revisão, exoneração e execução de pensão alimentícia em atraso",
+      "Regulamentação de guarda compartilhada, visitas e convivência familiar equilibrada",
+      "Planejamento sucessório familiar, testamentos e doações com cláusulas de usufruto",
     ],
     whatsAppText:
-      "Olá, Dra. Jéssica Bernardes! Gostaria de orientação sobre inventário / partilha / questão de família.",
+      "Olá, Dra. Maira Gomes! Gostaria de orientação sobre inventário / partilha / questão de família.",
   },
   {
-    id: "direito-previdenciario",
-    title: "Direito Previdenciário & Benefícios INSS",
-    category: "Aposentadorias · Auxílio por Incapacidade · BPC/LOAS · Pensão por Morte · Planejamento",
-    icon: Landmark,
-    tag: "Concessão Justa · Reversão de Indeferimentos · Proteção Social",
+    id: "direito-do-consumidor-fraudes",
+    title: "Direito do Consumidor & Defesa contra Golpes",
+    category: "Golpe do Pix · Empréstimos Não Autorizados · SPC/Serasa · Planos de Saúde · Cobranças Abusivas",
+    icon: Shield,
+    tag: "Defesa Ativa · Indenizações por Danos Morais · Recuperação de Valores",
     summary:
-      "Orientação técnica segura e planejamento previdenciário para assegurar o benefício correto. Reversão ágil de pedidos negados pelo INSS na via judicial perante a Justiça Federal.",
+      "Defesa enérgica contra fraudes financeiras, golpes digitais do Pix, negativações indevidas nos órgãos de proteção ao crédito, contratos abusivos e negativa de cobertura por planos de saúde.",
     details:
-      "A conquista da aposentadoria e o amparo nos momentos de incapacidade são direitos fundamentais. A Dra. Jéssica Bernardes realiza contagem detalhada de tempo de contribuição, análise de vínculos rurais e urbanos, e atua fortemente na concessão e restabelecimento de auxílio por incapacidade temporária (auxílio-doença), aposentadoria por idade e BPC/LOAS para idosos e pessoas com deficiência.",
+      "O consumidor lesado por fraudes bancárias ou cobranças ilegais necessita de providências imediatas. A Dra. Maira Gomes atua com rigor na solicitação de bloqueio de transações fraudulentas, acionamento judicial de bancos por falhas de segurança, exclusão liminar de inscrições no SPC/Serasa e requerimento de reparações por danos morais.",
     topics: [
-      "Planejamento Previdenciário individualizado para encontrar o momento ideal e maior valor de aposentadoria",
-      "Aposentadoria por Idade Urbana e Rural, Tempo de Contribuição e Regras de Transição da Reforma",
-      "Ação judicial para reversão de indeferimento de Auxílio por Incapacidade Temporária (auxílio-doença)",
-      "Concessão de BPC/LOAS (Benefício de Prestação Continuada) para idosos com 65+ anos e pessoas com deficiência",
-      "Reconhecimento de período rural e acerto de pendências cadastrais no CNIS",
-      "Concessão de Pensão por Morte e Auxílio-Reclusão para dependentes",
+      "Ações judiciais por Golpe do Pix, clonagem de contas, fraudes eletrônicas e empréstimos consignados indevidos",
+      "Exclusão liminar de registros indevidos nos cadastros do SPC e Serasa com pedido de indenização",
+      "Combate a juros abusivos, tarifas não contratadas e descontos ilegais em benefícios previdenciários",
+      "Ações contra planos de saúde por recusa de tratamentos, exames, cirurgias ou medicamentos de alto custo",
+      "Ações contra companhias aéreas e concessionárias por interrupções injustificadas e danos ao consumidor",
+      "Reparação por vícios ocultos de produtos, garantia descumprida e devolução de valores em dobro",
     ],
     whatsAppText:
-      "Olá, Dra. Jéssica Bernardes! Gostaria de auxílio para solicitar ou destravar meu benefício do INSS.",
+      "Olá, Dra. Maira Gomes! Fui vítima de fraude / cobrança indevida e preciso de orientação jurídica urgente.",
   },
   {
     id: "direito-trabalhista",
     title: "Direito Trabalhista & Causas Laborais",
-    category: "Rescisão Indireta · Verbas Rescisórias · Horas Extras · Vínculo Empregatício · Assédio",
+    category: "Verbas Rescisórias · Rescisão Indireta · Horas Extras · Vínculo Empregatício · Assédio",
     icon: Briefcase,
-    tag: "Defesa dos Direitos do Trabalhador · Cálculo Minucioso · Reparação Integral",
+    tag: "Defesa dos Direitos · Cálculo Minucioso · Reparação Integral",
     summary:
-      "Defesa firme e detalhista dos direitos trabalhistas. Atuação para recebimento integral de verbas devidas, horas extras, adicionais e indenizações por abusos no ambiente corporativo.",
+      "Proteção zelosa e fundamentada dos direitos trabalhistas. Atuação para recebimento de verbas devidas, adicionais de insalubridade, horas extras não pagas e rescisão indireta em faltas graves.",
     details:
-      "Com escuta atenta e respeito absoluto à trajetória do trabalhador, a Dra. Jéssica Bernardes analisa minuciosamente contracheques, registros de jornada e condições de trabalho. Atuamos para cobrar diferenças rescisórias, horas extras não quitadas, adicional de insalubridade e propor rescisão indireta em situações de falta grave do empregador.",
+      "A análise detalhada de contracheques, acordos e rotinas de trabalho é fundamental para garantir a justa remuneração. O escritório conduz ações trabalhistas com rigor nos cálculos, busca de equiparação salarial, indenização por acidentes e danos morais decorrentes de assédio ou condições inadequadas de trabalho.",
     topics: [
-      "Ação trabalhista para pagamento de verbas rescisórias integrais, saldo de salário, aviso prévio e FGTS + 40%",
-      "Cobrança de horas extras, intervalos intrajornada suprimidos e banco de horas descumprido",
-      "Reconhecimento de vínculo de emprego informal (sem carteira assinada) com recolhimento de benefícios",
-      "Rescisão Indireta do contrato de trabalho por atrasos reiterados ou descumprimento de obrigações legais",
-      "Pedidos de adicional de insalubridade e periculosidade para ambientes de risco à saúde",
-      "Indenização por danos morais decorrentes de assédio moral, perseguição ou condições degradantes",
+      "Ação trabalhista para pagamento integral de verbas rescisórias, saldo de salário, aviso prévio e FGTS + 40%",
+      "Cobrança de horas extras, intervalos suprimidos e desrespeito a descansos remunerados",
+      "Reconhecimento de vínculo de emprego sem carteira assinada com anotação retroativa em CTPS",
+      "Rescisão Indireta do contrato de trabalho motivada por atrasos reiterados de salários ou faltas graves",
+      "Pedidos de adicional de insalubridade e periculosidade para ambientes de risco à saúde e segurança",
+      "Indenização por danos morais em virtude de assédio moral, perseguição ou humilhações no ambiente profissional",
     ],
     whatsAppText:
-      "Olá, Dra. Jéssica Bernardes! Gostaria de consultar sobre os meus direitos trabalhistas / rescisão.",
+      "Olá, Dra. Maira Gomes! Gostaria de consultar sobre meus direitos trabalhistas / rescisão.",
   },
   {
-    id: "consultoria-empresarial-preventiva",
+    id: "assessoria-empresarial-preventiva",
     title: "Assessoria Jurídica Preventiva para Empresas",
-    category: "Adequação ao CDC · Gestão de Riscos · Contratos Comerciais · Proteção do Negócio",
+    category: "Blindagem Contratual · Adequação ao CDC · Gestão de Riscos · Recuperação de Ativos",
     icon: Building2,
-    tag: "Segurança Operacional · Mitigação de Passivos · Suporte Ágil",
+    tag: "Segurança Operacional · Mitigação de Passivos · Suporte Estratégico",
     summary:
-      "Consultoria jurídica estratégica e resolutiva para comércios locais, empreendedores e empresas. Redução de riscos contratuais, conformidade com o CDC e resolução célere de litígios.",
+      "Consultoria jurídica preventiva para comércios locais, produtores e empresas. Estruturação contratual robusta, mitigação de riscos operacionais e cobrança estratégica de inadimplências.",
     details:
-      "Empreender com tranquilidade exige respaldo legal seguro. A Dra. Jéssica Bernardes auxilia negócios na revisão de contratos com fornecedores e clientes, implementação de termos claros conforme as diretrizes do Código de Defesa do Consumidor e gerenciamento preventivo de conflitos para evitar que divergências se tornem ações judiciais onerosas.",
+      "Prevenir litígios é a estratégia mais rentável para qualquer negócio. A Dra. Maira Gomes de Oliveira presta assessoria contínua para resguardar empresas em suas relações com parceiros, fornecedores e clientes, elaborando instrumentos contratuais sólidos e intermediando soluções amigáveis com agilidade e respaldo jurídico.",
     topics: [
-      "Adequação de práticas de vendas e atendimento ao Código de Defesa do Consumidor (evitando autuações)",
-      "Elaboração e revisão de contratos com parceiros, fornecedores e prestadores de serviços",
-      "Cobrança extrajudicial e judicial célere de títulos e faturas inadimplidas",
-      "Consultoria preventiva em rotinas de trabalho para reduzir riscos de passivos trabalhistas",
-      "Envio de notificações extrajudiciais fundamentadas e condução de acordos estratégicos",
-      "Orientação ágil para tomada de decisões com segurança jurídica patrimonial",
+      "Elaboração e revisão criteriosa de contratos comerciais, termos de parceria e prestação de serviços",
+      "Adequação de rotinas de atendimento e vendas às exigências do Código de Defesa do Consumidor",
+      "Cobrança extrajudicial estruturada e recuperação judicial célere de títulos e duplicatas inadimplidas",
+      "Orientação preventiva nas relações de trabalho para redução de passivos trabalhistas futuros",
+      "Notificações extrajudiciais formais e condução de negociações estratégicas de alto impacto",
+      "Suporte ágil para tomadas de decisão com respaldo técnico e proteção patrimonial societária",
     ],
     whatsAppText:
-      "Olá, Dra. Jéssica Bernardes! Gostaria de uma assessoria preventiva para a minha empresa.",
+      "Olá, Dra. Maira Gomes! Gostaria de uma assessoria jurídica preventiva para a minha empresa.",
   },
 ];
 
@@ -304,139 +304,67 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Rafael Brito",
-    badge: "2 avaliações · 5 Estrelas",
+    name: "Wellington Cabalini",
+    badge: "7 avaliações · 3 fotos · 5 Estrelas",
     date: "Avaliação Verificada no Google",
     highlight:
-      "Amei ser atendido pela Dra. Jéssica, destaca-se pelo demasiado e notório saber jurídico!",
+      "Grande Escritório. Atendimento de qualidade, transparência e eficiência! Gratidão ❤️",
     content:
-      "Amei ser atendido pela dra Jessica, destaca-se pelo demasiado e notório saber jurídico.",
+      "Grande Escritório. Atendimento de qualidade, transferência e eficiência! Gratidão ❤️",
   },
   {
-    name: "Bruno Resende",
-    badge: "Local Guide · 6 avaliações · 11 fotos · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "O difícil é decidir se ela é melhor resolvendo problemas ou evitando que eles aconteçam!",
-    content:
-      "Recomendo muito, de olhos fechados. O difícil é decidir se ela é melhor resolvendo problemas ou evitando que eles aconteçam. 🫣",
-  },
-  {
-    name: "Katia Aparecida de Lima",
-    badge: "3 avaliações · 1 foto · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Estava passando por muita angústia após ser vítima de golpe... a Dra. Jéssica tem me ajudado com muito carinho e profissionalismo!",
-    content:
-      "Estava passando por muita angústia, sem saber o que fazer, depois de ter sido vítima de um golpe, pois nunca passei por essa situação antes, foi quando conheci o trabalho da dra Jéssica, que com muito carinho e profissionalismo tem me ajudado a resolver essa pendência, além da parte como advogada, com uma atenção especial. Agradeço muito, sei que terei uma solução para meu caso!",
-  },
-  {
-    name: "Eduarda Ferreira",
+    name: "Samuel Sr. Deputado",
     badge: "4 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google",
     highlight:
-      "Sua agilidade, comprometimento e cuidado com cada detalhe fazem toda a diferença!",
+      "Excelente escritório com profissionais preparados e atendimento humanizado, advogada muito competente! 👏👍",
     content:
-      "Excelente profissional! A Dra. Jessica Bernardes demonstra muito conhecimento, competência e dedicação em tudo o que faz. Sempre atenciosa, prestativa e transparente, transmite confiança e segurança durante todo o atendimento. Sua agilidade, comprometimento e cuidado com cada detalhe fazem toda a diferença. Recomendo fortemente para quem procura um serviço jurídico de qualidade, realizado com ética e profissionalismo.",
+      "Excelente escritório com profissionais preparados e atendimento humanizado, advogada muito competente! 👏👍",
   },
   {
-    name: "Negão AutoCenter",
-    badge: "1 avaliação · 5 Estrelas",
+    name: "Maraisa Gomes",
+    badge: "3 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google",
     highlight:
-      "Advogada de alto nível, incansável e comprometida. Seu rigor nos detalhes faz toda a diferença!",
+      "Escritório muito diferenciado, com profissionais qualificadas e com a excelência da melhor Advogada da região! ❤️",
     content:
-      "Advogada de alto nível, incansável e comprometida com cada demanda que abraça. Seu rigor nos detalhes e sua postura profissional fazem toda a diferença na gestão dos processos. Referência em confiabilidade, exerce sua função com integridade, responsabilidade e clareza, transmitindo segurança e paz de espírito aos seus clientes em todas as fases. Sua solidez técnica, somada ao empenho contínuo e à busca pelas melhores alternativas, evidencia seu compromisso com a excelência.",
+      "Escritório muito diferenciado, com profissionais qualificadas e com a excelência da melhor Advogada da região! ❤️",
   },
   {
-    name: "Gabriela Cardozo",
+    name: "Luccas Couto",
+    badge: "7 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google",
+    highlight:
+      "Competência, comprometimento e qualidade. A melhor da região. ❤️",
+    content:
+      "Competência, comprometimento e qualidade. A melhor da região. ❤️",
+  },
+  {
+    name: "Gena Moura",
     badge: "4 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google",
     highlight:
-      "Excelente profissional e totalmente responsável ao caso, dedicação do começo ao fim ❤️",
+      "Escritório sério, com profissionais comprometidos e qualificados, com o melhor atendimento para seus clientes!!! ❤️",
     content:
-      "Boa noite Jessica, gostaria de agradecer todo apoio e dedicação ao meu caso e dizer que é uma excelente profissional e totalmente responsável ao caso, obrigada mais uma vez pela dedicação do começo ao fim ❤️",
+      "Escritório sério, com profissionais comprometidos e qualificados,com o melhor atendimento para seus clientes!!! ❤️",
   },
   {
-    name: "Fabiola Santos",
-    badge: "1 avaliação · 5 Estrelas",
+    name: "Filipe Barbosa",
+    badge: "2 avaliações · 2 fotos · 5 Estrelas",
     date: "Avaliação Verificada no Google",
     highlight:
-      "Durante todo o processo, demonstrou paciência para esclarecer minhas dúvidas e me passou muita segurança!",
+      "Ótimo escritório, com profissionais competentes e qualificados. ❤️",
     content:
-      "Gostaria de deixar minha recomendação e avaliação sobre o excelente trabalho da Dra. Jéssica. Sempre fui atendida com muita atenção, profissionalismo e dedicação. É uma profissional extremamente competente, responsável e comprometida em buscar as melhores soluções para seus clientes. Durante todo o processo, demonstrou paciência para esclarecer minhas dúvidas e me passou muita segurança e confiança. Sou muito grata por todo o empenho!",
+      "Ótimo escritório, com profissionais competentes e qualificados. ❤️",
   },
   {
-    name: "Stefany Bernardes",
-    badge: "4 avaliações · 5 Estrelas",
+    name: "Flor de Lótus",
+    badge: "5 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google",
     highlight:
-      "Profissional de confiança exemplar, atua com ética, responsabilidade e transparência!",
+      "A melhor advogada da região. ❤️",
     content:
-      "Advogada extremamente competente, dedicada e comprometida com cada caso que assume. Sua atenção aos detalhes e seu profissionalismo fazem toda a diferença na condução dos processos. Profissional de confiança exemplar, atua com ética, responsabilidade e transparência, transmitindo segurança e tranquilidade aos seus clientes em todas as etapas.",
-  },
-  {
-    name: "Michelle Lopes",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Conduz tudo muito bem e explica cada etapa super bem! Super indico!",
-    content:
-      "Jessica é uma ótima advogada, atenciosa e dedicada. E conduz tudo muito bem e explica cada etapa super bem! Super indico.",
-  },
-  {
-    name: "Amanda",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Excelente profissional. Recomendo de olhos fechados!",
-    content:
-      "Excelente profissional. Recomendo de olhos fechados.",
-  },
-  {
-    name: "Silveri Caetano",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Profissional de muita responsabilidade e dedicada, faz jus à profissão que exerce!",
-    content:
-      "Profissional de muita responsabilidade, e dedicada que faz jus a profissão que exerce, parabéns.",
-  },
-  {
-    name: "Vivian Alencar",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Muito boa experiência, tudo muito bem explicado, ótimo atendimento!",
-    content:
-      "Muito boa experiência, tudo muito bem explicado, ótimo atendimento.",
-  },
-  {
-    name: "Jonas Alencar",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Ótimo atendimento, profissional super educada e atenciosa 🙏🏼",
-    content:
-      "Ótimo atendimento, profissional super educada e atenciosa 🙏🏼",
-  },
-  {
-    name: "Jessica Cristina",
-    badge: "5 avaliações · 4 fotos · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Excelente profissional, sempre pronta a resolver os problemas. Super indico!",
-    content:
-      "Excelente profissional, sempre pronta a resolver os problemas. Super indico.",
-  },
-  {
-    name: "Anacione Bernades",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google",
-    highlight:
-      "Minha experiência foi muito boa. Advogada muito competente!!",
-    content:
-      "Minha experiência foi muito boa. Advogada muito competente!!",
+      "A melhor advogada da região. ❤️",
   },
 ];
 
@@ -447,34 +375,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "Fui vítima de um golpe (Pix, cartão ou empréstimo). O que devo fazer de imediato?",
+    question: "Como funciona a primeira conversa com a Dra. Maira Gomes de Oliveira?",
     answer:
-      "O tempo é um fator determinante. Primeiro, registre prints de todas as conversas, comprovantes bancários com chave Pix ou dados da transação, extratos e o Boletim de Ocorrência. Em seguida, entre em contato imediatamente com o nosso escritório pelo WhatsApp. A Dra. Jéssica Bernardes adotará as providências legais cabíveis contra as instituições financeiras envolvidas para acionar o Mecanismo Especial de Devolução (MED), buscar o bloqueio de valores e ingressar com ação para ressarcimento e indenização por danos morais.",
+      "O primeiro contato é simples, rápido e direto pelo nosso WhatsApp oficial. Você nos envia um resumo do seu caso ou dúvida e os documentos que possuir. A Dra. Maira Gomes analisa a viabilidade com total transparência e didática, explicando seus direitos sem termos jurídicos complicados e traçando o plano de ação mais seguro.",
   },
   {
-    question: "Como funciona a primeira conversa com a Dra. Jéssica Bernardes?",
+    question: "O escritório atende apenas presencialmente em Espera Feliz ou também online?",
     answer:
-      "O primeiro contato é simples e direto pelo WhatsApp oficial. Você nos envia um resumo do ocorrido e os documentos que possuir. A Dra. Jéssica analisa a viabilidade jurídica do seu caso de forma didática, sem juridiquês, esclarecendo seus direitos, os prazos e as estratégias mais assertivas — tanto para atendimento presencial em Luz - MG quanto online para clientes de qualquer localidade.",
+      "Atendemos com estrutura física acolhedora em nossa sede própria no Centro de Espera Feliz - MG e também de forma 100% digital para clientes de toda a região do Caparaó, Zona da Mata e de qualquer lugar do Brasil. Por meio de videochamadas, envio seguro de arquivos e assinatura eletrônica, você acompanha seu processo com total agilidade.",
   },
   {
-    question: "Moro em outra cidade ou estado. É possível ser atendido(a) 100% online?",
+    question: "Quais são as vantagens de realizar o inventário em cartório (extrajudicial)?",
     answer:
-      "Sim, perfeitamente! Os processos judiciais brasileiros tramitam de maneira eletrônica. Nós realizamos consultas por videochamada, envio seguro de documentos digitalizados e assinatura digital direta pelo seu celular. Você acompanha cada movimentação com total transparência e comodidade, recebendo orientações claras em cada etapa.",
+      "Quando todos os herdeiros são maiores, capazes e há consenso sobre a partilha dos bens, o inventário extrajudicial em cartório de notas é substancialmente mais rápido, econômico e tranquilo do que um processo judicial, podendo ser concluído em poucas semanas com a assistência jurídica do nosso escritório.",
   },
   {
-    question: "Meu nome foi negativado indevidamente no SPC/Serasa. Quais são meus direitos?",
+    question: "Tive um benefício do INSS negado ou cortado. Ainda é possível reverter?",
     answer:
-      "Se você sofreu negativação por dívida inexistente, já quitada ou decorrente de golpe/fraude cometida por terceiros, trata-se de dano moral presumido pela lei (in re ipsa). Ingressamos com ação judicial exigindo a exclusão imediata do seu nome dos cadastros de proteção ao crédito em tutela de urgência (liminar), além de indenização proporcional aos constrangimentos gerados.",
+      "Sim, com certeza. Indeferimentos administrativos do INSS por análises superficiais de perícia ou de tempo de contribuição são muito comuns. Nosso escritório analisa o processo administrativo e, identificando o direito do segurado, ingressa com ação perante a Justiça Federal, onde médicos e peritos judiciais imparciais avaliam detalhadamente o caso.",
   },
   {
-    question: "Qual a vantagem de fazer o inventário em cartório (extrajudicial)?",
+    question: "Fui vítima de golpe do Pix, fraude bancária ou desconto indevido. O que fazer?",
     answer:
-      "O inventário extrajudicial em cartório de notas é substancialmente mais rápido, econômico e menos desgastante do que a via judicial. Quando todos os herdeiros são capazes e concordam com a partilha dos bens, a partilha pode ser lavrada em poucos dias ou semanas, garantindo a regularização do patrimônio com total segurança jurídica e assessoria da Dra. Jéssica Bernardes.",
+      "O tempo é fundamental. Guarde imediatamente comprovantes de transferência, prints de conversas, extratos e registre o Boletim de Ocorrência. Em seguida, entre em contato imediatamente com o nosso escritório pelo WhatsApp para adotarmos as medidas jurídicas cabíveis de bloqueio e requerimento de restituição dos valores com danos morais.",
   },
   {
-    question: "Tive um benefício negado pelo INSS. Ainda posso recorrer?",
+    question: "Quais são os documentos necessários para a análise jurídica inicial?",
     answer:
-      "Sim! É muito comum o INSS negar pedidos de aposentadoria, auxílio-doença ou BPC/LOAS por equívocos na análise de vínculos ou perícias superficiais. Analisamos o processo administrativo e, se viável, ajuizamos ação perante a Justiça Federal, onde peritos judiciais independentes avaliam com rigor e imparcialidade sua real situação.",
+      "De início, basta um documento de identificação (RG ou CNH), comprovante de residência e os documentos relacionados ao seu caso específico (extratos bancários, comprovantes, contracheques, certidões ou negativas do INSS). Durante a conversa orientamos exatamente o que precisa ser apresentado.",
   },
 ];
 
@@ -498,7 +426,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-          dark ? "text-white" : "text-[#0d1726]"
+          dark ? "text-white" : "text-[#0b1322]"
         }`}
       >
         {children}
@@ -506,7 +434,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-sm leading-relaxed sm:text-base ${
-            dark ? "text-[#ecdecc]" : "text-[#4a576b]"
+            dark ? "text-[#faefd4]" : "text-[#4e5e74]"
           }`}
         >
           {description}
@@ -534,36 +462,36 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen bg-[#0b1320] text-[#fbf7f1] selection:bg-[#c4a287] selection:text-[#0b1320]">
+      <main className="min-h-screen bg-[#0b1322] text-[#fffaf0] selection:bg-[#df9e32] selection:text-[#060a12]">
         {/* TOP ANNOUNCEMENT BAR (MIDNIGHT NAVY & GOLD) */}
-        <div className="border-b border-[#c4a287]/25 bg-[#070c14] py-2 text-xs">
+        <div className="border-b border-[#df9e32]/25 bg-[#060a12] py-2 text-xs">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#ecdecc] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-white" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#df9e32] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#fee690]" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                Dra. Jéssica Bernardes — Advogada · OAB/MG 231.560 · Luz - MG ⚖️
+                Dra. Maira Gomes de Oliveira · OAB/MG 166.714 · Espera Feliz - MG ⚖️
               </span>
             </div>
 
-            <div className="flex items-center gap-4 text-[11px] text-[#ecdecc]">
+            <div className="flex items-center gap-4 text-[11px] text-[#faefd4]">
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
-                <Star size={12} className="fill-[#ecdecc] text-white" />
-                <span className="font-bold text-white">5,0 ★</span> (21 avaliações no Google)
+                <Star size={12} className="fill-[#df9e32] text-[#df9e32]" />
+                <span className="font-bold text-white">5,0 ★</span> (16 avaliações no Google)
               </a>
-              <span className="hidden h-3 w-px bg-[#c4a287]/40 sm:inline-block" />
+              <span className="hidden h-3 w-px bg-[#df9e32]/40 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de uma consultoria sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de uma consultoria jurídica sobre o meu caso.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[#ecdecc] sm:inline-flex"
+                className="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[#fee690] sm:inline-flex"
               >
                 <WhatsAppIcon size={13} className="text-[#25D366]" />
                 {PHONE_DISPLAY}
@@ -576,38 +504,38 @@ export default function Home() {
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
             scrolled
-              ? "border-b border-[#c4a287]/35 bg-[#0b1320]/95 py-3 shadow-xl shadow-black/80 backdrop-blur-md"
-              : "border-b border-[#c4a287]/20 bg-[#0b1320]/90 py-4 backdrop-blur-sm"
+              ? "border-b border-[#df9e32]/35 bg-[#0b1322]/95 py-3 shadow-xl shadow-black/80 backdrop-blur-md"
+              : "border-b border-[#df9e32]/20 bg-[#0b1322]/90 py-4 backdrop-blur-sm"
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             {/* Left: Logo + Desktop Navigation */}
-            <div className="flex items-center gap-8 lg:gap-12 xl:gap-16">
+            <div className="flex items-center gap-6 xl:gap-10">
               {/* Logo Link */}
               <a
                 href="#"
                 className="group flex shrink-0 items-center transition-opacity hover:opacity-95"
-                aria-label="Jéssica Bernardes Advogada - Início"
+                aria-label="Escritório de Advocacia Maira Gomes de Oliveira - Início"
               >
                 <div className="relative flex items-center py-1">
                   <Image
                     src={LOGO_SRC}
-                    alt="Jéssica Bernardes Advogada OAB/MG 231.560 - Logotipo Oficial"
-                    width={340}
-                    height={116}
-                    className="h-12 sm:h-13 md:h-14 lg:h-15 w-auto max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] object-contain object-left drop-shadow-[0_2px_14px_rgba(236,222,204,0.22)] transition-transform duration-200 group-hover:scale-[1.02]"
+                    alt="Escritório de Advocacia Maira Gomes de Oliveira OAB/MG 166.714 - Logotipo Oficial"
+                    width={320}
+                    height={110}
+                    className="h-11 sm:h-12 md:h-13 w-auto max-w-[190px] sm:max-w-[220px] md:max-w-[250px] lg:max-w-[270px] object-contain object-left drop-shadow-[0_2px_14px_rgba(223,158,50,0.3)] transition-transform duration-200 group-hover:scale-[1.02]"
                     priority
                   />
                 </div>
               </a>
 
               {/* Desktop Navigation */}
-              <nav className="hidden items-center gap-4 lg:gap-5 xl:gap-7 lg:flex">
+              <nav className="hidden items-center gap-3.5 lg:gap-4 xl:gap-6 lg:flex">
                 <a href="#atuacao" className="nav-link-dark text-[11px] whitespace-nowrap">
-                  Áreas de Atuação
+                  Atuação
                 </a>
                 <a href="#sobre" className="nav-link-dark text-[11px] whitespace-nowrap">
-                  Sobre a Advogada
+                  Sobre a Dra. Maira
                 </a>
                 <a href="#diferenciais" className="nav-link-dark text-[11px] whitespace-nowrap">
                   Diferenciais
@@ -616,7 +544,7 @@ export default function Home() {
                   Avaliações (5,0 ★)
                 </a>
                 <a href="#duvidas" className="nav-link-dark text-[11px] whitespace-nowrap">
-                  Dúvidas Frequentes
+                  Dúvidas
                 </a>
                 <a href="#contato" className="nav-link-dark text-[11px] whitespace-nowrap">
                   Sede & Contato
@@ -625,24 +553,24 @@ export default function Home() {
             </div>
 
             {/* Right Action */}
-            <div className="flex shrink-0 items-center gap-3">
+            <div className="flex shrink-0 items-center gap-3 ml-4 lg:ml-6 xl:ml-8 pl-2">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de consultar sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de consultar sobre o meu caso.")}
                 target="_blank"
-                variant="platinum"
+                variant="gold"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#0b1320]" />
-                <span className="hidden xl:inline">Atendimento WhatsApp</span>
-                <span className="xl:hidden">WhatsApp</span>
+                <WhatsAppIcon size={14} className="text-[#060a12]" />
+                <span className="hidden 2xl:inline">Atendimento WhatsApp</span>
+                <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
 
               {/* Mobile menu toggle */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-[#c4a287]/40 bg-[#111c2e] text-[#fbf7f1] transition-colors hover:border-[#ecdecc] hover:text-white lg:hidden"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-[#df9e32]/40 bg-[#101a2d] text-[#fffaf0] transition-colors hover:border-[#fee690] hover:text-white lg:hidden"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -657,13 +585,13 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="border-b border-[#c4a287]/40 bg-[#070c14] px-5 py-6 lg:hidden"
+                className="border-b border-[#df9e32]/40 bg-[#060a12] px-5 py-6 lg:hidden"
               >
                 <div className="flex flex-col gap-4">
-                  <div className="pb-3 border-b border-[#c4a287]/20 flex items-center">
+                  <div className="pb-3 border-b border-[#df9e32]/20 flex items-center">
                     <Image
                       src={LOGO_SRC}
-                      alt="Jéssica Bernardes Advogada"
+                      alt="Escritório de Advocacia Maira Gomes de Oliveira"
                       width={280}
                       height={95}
                       className="h-10 w-auto object-contain object-left"
@@ -672,62 +600,62 @@ export default function Home() {
                   <a
                     href="#atuacao"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#ecdecc] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#faefd4] uppercase transition-colors hover:text-white"
                   >
                     <span>Áreas de Atuação</span>
-                    <ArrowRight size={14} className="text-[#d9ba9e]" />
+                    <ArrowRight size={14} className="text-[#df9e32]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#ecdecc] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#faefd4] uppercase transition-colors hover:text-white"
                   >
-                    <span>Sobre a Dra. Jéssica Bernardes</span>
-                    <ArrowRight size={14} className="text-[#d9ba9e]" />
+                    <span>Sobre a Dra. Maira Gomes</span>
+                    <ArrowRight size={14} className="text-[#df9e32]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#ecdecc] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#faefd4] uppercase transition-colors hover:text-white"
                   >
                     <span>Diferenciais</span>
-                    <ArrowRight size={14} className="text-[#d9ba9e]" />
+                    <ArrowRight size={14} className="text-[#df9e32]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#ecdecc] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#faefd4] uppercase transition-colors hover:text-white"
                   >
                     <span>Avaliações Google (5,0 ★)</span>
-                    <ArrowRight size={14} className="text-[#d9ba9e]" />
+                    <ArrowRight size={14} className="text-[#df9e32]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#ecdecc] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#faefd4] uppercase transition-colors hover:text-white"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#d9ba9e]" />
+                    <ArrowRight size={14} className="text-[#df9e32]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#ecdecc] uppercase transition-colors hover:text-white"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-[#faefd4] uppercase transition-colors hover:text-white"
                   >
                     <span>Sede & Contato</span>
-                    <ArrowRight size={14} className="text-[#d9ba9e]" />
+                    <ArrowRight size={14} className="text-[#df9e32]" />
                   </a>
 
-                  <div className="pt-4 border-t border-[#c4a287]/30">
+                  <div className="pt-4 border-t border-[#df9e32]/30">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de agendar um atendimento.")}
+                      href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de agendar um atendimento.")}
                       target="_blank"
-                      variant="platinum"
+                      variant="gold"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com a Dra. Jéssica</span>
+                      <span>Falar no WhatsApp com a Dra. Maira Gomes</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -739,10 +667,10 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 1: HERO SECTION + FAIXA DE MÉTRICAS (DARK LUXURY)  */}
         {/* ======================================================== */}
-        <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#0b1320]">
-          {/* Subtle Ambient Champagne Gold Radial Glow Background */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-radial from-[#dfc8ac]/15 via-[#81654e]/10 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-96 w-96 rounded-full bg-[#1e304e]/50 blur-3xl" />
+        <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#0b1322]">
+          {/* Subtle Ambient Imperial Gold Radial Glow Background */}
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-radial from-[#df9e32]/18 via-[#a06008]/10 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-96 w-96 rounded-full bg-[#1d2d4c]/50 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -755,9 +683,9 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-5">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#c4a287]/40 bg-[#111c2e] px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-white shadow-sm">
-                    <span className="size-1.5 rounded-full bg-[#ecdecc] animate-pulse" />
-                    Jéssica Bernardes · Advogada · OAB/MG 231.560 · Luz - MG
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#df9e32]/40 bg-[#101a2d] px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-white shadow-sm">
+                    <span className="size-1.5 rounded-full bg-[#fee690] animate-pulse" />
+                    MR Advocacia · Dra. Maira Gomes de Oliveira · Espera Feliz - MG
                   </span>
                 </motion.div>
 
@@ -766,9 +694,9 @@ export default function Home() {
                   variants={reveal}
                   className="font-serif text-3xl leading-[1.14] font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Advocacia Estratégica, Humana e com{" "}
-                  <span className="bg-gradient-to-r from-white via-[#fbf7f1] to-[#dfc8ac] bg-clip-text text-transparent">
-                    Rigor nos Detalhes
+                  Advocacia Estratégica, Rigor Técnico e{" "}
+                  <span className="bg-gradient-to-r from-white via-[#fee690] to-[#df9e32] bg-clip-text text-transparent">
+                    Atendimento Humanizado
                   </span>{" "}
                   para Proteger Você.
                 </motion.h1>
@@ -776,22 +704,19 @@ export default function Home() {
                 {/* Subtitle / Value Proposition */}
                 <motion.p
                   variants={reveal}
-                  className="mt-6 max-w-2xl text-base leading-relaxed text-[#ecdecc] sm:text-lg"
+                  className="mt-6 max-w-2xl text-base leading-relaxed text-[#faefd4] sm:text-lg"
                 >
-                  Segurança jurídica, acolhimento transparente e atuação incansável. A advogada{" "}
-                  <strong className="text-white font-semibold">Dra. Jéssica Bernardes</strong> atua com notório saber jurídico e excelência em{" "}
-                  <strong className="text-white font-semibold">Direito do Consumidor, Defesa contra Golpes Financeiros, Cível, Família e Previdenciário</strong>{" "}
-                  em <strong className="text-white font-semibold">Luz, Centro-Oeste de Minas</strong> e online para todo o Brasil.
+                  Com <strong className="text-white font-semibold">mais de 7 anos de experiência</strong> e nota máxima <strong className="text-white font-semibold">5,0 ★ no Google</strong>, a <strong className="text-white font-semibold">Dra. Maira Gomes de Oliveira</strong> lidera um escritório sério, ético e resolutivo, pronto para defender seus interesses em <strong className="text-white font-semibold">Direito Civil, Previdenciário (INSS), Família & Inventários, Consumidor e Trabalhista</strong> — com atendimento presencial em <strong className="text-white font-semibold">Espera Feliz - MG</strong> e online para todo o Brasil.
                 </motion.p>
 
-                {/* Direct Alert for Victims of Scams / Fraud */}
+                {/* Direct Trust Highlights */}
                 <motion.div
                   variants={reveal}
-                  className="mt-6 flex items-start gap-3 rounded-xl border border-[#c4a287]/40 bg-[#16243b]/90 p-3.5 backdrop-blur-sm"
+                  className="mt-6 flex items-start gap-3 rounded-xl border border-[#df9e32]/40 bg-[#15223a]/90 p-3.5 backdrop-blur-sm"
                 >
-                  <AlertTriangle size={18} className="text-[#dfc8ac] shrink-0 mt-0.5" />
-                  <p className="text-xs text-[#fbf7f1] leading-relaxed">
-                    <strong className="text-white font-bold">Foi vítima de golpe do Pix, fraude bancária ou clonagem?</strong> Atendimento prioritário e imediato para bloqueio de transações e recuperação de valores.
+                  <Award size={18} className="text-[#df9e32] shrink-0 mt-0.5" />
+                  <p className="text-xs text-[#fffaf0] leading-relaxed">
+                    <strong className="text-white font-bold">Reconhecimento unânime na região do Caparaó:</strong> Atendimento de qualidade, transparência e eficiência com suporte humanizado em cada etapa do seu processo.
                   </p>
                 </motion.div>
 
@@ -801,9 +726,9 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de consultar sobre a situação do meu caso.")}
+                    href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de consultar sobre a situação do meu caso.")}
                     target="_blank"
-                    variant="platinum"
+                    variant="gold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
@@ -823,7 +748,7 @@ export default function Home() {
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Visual Frame (Dra. Jéssica Bernardes portrait) */}
+              {/* Right Column: Hero Visual Frame (Dra. Maira Gomes portrait) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -832,40 +757,40 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Decorative Metallic Border Box */}
-                  <div className="relative overflow-hidden rounded-2xl border border-[#c4a287]/50 bg-[#111c2e] p-2 shadow-2xl shadow-black/95">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#070c14]">
+                  <div className="relative overflow-hidden rounded-2xl border border-[#df9e32]/50 bg-[#101a2d] p-2 shadow-2xl shadow-black/95">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#060a12]">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dra. Jéssica Bernardes - Advogada em Luz - MG (OAB/MG 231.560)"
+                        alt="Dra. Maira Gomes de Oliveira - Advogada em Espera Feliz - MG"
                         fill
                         sizes="(max-width: 768px) 100vw, 500px"
                         className="object-cover object-top transition-transform duration-700 hover:scale-105"
                         priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b1320] via-transparent to-transparent opacity-65" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b1322] via-transparent to-transparent opacity-65" />
                     </div>
 
                     {/* Subtle Overlay Label */}
-                    <div className="absolute right-5 bottom-5 left-5 rounded-xl border border-[#c4a287]/50 bg-[#070c14]/95 p-4 shadow-lg backdrop-blur-md">
+                    <div className="absolute right-5 bottom-5 left-5 rounded-xl border border-[#df9e32]/50 bg-[#060a12]/95 p-4 shadow-lg backdrop-blur-md">
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="font-serif text-sm font-bold text-white">
-                            Jéssica Bernardes
+                            Dra. Maira Gomes de Oliveira
                           </p>
-                          <p className="text-[11px] text-[#ecdecc]">
-                            Advogada · OAB/MG 231.560
+                          <p className="text-[11px] text-[#faefd4]">
+                            Advogada · OAB/MG 166.714
                           </p>
                         </div>
-                        <span className="rounded-md border border-[#c4a287]/40 bg-[#16243b] px-2.5 py-1 text-[10px] font-bold text-[#ecdecc]">
-                          Luz · MG
+                        <span className="rounded-md border border-[#df9e32]/40 bg-[#15223a] px-2.5 py-1 text-[10px] font-bold text-[#fee690]">
+                          Espera Feliz · MG
                         </span>
                       </div>
                     </div>
                   </div>
 
                   {/* Floating Stat Badge 1 (Google 5.0 Rating) */}
-                  <div className="absolute -top-5 -left-5 hidden rounded-xl border border-[#c4a287]/50 bg-[#111c2e]/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-lg bg-[#16243b] border border-[#c4a287]/40">
+                  <div className="absolute -top-5 -left-5 hidden rounded-xl border border-[#df9e32]/50 bg-[#101a2d]/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
+                    <div className="flex size-10 items-center justify-center rounded-lg bg-[#15223a] border border-[#df9e32]/40">
                       <GoogleIcon size={20} />
                     </div>
                     <div>
@@ -874,21 +799,21 @@ export default function Home() {
                           <Star
                             key={i}
                             size={12}
-                            className="fill-[#ecdecc] text-white"
+                            className="fill-[#df9e32] text-[#df9e32]"
                           />
                         ))}
                       </div>
                       <p className="text-[11px] font-bold text-white mt-0.5">
-                        5,0 no Google · 21 Avaliações
+                        5,0 no Google · 16 Avaliações
                       </p>
                     </div>
                   </div>
 
-                  {/* Floating Stat Badge 2 (Especialidades) */}
-                  <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-[#c4a287]/50 bg-[#111c2e]/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
-                    <Scale size={16} className="text-[#dfc8ac]" />
+                  {/* Floating Stat Badge 2 (Experiência) */}
+                  <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-[#df9e32]/50 bg-[#101a2d]/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
+                    <Scale size={16} className="text-[#df9e32]" />
                     <span className="text-xs font-bold tracking-wide text-white">
-                      Consumidor · Golpes · Cível · Família ⚖️
+                      +7 Anos de Experiência Jurídica ⚖️
                     </span>
                   </div>
                 </div>
@@ -896,38 +821,38 @@ export default function Home() {
             </div>
 
             {/* INTEGRATED AUTHORITY BAR WITHIN DOBRA 1 (DARK) */}
-            <div className="mt-14 border-t border-[#c4a287]/25 pt-8">
+            <div className="mt-14 border-t border-[#df9e32]/25 pt-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <div className="rounded-xl border border-[#c4a287]/30 bg-[#111c2e]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#df9e32]/30 bg-[#101a2d]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
                     5,0 ★
                   </span>
                   <p className="text-xs font-semibold text-white mt-1">Google Meu Negócio</p>
-                  <p className="text-[11px] text-[#ecdecc]">21 avaliações 100% 5 estrelas</p>
+                  <p className="text-[11px] text-[#faefd4]">16 avaliações 100% 5 estrelas</p>
                 </div>
 
-                <div className="rounded-xl border border-[#c4a287]/30 bg-[#111c2e]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#df9e32]/30 bg-[#101a2d]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
-                    Notório Saber
+                    +7 Anos
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Solidez Técnica</p>
-                  <p className="text-[11px] text-[#ecdecc]">Rigor em cada detalhe processual</p>
+                  <p className="text-xs font-semibold text-white mt-1">Sólida Experiência</p>
+                  <p className="text-[11px] text-[#faefd4]">Atuação consolidada e segura</p>
                 </div>
 
-                <div className="rounded-xl border border-[#c4a287]/30 bg-[#111c2e]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#df9e32]/30 bg-[#101a2d]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
                     Humanizado
                   </span>
                   <p className="text-xs font-semibold text-white mt-1">Atendimento Acolhedor</p>
-                  <p className="text-[11px] text-[#ecdecc]">Paciência, didática e clareza</p>
+                  <p className="text-[11px] text-[#faefd4]">Escuta atenta e dedicação integral</p>
                 </div>
 
-                <div className="rounded-xl border border-[#c4a287]/30 bg-[#111c2e]/80 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border border-[#df9e32]/30 bg-[#101a2d]/80 p-4 backdrop-blur-sm">
                   <span className="font-serif text-2xl font-bold text-white">
                     Resolutividade
                   </span>
-                  <p className="text-xs font-semibold text-white mt-1">Prevenção & Solução</p>
-                  <p className="text-[11px] text-[#ecdecc]">Agilidade com ética irretocável</p>
+                  <p className="text-xs font-semibold text-white mt-1">Agilidade & Eficiência</p>
+                  <p className="text-[11px] text-[#faefd4]">Respostas rápidas e transparentes</p>
                 </div>
               </div>
             </div>
@@ -937,20 +862,20 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 2: PILARES & ÁREAS DE ATUAÇÃO (LIGHT ALABASTER)    */}
         {/* ======================================================== */}
-        <section id="atuacao" className="border-t border-[#e8dfd3] bg-[#fdfbf8] text-[#0d1726] py-20 lg:py-28">
+        <section id="atuacao" className="border-t border-[#e8decc] bg-[#fbf9f5] text-[#0b1322] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="Especialidades & Pilares de Atuação"
-                description="Soluções jurídicas estruturadas para defender seus direitos em causas do consumidor, proteção contra fraudes, relações cíveis, familiares e previdenciárias."
+                description="Atuação jurídica qualificada e multidisciplinar para proteger seus direitos em questões cíveis, previdenciárias, familiares, do consumidor e trabalhistas."
               >
-                Atuação Jurídica Completa e Especializada
+                Atuação Jurídica Completa e Estratégica
               </Heading>
 
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de consultar sobre a minha situação jurídica.")}
+                href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de consultar sobre a minha situação jurídica.")}
                 target="_blank"
-                variant="rosegold"
+                variant="gold"
                 size="md"
               >
                 <WhatsAppIcon size={15} />
@@ -965,37 +890,37 @@ export default function Home() {
                 return (
                   <div
                     key={area.id}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-[#e8dfd3] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-lg hover:shadow-[#81654e]/10"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-[#e8decc] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-lg hover:shadow-[#df9e32]/10"
                   >
                     <div>
                       {/* Icon & Category */}
                       <div className="flex items-center justify-between">
-                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#f7f4ee] text-[#81654e] border border-[#e8dfd3] transition-colors group-hover:bg-[#81654e] group-hover:text-white">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#f4efe6] text-[#df9e32] border border-[#e8decc] transition-colors group-hover:bg-[#df9e32] group-hover:text-[#060a12]">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full bg-[#f7f4ee] px-3 py-1 text-[10px] font-bold text-[#81654e] uppercase tracking-wider">
+                        <span className="rounded-full bg-[#f4efe6] px-3 py-1 text-[10px] font-bold text-[#a06008] uppercase tracking-wider">
                           Especialidade
                         </span>
                       </div>
 
-                      <h3 className="mt-5 font-serif text-xl font-bold text-[#0d1726] group-hover:text-[#81654e] transition-colors">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-[#0b1322] group-hover:text-[#a06008] transition-colors">
                         {area.title}
                       </h3>
 
-                      <p className="mt-2 text-xs font-semibold text-[#81654e]">
+                      <p className="mt-2 text-xs font-semibold text-[#a06008]">
                         {area.tag}
                       </p>
 
-                      <p className="mt-3 text-xs leading-relaxed text-[#4a576b]">
+                      <p className="mt-3 text-xs leading-relaxed text-[#4e5e74]">
                         {area.summary}
                       </p>
                     </div>
 
-                    <div className="mt-6 border-t border-[#e8dfd3] pt-4">
+                    <div className="mt-6 border-t border-[#e8decc] pt-4">
                       <button
                         type="button"
                         onClick={() => setSelectedPractice(area)}
-                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#81654e] transition-colors hover:text-[#0d1726] cursor-pointer"
+                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#a06008] transition-colors hover:text-[#0b1322] cursor-pointer"
                       >
                         <span>Ver Detalhes & Tópicos Atendidos</span>
                         <ArrowUpRight size={15} />
@@ -1009,19 +934,20 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 3: SOBRE A ADVOGADA (DARK LUXURY MIDNIGHT NAVY)    */}
+        {/* DOBRA 3: SOBRE A ADVOGADA & SEDE (DARK LUXURY)           */}
         {/* ======================================================== */}
-        <section id="sobre" className="relative border-t border-[#c4a287]/25 bg-[#070c14] py-20 lg:py-28 text-[#fbf7f1]">
+        <section id="sobre" className="relative border-t border-[#df9e32]/25 bg-[#060a12] py-20 lg:py-28 text-[#fffaf0]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Image: Dra. Jéssica Bernardes portrait */}
+              {/* Left Images: Dra. Maira Gomes & Office Sign */}
               <div className="lg:col-span-5">
-                <div className="relative mx-auto max-w-sm lg:max-w-none">
-                  <div className="overflow-hidden rounded-2xl border-2 border-[#c4a287]/50 bg-[#111c2e] p-2.5 shadow-2xl">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#16243b]">
+                <div className="relative mx-auto max-w-sm lg:max-w-none space-y-4">
+                  {/* Photo 1: Dra. Maira Gomes */}
+                  <div className="overflow-hidden rounded-2xl border-2 border-[#df9e32]/50 bg-[#101a2d] p-2 shadow-2xl">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#15223a]">
                       <Image
-                        src={FOTO_ABOUT_SRC}
-                        alt="Dra. Jéssica Oliveira Bernardes Nunes - Advogada em Luz - MG"
+                        src={FOTO_HERO_SRC}
+                        alt="Dra. Maira Gomes de Oliveira - Advogada em Espera Feliz - MG"
                         fill
                         sizes="(max-width: 768px) 100vw, 450px"
                         className="object-cover object-top"
@@ -1029,13 +955,22 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Experience Badge */}
-                  <div className="absolute -bottom-6 -right-4 rounded-xl border border-[#c4a287]/50 bg-[#0b1320] p-4 shadow-xl">
-                    <p className="font-serif text-3xl font-bold text-white">
-                      Nota 5,0 ★
-                    </p>
-                    <p className="text-[11px] font-semibold text-[#ecdecc]">
-                      21 Avaliações 100% 5 Estrelas no Google
+                  {/* Photo 2: Office Wall Sign (MR Advocacia) */}
+                  <div className="overflow-hidden rounded-xl border border-[#df9e32]/40 bg-[#101a2d] p-1.5 shadow-lg">
+                    <div
+                      className="relative w-full overflow-hidden rounded-lg bg-[#060a12]"
+                      style={{ aspectRatio: "768 / 640" }}
+                    >
+                      <Image
+                        src={FOTO_ABOUT_SRC}
+                        alt="MR Advocacia - Sede própria em Espera Feliz - MG"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 450px"
+                        className="object-cover object-center"
+                      />
+                    </div>
+                    <p className="mt-2 text-center text-[10px] font-bold text-[#fee690] uppercase tracking-wider">
+                      Sede Própria · R. Pedro Dias Neto, 03 - Centro, Espera Feliz - MG
                     </p>
                   </div>
                 </div>
@@ -1044,73 +979,71 @@ export default function Home() {
               {/* Right Content */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre a Advogada"
+                  eyebrow="Sobre a Profissional & O Escritório"
                   dark={true}
-                  description="Uma trajetória alicerçada em trabalho honesto, persistência diária e o compromisso irrestrito de colocar o Direito a serviço de pessoas e famílias."
+                  description="Mais de 7 anos dedicados a colocar o Direito a serviço da proteção de direitos, segurança patrimonial e amparo de pessoas e famílias."
                 >
-                  Dra. Jéssica Bernardes: Notório Saber & Advocacia Humanizada
+                  Dra. Maira Gomes de Oliveira: Competência, Rigor & Atendimento Humano
                 </Heading>
 
-                <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#ecdecc]">
+                <div className="mt-6 space-y-4 text-sm leading-relaxed text-[#faefd4]">
                   <p>
-                    <strong className="text-white font-semibold">
-                      &ldquo;Sou filha de uma família humilde, que sempre me ensinou o valor do trabalho, da honestidade e da persistência. Cresci vendo meus pais lutarem pelos seus objetivos, e foi assim que aprendi a nunca desistir dos meus sonhos. O Direito já foi sonho, hoje é realidade!&rdquo;
-                    </strong>
+                    Com mais de 7 anos de atuação jurídica consistente e registro profissional <strong className="text-white font-semibold">OAB/MG 166.714</strong>, a <strong className="text-white font-semibold">Dra. Maira Gomes de Oliveira</strong> construiu uma trajetória sólida pautada na ética, na competência técnica e no atendimento profundamente humanizado.
                   </p>
                   <p>
-                    Sempre estudiosa, dedicada e determinada a construir seu próprio caminho, a <strong className="text-white font-semibold">Dra. Jéssica Oliveira Bernardes Nunes (OAB/MG 231.560)</strong> leva esses valores inegociáveis para o exercício diário da advocacia: uma prática <strong className="text-white font-semibold">humana, acessível, ética e feita com propósito</strong>.
+                    À frente do <strong className="text-white font-semibold">Escritório de Advocacia Maira Gomes de Oliveira (MR Advocacia)</strong>, com moderna sede física no Centro de <strong className="text-white font-semibold">Espera Feliz - MG</strong>, o escritório consolidou-se como referência regional em qualidade, clareza e dedicação em cada processo.
                   </p>
                   <p>
-                    Com escritório sediado no coração de <strong className="text-white font-semibold">Luz - MG</strong>, destaca-se pelo notório saber jurídico e pelo rigor minucioso nos detalhes de cada processo. Seus clientes enfatizam a clareza e paciência no atendimento, o apoio decisivo em situações de angústia (como fraudes e golpes) e a capacidade ímpar de solucionar demandas complexas com celeridade e empatia.
+                    Seus clientes destacam constantemente o acolhimento diferenciado, a transparência na condução dos casos e a agilidade nas respostas. Cada demanda é tratada com rigor artesanal, unindo conhecimento da legislação a um compromisso inegociável de resolver os problemas com a maior eficiência possível.
                   </p>
                 </div>
 
                 {/* 4 Highlights */}
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="flex items-start gap-3 rounded-xl border border-[#c4a287]/30 bg-[#111c2e] p-4">
-                    <HeartHandshake size={20} className="text-[#dfc8ac] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#df9e32]/30 bg-[#101a2d] p-4">
+                    <HeartHandshake size={20} className="text-[#df9e32] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Acolhimento & Empatia
+                        Atendimento Humanizado
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#ecdecc]">
-                        Atenção especial e suporte humano para momentos difíceis, como vítimas de fraudes.
+                      <p className="mt-1 text-[11px] text-[#faefd4]">
+                        Acolhimento com empatia, escuta ativa e respeito absoluto à história de cada cliente.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-[#c4a287]/30 bg-[#111c2e] p-4">
-                    <FileText size={20} className="text-[#dfc8ac] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#df9e32]/30 bg-[#101a2d] p-4">
+                    <BadgeCheck size={20} className="text-[#df9e32] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Didática & Clareza
+                        Competência & Qualificação
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#ecdecc]">
-                        Explicação de cada etapa sem termos técnicos confusos, sanando todas as dúvidas.
+                      <p className="mt-1 text-[11px] text-[#faefd4]">
+                        Profissionais qualificados com rigor técnico nas peças processuais e estratégias.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-[#c4a287]/30 bg-[#111c2e] p-4">
-                    <BadgeCheck size={20} className="text-[#dfc8ac] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#df9e32]/30 bg-[#101a2d] p-4">
+                    <FileText size={20} className="text-[#df9e32] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Rigor nos Detalhes
+                        Transparência & Clareza
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#ecdecc]">
-                        Gestão processual minuciosa e busca pelas melhores estratégias jurídicas.
+                      <p className="mt-1 text-[11px] text-[#faefd4]">
+                        Comunicação direta, sem rodeios ou termos técnicos complicados.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 rounded-xl border border-[#c4a287]/30 bg-[#111c2e] p-4">
-                    <Lock size={20} className="text-[#dfc8ac] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-xl border border-[#df9e32]/30 bg-[#101a2d] p-4">
+                    <Sparkles size={20} className="text-[#df9e32] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                        Ética & Transparência
+                        Eficiência & Agilidade
                       </h4>
-                      <p className="mt-1 text-[11px] text-[#ecdecc]">
-                        Conduta séria, comprometida e acompanhamento transparente do início ao fim.
+                      <p className="mt-1 text-[11px] text-[#faefd4]">
+                        Foco nas melhores soluções, atuando com celeridade extrajudicial e judicial.
                       </p>
                     </div>
                   </div>
@@ -1118,20 +1051,20 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Li sobre sua trajetória e gostaria de conversar sobre o meu caso.")}
+                    href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de conversar com você sobre o meu caso.")}
                     target="_blank"
-                    variant="platinum"
+                    variant="gold"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Falar com a Dra. Jéssica Bernardes</span>
+                    <span>Falar com a Dra. Maira Gomes</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#ecdecc] transition-colors hover:text-white"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#faefd4] transition-colors hover:text-white"
                   >
                     <InstagramIcon size={15} />
                     <span>{INSTAGRAM_HANDLE}</span>
@@ -1145,75 +1078,75 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 4: DIFERENCIAIS BASEADOS NAS AVALIAÇÕES (LIGHT)    */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="border-t border-[#e8dfd3] bg-[#f7f4ee] text-[#0d1726] py-20 lg:py-28">
+        <section id="diferenciais" className="border-t border-[#e8decc] bg-[#f4efe6] text-[#0b1322] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <p className="eyebrow justify-center mb-3">
-                Por que Escolher a Dra. Jéssica Bernardes
+                Por que Escolher o Escritório Dra. Maira Gomes
               </p>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0d1726] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0b1322] sm:text-4xl">
                 O Padrão de Excelência com Nota Máxima 5,0 ★ no Google
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#4a576b]">
-                Pilares comprovados por quem vivenciou o atendimento e teve suas causas solucionadas com segurança e paz de espírito.
+              <p className="mt-3 text-sm leading-relaxed text-[#4e5e74]">
+                Pilares comprovados por quem vivenciou o atendimento e teve seus direitos assegurados com tranquilidade e rigor técnico.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f7f4ee] text-[#81654e] border border-[#e8dfd3]">
-                  <Sparkles size={22} />
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fbf9f5] text-[#a06008] border border-[#e8decc]">
+                  <Award size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0d1726]">
-                  Notório Saber Jurídico
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#0b1322]">
+                  Qualidade e Competência
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Capacidade técnica reconhecida, profundidade na interpretação das leis e solidez em cada petição apresentada.
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Equipe preparada e advogada altamente competente, com conhecimento aprofundado da legislação e da jurisprudência.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f7f4ee] text-[#81654e] border border-[#e8dfd3]">
-                  <Shield size={22} />
-                </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0d1726]">
-                  Prevenção & Resolução
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  &ldquo;O difícil é decidir se ela é melhor resolvendo problemas ou evitando que eles aconteçam.&rdquo;
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f7f4ee] text-[#81654e] border border-[#e8dfd3]">
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fbf9f5] text-[#a06008] border border-[#e8decc]">
                   <Heart size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0d1726]">
-                  Apoio em Momentos Críticos
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#0b1322]">
+                  Atendimento Humanizado
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Sensibilidade especial com vítimas de golpes, transmitindo tranquilidade, segurança e condução atenta.
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Cuidado especial em entender a real dor de cada cliente, proporcionando tranquilidade e acolhimento em momentos delicados.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#f7f4ee] text-[#81654e] border border-[#e8dfd3]">
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fbf9f5] text-[#a06008] border border-[#e8decc]">
+                  <Shield size={22} />
+                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#0b1322]">
+                  Transparência e Ética
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Conduta séria e transparente. Informações claras sobre riscos, prazos e chances reais de êxito em cada procedimento.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fbf9f5] text-[#a06008] border border-[#e8decc]">
                   <Clock size={22} />
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#0d1726]">
-                  Dedicação do Começo ao Fim
+                <h3 className="mt-5 font-serif text-lg font-bold text-[#0b1322]">
+                  Eficiência e Rapidez
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Acompanhamento próximo em todas as fases processuais, com respostas ágeis e transparência contínua.
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Acompanhamento próximo em todas as fases, atuando de maneira resolutiva para acelerar a conclusão das demandas.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de esclarecer algumas dúvidas sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de esclarecer algumas dúvidas sobre o meu caso.")}
                 target="_blank"
-                variant="rosegold"
+                variant="gold"
                 size="md"
               >
                 <WhatsAppIcon size={15} />
@@ -1226,7 +1159,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 5,0 ★ (DARK)      */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="border-t border-[#c4a287]/25 bg-[#0b1320] py-20 lg:py-28 text-[#fbf7f1]">
+        <section id="depoimentos" className="border-t border-[#df9e32]/25 bg-[#0b1322] py-20 lg:py-28 text-[#fffaf0]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <div>
@@ -1242,13 +1175,13 @@ export default function Home() {
                       <Star
                         key={i}
                         size={16}
-                        className="fill-[#ecdecc] text-white"
+                        className="fill-[#df9e32] text-[#df9e32]"
                       />
                     ))}
                   </div>
                   <span className="text-sm font-bold text-white">5,0 de 5,0</span>
-                  <span className="text-xs text-[#ecdecc]">
-                    · 21 avaliações unânimes cinco estrelas no Google
+                  <span className="text-xs text-[#faefd4]">
+                    · 16 avaliações unânimes cinco estrelas no Google Meu Negócio
                   </span>
                 </div>
               </div>
@@ -1257,10 +1190,10 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-[#c4a287]/40 bg-[#111c2e] px-4 py-2.5 text-xs font-bold text-white transition-colors hover:border-[#ecdecc] hover:bg-[#16243b]"
+                className="inline-flex items-center gap-2 rounded-lg border border-[#df9e32]/40 bg-[#101a2d] px-4 py-2.5 text-xs font-bold text-white transition-colors hover:border-[#fee690] hover:bg-[#15223a]"
               >
                 <GoogleIcon size={14} />
-                <span>Ver Perfil no Google Maps</span>
+                <span>Ver Avaliações no Google Maps</span>
                 <ExternalLink size={12} />
               </a>
             </div>
@@ -1270,7 +1203,7 @@ export default function Home() {
               {clientReviews.map((review, idx) => (
                 <div
                   key={idx}
-                  className="relative flex flex-col justify-between rounded-2xl border border-[#c4a287]/30 bg-[#111c2e] p-6 shadow-md transition-all duration-300 hover:border-[#dfc8ac] hover:bg-[#16243b]"
+                  className="relative flex flex-col justify-between rounded-2xl border border-[#df9e32]/30 bg-[#101a2d] p-6 shadow-md transition-all duration-300 hover:border-[#df9e32] hover:bg-[#15223a]"
                 >
                   <div>
                     {/* Stars */}
@@ -1279,7 +1212,7 @@ export default function Home() {
                         <Star
                           key={i}
                           size={13}
-                          className="fill-[#ecdecc] text-white"
+                          className="fill-[#df9e32] text-[#df9e32]"
                         />
                       ))}
                     </div>
@@ -1290,16 +1223,16 @@ export default function Home() {
                     </p>
 
                     {/* Full Review Text */}
-                    <p className="mt-3 text-xs leading-relaxed text-[#ecdecc]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#faefd4]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
-                  <div className="mt-6 border-t border-[#c4a287]/30 pt-4">
+                  <div className="mt-6 border-t border-[#df9e32]/30 pt-4">
                     <p className="font-serif text-xs font-bold text-white">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#dfc8ac]">
+                    <p className="text-[10px] text-[#fee690]">
                       {review.badge} · {review.date}
                     </p>
                   </div>
@@ -1307,22 +1240,22 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#c4a287]/40 bg-[#111c2e] p-6 text-center sm:p-8">
+            <div className="mt-12 rounded-2xl border border-[#df9e32]/40 bg-[#101a2d] p-6 text-center sm:p-8">
               <h3 className="font-serif text-lg font-bold text-white sm:text-xl">
                 Precisa de orientação jurídica profissional e segura?
               </h3>
-              <p className="mt-2 text-xs text-[#ecdecc] max-w-xl mx-auto">
+              <p className="mt-2 text-xs text-[#faefd4] max-w-xl mx-auto">
                 Não enfrente dúvidas ou litígios sem o respaldo de quem atua com seriedade, ética, rapidez e rigor em cada detalhe.
               </p>
               <div className="mt-6 flex justify-center">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Li as avaliações no site e gostaria de conversar com você sobre o meu caso.")}
+                  href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Li as avaliações no site e gostaria de conversar com você sobre o meu caso.")}
                   target="_blank"
-                  variant="platinum"
+                  variant="gold"
                   size="md"
                 >
                   <WhatsAppIcon size={15} />
-                  <span>Falar com a Dra. Jéssica Bernardes Agora</span>
+                  <span>Falar com a Dra. Maira Gomes de Oliveira Agora</span>
                 </GlowingButton>
               </div>
             </div>
@@ -1332,66 +1265,66 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: COMO FUNCIONA O ATENDIMENTO (LIGHT)             */}
         {/* ======================================================== */}
-        <section className="border-t border-[#e8dfd3] bg-[#fdfbf8] text-[#0d1726] py-20 lg:py-24">
+        <section className="border-t border-[#e8decc] bg-[#fbf9f5] text-[#0b1322] py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <span className="eyebrow justify-center mb-3">
                 Processo Transparente
               </span>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0d1726] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0b1322] sm:text-4xl">
                 Como Funciona o Seu Atendimento
               </h2>
-              <p className="mt-3 text-sm text-[#4a576b]">
-                Passo a passo simples, ágil e descomplicado desde o primeiro contato até o desfecho da sua questão jurídica.
+              <p className="mt-3 text-sm text-[#4e5e74]">
+                Passo a passo simples, ágil e acolhedor desde o primeiro contato até o desfecho da sua questão jurídica.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#81654e]">
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#a06008]">
                   01
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0d1726]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#0b1322]">
                   Contato Inicial
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Envie uma mensagem no WhatsApp relatando a sua situação e tire as primeiras dúvidas diretamente com a Dra. Jéssica.
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Envie uma mensagem no WhatsApp relatando sua situação e tire as primeiras dúvidas diretamente com a equipe do escritório.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#81654e]">
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#a06008]">
                   02
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0d1726]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#0b1322]">
                   Análise Documental
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Avaliamos detalhadamente comprovantes, extratos, contratos, prints ou processos com rigor técnico para definir a viabilidade.
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Avaliamos detalhadamente comprovantes, extratos, contratos ou certidões com rigor técnico para definir a viabilidade jurídica.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#81654e]">
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#a06008]">
                   03
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0d1726]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#0b1322]">
                   Estratégia Assertiva
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Definimos o caminho mais econômico e rápido (acordo extrajudicial preventivo, notificação ou ação judicial fundamentada).
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Traçamos a melhor rota (acordo extrajudicial célere, notificação formal ou ação judicial fundamentada) para proteger você.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e8dfd3] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#c4a287] hover:shadow-md">
-                <span className="font-serif text-3xl font-bold text-[#81654e]">
+              <div className="rounded-2xl border border-[#e8decc] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#df9e32] hover:shadow-md">
+                <span className="font-serif text-3xl font-bold text-[#a06008]">
                   04
                 </span>
-                <h3 className="mt-3 font-serif text-base font-bold text-[#0d1726]">
+                <h3 className="mt-3 font-serif text-base font-bold text-[#0b1322]">
                   Acompanhamento Próximo
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
-                  Condução zelosa em todas as etapas, com atualizações frequentes e suporte atencioso até a resolução definitiva.
+                <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
+                  Condução zelosa em todas as etapas, com atualizações periódicas e suporte ágil até a solução definitiva da causa.
                 </p>
               </div>
             </div>
@@ -1401,7 +1334,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: DÚVIDAS FREQUENTES / FAQ (DARK)                 */}
         {/* ======================================================== */}
-        <section id="duvidas" className="border-t border-[#c4a287]/25 bg-[#070c14] py-20 lg:py-28 text-[#fbf7f1]">
+        <section id="duvidas" className="border-t border-[#df9e32]/25 bg-[#060a12] py-20 lg:py-28 text-[#fffaf0]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="eyebrow-dark mb-3.5 justify-center">
@@ -1410,8 +1343,8 @@ export default function Home() {
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Perguntas Frequentes
               </h2>
-              <p className="mt-3 text-sm text-[#ecdecc]">
-                Respostas diretas e didáticas sobre atendimento jurídico, proteção contra golpes, prazos e procedimentos.
+              <p className="mt-3 text-sm text-[#faefd4]">
+                Respostas diretas e didáticas sobre atendimento jurídico, causas cíveis, previdenciárias e inventários.
               </p>
             </div>
 
@@ -1421,18 +1354,18 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className="overflow-hidden rounded-xl border border-[#c4a287]/30 bg-[#111c2e] transition-colors"
+                    className="overflow-hidden rounded-xl border border-[#df9e32]/30 bg-[#101a2d] transition-colors"
                   >
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-white transition-colors hover:text-[#ecdecc] cursor-pointer"
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-white transition-colors hover:text-[#fee690] cursor-pointer"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#dfc8ac]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#df9e32]" />
                       ) : (
-                        <ChevronDown size={18} className="shrink-0 text-[#dfc8ac]" />
+                        <ChevronDown size={18} className="shrink-0 text-[#df9e32]" />
                       )}
                     </button>
 
@@ -1443,7 +1376,7 @@ export default function Home() {
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="border-t border-[#c4a287]/25 px-5 pt-3 pb-5 text-xs leading-relaxed text-[#ecdecc]"
+                          className="border-t border-[#df9e32]/25 px-5 pt-3 pb-5 text-xs leading-relaxed text-[#faefd4]"
                         >
                           {faq.answer}
                         </motion.div>
@@ -1455,18 +1388,18 @@ export default function Home() {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-xs text-[#dfc8ac]">
+              <p className="text-xs text-[#fee690]">
                 Sua dúvida específica não está listada acima?
               </p>
               <div className="mt-3">
                 <a
-                  href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de esclarecer uma dúvida que não encontrei no site.")}
+                  href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de esclarecer uma dúvida que não encontrei no site.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold text-white hover:underline"
                 >
                   <WhatsAppIcon size={14} className="text-[#25D366]" />
-                  <span>Pergunte diretamente à Dra. Jéssica Bernardes no WhatsApp</span>
+                  <span>Pergunte diretamente à equipe da Dra. Maira Gomes no WhatsApp</span>
                   <ArrowRight size={12} />
                 </a>
               </div>
@@ -1477,53 +1410,56 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: LOCALIZAÇÃO, SEDE & CONTATO (LIGHT)            */}
         {/* ======================================================== */}
-        <section id="contato" className="border-t border-[#e8dfd3] bg-[#fdfbf8] text-[#0d1726] py-20 lg:py-28">
+        <section id="contato" className="border-t border-[#e8decc] bg-[#fbf9f5] text-[#0b1322] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Sede info (LIGHT STYLING) */}
               <div className="lg:col-span-5">
                 <span className="eyebrow mb-3.5">Sede & Atendimento</span>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0d1726] sm:text-4xl">
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0b1322] sm:text-4xl">
                   Estamos Prontos para Atender Você
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-[#4a576b]">
-                  Agende sua consulta presencial em nosso escritório no Centro de Luz - MG, ou realize seu atendimento online com total comodidade e segurança jurídica de onde você estiver.
+                <p className="mt-4 text-sm leading-relaxed text-[#4e5e74]">
+                  Agende seu atendimento presencial em nossa sede própria no Centro de Espera Feliz - MG, ou realize sua consulta de forma online com total comodidade e discrição de onde você estiver.
                 </p>
 
                 <div className="mt-8 space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] text-[#81654e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8decc] bg-[#f4efe6] text-[#a06008]">
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0d1726] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#0b1322] uppercase tracking-wider">
                         Endereço da Sede
                       </p>
-                      <p className="mt-1 text-xs leading-relaxed text-[#4a576b]">
+                      <p className="mt-1 text-xs leading-relaxed text-[#4e5e74]">
                         {ADDRESS_TEXT}
                       </p>
-                      <p className="text-[11px] text-[#81654e] font-medium mt-0.5">
-                        Centro de Luz - MG · CEP 35595-000 · Atendimento presencial e online.
+                      <p className="text-[11px] text-[#a06008] font-medium mt-0.5">
+                        Centro de Espera Feliz - MG · CEP 36830-000 · Atendimento presencial e online.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] text-[#81654e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8decc] bg-[#f4efe6] text-[#a06008]">
                       <Phone size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0d1726] uppercase tracking-wider">
-                        Telefone & WhatsApp
+                      <p className="text-xs font-bold text-[#0b1322] uppercase tracking-wider">
+                        Telefones & WhatsApp
                       </p>
-                      <p className="mt-1 text-xs text-[#4a576b]">
-                        {PHONE_DISPLAY}
+                      <p className="mt-1 text-xs text-[#4e5e74]">
+                        Celular / WhatsApp: <strong className="text-[#0b1322]">{PHONE_DISPLAY}</strong>
+                      </p>
+                      <p className="text-xs text-[#4e5e74]">
+                        Fixo: <strong className="text-[#0b1322]">{PHONE_LANDLINE}</strong>
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de agendar uma consulta jurídica.")}
+                        href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de agendar uma consulta jurídica.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-bold text-[#81654e] hover:underline"
+                        className="text-[11px] font-bold text-[#a06008] hover:underline block mt-1"
                       >
                         Clique para enviar mensagem no WhatsApp
                       </a>
@@ -1531,28 +1467,28 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] text-[#81654e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8decc] bg-[#f4efe6] text-[#a06008]">
                       <Clock size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0d1726] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#0b1322] uppercase tracking-wider">
                         Horário de Funcionamento
                       </p>
-                      <p className="mt-1 text-xs text-[#4a576b]">
+                      <p className="mt-1 text-xs text-[#4e5e74]">
                         Segunda a Sexta: 09:00 às 18:00
                       </p>
-                      <p className="text-[11px] text-[#81654e]">
-                        Atendimento presencial com agendamento e online para todo o Brasil.
+                      <p className="text-[11px] text-[#a06008]">
+                        Atendimento presencial com agendamento prévio e online para todo o Brasil.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] text-[#81654e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e8decc] bg-[#f4efe6] text-[#a06008]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-[#0d1726] uppercase tracking-wider">
+                      <p className="text-xs font-bold text-[#0b1322] uppercase tracking-wider">
                         Redes Sociais & Perfil
                       </p>
                       <div className="mt-1 flex flex-col gap-1 text-xs">
@@ -1560,7 +1496,7 @@ export default function Home() {
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#4a576b] hover:text-[#0d1726]"
+                          className="text-[#4e5e74] hover:text-[#0b1322]"
                         >
                           Instagram: <span className="font-bold">{INSTAGRAM_HANDLE}</span>
                         </a>
@@ -1568,9 +1504,9 @@ export default function Home() {
                           href={GOOGLE_SEARCH_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#81654e] hover:underline"
+                          className="text-[#a06008] hover:underline"
                         >
-                          Perfil Google: Jéssica Oliveira Bernardes Nunes (5,0 ★)
+                          Perfil Google: Escritório de Advocacia Maira Gomes de Oliveira (5,0 ★)
                         </a>
                       </div>
                     </div>
@@ -1580,73 +1516,73 @@ export default function Home() {
 
               {/* Right Column: Interactive Consultation Card (LIGHT STYLING) */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-[#e8dfd3] bg-white p-8 shadow-xl shadow-[#81654e]/10">
+                <div className="rounded-2xl border border-[#e8decc] bg-white p-8 shadow-xl shadow-[#df9e32]/10">
                   <div className="flex items-center gap-3">
                     <span className="flex size-2 rounded-full bg-[#25D366]" />
-                    <span className="text-xs font-bold tracking-wider uppercase text-[#81654e]">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#a06008]">
                       Canal de Atendimento Direto
                     </span>
                   </div>
 
-                  <h3 className="mt-4 font-serif text-2xl font-bold text-[#0d1726] sm:text-3xl">
-                    Inicie seu Atendimento com a Dra. Jéssica Bernardes
+                  <h3 className="mt-4 font-serif text-2xl font-bold text-[#0b1322] sm:text-3xl">
+                    Inicie seu Atendimento com a Equipe da Dra. Maira Gomes
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#4a576b]">
+                  <p className="mt-2 text-xs leading-relaxed text-[#4e5e74]">
                     Selecione a área da sua necessidade para ser direcionado(a) com a mensagem adequada ao WhatsApp oficial do escritório:
                   </p>
 
                   <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de consultar sobre Direito do Consumidor / Golpe do Pix / Fraude Bancária.")}
+                      href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de consultar sobre Direito Cível / Contratos / Cobranças.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] p-4 text-xs font-bold text-[#0d1726] transition-all hover:border-[#c4a287] hover:bg-[#dfc8ac]/20"
-                    >
-                      <span>Consumidor & Golpes Bancários</span>
-                      <ArrowRight size={14} className="text-[#81654e]" />
-                    </a>
-
-                    <a
-                      href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de orientação sobre Direito Cível / Contratos / Cobranças.")}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] p-4 text-xs font-bold text-[#0d1726] transition-all hover:border-[#c4a287] hover:bg-[#dfc8ac]/20"
+                      className="flex items-center justify-between rounded-xl border border-[#e8decc] bg-[#f4efe6] p-4 text-xs font-bold text-[#0b1322] transition-all hover:border-[#df9e32] hover:bg-[#df9e32]/15"
                     >
                       <span>Cível & Contratos</span>
-                      <ArrowRight size={14} className="text-[#81654e]" />
+                      <ArrowRight size={14} className="text-[#a06008]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de orientação sobre Inventário / Partilha / Família.")}
+                      href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de orientação sobre Aposentadoria / Benefício Previdenciário (INSS).")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] p-4 text-xs font-bold text-[#0d1726] transition-all hover:border-[#c4a287] hover:bg-[#dfc8ac]/20"
-                    >
-                      <span>Família, Inventário & Partilha</span>
-                      <ArrowRight size={14} className="text-[#81654e]" />
-                    </a>
-
-                    <a
-                      href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de orientação sobre Aposentadoria / Benefício Previdenciário (INSS).")}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-[#e8dfd3] bg-[#f7f4ee] p-4 text-xs font-bold text-[#0d1726] transition-all hover:border-[#c4a287] hover:bg-[#dfc8ac]/20"
+                      className="flex items-center justify-between rounded-xl border border-[#e8decc] bg-[#f4efe6] p-4 text-xs font-bold text-[#0b1322] transition-all hover:border-[#df9e32] hover:bg-[#df9e32]/15"
                     >
                       <span>Previdenciário (INSS)</span>
-                      <ArrowRight size={14} className="text-[#81654e]" />
+                      <ArrowRight size={14} className="text-[#a06008]" />
+                    </a>
+
+                    <a
+                      href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de orientação sobre Inventário / Partilha de Bens / Família.")}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between rounded-xl border border-[#e8decc] bg-[#f4efe6] p-4 text-xs font-bold text-[#0b1322] transition-all hover:border-[#df9e32] hover:bg-[#df9e32]/15"
+                    >
+                      <span>Família, Inventário & Partilha</span>
+                      <ArrowRight size={14} className="text-[#a06008]" />
+                    </a>
+
+                    <a
+                      href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de consultar sobre Direito do Consumidor / Golpe do Pix / Fraude Bancária.")}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between rounded-xl border border-[#e8decc] bg-[#f4efe6] p-4 text-xs font-bold text-[#0b1322] transition-all hover:border-[#df9e32] hover:bg-[#df9e32]/15"
+                    >
+                      <span>Consumidor & Golpes Bancários</span>
+                      <ArrowRight size={14} className="text-[#a06008]" />
                     </a>
                   </div>
 
-                  <div className="mt-8 border-t border-[#e8dfd3] pt-6">
+                  <div className="mt-8 border-t border-[#e8decc] pt-6">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de conversar com você sobre a minha situação jurídica.")}
+                      href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de conversar com você sobre a minha situação jurídica.")}
                       target="_blank"
-                      variant="rosegold"
+                      variant="gold"
                       size="lg"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com a Dra. Jéssica Bernardes</span>
+                      <span>Falar no WhatsApp com a Dra. Maira Gomes</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -1658,7 +1594,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: FOOTER INSTITUCIONAL (DARK)                    */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#c4a287]/25 bg-[#070c14] pt-16 pb-12 text-[#dfc8ac]">
+        <footer className="border-t border-[#df9e32]/25 bg-[#060a12] pt-16 pb-12 text-[#faefd4]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
               {/* Brand Column */}
@@ -1666,31 +1602,31 @@ export default function Home() {
                 <div className="relative py-1">
                   <Image
                     src={LOGO_SRC}
-                    alt="Jéssica Bernardes Advogada OAB/MG 231.560"
+                    alt="Escritório de Advocacia Maira Gomes de Oliveira OAB/MG 166.714"
                     width={360}
                     height={122}
-                    className="h-13 sm:h-14 md:h-16 w-auto max-w-[260px] sm:max-w-[320px] object-contain object-left drop-shadow-[0_2px_12px_rgba(236,222,204,0.18)]"
+                    className="h-13 sm:h-14 md:h-16 w-auto max-w-[260px] sm:max-w-[320px] object-contain object-left drop-shadow-[0_2px_12px_rgba(223,158,50,0.25)]"
                   />
                 </div>
-                <p className="mt-4 text-xs leading-relaxed text-[#ecdecc] max-w-md">
-                  ⚖️ Dra. Jéssica Oliveira Bernardes Nunes — Advogada (OAB/MG 231.560). Atuação especializada em Direito do Consumidor, Defesa contra Golpes e Fraudes Bancárias, Cível, Família, Sucessões e Previdenciário (INSS). Atendimento humanizado, ético e resolutivo presencial em Luz - MG e online para todo o Brasil.
+                <p className="mt-4 text-xs leading-relaxed text-[#faefd4] max-w-md">
+                  ⚖️ Escritório de Advocacia Maira Gomes de Oliveira (MR Advocacia). Inscrição OAB/MG 166.714. Atuação especializada em Direito Civil, Previdenciário (INSS), Família & Sucessões, Direito do Consumidor e Trabalhista. Atendimento presencial com estrutura própria em Espera Feliz - MG e digital para todo o Brasil.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#c4a287]/40 bg-[#111c2e] text-[#ecdecc] transition-colors hover:border-white hover:text-white"
-                    aria-label="Instagram da Dra. Jéssica Bernardes"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#df9e32]/40 bg-[#101a2d] text-[#faefd4] transition-colors hover:border-white hover:text-white"
+                    aria-label="Instagram da Dra. Maira Gomes"
                   >
                     <InstagramIcon size={16} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes!")}
+                    href={getWhatsAppUrl("Olá, Dra. Maira Gomes!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#c4a287]/40 bg-[#111c2e] text-[#ecdecc] transition-colors hover:border-white hover:text-white"
-                    aria-label="WhatsApp da Dra. Jéssica Bernardes"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#df9e32]/40 bg-[#101a2d] text-[#faefd4] transition-colors hover:border-white hover:text-white"
+                    aria-label="WhatsApp da Dra. Maira Gomes"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1698,7 +1634,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#c4a287]/40 bg-[#111c2e] text-[#ecdecc] transition-colors hover:border-white hover:text-white"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-[#df9e32]/40 bg-[#101a2d] text-[#faefd4] transition-colors hover:border-white hover:text-white"
                     aria-label="Avaliações do Google"
                   >
                     <GoogleIcon size={16} />
@@ -1719,7 +1655,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="footer-link">
-                      Sobre a Dra. Jéssica Bernardes
+                      Sobre a Dra. Maira Gomes
                     </a>
                   </li>
                   <li>
@@ -1739,7 +1675,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="footer-link">
-                      Sede em Luz - MG
+                      Sede em Espera Feliz - MG
                     </a>
                   </li>
                 </ul>
@@ -1750,27 +1686,30 @@ export default function Home() {
                 <p className="font-serif text-xs font-bold uppercase tracking-wider text-white">
                   Informações Institucionais & OAB
                 </p>
-                <p className="mt-4 text-[11px] leading-relaxed text-[#c4a287]">
-                  Este site tem finalidade estritamente institucional e informativa, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
+                <p className="mt-4 text-[11px] leading-relaxed text-[#faefd4]/80">
+                  Este site possui caráter estritamente institucional e informativo, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
                 </p>
-                <div className="mt-4 rounded-lg border border-[#c4a287]/30 bg-[#111c2e] p-3 text-[11px] text-[#ecdecc]">
+                <div className="mt-4 rounded-lg border border-[#df9e32]/30 bg-[#101a2d] p-3 text-[11px] text-[#faefd4]">
                   <p className="font-bold text-white">
-                    Dra. Jéssica Oliveira Bernardes Nunes · OAB/MG 231.560
+                    Dra. Maira Gomes de Oliveira · OAB/MG 166.714
                   </p>
-                  <p className="mt-0.5 text-[#dfc8ac]">
+                  <p className="mt-0.5 text-[#fee690]">
                     {ADDRESS_TEXT}
+                  </p>
+                  <p className="mt-0.5 text-xs text-[#faefd4]/70">
+                    Telefones: {PHONE_DISPLAY} · {PHONE_LANDLINE}
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Bottom Copyright */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#c4a287]/25 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
+            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#df9e32]/25 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
               <p>
-                © {new Date().getFullYear()} JÉSSICA BERNARDES — ADVOGADA · OAB/MG 231.560. Todos os direitos reservados.
+                © {new Date().getFullYear()} ESCRITÓRIO DE ADVOCACIA MAIRA GOMES DE OLIVEIRA · OAB/MG 166.714. Todos os direitos reservados.
               </p>
-              <p className="text-[#c4a287]">
-                Luz · Minas Gerais · Brasil
+              <p className="text-[#df9e32]">
+                Espera Feliz · Minas Gerais · Brasil
               </p>
             </div>
           </div>
@@ -1779,15 +1718,15 @@ export default function Home() {
         {/* FLOATING WHATSAPP CTA BUTTON */}
         <div className="fixed right-5 bottom-5 z-50 flex items-center gap-2">
           <a
-            href={getWhatsAppUrl("Olá, Dra. Jéssica Bernardes! Gostaria de tirar uma dúvida sobre o meu caso.")}
+            href={getWhatsAppUrl("Olá, Dra. Maira Gomes! Gostaria de tirar uma dúvida sobre o meu caso.")}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Jéssica Bernardes"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Maira Gomes"
             className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/80 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
           >
             <WhatsAppIcon size={19} />
             <span className="hidden sm:inline tracking-wide font-bold">
-              Falar com a Dra. Jéssica
+              Falar com a Dra. Maira
             </span>
           </a>
         </div>
@@ -1800,18 +1739,18 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95, y: 15 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
-                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#c4a287]/50 bg-[#0b1320] p-6 text-white shadow-2xl sm:p-8"
+                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#df9e32]/50 bg-[#0b1322] p-6 text-white shadow-2xl sm:p-8"
               >
                 <button
                   type="button"
                   onClick={() => setSelectedPractice(null)}
-                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-[#c4a287]/40 bg-[#111c2e] text-[#ecdecc] hover:border-white hover:text-white cursor-pointer"
+                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-[#df9e32]/40 bg-[#101a2d] text-[#faefd4] hover:border-white hover:text-white cursor-pointer"
                   aria-label="Fechar modal"
                 >
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center gap-2 text-xs font-bold text-[#dfc8ac] uppercase tracking-wider">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#fee690] uppercase tracking-wider">
                   <span>Especialidade Jurídica</span>
                 </div>
 
@@ -1819,15 +1758,15 @@ export default function Home() {
                   {selectedPractice.title}
                 </h3>
 
-                <p className="mt-2 text-xs font-medium text-[#d9ba9e]">
+                <p className="mt-2 text-xs font-medium text-[#df9e32]">
                   {selectedPractice.category}
                 </p>
 
-                <p className="mt-4 text-xs leading-relaxed text-[#ecdecc] sm:text-sm">
+                <p className="mt-4 text-xs leading-relaxed text-[#faefd4] sm:text-sm">
                   {selectedPractice.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#c4a287]/30 pt-4">
+                <div className="mt-6 border-t border-[#df9e32]/30 pt-4">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-white">
                     Principais Demandas & Procedimentos Atendidos:
                   </h4>
@@ -1835,11 +1774,11 @@ export default function Home() {
                     {selectedPractice.topics.map((topic, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-2.5 text-xs text-[#ecdecc]"
+                        className="flex items-start gap-2.5 text-xs text-[#faefd4]"
                       >
                         <CheckCircle2
                           size={15}
-                          className="text-[#dfc8ac] shrink-0 mt-0.5"
+                          className="text-[#fee690] shrink-0 mt-0.5"
                         />
                         <span>{topic}</span>
                       </li>
@@ -1851,18 +1790,18 @@ export default function Home() {
                   <GlowingButton
                     href={getWhatsAppUrl(selectedPractice.whatsAppText)}
                     target="_blank"
-                    variant="platinum"
+                    variant="gold"
                     size="md"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Consultar Dra. Jéssica nesta Área</span>
+                    <span>Consultar Dra. Maira nesta Área</span>
                   </GlowingButton>
 
                   <button
                     type="button"
                     onClick={() => setSelectedPractice(null)}
-                    className="w-full rounded-lg border border-[#c4a287]/40 bg-[#111c2e] px-5 py-3 text-xs font-bold text-[#ecdecc] hover:bg-[#16243b] hover:text-white sm:w-auto cursor-pointer"
+                    className="w-full rounded-lg border border-[#df9e32]/40 bg-[#101a2d] px-5 py-3 text-xs font-bold text-[#faefd4] hover:bg-[#15223a] hover:text-white sm:w-auto cursor-pointer"
                   >
                     Fechar
                   </button>
