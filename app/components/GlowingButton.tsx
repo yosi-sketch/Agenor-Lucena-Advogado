@@ -14,6 +14,7 @@ interface GlowingButtonProps {
     | "platinum"
     | "gold"
     | "rosegold"
+    | "wine"
     | "dark"
     | "outline"
     | "emerald"
@@ -37,29 +38,31 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Escritório de Advocacia Maira Gomes de Oliveira
-  // Polished Imperial Gold, Rich Amber Bronze & Deep Obsidian Midnight Navy
+  // Visual identity based on Dra. Rhayssa Lima de Souza Oliveira (Advogada OAB/MG 247.321)
+  // Deep Velvet Wine, Marsala, Specular Rose-Wine Luster & Onyx Wine Noir
   const variantClasses = {
     gold:
-      "border border-[#fee690] bg-gradient-to-r from-[#df9e32] via-[#fee690] to-[#c88a24] text-[#060a12] font-black shadow-md shadow-[#df9e32]/35 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(223,158,50,0.5)]",
+      "border border-[#f5d0cb]/60 bg-gradient-to-r from-[#721422] via-[#a32235] to-[#721422] text-white font-black shadow-md shadow-[#721422]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(163,34,53,0.55)]",
+    wine:
+      "border border-[#f5d0cb]/60 bg-gradient-to-r from-[#721422] via-[#a32235] to-[#721422] text-white font-black shadow-md shadow-[#721422]/40 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(163,34,53,0.55)]",
     platinum:
-      "border border-[#faefd4] bg-gradient-to-r from-[#f2d499] via-[#fffbf0] to-[#fee690] text-[#060a12] font-black shadow-md shadow-[#df9e32]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(254,230,144,0.45)]",
+      "border border-[#fbeae8] bg-gradient-to-r from-[#f5d0cb] via-[#ffffff] to-[#f5d0cb] text-[#1c070a] font-black shadow-md shadow-[#8a1b2c]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(245,208,203,0.5)]",
     silver:
-      "border border-[#fff6d6] bg-gradient-to-r from-[#faefd4] via-[#ffffff] to-[#faefd4] text-[#060a12] font-black shadow-md shadow-[#df9e32]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(254,230,144,0.45)]",
+      "border border-[#fbeae8] bg-gradient-to-r from-[#f5d0cb] via-[#ffffff] to-[#f5d0cb] text-[#1c070a] font-black shadow-md shadow-[#8a1b2c]/25 hover:-translate-y-0.5 hover:brightness-105",
     rosegold:
-      "border border-[#fee690]/80 bg-gradient-to-r from-[#a06008] via-[#df9e32] to-[#fee690] text-[#060a12] font-black shadow-md shadow-[#a06008]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(223,158,50,0.5)]",
+      "border border-[#fbeae8] bg-gradient-to-r from-[#ee9492] via-[#fbeae8] to-[#d46f73] text-[#1c070a] font-black shadow-md shadow-[#ee9492]/35 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(245,208,203,0.5)]",
     dark:
-      "border border-[#df9e32]/50 bg-[#101a2d] text-[#fffaf0] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#fee690] hover:bg-[#15223a] hover:text-white",
+      "border border-[#8a1b2c]/50 bg-[#1d090e] text-[#fcf8f6] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#f5d0cb] hover:bg-[#260d14] hover:text-white",
     outline:
-      "border border-[#fee690]/70 bg-transparent text-[#fffaf0] font-bold hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white",
+      "border border-[#ee9492]/70 bg-transparent text-[#fcf8f6] font-bold hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white",
     emerald:
       "border border-[#25D366] bg-gradient-to-r from-[#1ea952] to-[#25D366] text-white font-black shadow-md shadow-[#25D366]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_28px_-4px_rgba(37,211,102,0.45)]",
     crimson:
-      "border border-[#e63946] bg-gradient-to-r from-[#9e121a] to-[#c81d25] text-white font-black shadow-md shadow-[#c81d25]/30 hover:-translate-y-0.5 hover:brightness-110",
+      "border border-[#d46f73] bg-gradient-to-r from-[#5a0e19] to-[#8a1b2c] text-white font-black shadow-md shadow-[#8a1b2c]/35 hover:-translate-y-0.5 hover:brightness-110",
     champagne:
-      "border border-[#e8decc] bg-[#fbf9f5] text-[#0b1322] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#df9e32]",
+      "border border-[#ebdccd] bg-[#fcfaf7] text-[#1c070a] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#8a1b2c]",
     white:
-      "border border-slate-200 bg-white text-[#0b1322] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#df9e32] hover:text-black",
+      "border border-slate-200 bg-white text-[#1c070a] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#8a1b2c] hover:text-black",
   }[variant];
 
   const classes =
