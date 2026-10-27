@@ -28,62 +28,61 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0d040a",
+  themeColor: "#0b1320",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.yanrezende.adv.br"),
+  metadataBase: new URL("https://www.jessicabernardes.adv.br"),
   title:
-    "Yan Rezende Advocacia e Consultoria Jurídica | Caxambu - MG · Cível, Consumidor, Previdenciário & Trabalhista",
+    "Jéssica Bernardes — Advogada | OAB/MG 231.560 · Direito do Consumidor, Cível & Previdenciário · Luz - MG",
   description:
-    "Yan Rezende — Advocacia e Consultoria Jurídica em Caxambu - MG. Atendimento especializado em Direito Cível, Consumidor, Previdenciário (INSS), Trabalhista e Assessoria Empresarial. Nota Máxima 5,0 ★ com 24 avaliações no Google. Atendimento presencial no Sul de Minas e online para todo o Brasil.",
+    "Dra. Jéssica Oliveira Bernardes Nunes — Advocacia de alto padrão em Luz - MG. Atuação especializada em Direito do Consumidor, combate a golpes e fraudes bancárias, Direito Cível, Família e Previdenciário (INSS). Nota Máxima 5,0 ★ com 21 avaliações no Google. Atendimento presencial no Centro-Oeste de Minas e online para todo o Brasil.",
   keywords: [
-    "Yan Rezende Advocacia",
-    "Yan Rezende Advogado",
-    "Advogado em Caxambu MG",
-    "Advocacia Caxambu Minas Gerais",
-    "Direito do Consumidor Caxambu",
-    "Advogado Trabalhista Caxambu MG",
-    "Direito Previdenciário INSS Caxambu",
-    "Direito Cível Caxambu MG",
-    "Consultoria Jurídica Caxambu",
-    "Galeria Pan América Caxambu",
-    "Advogado Sul de Minas",
-    "Direito na Escola Caxambu",
-    "Yan Rezende OAB MG",
+    "Jéssica Bernardes Advogada",
+    "Jéssica Oliveira Bernardes Nunes",
+    "Advogada em Luz MG",
+    "Advocacia Luz Minas Gerais",
+    "Direito do Consumidor Luz MG",
+    "Golpe do Pix Advogada",
+    "Fraudes Bancárias Advogado",
+    "Direito Cível Luz MG",
+    "Direito Previdenciário INSS Luz MG",
+    "Direito de Família e Sucessões Luz MG",
+    "OAB MG 231560",
+    "Advogada Centro-Oeste MG",
   ],
-  authors: [{ name: "Yan Rezende — Advocacia e Consultoria Jurídica" }],
-  creator: "Yan Rezende — Advocacia e Consultoria Jurídica",
-  publisher: "Yan Rezende — Advocacia e Consultoria Jurídica",
+  authors: [{ name: "Jéssica Bernardes — Advogada (OAB/MG 231.560)" }],
+  creator: "Jéssica Bernardes — Advogada",
+  publisher: "Jéssica Bernardes — Advogada",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=yr2", sizes: "any" },
-      { url: "/icon-32x32.png?v=yr2", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=yr2", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=yr2", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=jb1", sizes: "any" },
+      { url: "/icon-32x32.png?v=jb1", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=jb1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=jb1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=yr2",
-    apple: [{ url: "/apple-icon.png?v=yr2", sizes: "180x180" }],
+    shortcut: "/icon-32x32.png?v=jb1",
+    apple: [{ url: "/apple-icon.png?v=jb1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.yanrezende.adv.br",
+    url: "https://www.jessicabernardes.adv.br",
     title:
-      "Yan Rezende — Advocacia e Consultoria Jurídica | Caxambu - MG",
+      "Jéssica Bernardes — Advogada | OAB/MG 231.560 · Luz - MG",
     description:
-      "Advocacia estratégica, humana e de alta resolutividade. Especialista em Direito Cível, Consumidor, Previdenciário, Trabalhista e Empresarial. Nota Máxima 5,0 ★ no Google.",
-    siteName: "Yan Rezende — Advocacia e Consultoria Jurídica",
+      "Advocacia humana, ética, ágil e de alta resolutividade. Especialista em Direito do Consumidor, Defesa contra Golpes, Cível, Família e Previdenciário. Nota Máxima 5,0 ★ no Google.",
+    siteName: "Jéssica Bernardes — Advogada",
     images: [
       {
-        url: "/logo.png",
+        url: "/jessica-bernardes-logo-oficial.png",
         width: 1024,
-        height: 341,
-        alt: "Yan Rezende Advocacia e Consultoria Jurídica - Logotipo Oficial",
+        height: 349,
+        alt: "Jéssica Bernardes Advogada OAB/MG 231.560 - Logotipo Oficial",
       },
     ],
   },
@@ -97,34 +96,34 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Yan Rezende — Advocacia e Consultoria Jurídica",
-    alternateName: "Yan Rezende Advogado",
-    telephone: "+55-35-99809-8019",
-    url: "https://www.yanrezende.adv.br",
-    image: "https://www.yanrezende.adv.br/logo.png",
+    name: "Jéssica Bernardes — Advogada",
+    alternateName: "Jéssica Oliveira Bernardes Nunes — Advocacia",
+    telephone: "+55-37-99186-9585",
+    url: "https://www.jessicabernardes.adv.br",
+    image: "https://www.jessicabernardes.adv.br/jessica-bernardes-logo-oficial.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Galeria Pan América - R. Conselheiro Mayrink, n° 217 - Sala 6 - Centro",
-      addressLocality: "Caxambu",
+      streetAddress: "R. Cel. José Tomás, 200 - Centro",
+      addressLocality: "Luz",
       addressRegion: "MG",
-      postalCode: "37440-000",
+      postalCode: "35595-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "24",
+      reviewCount: "21",
     },
     areaServed: [
-      "Caxambu",
-      "Baependi",
-      "Cruzília",
-      "São Lourenço",
-      "Pouso Alto",
-      "Itamonte",
-      "Passa Quatro",
-      "Sul de Minas",
+      "Luz",
+      "Bom Despacho",
+      "Santo Antônio do Monte",
+      "Lagoa da Prata",
+      "Dores do Indaiá",
+      "Arcos",
+      "Formiga",
+      "Centro-Oeste de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -143,10 +142,9 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://wa.me/5535998098019",
-      "https://www.instagram.com/yanrezende.adv/",
-      "https://linktr.ee/yanrezende.adv",
-      "https://www.google.com/search?q=Yan+Rezende+%E2%80%94+Advocacia+e+Consultoria+Jur%C3%ADdica%0ACaxambu+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5537991869585",
+      "https://www.instagram.com/jessicaobernardes.adv",
+      "https://www.google.com/search?q=J%C3%A9ssica+Oliveira+Bernardes+Nunes+%E2%80%94+Advogada%0ALuz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -156,16 +154,16 @@ export default function RootLayout({
       className={`${cinzelFont.variable} ${playfairFont.variable} ${bodyFont.variable}`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=yr2" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=yr2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=yr2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=yr2" />
+        <link rel="icon" href="/favicon.ico?v=jb1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=jb1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=jb1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=jb1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased min-h-screen selection:bg-[#9f526c] selection:text-white">
+      <body className="antialiased min-h-screen selection:bg-[#c4a287] selection:text-[#0b1320]">
         {children}
       </body>
     </html>

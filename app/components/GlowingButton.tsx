@@ -37,29 +37,29 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Yan Rezende — Advocacia e Consultoria Jurídica
-  // Metallic Rose Mauve, Wine & Obsidian Plum Prestige
+  // Visual identity based on Jéssica Bernardes — Advogada (OAB/MG 231.560)
+  // Metallic Champagne Gold, Warm Bronze & Deep Midnight Navy Prestige
   const variantClasses = {
     platinum:
-      "border border-[#f2d6de] bg-gradient-to-r from-[#e3bcc4] via-[#fbf5f7] to-[#ffffff] text-[#1f0b15] font-black shadow-md shadow-[#c88ea0]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(227,188,196,0.45)]",
+      "border border-[#ecdecc] bg-gradient-to-r from-[#dfc8ac] via-[#fbf7f1] to-[#ecdecc] text-[#0b1320] font-black shadow-md shadow-[#d9ba9e]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(236,222,204,0.45)]",
     silver:
-      "border border-[#f2d6de] bg-gradient-to-r from-[#e3bcc4] via-[#fbf5f7] to-[#ffffff] text-[#1f0b15] font-black shadow-md shadow-[#c88ea0]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(227,188,196,0.45)]",
+      "border border-[#f6eee4] bg-gradient-to-r from-[#ecdecc] via-[#fbf7f1] to-[#ffffff] text-[#0b1320] font-black shadow-md shadow-[#d9ba9e]/25 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(236,222,204,0.45)]",
     gold:
-      "border border-[#e3bcc4]/80 bg-gradient-to-r from-[#8f415c] via-[#b65877] to-[#d8849e] text-white font-black shadow-md shadow-[#8f415c]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(182,88,119,0.5)]",
+      "border border-[#ecdecc]/80 bg-gradient-to-r from-[#81654e] via-[#b38c6d] to-[#dfc8ac] text-white font-black shadow-md shadow-[#81654e]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(179,140,109,0.5)]",
     rosegold:
-      "border border-[#e3bcc4]/80 bg-gradient-to-r from-[#7e3a53] via-[#9f526c] to-[#c88ea0] text-white font-black shadow-md shadow-[#7e3a53]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(159,82,108,0.5)]",
+      "border border-[#ecdecc]/80 bg-gradient-to-r from-[#81654e] via-[#c4a287] to-[#dfc8ac] text-white font-black shadow-md shadow-[#81654e]/35 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(196,162,135,0.5)]",
     dark:
-      "border border-[#9f526c]/50 bg-[#1a0b15] text-[#fbf5f7] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#e3bcc4] hover:bg-[#2d1326] hover:text-white",
+      "border border-[#c4a287]/50 bg-[#111c2e] text-[#fbf7f1] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#ecdecc] hover:bg-[#16243b] hover:text-white",
     outline:
-      "border border-[#e3bcc4]/60 bg-transparent text-[#fbf5f7] font-bold hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white",
+      "border border-[#ecdecc]/60 bg-transparent text-[#fbf7f1] font-bold hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white",
     emerald:
       "border border-[#25D366] bg-gradient-to-r from-[#1ea952] to-[#25D366] text-white font-black shadow-md shadow-[#25D366]/25 hover:-translate-y-0.5 hover:brightness-105",
     crimson:
       "border border-[#e63946] bg-gradient-to-r from-[#9e121a] to-[#c81d25] text-white font-black shadow-md shadow-[#c81d25]/30 hover:-translate-y-0.5 hover:brightness-110",
     champagne:
-      "border border-[#ebd9df] bg-[#fdfbfb] text-[#1f0b15] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#c88ea0]",
+      "border border-[#e8dfd3] bg-[#fdfbf8] text-[#0d1726] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#c4a287]",
     white:
-      "border border-slate-200 bg-white text-[#1f0b15] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#c88ea0] hover:text-black",
+      "border border-slate-200 bg-white text-[#0d1726] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#c4a287] hover:text-black",
   }[variant];
 
   const classes =
