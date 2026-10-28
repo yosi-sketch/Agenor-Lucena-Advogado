@@ -27,40 +27,40 @@ import {
   Building2,
   Users,
   Heart,
-  Stethoscope,
+  Briefcase,
   Coins,
   Calculator,
+  Gavel,
+  Landmark,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533988181310";
-const PHONE_DISPLAY = "(33) 98818-1310";
-const EMAIL_CONTACT = "contato@frbadvogados.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/frbadvogados_/";
-const INSTAGRAM_HANDLE = "@frbadvogados_";
-const FOUNDER_INSTAGRAM_URL = "https://www.instagram.com/filiperabelobraga/";
-const FOUNDER_INSTAGRAM_HANDLE = "@filiperabelobraga";
+const WHATSAPP_NUMBER = "5533987156234";
+const PHONE_DISPLAY = "(33) 98715-6234";
+const EMAIL_CONTACT = "contato@ferreiraebolleliadv.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/ferreiraebolleliadv/";
+const INSTAGRAM_HANDLE = "@ferreiraebolleliadv";
+const BEACONS_URL = "https://beacons.ai/ferreiraebolleliadv";
 
-const ADDRESS_CAPELINHA =
-  "R. Gov. Valadares, 213 - Centro, Capelinha - MG, 39680-060, Brasil";
-const ADDRESS_SANTA_MARIA =
-  "Rua Serafim Peixoto, 67 - Centro, Santa Maria do Suaçuí - MG, 39780-000, Brasil";
+const ADDRESS_NANUQUE =
+  "R. São Lourenço, 410 - Sl 03 - Centro, Nanuque - MG, 39860-000, Brasil";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=FRB+Advogados+%E2%80%94+Filipe+Rabelo%0ACapelinha+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Ferreira+e+Bolleli+Advogados%0ANanuque+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=aafa6ca6a126c165&sxsrf=APpeQnsFE0mWxKM75wsYIz82iWLKvmPPdg:1793135708603&q=frb+advogados+/+causas+contra+o+inss+capelinha+endere%C3%A7o&ludocid=3163646340820434934&sa=X&ved=2ahUKEwi_uceHj9uXAxVogpUCHYTLJd8Q6BN6BAg9EAI";
+  "https://www.google.com/search?sca_esv=10ab62e321bfdedb&sxsrf=AKL5yDiduCU6mus0lZYQdEx40BzKnNTBLg:1793194628850&q=ferreira+e+bolleli+advogados+%7C+advogado+em+nanuque+endere%C3%A7o&ludocid=14876295411396040823&sa=X&ved=2ahUKEwifxfXG6tyXAxWbLrkGHSCwMZEQ6BN6BAg4EAI";
 
 const LOGO_SRC = "/logo.png";
-const LOGO_EMBLEM_SRC = "/frb-emblem.png";
-const FOTO_HERO_SRC = "/dr-filipe-rabelo.jpg";
+const LOGO_EMBLEM_SRC = "/emblema-fb.png";
+const FOTO_HERO_SRC = "/equipe-ferreira-bolleli.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Filipe Rabelo / Equipe FRB Advogados! Gostaria de consultar sobre a minha causa contra o INSS.";
+    "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de agendar uma consulta jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -171,130 +171,130 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "aposentadorias-inss",
-    title: "Aposentadorias do INSS (Idade, Tempo, Rural & Especial)",
-    category: "Regras de Transição · Aposentadoria por Idade · Tempo de Contribuição · Atividade Rural · Insalubridade",
-    icon: Award,
-    tag: "Conquista do Benefício · Cálculo do Valor Máximo",
+    id: "direito-trabalhista",
+    title: "Direito Trabalhista & Relações de Trabalho",
+    category: "Reclamatórias Trabalhistas · Rescisão Indireta · Horas Extras · Acidente de Trabalho · Defesa dos Direitos",
+    icon: Briefcase,
+    tag: "Defesa Combativa · Recuperação de Verbas · Casos Ganhos",
     summary:
-      "Planejamento e requerimento seguro para quem deseja se aposentar com o maior valor possível, aproveitando regras de transição vantajosas, tempo rural e períodos insalubres.",
+      "Atuação firme e combativa na defesa de trabalhadores e empregadores, com foco na garantia integral de direitos, cálculo de verbas rescisórias, insalubridade e indenizações.",
     details:
-      "A Reforma da Previdência trouxe dezenas de regras complexas que confundem os trabalhadores e muitas vezes levam o INSS a conceder valores menores do que o devido. Na FRB Advogados, analisamos minuciosamente seu histórico de contribuições (CNIS), incluímos períodos rurais e vínculos sem registro formal, aplicando a fórmula mais benéfica para garantir a sua aposentadoria com o maior benefício mensal possível.",
+      "Muitos trabalhadores sofrem com rescisões incorretas, horas extras não remuneradas, desvio de função ou condições degradantes sem saber como comprovar seus direitos perante a Justiça do Trabalho. Na Ferreira e Bolleli Advogados, ouvimos cada cliente com paciência e clareza, esclarecendo dúvidas processuais e montando uma estratégia probatória sólida para garantir a máxima reparação cabível.",
     topics: [
-      "Aposentadoria por Idade Urbana e Híbrida (reconhecimento de períodos rurais e urbanos)",
-      "Aposentadoria Rural para agricultores familiares, meeiros, lavradores e segurados especiais",
-      "Aposentadoria por Tempo de Contribuição pelas melhores regras de transição pós-Reforma",
-      "Aposentadoria Especial para trabalhadores expostos a agentes nocivos, químicos e insalubres (PPP e LTCAT)",
-      "Inclusão de tempo militar, período trabalhado em regime próprio (servidor público) e carteira antiga",
-      "Recuperação de contribuições em atraso e regularização de pendências cadastrais no INSS",
+      "Reclamatórias trabalhistas para cobrança de horas extras, adicionais noturnos e intervalos intrajornada",
+      "Rescisão indireta do contrato de trabalho por falta grave do empregador ou atraso de salários",
+      "Cobrança de verbas rescisórias, saldo de salário, aviso prévio, férias proporcionais e multa do FGTS (40%)",
+      "Indenizações por acidente de trabalho, doença ocupacional, perda de capacidade laborativa e danos morais",
+      "Reconhecimento de vínculo de emprego sem carteira assinada e anotação retroativa em CTPS",
+      "Adicional de insalubridade e periculosidade para trabalhadores em condições nocivas à saúde",
     ],
     whatsAppText:
-      "Olá, Dr. Filipe Rabelo! Gostaria de consultar sobre o meu pedido de Aposentadoria no INSS.",
+      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre os meus direitos em uma questão trabalhista.",
   },
   {
-    id: "beneficio-negado",
-    title: "Reversão de Benefício Negado ou Cancelado pelo INSS",
-    category: "Indeferimento Indevido · Pedido de Liminar na Justiça · Pagamento de Todos os Atrasados",
+    id: "direito-previdenciario",
+    title: "Direito Previdenciário & Benefícios do INSS",
+    category: "Aposentadorias · Reversão de Benefício Negado · Auxílio-Doença & Invalidez · BPC/LOAS · Atrasados",
     icon: Scale,
-    tag: "Atuação Rápida · Ação Judicial Combate · Atrasados Integrais",
+    tag: "Cálculo do Maior Valor · Reversão Judicial · Pagamento de Atrasados",
     summary:
-      "Se o INSS negou injustamente ou cancelou o seu benefício, entramos com ação judicial combativa para reverter a decisão e garantir todo o pagamento retroativo desde a entrada.",
+      "Planejamento previdenciário e ações contra o INSS para reverter negativas, conceder aposentadorias pelas melhores regras e garantir o pagamento retroativo de todos os atrasados.",
     details:
-      "O INSS erra com frequência ao analisar pedidos administrativos por falta de documentos ou interpretações restritivas. Ter o pedido negado não significa que você perdeu seu direito. A equipe da FRB Advogados ingressa diretamente na Justiça Federal com pedido de liminar e perícias especializadas, exigindo a concessão imediata do benefício e a cobrança de 100% das parcelas atrasadas acumuladas desde o primeiro dia do requerimento.",
+      "Ter o benefício negado ou suspenso pelo INSS é uma situação angustiante que desampara o segurado no momento em que ele mais precisa. O escritório Ferreira e Bolleli Advogados analisa minuciosamente o extrato do CNIS, laudos médicos e histórico laboral, ingressando com a ação judicial cabível com pedido de liminar e perícia especializada para restabelecer seus pagamentos.",
     topics: [
-      "Reversão judicial de indeferimentos de aposentadorias, pensões e auxílios pelo INSS",
-      "Reativação de benefícios suspensos ou cortados indevidamente no 'pente-fino' da previdência",
-      "Pedido de Tutela de Urgência (liminar judicial) para liberação rápida dos pagamentos mensais",
-      "Cobrança integral de valores retroativos (atrasados) devidos desde a data do primeiro requerimento",
-      "Correção de divergências no CNIS e complementação de documentos recusados pela agência do INSS",
-      "Acompanhamento presencial e diligente em varas e juizados especiais federais de Minas Gerais",
+      "Aposentadoria por Idade Urbana, Híbrida e Rural para trabalhadores da lavoura e produtores",
+      "Aposentadoria por Tempo de Contribuição e aplicação das melhores regras de transição pós-Reforma",
+      "Aposentadoria Especial para profissionais expostos a agentes nocivos, químicos e ruído excessivo",
+      "Reversão na Justiça de benefícios negados, cancelados ou cortados no 'pente-fino' do INSS",
+      "Auxílio por Incapacidade Temporária (auxílio-doença) e conversão em Aposentadoria por Invalidez",
+      "BPC/LOAS no valor de 1 salário mínimo para idosos a partir de 65 anos e pessoas com deficiência (PCD)",
     ],
     whatsAppText:
-      "Olá, Dr. Filipe Rabelo! O INSS negou o meu benefício e preciso de ajuda para reverter.",
+      "Olá, equipe Ferreira e Bolleli Advogados! Preciso de auxílio com meu benefício / aposentadoria no INSS.",
   },
   {
-    id: "auxilio-doenca-invalidez",
-    title: "Auxílio por Incapacidade Temporária & Aposentadoria por Invalidez",
-    category: "Auxílio-Doença · Incapacidade Permanente · Perícia Médica Judicial · Acidente de Trabalho",
-    icon: Stethoscope,
-    tag: "Respaldo Médico-Jurídico · Quesitos Técnicos · Perícia Segura",
+    id: "direito-civel-indenizacoes",
+    title: "Direito Cível, Contratos & Indenizações",
+    category: "Reparação de Danos Morais e Materiais · Cobranças · Ações Possessórias · Disputas Imobiliárias",
+    icon: Shield,
+    tag: "Segurança Jurídica · Resolução de Conflitos · Proteção Patrimonial",
     summary:
-      "Defesa intransigente do trabalhador incapacitado por doença ou acidente, com preparação técnica para a perícia e combate a cortes desumanos de benefício pelo INSS.",
+      "Proteção eficaz em controvérsias patrimoniais, cobranças de créditos, litígios contratuais, disputas sobre bens imóveis e ações indenizatórias de alta complexidade.",
     details:
-      "Nenhum trabalhador com problemas graves de saúde deve ser forçado a voltar ao trabalho sem condições. As perícias do INSS costumam ser rápidas e superficiais. A FRB Advogados estrutura seu processo com laudos detalhados, exames atualizados e formulação de quesitos médicos judiciais precisos para que o perito judicial reconheça sua incapacidade temporária ou permanente, convertendo em aposentadoria por invalidez com adicional de 25% quando necessário.",
+      "Relações contratuais mal elaboradas ou descumpridas geram prejuízos severos. O escritório atua tanto na esfera preventiva, mediante confecção e revisão de contratos robustos, quanto no contencioso cível combativo, pleiteando indenizações justas por danos materiais, perdas e danos e ofensas morais perante o Poder Judiciário.",
     topics: [
-      "Concessão judicial de Auxílio por Incapacidade Temporária (antigo auxílio-doença)",
-      "Conversão de auxílio-doença em Aposentadoria por Incapacidade Permanente (Invalidez)",
-      "Adicional de 25% na aposentadoria por invalidez para segurados que necessitam de cuidador permanente",
-      "Benefícios acidentários decorrentes de doenças ocupacionais e acidentes de trabalho com estabilidade",
-      "Elaboração de quesitos médicos detalhados para perícia judicial independente",
-      "Acompanhamento em caso de alta médica indevida quando o trabalhador ainda está doente",
+      "Ações indenizatórias por danos morais, materiais e lucros cessantes decorrentes de atos ilícitos",
+      "Cobrança e execução de títulos judiciais e extrajudiciais (cheques, notas promissórias e contratos)",
+      "Ações possessórias: reintegração de posse, manutenção de posse, interdito proibitório e usucapião",
+      "Assessoria em transações imobiliárias, rescisão de compromissos de compra e venda e regularização de imóveis",
+      "Resolução de conflitos contratuais entre pessoas físicas, prestadores de serviços e empresas",
+      "Defesa dos direitos de posse e propriedade rural e urbana em Nanuque e região",
     ],
     whatsAppText:
-      "Olá, Dr. Filipe Rabelo! Estou doente ou incapacitado(a) e preciso de ajuda com o INSS / Perícia Médica.",
+      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre uma questão cível / contratual / indenizatória.",
   },
   {
-    id: "bpc-loas",
-    title: "BPC / LOAS (Idoso e Pessoa com Deficiência)",
-    category: "1 Salário Mínimo Mensal · Não Exige Contribuição Prévia · Idosos a partir de 65 Anos · PCD",
-    icon: Heart,
-    tag: "Sem Exigência de Contribuição · Dignidade · Concessão Segura",
-    summary:
-      "Benefício de 1 salário mínimo por mês pago pelo Governo Federal para idosos a partir de 65 anos e pessoas de qualquer idade com deficiência ou impedimento de longo prazo.",
-    details:
-      "O BPC/LOAS é uma das conquistas sociais mais importantes do Brasil e não exige ter contribuído no passado para o INSS. Muitas famílias de baixa renda têm o benefício negado por erros no Cadastro Único (CadÚnico) ou cálculo incorreto da renda per capita familiar. A FRB Advogados atua para desconsiderar rendas que a lei permite excluir, comprovando o estado de vulnerabilidade social e garantindo o pagamento mensal para quem mais precisa.",
-    topics: [
-      "BPC/LOAS Idoso: para pessoas com 65 anos ou mais em situação de vulnerabilidade socioeconômica",
-      "BPC/LOAS Pessoa com Deficiência: para crianças, jovens e adultos com limitações físicas, mentais ou sensoriais",
-      "Exclusão legal de gastos com remédios, fraldas e tratamentos médicos no cálculo da renda familiar",
-      "Desconsideração de outro BPC ou benefício de até 1 salário mínimo já recebido por outro idoso na mesma casa",
-      "Orientação completa e atualização correta do CadÚnico junto ao CRAS do seu município",
-      "Ação judicial rápida para reverter indeferimentos injustos do INSS na análise social e médica",
-    ],
-    whatsAppText:
-      "Olá, Dr. Filipe Rabelo! Gostaria de consultar se eu ou um familiar temos direito ao BPC / LOAS.",
-  },
-  {
-    id: "pensao-por-morte",
-    title: "Pensão por Morte & Direitos dos Dependentes",
-    category: "Cônjuges · Companheiros em União Estável · Filhos Menores · Pagamento desde o Óbito",
+    id: "direito-familia-sucessoes",
+    title: "Direito de Família & Sucessões (Inventários)",
+    category: "Inventário Judicial e Extrajudicial · Divórcio · Partilha de Bens · Pensão Alimentícia · Guarda",
     icon: Users,
-    tag: "Proteção Familiar · Comprovação Ágil · Atrasados Devidos",
+    tag: "Sensibilidade & Firmeza · Agilidade em Cartório · Partilha Segura",
     summary:
-      "Segurança e amparo financeiro imediato para viúvas, viúvos, filhos menores ou dependentes econômicos após a perda de um ente querido segurado do INSS.",
+      "Condução humanizada, discreta e segura de inventários, partilhas e dissoluções conjugais, protegendo o patrimônio familiar e os interesses dos herdeiros.",
     details:
-      "A perda de um familiar é um momento de extrema fragilidade, e o INSS muitas vezes impõe entraves burocráticos para reconhecer a união estável ou a qualidade de segurado do falecido. A FRB Advogados organiza todas as provas documentais e testemunhais com respeito, ética e rapidez, viabilizando a concessão da Pensão por Morte com recebimento de todas as parcelas retroativas desde a data do falecimento.",
+      "Momentos de luto ou de separação exigem suporte jurídico sereno e experiente para evitar desgastes emocionais desnecessários e prejuízos na partilha do patrimônio. Atuamos com extrema agilidade em inventários extrajudiciais em cartório quando há consenso, além de prestar defesa técnica em inventários judiciais complexos e disputas familiares.",
     topics: [
-      "Requerimento e concessão célere de Pensão por Morte para viúvos, viúvas e dependentes",
-      "Comprovação judicial robusta de União Estável mesmo sem certidão de casamento formal em cartório",
-      "Pensão por morte para filhos menores de 21 anos ou filhos maiores com deficiência/invalidez",
-      "Garantia da pensão quando o falecido havia parado de contribuir temporariamente (período de graça)",
-      "Pensão por morte decorrente de morte presumida ou acidente de trabalho",
-      "Recebimento de parcelas retroativas integrais desde o dia do falecimento do segurado",
+      "Inventário Extrajudicial em Cartório: procedimento rápido e econômico para partilha de herança consensual",
+      "Inventário Judicial e arrolamento de bens em casos com herdeiros menores ou divergências na partilha",
+      "Divórcio Consensual e Litigioso, com definição equilibrada de partilha patrimonial e regime de bens",
+      "Ações de Fixação, Revisão e Execução de Pensão Alimentícia para filhos menores e dependentes",
+      "Definição de Guarda Compartilhada, regime de convivência e regulamentação de visitas",
+      "Planejamento Sucessório preventivo e doação de bens com reserva de usufruto",
     ],
     whatsAppText:
-      "Olá, Dr. Filipe Rabelo! Gostaria de orientações jurídicas sobre Pensão por Morte do INSS.",
+      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de orientações sobre Inventário / Direito de Família.",
   },
   {
-    id: "planejamento-revisoes",
-    title: "Planejamento Previdenciário & Revisão de Benefícios",
-    category: "Cálculo do Maior Valor · Revisão da Carta de Concessão · Erros do INSS · Aumento de Renda",
-    icon: Calculator,
-    tag: "Investimento Seguro · Aumento de Renda · Direitos do Passado",
+    id: "direito-consumidor-bancario",
+    title: "Direito do Consumidor & Defesa Bancária",
+    category: "Juros Abusivos · Fraudes Bancárias · Empréstimos Consignados Indevidos · Negativação Injusta",
+    icon: Landmark,
+    tag: "Limpeza de Nome · Cancelamento de Dívidas Fraudentas · Indenização",
     summary:
-      "Cálculo matemático rigoroso do seu tempo de contribuição e análise detalhada da carta de concessão para aumentar o valor da sua aposentadoria e receber atrasados dos últimos 5 anos.",
+      "Combate a abusos cometidos por instituições financeiras, concessionárias e fornecedores, com cancelamento de cobranças indevidas e reparação financeira.",
     details:
-      "Milhares de aposentados no Brasil recebem menos do que deveriam todos os meses porque o INSS cometeu erros ao calcular a média dos salários, descartou períodos de trabalho ou aplicou índices desfavoráveis. Na FRB Advogados realizamos a conferência detalhada da sua Carta de Concessão e do processo administrativo, verificando se você tem direito a revisões vantajosas com aumento mensal e recebimento dos atrasados dos últimos 5 anos.",
+      "Golpes eletrônicos, contratações de empréstimos consignados fraudulentos em contas de aposentados e inclusões indevidas no SPC e Serasa são frequentes. Nossa equipe ingressa com ações rápidas solicitando a suspensão dos descontos, exclusão do nome dos cadastros de restrição ao crédito e reparação em dinheiro pelos danos sofridos.",
     topics: [
-      "Planejamento Previdenciário Preventivo: descubra quando se aposentar e qual a melhor regra financeira",
-      "Análise de Revisão da Carta de Concessão e Memória de Cálculo para detectar erros do INSS",
-      "Revisão para inclusão de tempo trabalhado na roça (rural) ou sob condições insalubres (especial)",
-      "Revisão do Teto Previdenciário e inclusão de vínculos empregatícios omitidos na carteira",
-      "Aumento imediato do valor mensal recebido no banco e cobrança de retroativos dos últimos 5 anos",
-      "Segurança jurídica absoluta com cálculo prévio demonstrando a viabilidade antes de ingressar",
+      "Cancelamento de empréstimos consignados não autorizados e devolução em dobro dos valores descontados",
+      "Ações contra golpes do Pix, boletos falsos e clonagem de dados bancários",
+      "Retirada de negativação indevida nos órgãos de proteção ao crédito (SPC, Serasa e Boa Vista)",
+      "Indenização por danos morais decorrentes de cobrança vexatória ou negativação injusta",
+      "Ações revisionais de cláusulas e juros abusivos em contratos bancários e de financiamento veicular",
+      "Reparação por falhas na prestação de serviços de telefonia, energia elétrica, internet e companhias aéreas",
     ],
     whatsAppText:
-      "Olá, Dr. Filipe Rabelo! Gostaria de fazer um Planejamento Previdenciário ou Revisão da minha Aposentadoria.",
+      "Olá, equipe Ferreira e Bolleli Advogados! Preciso de ajuda contra uma cobrança indevida / golpe bancário / negativação.",
+  },
+  {
+    id: "assessoria-empresarial-rural",
+    title: "Assessoria Jurídica Estratégica & Agronegócio",
+    category: "Contratos Agrários · Arrendamentos · Prevenção de Passivos · Consultoria Contratual · Cobrança",
+    icon: Gavel,
+    tag: "Visão Empresarial · Apoio ao Produtor · Resolução Ágil de Conflitos",
+    summary:
+      "Suporte preventivo e contencioso sob medida para comerciantes, prestadores de serviços, produtores rurais e empresas que demandam segurança jurídica contínua.",
+    details:
+      "Operar no comércio ou no campo requer assessoria qualificada para mitigar riscos trabalhistas, validar negócios com garantia real e executar títulos inadimplidos sem morosidade. Ferreira e Bolleli Advogados presta suporte estratégico focado em viabilizar negócios seguros e proteger o caixa da sua atividade.",
+    topics: [
+      "Elaboração e revisão de contratos de arrendamento rural, parceria agrícola e compra e venda de safras",
+      "Assessoria preventiva trabalhista para redução de passivos e adequação de rotinas operacionais",
+      "Recuperação de créditos inadimplidos, negociação extrajudicial e execuções judiciais de dívidas",
+      "Defesa técnica em autuações administrativas e fiscais de órgãos de fiscalização",
+      "Estruturação societária, acordos de sócios e proteção patrimonial de empresas familiares",
+      "Representação combativa em audiências de conciliação, mediação e julgamentos no Vale do Mucuri",
+    ],
+    whatsAppText:
+      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de conversar sobre assessoria jurídica para minha empresa / atividade rural.",
   },
 ];
 
@@ -308,58 +308,49 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Fernanda Costa",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 6 meses atrás",
+    name: "Wallace Gustavo",
+    badge: "7 avaliações · 9 fotos · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 4 anos atrás",
     highlight:
-      "Este escritório se destaca pela excelência, organização e compromisso com qualidade. A equipe demonstra profissionalismo em cada detalhe, oferecendo soluções eficientes e um atendimento atencioso.",
+      "Muito receptivos e pacientes, me auxiliaram em um processo trabalhista a uns anos, explicaram todas as minhas dúvidas processuais na época o que me deu confiança para continuar e ganhar tal processo.",
     content:
-      "Este escritório se destaca pela excelência, organização e compromisso com qualidade. A equipe demonstra profissionalismo em cada detalhe, Oferecendo soluções eficientes e um atendimento atencioso.",
+      "Muito receptivos e pacientes, me auxiliar em um processo trabalhista a uns anos, explico todas as minhas dúvidas processuais na época o que me deu confiança para continuar e ganhar tal processo tempos depois. Meus eternos agradecimentos a todos os doutores da equipe.",
   },
   {
-    name: "Adão Alves",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
+    name: "Gustavo Ferreira",
+    badge: "Local Guide · 10 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 4 anos atrás",
     highlight:
-      "Muito satisfeito com o atendimento, super educados e além disso trabalha muito bem!",
+      "Resolutividade, competência e um atendimento incrível. Gratidão 🤍",
     content:
-      "Muito satisfeito com o atendimento super educados e além disso trabalha muito bem",
+      "Resolutividade, competência e um atendimento incrível. Gratidão 🤍",
   },
   {
-    name: "Daiane Lopes",
+    name: "Felipe Natan",
+    badge: "Local Guide · 12 avaliações · 83 fotos · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 4 anos atrás",
+    highlight:
+      "Tem um ótimo atendimento, altamente capacitados, grande ética profissional e são objetivos.",
+    content:
+      "Tem um ótimo atendimento, altamente capacitados, grande ética profissional e são objetivos.",
+  },
+  {
+    name: "Anna Christina",
+    badge: "4 avaliações · 7 fotos · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 2 anos atrás",
+    highlight:
+      "Até o momento estamos satisfeitos com toda disponibilidade e atendimento dos senhores. O nosso processo continua em andamento e esperamos ter sucesso neste caso.",
+    content:
+      "Até o momento estamos satisfeitos com toda disponibilidade e atendimento doa senhores. O nosso processo continua em andamento e esperamos ter sucesso neste caso.",
+  },
+  {
+    name: "Eliene Alves",
     badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
+    date: "Avaliação Verificada no Google · 2 anos atrás",
     highlight:
-      "Excelente escritório de advocacia, especializado em Direito Previdenciário, com profissionais atenciosos, responsáveis e comprometidos com cada cliente.",
+      "Muito eficiente, prestativo e educado.",
     content:
-      "Excelente escritório de advocacia, especializado em Direito Previdenciário, com profissionais atenciosos, responsáveis e comprometidos com cada cliente.",
-  },
-  {
-    name: "Nicolas Mendonça Zoia",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
-    highlight:
-      "Ótimos profissionais atuando em prol da população.",
-    content:
-      "Otimos profissionais atuando em prol da população.",
-  },
-  {
-    name: "Steffany Xavier",
-    badge: "4 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
-    highlight:
-      "Profissionais competentes e excelente atendimento.",
-    content:
-      "Profissionais competentes e excelente atendimento.",
-  },
-  {
-    name: "Bethânia Costa",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
-    highlight:
-      "Excelente escritório de advocacia, especializado em Direito Previdenciário, com profissionais atenciosos, responsáveis e comprometidos com o cliente.",
-    content:
-      "Excelente escritório de advocacia, especializado em Direito Previdenciário, com profissionais atenciosos, responsáveis e comprometidos com o cliente.",
+      "Muito enficiente, prestativo e educado.",
   },
 ];
 
@@ -370,34 +361,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "O INSS negou ou cancelou o meu benefício. O que devo fazer agora?",
+    question: "Como funciona a consulta jurídica inicial com a Ferreira e Bolleli Advogados?",
     answer:
-      "Não se desespere e não deixe o tempo passar. O INSS erra com grande frequência em suas decisões administrativas. Ao receber a carta de indeferimento ou cancelamento, envie uma foto do documento diretamente para a FRB Advogados no WhatsApp. Nossa equipe analisa os motivos da recusa e ingressa na Justiça Federal com pedido de liminar para reverter a decisão e garantir o pagamento de todas as parcelas retroativas desde a data do primeiro pedido.",
+      "O primeiro contato pode ser feito diretamente pelo WhatsApp ou presencialmente em nossa sede no Centro de Nanuque (Rua São Lourenço, 410, Sala 03). Nossa equipe realiza uma triagem atenta do seu caso, compreende os fatos relatados, confere os documentos disponíveis e orienta com total transparência se há viabilidade jurídica para ingresso judicial ou acordo extrajudicial.",
   },
   {
-    question: "Nunca paguei ou parei de contribuir para o INSS há muitos anos. Posso receber o BPC/LOAS?",
+    question: "Tive problemas no trabalho ou fui demitido sem receber meus direitos. O que devo fazer?",
     answer:
-      "Sim! O Benefício de Prestação Continuada (BPC/LOAS) é um direito constitucional de assistência social no valor de 1 salário mínimo mensal e NÃO exige histórico de contribuições para a Previdência. Ele é devido a idosos a partir de 65 anos ou pessoas de qualquer idade com deficiência física, mental ou sensorial de longo prazo que estejam em situação de vulnerabilidade socioeconômica.",
+      "É fundamental agir rápido e guardar todos os comprovantes: extratos bancários, conversas de WhatsApp, contracheques, fotos e contatos de testemunhas. A lei trabalhista estabelece o prazo de até 2 anos após o término do vínculo de emprego para ingressar com a ação. Conforme comprovado por clientes reais como Wallace Gustavo em nossas avaliações, explicamos cada etapa processual com calma e montamos a estratégia para buscar a vitória na causa.",
   },
   {
-    question: "Como funciona o atendimento presencial e online da FRB Advogados?",
+    question: "O INSS negou ou cancelou minha aposentadoria/auxílio. Ainda posso reverter na Justiça?",
     answer:
-      "A FRB Advogados conta com 10 escritórios físicos de portas abertas em Minas Gerais — com sede principal em Capelinha (R. Gov. Valadares, 213 - Centro) e unidade em Santa Maria do Suaçuí (Rua Serafim Peixoto, 67 - Centro). Você pode nos visitar pessoalmente ou ser atendido de forma 100% digital pelo WhatsApp de qualquer lugar do Brasil, com reuniões online, envio seguro de fotos de documentos e assinatura eletrônica pelo próprio celular.",
+      "Com certeza! As negativas administrativas do INSS são recorrentes por equívocos na conferência de vínculos ou perícias superficiais. Ter o pedido negado na agência não encerra o seu direito. Ingressamos com a competente ação perante a Justiça Federal, onde um perito judicial neutro avaliará sua condição e o juiz poderá determinar o pagamento retroativo de todos os valores atrasados acumulados desde a data da entrada.",
   },
   {
-    question: "Quais documentos preciso enviar para a primeira análise do meu caso?",
+    question: "Como funciona o inventário de bens da família e quanto tempo leva?",
     answer:
-      "Para a primeira avaliação, basta nos enviar pelo WhatsApp fotos do seu RG ou CNH, comprovante de residência, sua Carteira de Trabalho (física ou digital), e caso possua, a Carta de Indeferimento do INSS ou extrato do Meu INSS (CNIS). Se a sua causa for por motivo de saúde ou invalidez, tenha em mãos laudos médicos, exames e receitas atualizadas.",
+      "Quando há consenso entre todos os herdeiros e não há menores de idade, o inventário pode ser realizado de forma extrajudicial diretamente no Cartório de Notas de Nanuque, concluindo-se em semanas ou poucos meses com custos reduzidos. Havendo divergência ou herdeiro incapaz, ingressamos com o inventário judicial, zelando pela correta avaliação dos bens e partilha justa.",
   },
   {
-    question: "Se a FRB Advogados entrar com ação judicial contra o INSS, eu recebo os valores atrasados?",
+    question: "Quais são os horários de funcionamento do escritório em Nanuque?",
     answer:
-      "Sim! Sempre que o benefício é concedido pela via judicial, o INSS é obrigado por lei a pagar todos os valores acumulados (atrasados) corrigidos monetariamente desde o dia em que você deu entrada no primeiro requerimento administrativo até a data da efetiva liberação dos pagamentos.",
+      "Nosso escritório em Nanuque funciona de segunda a sexta-feira, das 08:00 às 11:30 e das 13:30 às 18:00. Pelo WhatsApp oficial (33) 98715-6234, nosso canal de triagem permanece aberto para agendamentos rápidos e envio de mensagens a qualquer momento.",
   },
   {
-    question: "Trabalhei na roça (lavoura/rural) na infância ou juventude. Esse tempo conta para a minha aposentadoria?",
+    question: "Qual o endereço da sede em Nanuque e como posso agendar um horário presencial?",
     answer:
-      "Sim, conta! O tempo de trabalho rural exercido em regime de economia familiar a partir dos 12 anos de idade pode ser reconhecido e somado ao seu tempo urbano para adiantar a sua aposentadoria ou aumentar consideravelmente o valor do benefício. Nossa equipe sabe exatamente como comprovar esse período por meio de certidões, declarações e documentos rurais antigos.",
+      "Nossa sede está localizada na Rua São Lourenço, 410 - Sala 03 - Centro, Nanuque - MG, 39860-000, próximo aos principais pontos comerciais e órgãos públicos da cidade. Você pode nos fazer uma visita ou agendar seu horário com antecedência pelo WhatsApp para garantir atendimento com hora marcada.",
   },
 ];
 
@@ -421,7 +412,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-          dark ? "text-white" : "text-[#0f172a]"
+          dark ? "text-white" : "text-[#071126]"
         }`}
       >
         {children}
@@ -457,19 +448,19 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen bg-[#fbfaf8] text-[#0f172a] selection:bg-[#caa24d] selection:text-[#0c0f17]">
+      <main className="min-h-screen bg-[#fbfbf9] text-[#071126] selection:bg-[#e5b448] selection:text-[#040914]">
         {/* ======================================================== */}
-        {/* TOP ANNOUNCEMENT BAR (REFINED SLATE NOIR FRAME)          */}
+        {/* TOP ANNOUNCEMENT BAR (ROYAL MIDNIGHT WITH GOLD ACCENT)   */}
         {/* ======================================================== */}
-        <div className="border-b border-slate-800 bg-[#0c0f17] py-2 text-xs text-slate-300">
+        <div className="border-b border-[#102859] bg-[#071126] py-2 text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#d4af37] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#caa24d]" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#fad771] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#e5b448]" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                FRB ADVOGADOS · Causas Contra o INSS · 10 Escritórios em MG ⚖️
+                FERREIRA & BOLLELI ADVOGADOS · Nanuque - MG · Advocacia Especializada ⚖️
               </span>
             </div>
 
@@ -480,12 +471,12 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
-                <Star size={12} className="fill-[#caa24d] text-[#caa24d]" />
-                <span className="font-bold text-white">5,0 ★</span> (14 avaliações no Google)
+                <Star size={12} className="fill-[#e5b448] text-[#e5b448]" />
+                <span className="font-bold text-white">4,9 ★</span> (12 avaliações no Google)
               </a>
               <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de consultar sobre o meu caso contra o INSS.")}
+                href={getWhatsAppUrl("Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre o meu caso.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 font-semibold text-slate-200 transition-colors hover:text-white sm:inline-flex"
@@ -498,7 +489,7 @@ export default function Home() {
         </div>
 
         {/* ======================================================== */}
-        {/* STICKY HEADER / NAVBAR (LIGHT EDITORIAL LUXURY)          */}
+        {/* STICKY HEADER / NAVBAR                                   */}
         {/* ======================================================== */}
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
@@ -512,12 +503,12 @@ export default function Home() {
             <a
               href="#"
               className="group flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95"
-              aria-label="FRB Advogados — Causas Contra o INSS - Início"
+              aria-label="Ferreira e Bolleli Advogados - Início"
             >
               <div className="relative shrink-0">
                 <Image
                   src={LOGO_EMBLEM_SRC}
-                  alt="Brasão FRB Advogados"
+                  alt="Emblema FB - Ferreira e Bolleli Advogados"
                   width={140}
                   height={110}
                   className="h-11 sm:h-12 md:h-13 w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
@@ -526,16 +517,16 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col justify-center">
-                <span className="font-cinzel text-sm sm:text-base md:text-[1.1rem] font-bold tracking-[0.08em] text-[#0f172a] uppercase leading-none drop-shadow-xs transition-colors group-hover:text-[#936937]">
-                  FRB ADVOGADOS
+                <span className="font-cinzel text-sm sm:text-base md:text-[1.12rem] font-bold tracking-[0.08em] text-[#071126] uppercase leading-none drop-shadow-xs transition-colors group-hover:text-[#946b23]">
+                  FERREIRA & BOLLELI
                 </span>
-                <span className="font-cinzel text-[10px] sm:text-[11px] font-semibold tracking-[0.14em] text-[#936937] uppercase leading-tight mt-0.5">
-                  Advocacia & Assessoria Jurídica
+                <span className="font-cinzel text-[10px] sm:text-[11px] font-semibold tracking-[0.16em] text-[#946b23] uppercase leading-tight mt-0.5">
+                  ADVOGADOS ASSOCIADOS
                 </span>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="h-px w-4 sm:w-5 bg-gradient-to-r from-[#caa24d] to-transparent" />
+                  <span className="h-px w-4 sm:w-5 bg-gradient-to-r from-[#e5b448] to-transparent" />
                   <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.18em] text-slate-500 uppercase leading-none">
-                    Causas Contra o INSS · 10 Unidades em MG
+                    Nanuque - MG · Avaliação 4,9 ★
                   </span>
                 </div>
               </div>
@@ -543,36 +534,36 @@ export default function Home() {
 
             {/* Center: Desktop Navigation */}
             <nav className="hidden items-center gap-5 xl:gap-7 xl:flex">
-              <a href="#inss" className="nav-link text-[11px] whitespace-nowrap">
-                Causas do INSS
+              <a href="#servicos" className="nav-link text-[11px] whitespace-nowrap">
+                Áreas de Atuação
               </a>
               <a href="#sobre" className="nav-link text-[11px] whitespace-nowrap">
-                Sobre a FRB
+                Sobre o Escritório
               </a>
               <a href="#diferenciais" className="nav-link text-[11px] whitespace-nowrap">
                 Diferenciais
               </a>
               <a href="#depoimentos" className="nav-link text-[11px] whitespace-nowrap">
-                Avaliações (5,0 ★)
+                Avaliações (4,9 ★)
               </a>
               <a href="#duvidas" className="nav-link text-[11px] whitespace-nowrap">
                 Dúvidas
               </a>
               <a href="#contato" className="nav-link text-[11px] whitespace-nowrap">
-                Sedes & Contato
+                Sede & Contato
               </a>
             </nav>
 
             {/* Right Action: WhatsApp CTA */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de consultar sobre o meu benefício do INSS.")}
+                href={getWhatsAppUrl("Olá! Gostaria de consultar um advogado da Ferreira e Bolleli Advogados.")}
                 target="_blank"
                 variant="gold"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#0c0f17]" />
+                <WhatsAppIcon size={14} className="text-[#040914]" />
                 <span className="hidden 2xl:inline">Atendimento WhatsApp</span>
                 <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
@@ -581,7 +572,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#caa24d] hover:text-black xl:hidden cursor-pointer"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#e5b448] hover:text-black xl:hidden cursor-pointer"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -602,82 +593,82 @@ export default function Home() {
                   <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
                     <Image
                       src={LOGO_EMBLEM_SRC}
-                      alt="Brasão FRB Advogados"
+                      alt="Emblema FB"
                       width={100}
                       height={80}
                       className="h-11 w-auto object-contain"
                     />
                     <div className="flex flex-col">
                       <span className="font-cinzel text-base font-bold tracking-wider text-slate-900 uppercase leading-tight">
-                        FRB Advogados
+                        Ferreira & Bolleli
                       </span>
-                      <span className="font-cinzel text-[10px] font-semibold tracking-[0.14em] text-[#936937] uppercase leading-tight mt-0.5">
-                        Causas Contra o INSS
+                      <span className="font-cinzel text-[10px] font-semibold tracking-[0.14em] text-[#946b23] uppercase leading-tight mt-0.5">
+                        Advogados Associados
                       </span>
                       <span className="text-[9px] font-bold tracking-[0.18em] text-slate-500 uppercase mt-1">
-                        10 Escritórios em MG
+                        R. São Lourenço, 410 · Centro, Nanuque
                       </span>
                     </div>
                   </div>
                   <a
-                    href="#inss"
+                    href="#servicos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#936937]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
                   >
-                    <span>Causas do INSS & Benefícios</span>
-                    <ArrowRight size={14} className="text-[#caa24d]" />
+                    <span>Áreas de Atuação</span>
+                    <ArrowRight size={14} className="text-[#e5b448]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#936937]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
                   >
-                    <span>Sobre o Escritório & Dr. Filipe</span>
-                    <ArrowRight size={14} className="text-[#caa24d]" />
+                    <span>Sobre o Escritório & Sócios</span>
+                    <ArrowRight size={14} className="text-[#e5b448]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#936937]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
                   >
                     <span>Diferenciais</span>
-                    <ArrowRight size={14} className="text-[#caa24d]" />
+                    <ArrowRight size={14} className="text-[#e5b448]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#936937]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
                   >
-                    <span>Avaliações Google (5,0 ★)</span>
-                    <ArrowRight size={14} className="text-[#caa24d]" />
+                    <span>Avaliações Google (4,9 ★)</span>
+                    <ArrowRight size={14} className="text-[#e5b448]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#936937]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#caa24d]" />
+                    <ArrowRight size={14} className="text-[#e5b448]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#936937]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
                   >
-                    <span>Sedes & Contato</span>
-                    <ArrowRight size={14} className="text-[#caa24d]" />
+                    <span>Sede & Contato</span>
+                    <ArrowRight size={14} className="text-[#e5b448]" />
                   </a>
 
                   <div className="pt-4 border-t border-slate-100">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de consultar sobre a minha causa contra o INSS.")}
+                      href={getWhatsAppUrl("Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre a minha causa.")}
                       target="_blank"
                       variant="gold"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com o Dr. Filipe</span>
+                      <span>Falar no WhatsApp com o Escritório</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -689,10 +680,10 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 1: HERO SECTION + MÉTRICAS — [MODO CLARO]          */}
         {/* ======================================================== */}
-        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fbfaf8]">
+        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fbfbf9]">
           {/* Subtle Ambient Light Glow Background */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#edd585]/20 via-[#f6f3ed]/60 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#f3ece0]/70 blur-3xl" />
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#fad771]/20 via-[#f4f3ee]/60 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#e8e6dc]/70 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -705,22 +696,21 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-5">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#caa24d]/35 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#936937] shadow-xs">
-                    <span className="size-1.5 rounded-full bg-[#caa24d] animate-pulse" />
-                    FRB ADVOGADOS · CAUSAS CONTRA O INSS · 10 ESCRITÓRIOS EM MG
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#e5b448]/40 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#946b23] shadow-xs">
+                    <span className="size-1.5 rounded-full bg-[#e5b448] animate-pulse" />
+                    FERREIRA & BOLLELI ADVOGADOS · NANUQUE - MG
                   </span>
                 </motion.div>
 
                 {/* H1 Headline */}
                 <motion.h1
                   variants={reveal}
-                  className="font-serif text-3xl leading-[1.15] font-bold tracking-tight text-[#0f172a] sm:text-5xl lg:text-[3.25rem]"
+                  className="font-serif text-3xl leading-[1.15] font-bold tracking-tight text-[#071126] sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Teve seu Benefício Negado pelo INSS? Conquiste a{" "}
-                  <span className="bg-gradient-to-r from-[#936937] via-[#caa24d] to-[#7a5426] bg-clip-text text-transparent">
-                    sua Aposentadoria
-                  </span>{" "}
-                  com Quem Já Aprovou Centenas de Casos.
+                  Advocacia Estratégica, Ética e Resolutiva para Defender Seus{" "}
+                  <span className="bg-gradient-to-r from-[#946b23] via-[#e5b448] to-[#6c4a16] bg-clip-text text-transparent">
+                    Direitos e Seu Patrimônio.
+                  </span>
                 </motion.h1>
 
                 {/* Subtitle / Value Proposition */}
@@ -728,17 +718,17 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg"
                 >
-                  Com nota máxima <strong className="text-slate-900 font-bold">5,0 ★ no Google</strong> e <strong className="text-slate-900 font-bold">10 escritórios físicos de portas abertas em Minas Gerais</strong>, a <strong className="text-slate-900 font-bold">FRB Advogados</strong> — liderada pelo <strong className="text-slate-900 font-bold">Dr. Filipe Rabelo Braga</strong> — é autoridade em reverter negativas do INSS, calcular o valor máximo do benefício e garantir seus direitos previdenciários de forma ágil e humanizada.
+                  Com avaliação <strong className="text-slate-900 font-bold">4,9 ★ no Google</strong> e sede no Centro de Nanuque, a <strong className="text-slate-900 font-bold">Ferreira e Bolleli Advogados</strong> alia tradição jurídica, dinamismo processual e atendimento humano nas áreas <strong className="text-slate-900 font-bold">Trabalhista, Previdenciária, Cível, Família e Empresarial</strong>.
                 </motion.p>
 
-                {/* Direct Trust Highlights */}
+                {/* Direct Trust Highlight with Real Client Review */}
                 <motion.div
                   variants={reveal}
                   className="mt-6 flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs"
                 >
-                  <Award size={20} className="text-[#caa24d] shrink-0 mt-0.5" />
+                  <Award size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
                   <p className="text-xs text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900 font-bold">Aposentando pessoas todos os dias 🚀🇧🇷:</strong> &ldquo;Este escritório se destaca pela excelência, organização e compromisso com qualidade. Oferecendo soluções eficientes e um atendimento atencioso.&rdquo; (Google Reviews 5,0 ★)
+                    <strong className="text-slate-900 font-bold">Reconhecimento comprovado no Google (4,9 ★):</strong> &ldquo;Muito receptivos e pacientes, me auxiliaram em um processo trabalhista... me deram confiança para continuar e ganhar tal processo. Meus eternos agradecimentos a todos os doutores da equipe.&rdquo; (Wallace Gustavo)
                   </p>
                 </motion.div>
 
@@ -748,29 +738,29 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de consultar sobre a minha situação com o INSS.")}
+                    href={getWhatsAppUrl("Olá! Gostaria de uma orientação jurídica com a Ferreira e Bolleli Advogados.")}
                     target="_blank"
                     variant="gold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Destravar Meu Benefício no WhatsApp</span>
+                    <span>Falar no WhatsApp com o Escritório</span>
                   </GlowingButton>
 
                   <GlowingButton
-                    href="#inss"
+                    href="#servicos"
                     variant="champagne"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
-                    <span>Conhecer Benefícios Atendidos</span>
+                    <span>Conhecer Áreas de Atuação</span>
                     <ArrowRight size={15} />
                   </GlowingButton>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Visual Frame (Dr. Filipe Rabelo portrait) */}
+              {/* Right Column: Hero Visual Frame (Equipe Foto) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -779,17 +769,17 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Decorative Frame */}
-                  <div className="relative overflow-hidden rounded-2xl border border-[#e2d9cc] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-100">
+                  <div className="relative overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
+                    <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dr. Filipe Rabelo Braga - Advogado Previdenciário em Capelinha - MG · FRB Advogados"
+                        alt="Corpo Jurídico Ferreira e Bolleli Advogados em Nanuque - MG"
                         fill
-                        sizes="(max-width: 768px) 100vw, 500px"
-                        className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 550px"
+                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
                         priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#040914]/70 via-transparent to-transparent opacity-70" />
                     </div>
 
                     {/* Overlay Label */}
@@ -797,20 +787,20 @@ export default function Home() {
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="font-serif text-sm font-bold text-slate-900">
-                            Dr. Filipe Rabelo Braga
+                            Ferreira & Bolleli Advogados
                           </p>
                           <p className="text-[11px] text-slate-600">
-                            Advogado Previdenciário · Fundador FRB Advogados
+                            Advocacia Especializada · Centro, Nanuque - MG
                           </p>
                         </div>
-                        <span className="rounded-md border border-[#caa24d]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#936937]">
-                          10 Unidades em MG
+                        <span className="rounded-md border border-[#e5b448]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#946b23]">
+                          Sede Própria
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Floating Stat Badge 1 (Google 5.0 Rating) */}
+                  {/* Floating Stat Badge 1 (Google 4.9 Rating) */}
                   <div className="absolute -top-5 -left-5 hidden rounded-xl border border-slate-200 bg-white/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
                     <div className="flex size-10 items-center justify-center rounded-lg bg-slate-50 border border-slate-200">
                       <GoogleIcon size={20} />
@@ -821,60 +811,60 @@ export default function Home() {
                           <Star
                             key={i}
                             size={12}
-                            className="fill-[#caa24d] text-[#caa24d]"
+                            className="fill-[#e5b448] text-[#e5b448]"
                           />
                         ))}
                       </div>
                       <p className="text-[11px] font-bold text-slate-900 mt-0.5">
-                        5,0 no Google · 14 Avaliações
+                        4,9 no Google · 12 Avaliações
                       </p>
                     </div>
                   </div>
 
                   {/* Floating Stat Badge 2 (Especialidade) */}
                   <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-slate-200 bg-white/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
-                    <Scale size={16} className="text-[#936937]" />
+                    <Scale size={16} className="text-[#946b23]" />
                     <span className="text-xs font-bold tracking-wide text-slate-900">
-                      Causas Contra o INSS ⚖️
+                      Nanuque e Vale do Mucuri ⚖️
                     </span>
                   </div>
                 </div>
               </motion.div>
             </div>
 
-            {/* INTEGRATED AUTHORITY BAR WITHIN HERO (LIGHT) */}
+            {/* INTEGRATED AUTHORITY BAR WITHIN HERO */}
             <div className="mt-14 border-t border-slate-200/80 pt-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#0f172a]">
-                    5,0 ★
+                  <span className="font-serif text-2xl font-bold text-[#071126]">
+                    4,9 ★
                   </span>
                   <p className="text-xs font-semibold text-slate-900 mt-1">Google Meu Negócio</p>
-                  <p className="text-[11px] text-slate-500">14 avaliações unânimes 5 estrelas</p>
+                  <p className="text-[11px] text-slate-500">12 avaliações no Google</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#0f172a]">
-                    10 Sedes
+                  <span className="font-serif text-2xl font-bold text-[#071126]">
+                    Nanuque - MG
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Presença em Minas Gerais</p>
-                  <p className="text-[11px] text-slate-500">Escritórios de portas abertas</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Sede Centralizada</p>
+                  <p className="text-[11px] text-slate-500">R. São Lourenço, 410, Sala 03</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#0f172a]">
-                    Especialistas
+                  <span className="font-serif text-2xl font-bold text-[#071126]">
+                    Multidisciplinar
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Direito Previdenciário</p>
-                  <p className="text-[11px] text-slate-500">Foco integral em causas do INSS</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Soluções Completas</p>
+                  <p className="text-[11px] text-slate-500">Trabalhista, Previdenciário e Cível</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#0f172a]">
-                    Diário 🚀
+                  <span className="font-serif text-2xl font-bold text-[#071126]">
+                    Combatividade ⚖️
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Aposentando Pessoas</p>
-                  <p className="text-[11px] text-slate-500">Atendimento presencial & online</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Atendimento Próximo</p>
+                  <p className="text-[11px] text-slate-500">Presencial e digital para todo Brasil</p>
                 </div>
               </div>
             </div>
@@ -882,27 +872,27 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 2: PILARES & ÁREAS PREVIDENCIÁRIAS — [MODO ESCURO] */}
+        {/* DOBRA 2: PILARES & ÁREAS DE ATUAÇÃO — [MODO ESCURO]      */}
         {/* ======================================================== */}
-        <section id="inss" className="border-t border-[#caa24d]/30 bg-[#0c0f17] text-white py-20 lg:py-28">
+        <section id="servicos" className="border-t border-[#e5b448]/30 bg-[#071126] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <Heading
-                eyebrow="Especialidades & Causas do INSS"
+                eyebrow="Áreas de Atuação & Soluções Jurídicas"
                 dark={true}
-                description="Atuação previdenciária experiente para aprovar a sua aposentadoria com o maior valor, destravar benefícios negados e receber todos os atrasados."
+                description="Expertise sólida e combatividade processual para assegurar seus direitos perante tribunais, órgãos previdenciários e na celebração de acordos."
               >
-                Causas Previdenciárias & Benefícios do INSS
+                Pilares de Excelência Jurídica
               </Heading>
 
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Filipe! Gostaria de consultar sobre a minha situação no INSS.")}
+                href={getWhatsAppUrl("Olá! Gostaria de consultar sobre a viabilidade da minha causa.")}
                 target="_blank"
                 variant="gold"
                 size="md"
               >
                 <WhatsAppIcon size={15} />
-                <span>Consultar Meu Caso no INSS</span>
+                <span>Consultar Meu Caso no WhatsApp</span>
               </GlowingButton>
             </div>
 
@@ -913,24 +903,24 @@ export default function Home() {
                 return (
                   <div
                     key={area.id}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-[#caa24d]/30 bg-[#131824] p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d] hover:shadow-xl hover:shadow-[#caa24d]/10"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448] hover:shadow-xl hover:shadow-[#e5b448]/15"
                   >
                     <div>
                       {/* Icon & Category */}
                       <div className="flex items-center justify-between">
-                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#181e2b] text-[#caa24d] border border-[#caa24d]/40 transition-colors group-hover:bg-[#caa24d] group-hover:text-[#0c0f17]">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#102859] text-[#e5b448] border border-[#e5b448]/40 transition-colors group-hover:bg-[#e5b448] group-hover:text-[#040914]">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full bg-[#181e2b] px-3 py-1 text-[10px] font-bold text-[#caa24d] uppercase tracking-wider border border-[#caa24d]/30">
+                        <span className="rounded-full bg-[#102859] px-3 py-1 text-[10px] font-bold text-[#e5b448] uppercase tracking-wider border border-[#e5b448]/30">
                           Especialidade
                         </span>
                       </div>
 
-                      <h3 className="mt-5 font-serif text-xl font-bold text-white group-hover:text-[#f5e49e] transition-colors">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-white group-hover:text-[#fad771] transition-colors">
                         {area.title}
                       </h3>
 
-                      <p className="mt-2 text-xs font-semibold text-[#caa24d]">
+                      <p className="mt-2 text-xs font-semibold text-[#e5b448]">
                         {area.tag}
                       </p>
 
@@ -939,13 +929,13 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div className="mt-6 border-t border-[#caa24d]/25 pt-4">
+                    <div className="mt-6 border-t border-[#e5b448]/25 pt-4">
                       <button
                         type="button"
                         onClick={() => setSelectedPractice(area)}
-                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#caa24d] transition-colors hover:text-white cursor-pointer"
+                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#e5b448] transition-colors hover:text-white cursor-pointer"
                       >
-                        <span>Ver Detalhes & Regras de Concessão</span>
+                        <span>Ver Procedimentos & Detalhes</span>
                         <ArrowUpRight size={15} />
                       </button>
                     </div>
@@ -957,44 +947,44 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 3: SOBRE O ESCRITÓRIO & DR. FILIPE — [MODO CLARO]  */}
+        {/* DOBRA 3: SOBRE O ESCRITÓRIO & CORPO JURÍDICO — [MODO CLARO] */}
         {/* ======================================================== */}
-        <section id="sobre" className="relative border-t border-slate-200 bg-[#f8f6f0] py-20 lg:py-28 text-[#0f172a]">
+        <section id="sobre" className="relative border-t border-slate-200 bg-[#f4f3ee] py-20 lg:py-28 text-[#071126]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Column: Dr. Filipe Rabelo Portrait */}
+              {/* Left Column: Equipe Frame */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Frame */}
-                  <div className="relative overflow-hidden rounded-2xl border border-[#e2d9cc] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-100">
+                  <div className="relative overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
+                    <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dr. Filipe Rabelo Braga - FRB Advogados Previdenciário"
+                        alt="Ferreira e Bolleli Advogados em Nanuque"
                         fill
                         sizes="(max-width: 768px) 100vw, 500px"
-                        className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#040914]/70 via-transparent to-transparent opacity-70" />
 
                       {/* Overlay Badge at Bottom of Photo */}
                       <div className="absolute right-4 bottom-4 left-4 rounded-xl border border-slate-200 bg-white/95 p-4 shadow-xl backdrop-blur-md">
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-serif text-sm font-bold text-slate-900">
-                              Dr. Filipe Rabelo Braga
+                              Ferreira & Bolleli Advogados
                             </p>
                             <p className="text-[11px] text-slate-600 mt-0.5">
-                              Advogado Especialista em Causas do INSS
+                              Sociedade de Advogados · Nanuque - MG
                             </p>
                           </div>
-                          <span className="rounded-md border border-[#caa24d]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#936937]">
-                            Fundador
+                          <span className="rounded-md border border-[#e5b448]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#946b23]">
+                            Desde Nanuque
                           </span>
                         </div>
                         <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-600">
-                          <span>Aposentando Pessoas Todos os Dias</span>
-                          <span className="text-[#1ea952] font-semibold">10 Unidades em MG</span>
+                          <span>Ética · Capacidade Técnica · Objetividade</span>
+                          <span className="text-[#1ea952] font-semibold">Avaliação 4,9 ★</span>
                         </div>
                       </div>
                     </div>
@@ -1002,9 +992,9 @@ export default function Home() {
 
                   {/* Floating Trust Pill */}
                   <div className="absolute -top-4 -right-4 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3.5 py-2 shadow-xl">
-                    <Star size={13} className="fill-[#caa24d] text-[#caa24d]" />
+                    <Star size={13} className="fill-[#e5b448] text-[#e5b448]" />
                     <span className="text-[11px] font-bold text-slate-900">
-                      5,0 no Google · 14 Avaliações
+                      4,9 no Google · 12 Avaliações
                     </span>
                   </div>
                 </div>
@@ -1013,71 +1003,71 @@ export default function Home() {
               {/* Right Content */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre o Fundador & O Escritório"
+                  eyebrow="Sobre o Escritório & Equipe"
                   dark={false}
-                  description="Advocacia previdenciária de excelência, pautada no respeito à história do trabalhador e no compromisso inegociável de garantir o que é seu por direito."
+                  description="Uma trajetória de dedicação jurídica, unindo tradição, rigor técnico e proximidade no atendimento a trabalhadores, aposentados e famílias."
                 >
-                  FRB Advogados: Aposentando Pessoas Todos os Dias 🚀🇧🇷
+                  Ferreira e Bolleli Advogados: Tradição e Excelência em Nanuque
                 </Heading>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
                   <p>
-                    Fundada e liderada pelo <strong className="text-slate-900 font-bold">Dr. Filipe Rabelo Braga</strong>, a <strong className="text-slate-900 font-bold">FRB Advogados — Advocacia & Assessoria Jurídica</strong> construiu uma trajetória sólida e respeitada em Minas Gerais, tornando-se uma das principais referências regionais em <strong className="text-slate-900 font-bold">Causas contra o INSS</strong> e planejamento de aposentadorias.
+                    Com sede no Centro de <strong className="text-slate-900 font-bold">Nanuque - MG</strong> (Rua São Lourenço, 410, Sala 03), o escritório <strong className="text-slate-900 font-bold">Ferreira e Bolleli Advogados</strong> consolidou-se como uma referência em assessoria e representação jurídica no Vale do Mucuri e em todo o estado de Minas Gerais.
                   </p>
                   <p>
-                    Com sede principal no coração de <strong className="text-slate-900 font-bold">Capelinha - MG</strong> (Rua Governador Valadares, 213 - Centro), unidade em <strong className="text-slate-900 font-bold">Santa Maria do Suaçuí</strong> e uma rede de <strong className="text-slate-900 font-bold">10 escritórios físicos de portas abertas</strong> em municípios mineiros, o escritório combina a segurança do atendimento presencial com a rapidez e alcance da assessoria digital para clientes de todo o Brasil.
+                    Nossa equipe é formada por profissionais com sólida vivência processual que unem a experiência da advocacia clássica à agilidade das ferramentas tecnológicas modernas. Atuamos com destaque nas áreas de <strong className="text-slate-900 font-bold">Direito do Trabalho, Direito Previdenciário (INSS), Cível, Família, Sucessões e Consumidor</strong>.
                   </p>
                   <p>
-                    A missão da FRB Advogados é simples e transparente: devolver a dignidade e a tranquilidade a quem trabalhou a vida inteira. Tratamos cada caso com rigor matemático nos cálculos, acolhimento humano e dedicação total, desmistificando o juridiquês e lutando para que você receba até o último centavo dos seus atrasados.
+                    O compromisso do escritório é oferecer um atendimento baseado na clareza, empatia e resolutividade. Explicamos cada etapa do processo em linguagem simples e acessível, proporcionando a segurança que nossos clientes necessitam para defender seus direitos e alcançar a vitória em suas causas.
                   </p>
                 </div>
 
                 {/* 4 Highlights */}
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <HeartHandshake size={20} className="text-[#caa24d] shrink-0 mt-0.5" />
+                    <HeartHandshake size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Atendimento Super Educado
+                        Receptivos e Pacientes
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Reconhecido pelos clientes por ouvir com paciência e orientar com clareza cada detalhe.
+                        Ouvimos com atenção cada detalhe e esclarecemos todas as dúvidas com tranquilidade e respeito.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <BadgeCheck size={20} className="text-[#caa24d] shrink-0 mt-0.5" />
+                    <BadgeCheck size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Especialização Exclusiva no INSS
+                        Alta Capacidade Técnica
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Domínio absoluto das regras pós-Reforma, perícias médicas e jurisprudência dos tribunais.
+                        Atuação estratégica com fundamentação jurídica sólida e preparo probatório impecável.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <Building2 size={20} className="text-[#caa24d] shrink-0 mt-0.5" />
+                    <Building2 size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        10 Escritórios de Portas Abertas
+                        Sede Própria em Nanuque
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Presença física real em Minas Gerais para você tomar um café e conversar olho no olho.
+                        Ambiente acolhedor no Centro de Nanuque para receber você e sua família com conforto.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <Sparkles size={20} className="text-[#caa24d] shrink-0 mt-0.5" />
+                    <Sparkles size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Cálculo do Valor Máximo
+                        Resolutividade & Ética
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Simulação e busca incansável pela regra que garanta a maior renda mensal possível.
+                        Foco permanente em soluções céleres, transparentes e sem falsas promessas.
                       </p>
                     </div>
                   </div>
@@ -1085,33 +1075,33 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de conversar com você sobre a minha causa do INSS.")}
+                    href={getWhatsAppUrl("Olá! Gostaria de falar com os advogados da Ferreira e Bolleli Advogados.")}
                     target="_blank"
                     variant="gold"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Falar com o Dr. Filipe Rabelo</span>
+                    <span>Falar com Nossos Advogados</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 transition-colors hover:text-[#936937]"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 transition-colors hover:text-[#946b23]"
                   >
                     <InstagramIcon size={15} />
                     <span>{INSTAGRAM_HANDLE}</span>
                   </a>
 
                   <a
-                    href={FOUNDER_INSTAGRAM_URL}
+                    href={BEACONS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#936937] transition-colors hover:text-black"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#946b23] transition-colors hover:text-black"
                   >
-                    <InstagramIcon size={15} />
-                    <span>Fundador: {FOUNDER_INSTAGRAM_HANDLE}</span>
+                    <ExternalLink size={14} />
+                    <span>Canal Digital de Links</span>
                   </a>
                 </div>
               </div>
@@ -1122,73 +1112,73 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 4: DIFERENCIAIS — [MODO ESCURO]                    */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="border-t border-[#caa24d]/30 bg-[#080a0f] text-white py-20 lg:py-28">
+        <section id="diferenciais" className="border-t border-[#e5b448]/30 bg-[#040914] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <p className="eyebrow-dark justify-center mb-3">
-                Por que Escolher a FRB Advogados
+                Por que Escolher a Ferreira e Bolleli Advogados
               </p>
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                O Padrão de Confiança com Nota Máxima 5,0 ★ no Google
+                O Padrão de Confiança com Avaliação 4,9 ★ no Google
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Qualidades comprovadas por segurados e famílias que conquistaram seus benefícios e tiveram seus direitos restabelecidos com serenidade.
+                Princípios praticados no dia a dia por quem já auxiliou centenas de pessoas a conquistarem seus direitos com dignidade.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#121622] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#181e2b] text-[#caa24d] border border-[#caa24d]/40">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
                   <Award size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Excelência & Organização
+                  Resolutividade & Competência
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Processos organizados, documentação completa e acompanhamento minucioso em cada fase administrativa e judicial.
+                  Agilidade e capacidade técnica para destrinchar casos difíceis e encontrar o melhor caminho jurídico.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#121622] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#181e2b] text-[#caa24d] border border-[#caa24d]/40">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
                   <Heart size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Atendimento Super Educado
+                  Atendimento Humanizado
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Equipe atenciosa e acessível que atende cada pessoa com respeito, paciência e sem complicação.
+                  Paciência, acolhimento e escuta atenta para orientar sem jargões complicados.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#121622] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#181e2b] text-[#caa24d] border border-[#caa24d]/40">
-                  <Coins size={22} />
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
+                  <Scale size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Direito aos Atrasados
+                  Grande Ética & Objetividade
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Cobrança intransigente de todas as parcelas retroativas corrigidas desde o primeiro requerimento no INSS.
+                  Compromisso inegociável com a verdade e clareza total sobre os riscos e possibilidades de cada ação.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#121622] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#181e2b] text-[#caa24d] border border-[#caa24d]/40">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
                   <Building2 size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  10 Unidades Físicas
+                  Presença & Acessibilidade
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Segurança e solidez com escritórios presenciais em Minas Gerais e suporte digital ágil para todo o país.
+                  Escritório físico no Centro de Nanuque com canal direto pelo WhatsApp para respostas ágeis.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Filipe! Gostaria de esclarecer algumas dúvidas sobre o meu caso contra o INSS.")}
+                href={getWhatsAppUrl("Olá! Gostaria de agendar um atendimento personalizado na Ferreira e Bolleli Advogados.")}
                 target="_blank"
                 variant="gold"
                 size="md"
@@ -1201,17 +1191,17 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 5,0 ★ — [MODO CLARO] */}
+        {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 4,9 ★ — [MODO CLARO] */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="border-t border-slate-200 bg-[#fbfaf8] py-20 lg:py-28 text-[#0f172a]">
+        <section id="depoimentos" className="border-t border-slate-200 bg-[#fbfbf9] py-20 lg:py-28 text-[#071126]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <span className="eyebrow mb-3.5">
                   Avaliações Verificadas no Google
                 </span>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
-                  A Opinião de Quem Confia na FRB Advogados
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#071126] sm:text-4xl">
+                  A Opinião de Quem Confia na Ferreira e Bolleli Advogados
                 </h2>
                 <div className="mt-3 flex items-center gap-3">
                   <div className="flex items-center gap-1">
@@ -1219,13 +1209,13 @@ export default function Home() {
                       <Star
                         key={i}
                         size={16}
-                        className="fill-[#caa24d] text-[#caa24d]"
+                        className="fill-[#e5b448] text-[#e5b448]"
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-bold text-slate-900">5,0 de 5,0</span>
+                  <span className="text-sm font-bold text-slate-900">4,9 de 5,0</span>
                   <span className="text-xs text-slate-500">
-                    · 14 avaliações unânimes cinco estrelas no Google Meu Negócio
+                    · 12 avaliações no Google Meu Negócio em Nanuque - MG
                   </span>
                 </div>
               </div>
@@ -1234,7 +1224,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs transition-colors hover:border-[#caa24d] hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs transition-colors hover:border-[#e5b448] hover:bg-slate-50"
               >
                 <GoogleIcon size={14} />
                 <span>Ver Perfil e Avaliações no Google</span>
@@ -1247,7 +1237,7 @@ export default function Home() {
               {clientReviews.map((review, idx) => (
                 <div
                   key={idx}
-                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-[#caa24d] hover:shadow-md"
+                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-[#e5b448] hover:shadow-md"
                 >
                   <div>
                     {/* Stars */}
@@ -1256,7 +1246,7 @@ export default function Home() {
                         <Star
                           key={i}
                           size={13}
-                          className="fill-[#caa24d] text-[#caa24d]"
+                          className="fill-[#e5b448] text-[#e5b448]"
                         />
                       ))}
                     </div>
@@ -1276,7 +1266,7 @@ export default function Home() {
                     <p className="font-serif text-xs font-bold text-slate-900">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#936937] font-semibold">
+                    <p className="text-[10px] text-[#946b23] font-semibold">
                       {review.badge} · {review.date}
                     </p>
                   </div>
@@ -1284,22 +1274,22 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#e2d9cc] bg-[#f5f2eb] p-6 text-center sm:p-8">
+            <div className="mt-12 rounded-2xl border border-[#e2e8f0] bg-[#f4f3ee] p-6 text-center sm:p-8">
               <h3 className="font-serif text-lg font-bold text-slate-900 sm:text-xl">
-                Precisa de orientação jurídica segura para o seu caso contra o INSS?
+                Precisa de orientação jurídica segura para o seu caso?
               </h3>
               <p className="mt-2 text-xs text-slate-600 max-w-xl mx-auto">
-                Não enfrente o INSS sozinho ou desamparado. Conte com quem é especialista no assunto, possui 10 escritórios em Minas Gerais e luta pelo valor máximo do seu benefício.
+                Não enfrente conflitos sozinho ou sem orientação especializada. Conte com a equipe Ferreira e Bolleli Advogados em Nanuque - MG para defender seus direitos.
               </p>
               <div className="mt-6 flex justify-center">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Li as avaliações no site e gostaria de conversar com você sobre a minha causa no INSS.")}
+                  href={getWhatsAppUrl("Olá! Li os depoimentos no site e gostaria de agendar uma consulta com a Ferreira e Bolleli Advogados.")}
                   target="_blank"
                   variant="gold"
                   size="md"
                 >
                   <WhatsAppIcon size={15} />
-                  <span>Falar com o Dr. Filipe Rabelo Agora no WhatsApp</span>
+                  <span>Falar com a Ferreira e Bolleli Advogados no WhatsApp</span>
                 </GlowingButton>
               </div>
             </div>
@@ -1309,7 +1299,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: COMO FUNCIONA O ATENDIMENTO — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section className="border-t border-[#caa24d]/30 bg-[#0c0f17] text-white py-20 lg:py-24">
+        <section className="border-t border-[#e5b448]/30 bg-[#071126] text-white py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <span className="eyebrow-dark justify-center mb-3">
@@ -1319,56 +1309,56 @@ export default function Home() {
                 Como Funciona o Seu Atendimento
               </h2>
               <p className="mt-3 text-sm text-slate-300">
-                Passo a passo simples, didático e acolhedor desde o primeiro contato até o recebimento do seu benefício e valores atrasados.
+                Etapas bem definidas e didáticas, garantindo que você compreenda cada passo com total clareza.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#131824] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <span className="font-serif text-3xl font-bold text-[#caa24d]">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <span className="font-serif text-3xl font-bold text-[#e5b448]">
                   01
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
-                  Contato no WhatsApp
+                  Primeiro Contato
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Envie sua dúvida ou foto da carta de negativa do INSS para receber a primeira orientação direta da nossa equipe especializada.
+                  Envie sua mensagem pelo WhatsApp ou nos visite na sede em Nanuque para um acolhimento inicial sem compromisso.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#131824] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <span className="font-serif text-3xl font-bold text-[#caa24d]">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <span className="font-serif text-3xl font-bold text-[#e5b448]">
                   02
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
-                  Análise Técnica do CNIS
+                  Análise Documental
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Avaliamos seu extrato de contribuições, laudos médicos e vínculos rurais para calcular a regra mais vantajosa para você.
+                  Examinamos contratos, rescisões, carteiras de trabalho ou notificações para verificar a viabilidade da demanda.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#131824] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <span className="font-serif text-3xl font-bold text-[#caa24d]">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <span className="font-serif text-3xl font-bold text-[#e5b448]">
                   03
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
-                  Estratégia & Ação Judicial
+                  Estratégia & Ação
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Ingressamos com a ação adequada na Justiça com pedido de liminar para liberação do pagamento mensal o mais rápido possível.
+                  Construímos a melhor estratégia jurídica, propondo acordo extrajudicial ou ingressando com a ação perante o Judiciário.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#caa24d]/30 bg-[#131824] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#caa24d]">
-                <span className="font-serif text-3xl font-bold text-[#caa24d]">
+              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
+                <span className="font-serif text-3xl font-bold text-[#e5b448]">
                   04
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
-                  Concessão & Atrasados
+                  Acompanhamento Contínuo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Você começa a receber seu benefício todo mês e recebe o montante total dos valores atrasados acumulados desde a entrada.
+                  Você recebe atualizações claras sobre o andamento processual até a efetiva conclusão e recebimento dos valores devidos.
                 </p>
               </div>
             </div>
@@ -1378,17 +1368,17 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: DÚVIDAS FREQUENTES / FAQ — [MODO CLARO]          */}
         {/* ======================================================== */}
-        <section id="duvidas" className="border-t border-slate-200 bg-[#f8f6f0] py-20 lg:py-28 text-[#0f172a]">
+        <section id="duvidas" className="border-t border-slate-200 bg-[#f4f3ee] py-20 lg:py-28 text-[#071126]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="eyebrow mb-3.5 justify-center">
                 Esclarecimento de Dúvidas
               </span>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#071126] sm:text-4xl">
                 Perguntas Frequentes
               </h2>
               <p className="mt-3 text-sm text-slate-600">
-                Respostas diretas e didáticas sobre causas contra o INSS, aposentadorias, reversão de negativas, auxílio-doença e BPC/LOAS.
+                Respostas diretas e esclarecedoras sobre consultas, processos trabalhistas, previdenciários e inventários.
               </p>
             </div>
 
@@ -1403,13 +1393,13 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-slate-900 transition-colors hover:text-[#936937] cursor-pointer"
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-slate-900 transition-colors hover:text-[#946b23] cursor-pointer"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#caa24d]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#e5b448]" />
                       ) : (
-                        <ChevronDown size={18} className="shrink-0 text-[#caa24d]" />
+                        <ChevronDown size={18} className="shrink-0 text-[#e5b448]" />
                       )}
                     </button>
 
@@ -1437,13 +1427,13 @@ export default function Home() {
               </p>
               <div className="mt-3">
                 <a
-                  href={getWhatsAppUrl("Olá, Dr. Filipe! Gostaria de esclarecer uma dúvida que não encontrei no site.")}
+                  href={getWhatsAppUrl("Olá! Gostaria de tirar uma dúvida que não encontrei no site.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#0f172a] hover:text-[#936937] hover:underline"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#071126] hover:text-[#946b23] hover:underline"
                 >
                   <WhatsAppIcon size={14} className="text-[#25D366]" />
-                  <span>Pergunte diretamente ao Dr. Filipe Rabelo no WhatsApp</span>
+                  <span>Tire sua dúvida diretamente com nossa equipe no WhatsApp</span>
                   <ArrowRight size={12} />
                 </a>
               </div>
@@ -1454,64 +1444,46 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: LOCALIZAÇÃO, SEDES & CONTATO — [MODO ESCURO]    */}
         {/* ======================================================== */}
-        <section id="contato" className="border-t border-[#caa24d]/30 bg-[#080a0f] text-white py-20 lg:py-28">
+        <section id="contato" className="border-t border-[#e5b448]/30 bg-[#040914] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Sede info */}
               <div className="lg:col-span-5">
-                <span className="eyebrow-dark mb-3.5">Sedes & Atendimento</span>
+                <span className="eyebrow-dark mb-3.5">Localização & Atendimento</span>
                 <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Estamos Prontos para Atender Você
+                  Estamos Prontos para Atender Você em Nanuque
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  Visite um de nossos escritórios presenciais em Minas Gerais ou realize sua consulta de forma 100% online com agilidade, sigilo e conforto pelo WhatsApp.
+                  Visite nosso escritório no Centro de Nanuque ou receba suporte ágil e confidencial pelo WhatsApp de onde você estiver.
                 </p>
 
                 <div className="mt-8 space-y-6">
-                  {/* Sede Capelinha */}
+                  {/* Sede Nanuque */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#caa24d]/35 bg-[#121622] text-[#caa24d]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
                       <MapPin size={20} />
                     </div>
                     <div>
                       <p className="text-xs font-bold text-white uppercase tracking-wider">
-                        Sede Principal — Capelinha / MG
+                        Sede em Nanuque / MG
                       </p>
                       <p className="mt-1 text-xs leading-relaxed text-slate-300">
-                        {ADDRESS_CAPELINHA}
+                        {ADDRESS_NANUQUE}
                       </p>
                       <a
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] text-[#caa24d] font-semibold hover:underline block mt-1"
+                        className="text-[11px] text-[#e5b448] font-semibold hover:underline block mt-1"
                       >
-                        Ver localização no Google Maps de Capelinha →
+                        Ver localização e rotas no Google Maps →
                       </a>
-                    </div>
-                  </div>
-
-                  {/* Unidade Santa Maria do Suaçuí */}
-                  <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#caa24d]/35 bg-[#121622] text-[#caa24d]">
-                      <Building2 size={20} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-white uppercase tracking-wider">
-                        Unidade Santa Maria do Suaçuí & Rede em MG
-                      </p>
-                      <p className="mt-1 text-xs leading-relaxed text-slate-300">
-                        {ADDRESS_SANTA_MARIA}
-                      </p>
-                      <p className="text-[11px] text-[#f5e49e] font-semibold mt-1">
-                        📌 10 escritórios físicos de portas abertas em Minas Gerais.
-                      </p>
                     </div>
                   </div>
 
                   {/* Telefone & WhatsApp */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#caa24d]/35 bg-[#121622] text-[#caa24d]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
                       <Phone size={20} />
                     </div>
                     <div>
@@ -1519,13 +1491,13 @@ export default function Home() {
                         Telefone & WhatsApp
                       </p>
                       <p className="mt-1 text-xs text-slate-300">
-                        Celular / WhatsApp: <strong className="text-white">{PHONE_DISPLAY}</strong>
+                        Telefone / WhatsApp: <strong className="text-white">{PHONE_DISPLAY}</strong>
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dr. Filipe! Gostaria de agendar um atendimento sobre minha causa no INSS.")}
+                        href={getWhatsAppUrl("Olá! Gostaria de agendar um atendimento na Ferreira e Bolleli Advogados.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-bold text-[#caa24d] hover:underline block mt-1"
+                        className="text-[11px] font-bold text-[#e5b448] hover:underline block mt-1"
                       >
                         Clique para enviar mensagem direta no WhatsApp
                       </a>
@@ -1534,7 +1506,7 @@ export default function Home() {
 
                   {/* Horário */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#caa24d]/35 bg-[#121622] text-[#caa24d]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
                       <Clock size={20} />
                     </div>
                     <div>
@@ -1542,9 +1514,9 @@ export default function Home() {
                         Horário de Atendimento
                       </p>
                       <p className="mt-1 text-xs text-slate-300">
-                        Segunda a Sexta: 08:00 às 18:00
+                        Segunda a Sexta: 08:00 às 11:30 e 13:30 às 18:00
                       </p>
-                      <p className="text-[11px] text-[#caa24d]">
+                      <p className="text-[11px] text-[#fad771]">
                         Atendimento ágil pelo WhatsApp para dúvidas urgentes.
                       </p>
                     </div>
@@ -1552,7 +1524,7 @@ export default function Home() {
 
                   {/* Redes Sociais */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#caa24d]/35 bg-[#121622] text-[#caa24d]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
@@ -1569,20 +1541,20 @@ export default function Home() {
                           Instagram Oficial: <span className="font-bold text-white">{INSTAGRAM_HANDLE}</span>
                         </a>
                         <a
-                          href={FOUNDER_INSTAGRAM_URL}
+                          href={BEACONS_URL}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-slate-300 hover:text-white"
                         >
-                          Dr. Filipe Rabelo: <span className="font-bold text-white">{FOUNDER_INSTAGRAM_HANDLE}</span>
+                          Canal Beacons: <span className="font-bold text-white">beacons.ai/ferreiraebolleliadv</span>
                         </a>
                         <a
                           href={GOOGLE_SEARCH_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#caa24d] hover:underline"
+                          className="text-[#e5b448] hover:underline"
                         >
-                          Perfil Google: FRB Advogados / Causas contra o INSS (5,0 ★)
+                          Perfil Google: Ferreira e Bolleli Advogados (4,9 ★)
                         </a>
                       </div>
                     </div>
@@ -1592,93 +1564,93 @@ export default function Home() {
 
               {/* Right Column: Interactive Consultation Card */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-[#caa24d]/35 bg-[#121622] p-8 shadow-xl shadow-black/60">
+                <div className="rounded-2xl border border-[#e5b448]/35 bg-[#071126] p-8 shadow-xl shadow-black/60">
                   <div className="flex items-center gap-3">
                     <span className="flex size-2 rounded-full bg-[#25D366]" />
-                    <span className="text-xs font-bold tracking-wider uppercase text-[#caa24d]">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#e5b448]">
                       Canal de Atendimento Direto
                     </span>
                   </div>
 
                   <h3 className="mt-4 font-serif text-2xl font-bold text-white sm:text-3xl">
-                    Inicie seu Atendimento com a FRB Advogados
+                    Inicie seu Atendimento com a Ferreira e Bolleli Advogados
                   </h3>
                   <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                    Selecione a situação do seu benefício para ser direcionado(a) com a mensagem adequada ao WhatsApp oficial:
+                    Selecione a sua área de interesse para abrir o WhatsApp oficial com a mensagem apropriada:
                   </p>
 
                   <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! O INSS negou ou cancelou o meu benefício e preciso de ajuda.")}
+                      href={getWhatsAppUrl("Olá! Preciso de orientação sobre uma causa Trabalhista.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#181e2b] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#caa24d] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
                     >
-                      <span>Benefício Negado ou Cancelado</span>
-                      <ArrowRight size={14} className="text-[#caa24d]" />
+                      <span>Causa Trabalhista</span>
+                      <ArrowRight size={14} className="text-[#e5b448]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de consultar sobre a minha Aposentadoria (Idade, Tempo ou Rural).")}
+                      href={getWhatsAppUrl("Olá! Gostaria de consultar sobre Aposentadoria ou Benefício do INSS.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#181e2b] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#caa24d] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
                     >
-                      <span>Aposentadorias do INSS</span>
-                      <ArrowRight size={14} className="text-[#caa24d]" />
+                      <span>Aposentadorias & INSS</span>
+                      <ArrowRight size={14} className="text-[#e5b448]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Estou com problema de saúde e preciso de Auxílio-Doença ou Invalidez.")}
+                      href={getWhatsAppUrl("Olá! Preciso de assessoria em Direito Cível / Contratos / Indenizações.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#181e2b] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#caa24d] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
                     >
-                      <span>Auxílio-Doença & Invalidez</span>
-                      <ArrowRight size={14} className="text-[#caa24d]" />
+                      <span>Cível & Indenizações</span>
+                      <ArrowRight size={14} className="text-[#e5b448]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de orientações sobre o BPC / LOAS para idoso ou pessoa com deficiência.")}
+                      href={getWhatsAppUrl("Olá! Gostaria de orientações sobre Inventário de Bens ou Direito de Família.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#181e2b] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#caa24d] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
                     >
-                      <span>BPC / LOAS (Idoso e PCD)</span>
-                      <ArrowRight size={14} className="text-[#caa24d]" />
+                      <span>Inventários & Família</span>
+                      <ArrowRight size={14} className="text-[#e5b448]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de orientações sobre Pensão por Morte do INSS.")}
+                      href={getWhatsAppUrl("Olá! Preciso de ajuda contra uma cobrança indevida, juros bancários ou negativação.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#181e2b] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#caa24d] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
                     >
-                      <span>Pensão por Morte</span>
-                      <ArrowRight size={14} className="text-[#caa24d]" />
+                      <span>Consumidor & Bancário</span>
+                      <ArrowRight size={14} className="text-[#e5b448]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de fazer o Planejamento da minha Aposentadoria ou Revisão de Valor.")}
+                      href={getWhatsAppUrl("Olá! Gostaria de orientações sobre assessoria empresarial ou contratos rurais.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#181e2b] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#caa24d] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
                     >
-                      <span>Revisão & Planejamento</span>
-                      <ArrowRight size={14} className="text-[#caa24d]" />
+                      <span>Empresarial & Agronegócio</span>
+                      <ArrowRight size={14} className="text-[#e5b448]" />
                     </a>
                   </div>
 
                   <div className="mt-8 border-t border-slate-700/60 pt-6">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dr. Filipe Rabelo! Gostaria de conversar com você sobre a minha causa do INSS.")}
+                      href={getWhatsAppUrl("Olá! Gostaria de conversar com a equipe Ferreira e Bolleli Advogados.")}
                       target="_blank"
                       variant="gold"
                       size="lg"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com o Dr. Filipe Rabelo</span>
+                      <span>Falar no WhatsApp com Ferreira e Bolleli Advogados</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -1690,7 +1662,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: FOOTER INSTITUCIONAL — [MODO ESCURO]            */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#caa24d]/25 bg-[#05070a] pt-16 pb-12 text-slate-400">
+        <footer className="border-t border-[#e5b448]/25 bg-[#030710] pt-16 pb-12 text-slate-400">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
               {/* Brand Column */}
@@ -1698,31 +1670,31 @@ export default function Home() {
                 <div className="relative py-1">
                   <Image
                     src={LOGO_SRC}
-                    alt="FRB Advogados — Advocacia & Assessoria Jurídica"
+                    alt="Ferreira e Bolleli Advogados"
                     width={420}
                     height={140}
                     className="h-14 sm:h-16 md:h-18 w-auto max-w-[280px] sm:max-w-[340px] object-contain object-left drop-shadow-md"
                   />
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-slate-400 max-w-md">
-                  ⚖️ FRB Advogados — Advocacia & Assessoria Jurídica. Especialistas em Causas Contra o INSS, aposentadorias, reversão de benefícios negados, auxílio-doença e BPC/LOAS. 10 escritórios de portas abertas em Minas Gerais e assessoria jurídica digital para todo o Brasil.
+                  ⚖️ Ferreira e Bolleli Advogados — Advocacia e consultoria jurídica em Nanuque - MG e Vale do Mucuri. Atuação dedicada e experiente em causas Trabalhistas, Previdenciárias, Cíveis, de Família, Sucessões e Direito do Consumidor.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#0f1420] text-slate-300 transition-colors hover:border-[#caa24d] hover:text-white"
-                    aria-label="Instagram da FRB Advogados"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071126] text-slate-300 transition-colors hover:border-[#e5b448] hover:text-white"
+                    aria-label="Instagram de Ferreira e Bolleli Advogados"
                   >
                     <InstagramIcon size={16} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dr. Filipe!")}
+                    href={getWhatsAppUrl("Olá!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#0f1420] text-slate-300 transition-colors hover:border-[#caa24d] hover:text-white"
-                    aria-label="WhatsApp da FRB Advogados"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071126] text-slate-300 transition-colors hover:border-[#e5b448] hover:text-white"
+                    aria-label="WhatsApp de Ferreira e Bolleli Advogados"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1730,7 +1702,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#0f1420] text-slate-300 transition-colors hover:border-[#caa24d] hover:text-white"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071126] text-slate-300 transition-colors hover:border-[#e5b448] hover:text-white"
                     aria-label="Avaliações do Google"
                   >
                     <GoogleIcon size={16} />
@@ -1745,13 +1717,13 @@ export default function Home() {
                 </p>
                 <ul className="mt-4 space-y-2.5 text-xs">
                   <li>
-                    <a href="#inss" className="footer-link">
-                      Causas do INSS
+                    <a href="#servicos" className="footer-link">
+                      Áreas de Atuação
                     </a>
                   </li>
                   <li>
                     <a href="#sobre" className="footer-link">
-                      Sobre o Dr. Filipe & FRB
+                      Sobre o Escritório
                     </a>
                   </li>
                   <li>
@@ -1761,7 +1733,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#depoimentos" className="footer-link">
-                      Avaliações Google (5,0 ★)
+                      Avaliações Google (4,9 ★)
                     </a>
                   </li>
                   <li>
@@ -1771,7 +1743,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="footer-link">
-                      Sedes em Minas Gerais
+                      Sede em Nanuque
                     </a>
                   </li>
                 </ul>
@@ -1783,14 +1755,14 @@ export default function Home() {
                   Informações Institucionais & Ética
                 </p>
                 <p className="mt-4 text-[11px] leading-relaxed text-slate-400">
-                  Este website possui caráter estritamente informativo e institucional, em rigorosa observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
+                  Este website possui caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
                 </p>
-                <div className="mt-4 rounded-lg border border-slate-800 bg-[#0f1420] p-3 text-[11px] text-slate-300">
+                <div className="mt-4 rounded-lg border border-slate-800 bg-[#071126] p-3 text-[11px] text-slate-300">
                   <p className="font-bold text-white">
-                    FRB ADVOGADOS / CAUSAS CONTRA O INSS
+                    FERREIRA E BOLLELI ADVOGADOS
                   </p>
-                  <p className="mt-0.5 text-[#caa24d]">
-                    Sede: {ADDRESS_CAPELINHA}
+                  <p className="mt-0.5 text-[#e5b448]">
+                    Sede: {ADDRESS_NANUQUE}
                   </p>
                   <p className="mt-0.5 text-xs text-slate-400">
                     Telefone / WhatsApp: {PHONE_DISPLAY}
@@ -1802,10 +1774,10 @@ export default function Home() {
             {/* Bottom Copyright */}
             <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800/80 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
               <p>
-                © {new Date().getFullYear()} FRB ADVOGADOS — ADVOCACIA & ASSESSORIA JURÍDICA. Todos os direitos reservados.
+                © {new Date().getFullYear()} FERREIRA E BOLLELI ADVOGADOS. Todos os direitos reservados.
               </p>
-              <p className="text-[#caa24d]">
-                Capelinha · Santa Maria do Suaçuí · Minas Gerais · Brasil
+              <p className="text-[#e5b448]">
+                Nanuque · Vale do Mucuri · Minas Gerais · Brasil
               </p>
             </div>
           </div>
@@ -1814,15 +1786,15 @@ export default function Home() {
         {/* FLOATING WHATSAPP CTA BUTTON */}
         <div className="fixed right-5 bottom-5 z-50 flex items-center gap-2">
           <a
-            href={getWhatsAppUrl("Olá, Dr. Filipe! Gostaria de tirar uma dúvida sobre o meu benefício do INSS.")}
+            href={getWhatsAppUrl("Olá! Gostaria de conversar com um advogado da Ferreira e Bolleli Advogados.")}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar agora pelo WhatsApp com o Dr. Filipe Rabelo"
+            aria-label="Falar agora pelo WhatsApp com Ferreira e Bolleli Advogados"
             className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/60 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
           >
             <WhatsAppIcon size={19} />
             <span className="hidden sm:inline tracking-wide font-bold">
-              Falar com Dr. Filipe
+              Falar no WhatsApp
             </span>
           </a>
         </div>
@@ -1835,33 +1807,33 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95, y: 15 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
-                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#caa24d]/55 bg-[#0c0f17] p-6 text-white shadow-2xl sm:p-8"
+                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#e5b448]/55 bg-[#071126] p-6 text-white shadow-2xl sm:p-8"
               >
                 <button
                   type="button"
                   onClick={() => setSelectedPractice(null)}
-                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#121622] text-slate-300 hover:border-white hover:text-white cursor-pointer"
+                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#0d224d] text-slate-300 hover:border-white hover:text-white cursor-pointer"
                   aria-label="Fechar modal"
                 >
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center gap-2.5 text-xs font-bold text-[#caa24d] uppercase tracking-wider">
+                <div className="flex items-center gap-2.5 text-xs font-bold text-[#e5b448] uppercase tracking-wider">
                   <Image
                     src={LOGO_EMBLEM_SRC}
-                    alt="Brasão FRB Advogados"
+                    alt="Emblema FB"
                     width={24}
                     height={24}
                     className="size-6 object-contain"
                   />
-                  <span>Especialidade Previdenciária</span>
+                  <span>Área de Atuação Especializada</span>
                 </div>
 
                 <h3 className="mt-3 font-serif text-2xl font-bold text-white sm:text-3xl">
                   {selectedPractice.title}
                 </h3>
 
-                <p className="mt-2 text-xs font-medium text-[#caa24d]">
+                <p className="mt-2 text-xs font-medium text-[#e5b448]">
                   {selectedPractice.category}
                 </p>
 
@@ -1881,7 +1853,7 @@ export default function Home() {
                       >
                         <CheckCircle2
                           size={15}
-                          className="text-[#caa24d] shrink-0 mt-0.5"
+                          className="text-[#e5b448] shrink-0 mt-0.5"
                         />
                         <span>{topic}</span>
                       </li>
@@ -1898,13 +1870,13 @@ export default function Home() {
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Consultar Dr. Filipe nesta Área</span>
+                    <span>Consultar Advogado nesta Área</span>
                   </GlowingButton>
 
                   <button
                     type="button"
                     onClick={() => setSelectedPractice(null)}
-                    className="w-full rounded-lg border border-slate-700 bg-[#121622] px-5 py-3 text-xs font-bold text-slate-300 hover:bg-[#181e2b] hover:text-white sm:w-auto cursor-pointer"
+                    className="w-full rounded-lg border border-slate-700 bg-[#0d224d] px-5 py-3 text-xs font-bold text-slate-300 hover:bg-[#102859] hover:text-white sm:w-auto cursor-pointer"
                   >
                     Fechar
                   </button>
