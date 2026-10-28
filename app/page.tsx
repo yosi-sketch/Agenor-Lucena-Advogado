@@ -18,49 +18,43 @@ import {
   Menu,
   X,
   Sparkles,
-  FileText,
-  BadgeCheck,
   CheckCircle2,
   ChevronDown,
   ChevronUp,
   ExternalLink,
-  Building2,
   Users,
-  Heart,
   Briefcase,
-  Coins,
-  Calculator,
   Gavel,
   Landmark,
+  BadgeCheck,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533987156234";
-const PHONE_DISPLAY = "(33) 98715-6234";
-const EMAIL_CONTACT = "contato@ferreiraebolleliadv.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/ferreiraebolleliadv/";
-const INSTAGRAM_HANDLE = "@ferreiraebolleliadv";
-const BEACONS_URL = "https://beacons.ai/ferreiraebolleliadv";
+const WHATSAPP_NUMBER = "5531996990842";
+const PHONE_DISPLAY = "(31) 99699-0842";
+const EMAIL_CONTACT = "contato@antoniocesaradvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/drantoniocesaradvocacia/";
+const INSTAGRAM_HANDLE = "@drantoniocesaradvocacia";
 
-const ADDRESS_NANUQUE =
-  "R. São Lourenço, 410 - Sl 03 - Centro, Nanuque - MG, 39860-000, Brasil";
+const ADDRESS_MATOZINHOS =
+  "Av. Bento Gonçalves, 40 - Sl C - Centro, Matozinhos - MG, 35720-000, Brasil";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Ferreira+e+Bolleli+Advogados%0ANanuque+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Ant%C3%B4nio+Cesar+%E2%80%94+Advocacia%0AMatozinhos+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=10ab62e321bfdedb&sxsrf=AKL5yDiduCU6mus0lZYQdEx40BzKnNTBLg:1793194628850&q=ferreira+e+bolleli+advogados+%7C+advogado+em+nanuque+endere%C3%A7o&ludocid=14876295411396040823&sa=X&ved=2ahUKEwifxfXG6tyXAxWbLrkGHSCwMZEQ6BN6BAg4EAI";
+  "https://www.google.com/search?sca_esv=46301957b105dbed&sxsrf=AKL5yDjRnVyJdurDE_lq-f5ThZudN6EKFA:1793197499410&q=advocacia+ant%C3%B4nio+cesar+matozinhos+endere%C3%A7o&ludocid=13571655095632325030&sa=X&ved=2ahUKEwjThNuf9dyXAxVPrpUCHWzoE0EQ6BN6BAhFEAI";
 
 const LOGO_SRC = "/logo.png";
-const LOGO_EMBLEM_SRC = "/emblema-fb.png";
-const FOTO_HERO_SRC = "/equipe-ferreira-bolleli.jpg";
+const LOGO_EMBLEM_SRC = "/emblema-ac.png";
+const FOTO_HERO_SRC = "/hero.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de agendar uma consulta jurídica.";
+    "Olá, Dr. Antônio Cesar! Gostaria de agendar uma consulta jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -173,128 +167,128 @@ const practiceAreas: PracticeArea[] = [
   {
     id: "direito-trabalhista",
     title: "Direito Trabalhista & Relações de Trabalho",
-    category: "Reclamatórias Trabalhistas · Rescisão Indireta · Horas Extras · Acidente de Trabalho · Defesa dos Direitos",
+    category: "Reclamatórias Trabalhistas · Rescisão Indireta · Horas Extras · Acidente de Trabalho · Vínculo Empregatício",
     icon: Briefcase,
-    tag: "Defesa Combativa · Recuperação de Verbas · Casos Ganhos",
+    tag: "Defesa Combativa · Recuperação de Verbas · Direitos Respeitados",
     summary:
-      "Atuação firme e combativa na defesa de trabalhadores e empregadores, com foco na garantia integral de direitos, cálculo de verbas rescisórias, insalubridade e indenizações.",
+      "Atuação firme e combativa na defesa dos direitos dos trabalhadores em Matozinhos e região. Cálculos minuciosos de rescisões, horas extras, insalubridade e indenizações por acidente laboral.",
     details:
-      "Muitos trabalhadores sofrem com rescisões incorretas, horas extras não remuneradas, desvio de função ou condições degradantes sem saber como comprovar seus direitos perante a Justiça do Trabalho. Na Ferreira e Bolleli Advogados, ouvimos cada cliente com paciência e clareza, esclarecendo dúvidas processuais e montando uma estratégia probatória sólida para garantir a máxima reparação cabível.",
+      "Muitos profissionais enfrentam demissões injustas, supressão de horas extras, desvio de função, atraso crônico de salários ou condições inadequadas de trabalho sem saber como agir. Na Advocacia Antônio Cesar, analisamos com extrema atenção todo o histórico de trabalho, orientando cada cliente com clareza e paciência sobre os prazos e provas necessárias para pleitear a integralidade dos direitos na Justiça do Trabalho.",
     topics: [
-      "Reclamatórias trabalhistas para cobrança de horas extras, adicionais noturnos e intervalos intrajornada",
-      "Rescisão indireta do contrato de trabalho por falta grave do empregador ou atraso de salários",
-      "Cobrança de verbas rescisórias, saldo de salário, aviso prévio, férias proporcionais e multa do FGTS (40%)",
-      "Indenizações por acidente de trabalho, doença ocupacional, perda de capacidade laborativa e danos morais",
-      "Reconhecimento de vínculo de emprego sem carteira assinada e anotação retroativa em CTPS",
-      "Adicional de insalubridade e periculosidade para trabalhadores em condições nocivas à saúde",
+      "Reclamatórias trabalhistas para cobrança de horas extras, adicional noturno e descansos semanais",
+      "Rescisão indireta do contrato de trabalho por descumprimento grave das obrigações pelo empregador",
+      "Cobrança integral de verbas rescisórias: saldo de salário, aviso prévio, férias vencidas e proporcionais, 13º e multa de 40% do FGTS",
+      "Ações indenizatórias por acidente de trabalho, sequelas físicas, doenças ocupacionais e danos morais",
+      "Reconhecimento de vínculo de emprego sem carteira assinada com anotação retroativa e recolhimentos devidos",
+      "Adicionais de insalubridade e periculosidade para quem trabalhou exposto a agentes químicos, ruído ou risco físico",
     ],
     whatsAppText:
-      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre os meus direitos em uma questão trabalhista.",
+      "Olá, Dr. Antônio Cesar! Gostaria de consultar sobre os meus direitos em uma questão trabalhista.",
   },
   {
     id: "direito-previdenciario",
     title: "Direito Previdenciário & Benefícios do INSS",
-    category: "Aposentadorias · Reversão de Benefício Negado · Auxílio-Doença & Invalidez · BPC/LOAS · Atrasados",
+    category: "Aposentadorias · Reversão de Benefício Negado · Auxílio por Incapacidade · BPC/LOAS · Atrasados",
     icon: Scale,
     tag: "Cálculo do Maior Valor · Reversão Judicial · Pagamento de Atrasados",
     summary:
-      "Planejamento previdenciário e ações contra o INSS para reverter negativas, conceder aposentadorias pelas melhores regras e garantir o pagamento retroativo de todos os atrasados.",
+      "Planejamento previdenciário e ações judiciais contra o INSS para reverter negativas, destravar aposentadorias pelas regras mais vantajosas e garantir o pagamento de todos os retroativos.",
     details:
-      "Ter o benefício negado ou suspenso pelo INSS é uma situação angustiante que desampara o segurado no momento em que ele mais precisa. O escritório Ferreira e Bolleli Advogados analisa minuciosamente o extrato do CNIS, laudos médicos e histórico laboral, ingressando com a ação judicial cabível com pedido de liminar e perícia especializada para restabelecer seus pagamentos.",
+      "Ter um benefício negado ou cancelado indevidamente pelo INSS coloca a segurança financeira do segurado e de sua família em risco. O Dr. Antônio Cesar realiza um estudo detalhado do extrato do CNIS, carteiras de trabalho, laudos médicos e histórico contributivo, acionando a Justiça Federal com pedidos de tutela de urgência e perícias médicas judiciais para restabelecer seus pagamentos com todos os juros e correções legais.",
     topics: [
-      "Aposentadoria por Idade Urbana, Híbrida e Rural para trabalhadores da lavoura e produtores",
-      "Aposentadoria por Tempo de Contribuição e aplicação das melhores regras de transição pós-Reforma",
-      "Aposentadoria Especial para profissionais expostos a agentes nocivos, químicos e ruído excessivo",
-      "Reversão na Justiça de benefícios negados, cancelados ou cortados no 'pente-fino' do INSS",
-      "Auxílio por Incapacidade Temporária (auxílio-doença) e conversão em Aposentadoria por Invalidez",
-      "BPC/LOAS no valor de 1 salário mínimo para idosos a partir de 65 anos e pessoas com deficiência (PCD)",
+      "Aposentadoria por Idade Urbana, Rural e Híbrida com comprovação documental rigorosa",
+      "Aposentadoria por Tempo de Contribuição e aplicação da melhor regra de transição pós-Reforma da Previdência",
+      "Aposentadoria Especial para trabalhadores com atividade especial sob agentes nocivos ou perigosos",
+      "Reversão na Justiça Federal de benefícios previdenciários e assistenciais indeferidos ou cessados no INSS",
+      "Auxílio por Incapacidade Temporária (antigo auxílio-doença) e conversão em Aposentadoria por Incapacidade Permanente",
+      "Benefício de Prestação Continuada (BPC/LOAS) para idosos acima de 65 anos e pessoas com deficiência de baixa renda",
     ],
     whatsAppText:
-      "Olá, equipe Ferreira e Bolleli Advogados! Preciso de auxílio com meu benefício / aposentadoria no INSS.",
+      "Olá, Dr. Antônio Cesar! Preciso de orientações especializadas sobre aposentadoria ou benefício no INSS.",
   },
   {
-    id: "direito-civel-indenizacoes",
-    title: "Direito Cível, Contratos & Indenizações",
-    category: "Reparação de Danos Morais e Materiais · Cobranças · Ações Possessórias · Disputas Imobiliárias",
+    id: "direito-civil-indenizacoes",
+    title: "Direito Civil, Contratos & Indenizações",
+    category: "Reparação por Danos Morais e Materiais · Cobranças · Disputas Contratuais · Ações Possessórias",
     icon: Shield,
     tag: "Segurança Jurídica · Resolução de Conflitos · Proteção Patrimonial",
     summary:
-      "Proteção eficaz em controvérsias patrimoniais, cobranças de créditos, litígios contratuais, disputas sobre bens imóveis e ações indenizatórias de alta complexidade.",
+      "Proteção jurídica eficaz em controvérsias patrimoniais, cobranças de títulos e créditos, litígios contratuais, disputas imobiliárias e ações de indenização por perdas e danos.",
     details:
-      "Relações contratuais mal elaboradas ou descumpridas geram prejuízos severos. O escritório atua tanto na esfera preventiva, mediante confecção e revisão de contratos robustos, quanto no contencioso cível combativo, pleiteando indenizações justas por danos materiais, perdas e danos e ofensas morais perante o Poder Judiciário.",
+      "Descumprimentos contratuais e prejuízos causados por terceiros exigem intervenção técnica ágil. A Advocacia Antônio Cesar atua de forma estratégica tanto na elaboração e revisão preventiva de acordos quanto na representação contenciosa perante o Poder Judiciário, cobrando reparações justas por danos materiais, lucros cessantes e abalos morais.",
     topics: [
-      "Ações indenizatórias por danos morais, materiais e lucros cessantes decorrentes de atos ilícitos",
-      "Cobrança e execução de títulos judiciais e extrajudiciais (cheques, notas promissórias e contratos)",
-      "Ações possessórias: reintegração de posse, manutenção de posse, interdito proibitório e usucapião",
-      "Assessoria em transações imobiliárias, rescisão de compromissos de compra e venda e regularização de imóveis",
-      "Resolução de conflitos contratuais entre pessoas físicas, prestadores de serviços e empresas",
-      "Defesa dos direitos de posse e propriedade rural e urbana em Nanuque e região",
+      "Ações indenizatórias por danos morais, materiais e prejuízos decorrentes de atos ilícitos ou acidentes",
+      "Cobrança e execução judicial de dívidas, cheques, notas promissórias e instrumentos contratuais inadimplidos",
+      "Ações possessórias e petitórias: reintegração de posse, manutenção de posse, usucapião e defesa da propriedade",
+      "Rescisão de contratos de compra e venda de bens móveis e imóveis com restituição de quantias pagas",
+      "Elaboração, análise preventiva e repactuação de instrumentos contratuais particulares e comerciais",
+      "Defesa e propositura de medidas judiciais urgentes para proteção de patrimônio em Matozinhos e região",
     ],
     whatsAppText:
-      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre uma questão cível / contratual / indenizatória.",
+      "Olá, Dr. Antônio Cesar! Gostaria de consultar sobre uma questão cível, contratual ou indenizatória.",
   },
   {
     id: "direito-familia-sucessoes",
     title: "Direito de Família & Sucessões (Inventários)",
-    category: "Inventário Judicial e Extrajudicial · Divórcio · Partilha de Bens · Pensão Alimentícia · Guarda",
+    category: "Inventário Extrajudicial e Judicial · Partilha de Bens · Divórcio · Pensão Alimentícia · Guarda",
     icon: Users,
     tag: "Sensibilidade & Firmeza · Agilidade em Cartório · Partilha Segura",
     summary:
-      "Condução humanizada, discreta e segura de inventários, partilhas e dissoluções conjugais, protegendo o patrimônio familiar e os interesses dos herdeiros.",
+      "Condução humanizada, serena e segura de inventários de bens, partilhas de herança, divórcios e questões de família, preservando o patrimônio e os laços dos herdeiros.",
     details:
-      "Momentos de luto ou de separação exigem suporte jurídico sereno e experiente para evitar desgastes emocionais desnecessários e prejuízos na partilha do patrimônio. Atuamos com extrema agilidade em inventários extrajudiciais em cartório quando há consenso, além de prestar defesa técnica em inventários judiciais complexos e disputas familiares.",
+      "Momentos de luto ou reorganização familiar demandam acolhimento ético e condução técnica experiente para evitar conflitos desgastantes e perdas patrimoniais. Atuamos com celeridade em inventários extrajudiciais em cartório quando há concordância entre herdeiros capazes, além de prestar defesa combativa em inventários judiciais e causas de família.",
     topics: [
-      "Inventário Extrajudicial em Cartório: procedimento rápido e econômico para partilha de herança consensual",
-      "Inventário Judicial e arrolamento de bens em casos com herdeiros menores ou divergências na partilha",
-      "Divórcio Consensual e Litigioso, com definição equilibrada de partilha patrimonial e regime de bens",
-      "Ações de Fixação, Revisão e Execução de Pensão Alimentícia para filhos menores e dependentes",
-      "Definição de Guarda Compartilhada, regime de convivência e regulamentação de visitas",
-      "Planejamento Sucessório preventivo e doação de bens com reserva de usufruto",
+      "Inventário Extrajudicial em Cartório de Notas: procedimento ágil, econômico e seguro para partilhas consensuais",
+      "Inventário Judicial e arrolamento de bens em processos com menores de idade ou divergências entre herdeiros",
+      "Divórcio Consensual ou Litigioso com definição equilibrada da partilha de bens comuns",
+      "Ações de Fixação, Revisão, Exoneração e Execução de Pensão Alimentícia para filhos e dependentes",
+      "Regulamentação de Guarda Compartilhada e definição do regime de convivência familiar",
+      "Planejamento Sucessório com doação de bens com reserva de usufruto e testamentos",
     ],
     whatsAppText:
-      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de orientações sobre Inventário / Direito de Família.",
+      "Olá, Dr. Antônio Cesar! Gostaria de orientações sobre Inventário de Bens ou Direito de Família.",
   },
   {
     id: "direito-consumidor-bancario",
     title: "Direito do Consumidor & Defesa Bancária",
-    category: "Juros Abusivos · Fraudes Bancárias · Empréstimos Consignados Indevidos · Negativação Injusta",
+    category: "Fraudes Bancárias · Empréstimos Consignados Não Solicitados · Juros Abusivos · Negativação Indevida",
     icon: Landmark,
-    tag: "Limpeza de Nome · Cancelamento de Dívidas Fraudentas · Indenização",
+    tag: "Limpeza de Nome · Devolução em Dobro · Cancelamento de Dívidas",
     summary:
-      "Combate a abusos cometidos por instituições financeiras, concessionárias e fornecedores, com cancelamento de cobranças indevidas e reparação financeira.",
+      "Combate implacável a abusos de bancos, instituições financeiras e concessionárias, com cancelamento de cobranças indevidas, exclusão de restrições de crédito e reparação financeira.",
     details:
-      "Golpes eletrônicos, contratações de empréstimos consignados fraudulentos em contas de aposentados e inclusões indevidas no SPC e Serasa são frequentes. Nossa equipe ingressa com ações rápidas solicitando a suspensão dos descontos, exclusão do nome dos cadastros de restrição ao crédito e reparação em dinheiro pelos danos sofridos.",
+      "Aposentados, pensionistas e consumidores em geral frequentemente sofrem com descontos não autorizados de empréstimos em suas contas, fraudes via Pix e negativações injustas nos órgãos de proteção ao crédito. Ingressamos com medidas judiciais liminares imediatas para suspender os descontos, limpar o CPF e exigir a devolução dos valores com indenização por danos morais.",
     topics: [
-      "Cancelamento de empréstimos consignados não autorizados e devolução em dobro dos valores descontados",
-      "Ações contra golpes do Pix, boletos falsos e clonagem de dados bancários",
-      "Retirada de negativação indevida nos órgãos de proteção ao crédito (SPC, Serasa e Boa Vista)",
-      "Indenização por danos morais decorrentes de cobrança vexatória ou negativação injusta",
-      "Ações revisionais de cláusulas e juros abusivos em contratos bancários e de financiamento veicular",
-      "Reparação por falhas na prestação de serviços de telefonia, energia elétrica, internet e companhias aéreas",
+      "Cancelamento de empréstimos consignados fraudulentos e repetição em dobro dos valores descontados",
+      "Ações judiciais de ressarcimento contra fraudes eletrônicas, golpes do Pix e falhas de segurança bancária",
+      "Exclusão imediata de negativações indevidas nos sistemas do SPC, Serasa e órgãos de proteção ao crédito",
+      "Indenizações por danos morais em razão de cobranças abusivas, humilhantes ou restrições de crédito infundadas",
+      "Revisão de juros abusivos e tarifas ilegais em contratos de financiamento e mútuo bancário",
+      "Reparação civil por corte indevido ou falha grave na prestação de serviços essenciais de telefonia e energia",
     ],
     whatsAppText:
-      "Olá, equipe Ferreira e Bolleli Advogados! Preciso de ajuda contra uma cobrança indevida / golpe bancário / negativação.",
+      "Olá, Dr. Antônio Cesar! Preciso de ajuda contra uma cobrança indevida, fraude bancária ou negativação.",
   },
   {
-    id: "assessoria-empresarial-rural",
-    title: "Assessoria Jurídica Estratégica & Agronegócio",
-    category: "Contratos Agrários · Arrendamentos · Prevenção de Passivos · Consultoria Contratual · Cobrança",
+    id: "advocacia-processual-estrategica",
+    title: "Advocacia Processual & Contencioso Estratégico",
+    category: "Acompanhamento Processual · Recursos nos Tribunais · Sustentações Orais · Audiências · Execuções",
     icon: Gavel,
-    tag: "Visão Empresarial · Apoio ao Produtor · Resolução Ágil de Conflitos",
+    tag: "Domínio Processual · Acompanhamento Diligente · Foco em Resultados",
     summary:
-      "Suporte preventivo e contencioso sob medida para comerciantes, prestadores de serviços, produtores rurais e empresas que demandam segurança jurídica contínua.",
+      "Representação processual completa e dedicada perante as varas judiciais de Matozinhos, comarcas da Grande BH, Tribunal de Justiça de Minas Gerais (TJMG) e tribunais superiores.",
     details:
-      "Operar no comércio ou no campo requer assessoria qualificada para mitigar riscos trabalhistas, validar negócios com garantia real e executar títulos inadimplidos sem morosidade. Ferreira e Bolleli Advogados presta suporte estratégico focado em viabilizar negócios seguros e proteger o caixa da sua atividade.",
+      "O sucesso de uma demanda judicial depende da técnica processual, do cumprimento rigoroso de prazos e do preparo aprofundado para audiências e recursos. Com anos de dedicação à advocacia contenciosa, o Dr. Antônio Cesar conduz cada processo com dedicação artesanal, informando o cliente de maneira transparente a cada andamento dos autos.",
     topics: [
-      "Elaboração e revisão de contratos de arrendamento rural, parceria agrícola e compra e venda de safras",
-      "Assessoria preventiva trabalhista para redução de passivos e adequação de rotinas operacionais",
-      "Recuperação de créditos inadimplidos, negociação extrajudicial e execuções judiciais de dívidas",
-      "Defesa técnica em autuações administrativas e fiscais de órgãos de fiscalização",
-      "Estruturação societária, acordos de sócios e proteção patrimonial de empresas familiares",
-      "Representação combativa em audiências de conciliação, mediação e julgamentos no Vale do Mucuri",
+      "Atuação processual diligente em varas cíveis, trabalhistas, de família e juizados especiais cíveis e federais",
+      "Interposição e sustentação de recursos perante o Tribunal de Justiça de Minas Gerais (TJMG) e TRT da 3ª Região",
+      "Atuação perante os Tribunais Superiores em Brasília (STJ e STF) em matérias constitucionais e infraconstitucionais",
+      "Realização de audiências de instrução e julgamento com preparação prévia de depoimentos e testemunhas",
+      "Fase de cumprimento de sentença e execução de valores com busca patrimonial avançada de devedores",
+      "Atendimento presencial no Centro de Matozinhos e consultoria online para clientes em todo o território nacional",
     ],
     whatsAppText:
-      "Olá, equipe Ferreira e Bolleli Advogados! Gostaria de conversar sobre assessoria jurídica para minha empresa / atividade rural.",
+      "Olá, Dr. Antônio Cesar! Gostaria de consultar sobre o andamento ou ingresso de uma ação judicial.",
   },
 ];
 
@@ -308,49 +302,112 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Wallace Gustavo",
-    badge: "7 avaliações · 9 fotos · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 4 anos atrás",
+    name: "Nathalia Karoline",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 4 meses atrás",
     highlight:
-      "Muito receptivos e pacientes, me auxiliaram em um processo trabalhista a uns anos, explicaram todas as minhas dúvidas processuais na época o que me deu confiança para continuar e ganhar tal processo.",
+      "Fui muito bem atendida. O advogado foi atencioso, esclareceu minhas dúvidas com paciência e demonstrou profissionalismo durante o atendimento. Recomendo.",
     content:
-      "Muito receptivos e pacientes, me auxiliar em um processo trabalhista a uns anos, explico todas as minhas dúvidas processuais na época o que me deu confiança para continuar e ganhar tal processo tempos depois. Meus eternos agradecimentos a todos os doutores da equipe.",
+      "Fui muito bem atendida. O advogado foi atencioso, esclareceu minhas dúvidas com paciência e demonstrou profissionalismo durante o atendimento. Recomendo.",
   },
   {
-    name: "Gustavo Ferreira",
-    badge: "Local Guide · 10 avaliações · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 4 anos atrás",
-    highlight:
-      "Resolutividade, competência e um atendimento incrível. Gratidão 🤍",
-    content:
-      "Resolutividade, competência e um atendimento incrível. Gratidão 🤍",
-  },
-  {
-    name: "Felipe Natan",
-    badge: "Local Guide · 12 avaliações · 83 fotos · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 4 anos atrás",
-    highlight:
-      "Tem um ótimo atendimento, altamente capacitados, grande ética profissional e são objetivos.",
-    content:
-      "Tem um ótimo atendimento, altamente capacitados, grande ética profissional e são objetivos.",
-  },
-  {
-    name: "Anna Christina",
-    badge: "4 avaliações · 7 fotos · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 2 anos atrás",
-    highlight:
-      "Até o momento estamos satisfeitos com toda disponibilidade e atendimento dos senhores. O nosso processo continua em andamento e esperamos ter sucesso neste caso.",
-    content:
-      "Até o momento estamos satisfeitos com toda disponibilidade e atendimento doa senhores. O nosso processo continua em andamento e esperamos ter sucesso neste caso.",
-  },
-  {
-    name: "Eliene Alves",
+    name: "Hitalo Santos",
     badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 2 anos atrás",
+    date: "Avaliação Verificada no Google · 8 meses atrás",
     highlight:
-      "Muito eficiente, prestativo e educado.",
+      "Vim com o intuito de tirar algumas dúvidas trabalhistas e fui muito bem atendido pelo Dr. Antônio. Excelente!!!",
     content:
-      "Muito enficiente, prestativo e educado.",
+      "Vim com o intuito de tirar algumas dúvidas trabalhistas e fui muito bem atendido pelo Dr. Antônio. Excelente!!!",
+  },
+  {
+    name: "Bj do Concórdia",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 7 meses atrás",
+    highlight:
+      "O doutor é bem educado, me ajudou muito, precisamos de mais cidadãos assim no nosso brasil!!!",
+    content:
+      "O doutor é bem educado, me ajudou muito, precisamos de mais cidadãos assim no nosso brasil!!!",
+  },
+  {
+    name: "warley rodrigues",
+    badge: "2 avaliações · 1 foto · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 7 meses atrás",
+    highlight:
+      "Atendimento claro e eficiente, passa segurança nas orientações, recomendo.",
+    content:
+      "Atendimento claro e eficiente, passa segurança nas orientações, recomendo.",
+  },
+  {
+    name: "Alvaro Antonio Fernandes",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 3 meses atrás",
+    highlight:
+      "Excelente atendimento. Ótimo nota 10 Advogado muito atencioso.",
+    content:
+      "Excelente atendimento. Ótimo nota 10 Advogado muito atencioso.",
+  },
+  {
+    name: "Jhonn Ericky",
+    badge: "2 avaliações · 3 fotos · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 7 meses atrás",
+    highlight:
+      "Excelente profissional, e atribui muito em auxiliar seus clientes ...",
+    content:
+      "Excelente profissional, e atribui muito em auxiliar seus clientes ...",
+  },
+  {
+    name: "Vital Veira",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · Recente",
+    highlight:
+      "Gostei, advogado atencioso e competente.",
+    content:
+      "Gostei, advogado atencioso e competente.",
+  },
+  {
+    name: "José Maria",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 6 meses atrás",
+    highlight:
+      "Meu Advogado há muitos anos.",
+    content:
+      "Meu Advogado há muitos anos.",
+  },
+  {
+    name: "Laricia Soares",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 1 mês atrás",
+    highlight:
+      "É muito paciente, educado, compreensivo.",
+    content:
+      "É muito paciente educado compreensivo.",
+  },
+  {
+    name: "Cesar Elias",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 7 meses atrás",
+    highlight:
+      "Conheço há muito tempo. Advogado competente.",
+    content:
+      "Conheço ha muito tempo. Advogado competente.",
+  },
+  {
+    name: "Vanderley99",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 6 meses atrás",
+    highlight:
+      "Ótimo advogado. Já resolveu causas minhas.",
+    content:
+      "Ótimo advogado. Já resolveu causas minhas.",
+  },
+  {
+    name: "Natália Oliveira",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 3 meses atrás",
+    highlight:
+      "Ótimo atendimento, excelente profissional.",
+    content:
+      "Ótimo atendimento, excelente profissional.",
   },
 ];
 
@@ -361,34 +418,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "Como funciona a consulta jurídica inicial com a Ferreira e Bolleli Advogados?",
+    question: "Como funciona a consulta jurídica com o Dr. Antônio Cesar?",
     answer:
-      "O primeiro contato pode ser feito diretamente pelo WhatsApp ou presencialmente em nossa sede no Centro de Nanuque (Rua São Lourenço, 410, Sala 03). Nossa equipe realiza uma triagem atenta do seu caso, compreende os fatos relatados, confere os documentos disponíveis e orienta com total transparência se há viabilidade jurídica para ingresso judicial ou acordo extrajudicial.",
+      "O atendimento pode ser realizado de forma presencial no escritório no Centro de Matozinhos (Av. Bento Gonçalves, 40 - Sala C) ou totalmente online via WhatsApp e videoconferência para qualquer localidade do país. Na conversa inicial, ouvimos atentamente seu relato, analisamos a documentação comprobatória e explicamos com didática e transparência se existe fundamento jurídico para um acordo ou ingresso com ação judicial.",
   },
   {
-    question: "Tive problemas no trabalho ou fui demitido sem receber meus direitos. O que devo fazer?",
+    question: "Tive problemas no trabalho ou rescisão incorreta. O que devo provar?",
     answer:
-      "É fundamental agir rápido e guardar todos os comprovantes: extratos bancários, conversas de WhatsApp, contracheques, fotos e contatos de testemunhas. A lei trabalhista estabelece o prazo de até 2 anos após o término do vínculo de emprego para ingressar com a ação. Conforme comprovado por clientes reais como Wallace Gustavo em nossas avaliações, explicamos cada etapa processual com calma e montamos a estratégia para buscar a vitória na causa.",
+      "Recomendamos guardar todos os registros: contracheques, mensagens de WhatsApp, extrato analítico do FGTS, relatórios de ponto, fotos e nomes de testemunhas. A legislação trabalhista prevê o prazo prescricional de até 2 anos após a extinção do contrato para pleitear direitos dos últimos 5 anos. Conforme relatam nossos clientes em avaliações reais, o Dr. Antônio Cesar analisa minuciosamente cada cálculo para buscar tudo o que é devido por lei.",
   },
   {
-    question: "O INSS negou ou cancelou minha aposentadoria/auxílio. Ainda posso reverter na Justiça?",
+    question: "O INSS negou minha aposentadoria ou auxílio-doença. Ainda posso conseguir?",
     answer:
-      "Com certeza! As negativas administrativas do INSS são recorrentes por equívocos na conferência de vínculos ou perícias superficiais. Ter o pedido negado na agência não encerra o seu direito. Ingressamos com a competente ação perante a Justiça Federal, onde um perito judicial neutro avaliará sua condição e o juiz poderá determinar o pagamento retroativo de todos os valores atrasados acumulados desde a data da entrada.",
+      "Certamente. As decisões administrativas do INSS frequentemente desconsideram períodos trabalhados ou laudos médicos contundentes. Ter a solicitação negada na agência não tira o seu direito. Ingressamos com a ação adequada na Justiça Federal, onde a perícia é realizada por um perito médico judicial neutro, pleiteando inclusive o pagamento retroativo de todos os valores atrasados desde o primeiro pedido.",
   },
   {
-    question: "Como funciona o inventário de bens da família e quanto tempo leva?",
+    question: "Qual o procedimento para fazer um inventário de herança em Matozinhos?",
     answer:
-      "Quando há consenso entre todos os herdeiros e não há menores de idade, o inventário pode ser realizado de forma extrajudicial diretamente no Cartório de Notas de Nanuque, concluindo-se em semanas ou poucos meses com custos reduzidos. Havendo divergência ou herdeiro incapaz, ingressamos com o inventário judicial, zelando pela correta avaliação dos bens e partilha justa.",
+      "Quando todos os herdeiros são maiores, capazes e estão de acordo com a partilha dos bens, o inventário pode ser realizado diretamente em cartório de notas (extrajudicial), sendo finalizado em curto prazo e com custos cartorários menores. Havendo discordância ou herdeiro menor, cuidamos de todo o processo judicial de inventário e partilha resguardando os direitos patrimoniais da família.",
   },
   {
-    question: "Quais são os horários de funcionamento do escritório em Nanuque?",
+    question: "Como agendar um horário presencial na sede em Matozinhos / MG?",
     answer:
-      "Nosso escritório em Nanuque funciona de segunda a sexta-feira, das 08:00 às 11:30 e das 13:30 às 18:00. Pelo WhatsApp oficial (33) 98715-6234, nosso canal de triagem permanece aberto para agendamentos rápidos e envio de mensagens a qualquer momento.",
+      "O agendamento pode ser feito previamente pelo WhatsApp oficial (31) 99699-0842 para garantir que o Dr. Antônio Cesar reserve um horário exclusivo para você. Nosso escritório está localizado na Av. Bento Gonçalves, 40 - Sala C - Centro, Matozinhos - MG (CEP 35720-000), em localização de fácil acesso no centro comercial da cidade.",
   },
   {
-    question: "Qual o endereço da sede em Nanuque e como posso agendar um horário presencial?",
+    question: "Quais são os horários de atendimento da Advocacia Antônio Cesar?",
     answer:
-      "Nossa sede está localizada na Rua São Lourenço, 410 - Sala 03 - Centro, Nanuque - MG, 39860-000, próximo aos principais pontos comerciais e órgãos públicos da cidade. Você pode nos fazer uma visita ou agendar seu horário com antecedência pelo WhatsApp para garantir atendimento com hora marcada.",
+      "O escritório funciona de segunda a sexta-feira, das 08:00 às 18:00. Pelo canal oficial do WhatsApp (31) 99699-0842, você pode enviar sua mensagem e agendar seu atendimento a qualquer hora.",
   },
 ];
 
@@ -412,7 +469,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-          dark ? "text-white" : "text-[#071126]"
+          dark ? "text-white" : "text-[#061120]"
         }`}
       >
         {children}
@@ -448,19 +505,19 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen bg-[#fbfbf9] text-[#071126] selection:bg-[#e5b448] selection:text-[#040914]">
+      <main className="min-h-screen bg-[#fbfbf9] text-[#061120] selection:bg-[#d8a84e] selection:text-[#030a14]">
         {/* ======================================================== */}
         {/* TOP ANNOUNCEMENT BAR (ROYAL MIDNIGHT WITH GOLD ACCENT)   */}
         {/* ======================================================== */}
-        <div className="border-b border-[#102859] bg-[#071126] py-2 text-xs text-slate-300">
+        <div className="border-b border-[#0c203d] bg-[#061120] py-2 text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#fad771] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#e5b448]" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#d8a84e]" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                FERREIRA & BOLLELI ADVOGADOS · Nanuque - MG · Advocacia Especializada ⚖️
+                ADVOCACIA ANTÔNIO CESAR · Matozinhos - MG · Atendimento Presencial & Online ⚖️
               </span>
             </div>
 
@@ -471,12 +528,12 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
-                <Star size={12} className="fill-[#e5b448] text-[#e5b448]" />
-                <span className="font-bold text-white">4,9 ★</span> (12 avaliações no Google)
+                <Star size={12} className="fill-[#d8a84e] text-[#d8a84e]" />
+                <span className="font-bold text-white">5,0 ★</span> (252 avaliações no Google)
               </a>
               <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de uma consulta jurídica.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 font-semibold text-slate-200 transition-colors hover:text-white sm:inline-flex"
@@ -499,16 +556,16 @@ export default function Home() {
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-            {/* Left: Brand Logo */}
+            {/* Left: Brand Logo with Official AC Monogram */}
             <a
               href="#"
               className="group flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95"
-              aria-label="Ferreira e Bolleli Advogados - Início"
+              aria-label="Advocacia Antônio Cesar - Início"
             >
               <div className="relative shrink-0">
                 <Image
                   src={LOGO_EMBLEM_SRC}
-                  alt="Emblema FB - Ferreira e Bolleli Advogados"
+                  alt="Monograma AC - Advocacia Antônio Cesar"
                   width={140}
                   height={110}
                   className="h-11 sm:h-12 md:h-13 w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
@@ -517,16 +574,16 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col justify-center">
-                <span className="font-cinzel text-sm sm:text-base md:text-[1.12rem] font-bold tracking-[0.08em] text-[#071126] uppercase leading-none drop-shadow-xs transition-colors group-hover:text-[#946b23]">
-                  FERREIRA & BOLLELI
+                <span className="font-cinzel text-sm sm:text-base md:text-[1.15rem] font-bold tracking-[0.08em] text-[#061120] uppercase leading-none drop-shadow-xs transition-colors group-hover:text-[#966c26]">
+                  ANTÔNIO CESAR
                 </span>
-                <span className="font-cinzel text-[10px] sm:text-[11px] font-semibold tracking-[0.16em] text-[#946b23] uppercase leading-tight mt-0.5">
-                  ADVOGADOS ASSOCIADOS
+                <span className="font-cinzel text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] text-[#966c26] uppercase leading-tight mt-0.5">
+                  ADVOCACIA
                 </span>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="h-px w-4 sm:w-5 bg-gradient-to-r from-[#e5b448] to-transparent" />
-                  <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.18em] text-slate-500 uppercase leading-none">
-                    Nanuque - MG · Avaliação 4,9 ★
+                  <span className="h-px w-4 sm:w-5 bg-gradient-to-r from-[#d8a84e] to-transparent" />
+                  <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.16em] text-slate-500 uppercase leading-none">
+                    Matozinhos - MG · Nota 5,0 ★ (252 reviews)
                   </span>
                 </div>
               </div>
@@ -538,13 +595,13 @@ export default function Home() {
                 Áreas de Atuação
               </a>
               <a href="#sobre" className="nav-link text-[11px] whitespace-nowrap">
-                Sobre o Escritório
+                Sobre o Advogado
               </a>
               <a href="#diferenciais" className="nav-link text-[11px] whitespace-nowrap">
                 Diferenciais
               </a>
               <a href="#depoimentos" className="nav-link text-[11px] whitespace-nowrap">
-                Avaliações (4,9 ★)
+                Avaliações (5,0 ★)
               </a>
               <a href="#duvidas" className="nav-link text-[11px] whitespace-nowrap">
                 Dúvidas
@@ -557,13 +614,13 @@ export default function Home() {
             {/* Right Action: WhatsApp CTA */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá! Gostaria de consultar um advogado da Ferreira e Bolleli Advogados.")}
+                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre a viabilidade do meu caso.")}
                 target="_blank"
                 variant="gold"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#040914]" />
+                <WhatsAppIcon size={14} className="text-[#030a14]" />
                 <span className="hidden 2xl:inline">Atendimento WhatsApp</span>
                 <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
@@ -572,7 +629,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#e5b448] hover:text-black xl:hidden cursor-pointer"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#d8a84e] hover:text-black xl:hidden cursor-pointer"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -593,82 +650,82 @@ export default function Home() {
                   <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
                     <Image
                       src={LOGO_EMBLEM_SRC}
-                      alt="Emblema FB"
+                      alt="Monograma AC"
                       width={100}
                       height={80}
                       className="h-11 w-auto object-contain"
                     />
                     <div className="flex flex-col">
                       <span className="font-cinzel text-base font-bold tracking-wider text-slate-900 uppercase leading-tight">
-                        Ferreira & Bolleli
+                        Antônio Cesar
                       </span>
-                      <span className="font-cinzel text-[10px] font-semibold tracking-[0.14em] text-[#946b23] uppercase leading-tight mt-0.5">
-                        Advogados Associados
+                      <span className="font-cinzel text-[10px] font-semibold tracking-[0.16em] text-[#966c26] uppercase leading-tight mt-0.5">
+                        Advocacia
                       </span>
-                      <span className="text-[9px] font-bold tracking-[0.18em] text-slate-500 uppercase mt-1">
-                        R. São Lourenço, 410 · Centro, Nanuque
+                      <span className="text-[9px] font-bold tracking-[0.16em] text-slate-500 uppercase mt-1">
+                        Av. Bento Gonçalves, 40 · Matozinhos - MG
                       </span>
                     </div>
                   </div>
                   <a
                     href="#servicos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
                   >
                     <span>Áreas de Atuação</span>
-                    <ArrowRight size={14} className="text-[#e5b448]" />
+                    <ArrowRight size={14} className="text-[#d8a84e]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
                   >
-                    <span>Sobre o Escritório & Sócios</span>
-                    <ArrowRight size={14} className="text-[#e5b448]" />
+                    <span>Sobre Dr. Antônio Cesar</span>
+                    <ArrowRight size={14} className="text-[#d8a84e]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
                   >
-                    <span>Diferenciais</span>
-                    <ArrowRight size={14} className="text-[#e5b448]" />
+                    <span>4 Pilares & Diferenciais</span>
+                    <ArrowRight size={14} className="text-[#d8a84e]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
                   >
-                    <span>Avaliações Google (4,9 ★)</span>
-                    <ArrowRight size={14} className="text-[#e5b448]" />
+                    <span>Avaliações Google (5,0 ★ · 252 reviews)</span>
+                    <ArrowRight size={14} className="text-[#d8a84e]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#e5b448]" />
+                    <ArrowRight size={14} className="text-[#d8a84e]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#946b23]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
                   >
                     <span>Sede & Contato</span>
-                    <ArrowRight size={14} className="text-[#e5b448]" />
+                    <ArrowRight size={14} className="text-[#d8a84e]" />
                   </a>
 
                   <div className="pt-4 border-t border-slate-100">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, equipe Ferreira e Bolleli Advogados! Gostaria de consultar sobre a minha causa.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar uma consulta sobre o meu caso.")}
                       target="_blank"
                       variant="gold"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com o Escritório</span>
+                      <span>Falar no WhatsApp com Dr. Antônio Cesar</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -682,7 +739,7 @@ export default function Home() {
         {/* ======================================================== */}
         <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fbfbf9]">
           {/* Subtle Ambient Light Glow Background */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#fad771]/20 via-[#f4f3ee]/60 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#fad771]/20 via-[#f4f3ec]/60 to-transparent blur-3xl" />
           <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#e8e6dc]/70 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -696,20 +753,20 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-5">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#e5b448]/40 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#946b23] shadow-xs">
-                    <span className="size-1.5 rounded-full bg-[#e5b448] animate-pulse" />
-                    FERREIRA & BOLLELI ADVOGADOS · NANUQUE - MG
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#d8a84e]/40 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#966c26] shadow-xs">
+                    <span className="size-1.5 rounded-full bg-[#d8a84e] animate-pulse" />
+                    ADVOCACIA ANTÔNIO CESAR · MATOZINHOS - MG
                   </span>
                 </motion.div>
 
-                {/* H1 Headline */}
+                {/* H1 Headline directly from brand artwork */}
                 <motion.h1
                   variants={reveal}
-                  className="font-serif text-3xl leading-[1.15] font-bold tracking-tight text-[#071126] sm:text-5xl lg:text-[3.25rem]"
+                  className="font-serif text-3xl leading-[1.15] font-bold tracking-tight text-[#061120] sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Advocacia Estratégica, Ética e Resolutiva para Defender Seus{" "}
-                  <span className="bg-gradient-to-r from-[#946b23] via-[#e5b448] to-[#6c4a16] bg-clip-text text-transparent">
-                    Direitos e Seu Patrimônio.
+                  Soluções Jurídicas Eficientes para Proteger o que{" "}
+                  <span className="bg-gradient-to-r from-[#966c26] via-[#d8a84e] to-[#734e15] bg-clip-text text-transparent">
+                    Realmente Importa.
                   </span>
                 </motion.h1>
 
@@ -718,7 +775,7 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg"
                 >
-                  Com avaliação <strong className="text-slate-900 font-bold">4,9 ★ no Google</strong> e sede no Centro de Nanuque, a <strong className="text-slate-900 font-bold">Ferreira e Bolleli Advogados</strong> alia tradição jurídica, dinamismo processual e atendimento humano nas áreas <strong className="text-slate-900 font-bold">Trabalhista, Previdenciária, Cível, Família e Empresarial</strong>.
+                  Com nota máxima de <strong className="text-slate-900 font-bold">5,0 ★ no Google e mais de 250 avaliações</strong>, o <strong className="text-slate-900 font-bold">Dr. Antônio Cesar</strong> oferece representação processual ética, experiente e combativa nas áreas <strong className="text-slate-900 font-bold">Trabalhista, Previdenciária (INSS) e Cível</strong>, com sede no Centro de Matozinhos e atendimento online para todo o Brasil.
                 </motion.p>
 
                 {/* Direct Trust Highlight with Real Client Review */}
@@ -726,9 +783,9 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs"
                 >
-                  <Award size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
+                  <Award size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
                   <p className="text-xs text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900 font-bold">Reconhecimento comprovado no Google (4,9 ★):</strong> &ldquo;Muito receptivos e pacientes, me auxiliaram em um processo trabalhista... me deram confiança para continuar e ganhar tal processo. Meus eternos agradecimentos a todos os doutores da equipe.&rdquo; (Wallace Gustavo)
+                    <strong className="text-slate-900 font-bold">Reconhecimento comprovado no Google (5,0 ★):</strong> &ldquo;Fui muito bem atendida. O advogado foi atencioso, esclareceu minhas dúvidas com paciência e demonstrou profissionalismo durante o atendimento. Recomendo.&rdquo; (Nathalia Karoline · Avaliação no Google)
                   </p>
                 </motion.div>
 
@@ -738,14 +795,14 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá! Gostaria de uma orientação jurídica com a Ferreira e Bolleli Advogados.")}
+                    href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre a viabilidade do meu caso.")}
                     target="_blank"
                     variant="gold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Falar no WhatsApp com o Escritório</span>
+                    <span>Falar no WhatsApp com o Dr. Antônio Cesar</span>
                   </GlowingButton>
 
                   <GlowingButton
@@ -754,13 +811,13 @@ export default function Home() {
                     size="lg"
                     className="w-full sm:w-auto"
                   >
-                    <span>Conhecer Áreas de Atuação</span>
+                    <span>Conhecer Especialidades</span>
                     <ArrowRight size={15} />
                   </GlowingButton>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Visual Frame (Equipe Foto) */}
+              {/* Right Column: Hero Visual Frame (Dr. Antônio Cesar Photo) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -770,16 +827,16 @@ export default function Home() {
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Decorative Frame */}
                   <div className="relative overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
-                    <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
+                    <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-100">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Corpo Jurídico Ferreira e Bolleli Advogados em Nanuque - MG"
+                        alt="Dr. Antônio Cesar - Advogado Especialista em Matozinhos - MG"
                         fill
                         sizes="(max-width: 768px) 100vw, 550px"
-                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                        className="object-cover object-top transition-transform duration-700 hover:scale-105"
                         priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#040914]/70 via-transparent to-transparent opacity-70" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#030a14]/75 via-transparent to-transparent opacity-80" />
                     </div>
 
                     {/* Overlay Label */}
@@ -787,20 +844,20 @@ export default function Home() {
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="font-serif text-sm font-bold text-slate-900">
-                            Ferreira & Bolleli Advogados
+                            Dr. Antônio Cesar
                           </p>
                           <p className="text-[11px] text-slate-600">
-                            Advocacia Especializada · Centro, Nanuque - MG
+                            Advogado Processual · Matozinhos - MG
                           </p>
                         </div>
-                        <span className="rounded-md border border-[#e5b448]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#946b23]">
-                          Sede Própria
+                        <span className="rounded-md border border-[#d8a84e]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#966c26]">
+                          OAB/MG
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Floating Stat Badge 1 (Google 4.9 Rating) */}
+                  {/* Floating Stat Badge 1 (Google 5.0 Rating - 252 reviews) */}
                   <div className="absolute -top-5 -left-5 hidden rounded-xl border border-slate-200 bg-white/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
                     <div className="flex size-10 items-center justify-center rounded-lg bg-slate-50 border border-slate-200">
                       <GoogleIcon size={20} />
@@ -811,21 +868,21 @@ export default function Home() {
                           <Star
                             key={i}
                             size={12}
-                            className="fill-[#e5b448] text-[#e5b448]"
+                            className="fill-[#d8a84e] text-[#d8a84e]"
                           />
                         ))}
                       </div>
                       <p className="text-[11px] font-bold text-slate-900 mt-0.5">
-                        4,9 no Google · 12 Avaliações
+                        5,0 no Google · 252 Avaliações
                       </p>
                     </div>
                   </div>
 
                   {/* Floating Stat Badge 2 (Especialidade) */}
                   <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-slate-200 bg-white/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
-                    <Scale size={16} className="text-[#946b23]" />
+                    <Scale size={16} className="text-[#966c26]" />
                     <span className="text-xs font-bold tracking-wide text-slate-900">
-                      Nanuque e Vale do Mucuri ⚖️
+                      Trabalhista, Civil & INSS ⚖️
                     </span>
                   </div>
                 </div>
@@ -836,35 +893,35 @@ export default function Home() {
             <div className="mt-14 border-t border-slate-200/80 pt-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#071126]">
-                    4,9 ★
+                  <span className="font-serif text-2xl font-bold text-[#061120]">
+                    5,0 ★
                   </span>
                   <p className="text-xs font-semibold text-slate-900 mt-1">Google Meu Negócio</p>
-                  <p className="text-[11px] text-slate-500">12 avaliações no Google</p>
+                  <p className="text-[11px] text-slate-500">252 avaliações verificadas</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#071126]">
-                    Nanuque - MG
+                  <span className="font-serif text-2xl font-bold text-[#061120]">
+                    Matozinhos - MG
                   </span>
                   <p className="text-xs font-semibold text-slate-900 mt-1">Sede Centralizada</p>
-                  <p className="text-[11px] text-slate-500">R. São Lourenço, 410, Sala 03</p>
+                  <p className="text-[11px] text-slate-500">Av. Bento Gonçalves, 40 - Sl C</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#071126]">
-                    Multidisciplinar
+                  <span className="font-serif text-2xl font-bold text-[#061120]">
+                    Especializado
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Soluções Completas</p>
-                  <p className="text-[11px] text-slate-500">Trabalhista, Previdenciário e Cível</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Trabalhista, Civil & INSS</p>
+                  <p className="text-[11px] text-slate-500">Atuação processual aprofundada</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#071126]">
+                  <span className="font-serif text-2xl font-bold text-[#061120]">
                     Combatividade ⚖️
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Atendimento Próximo</p>
-                  <p className="text-[11px] text-slate-500">Presencial e digital para todo Brasil</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Presencial & Online</p>
+                  <p className="text-[11px] text-slate-500">Para Matozinhos e todo o Brasil</p>
                 </div>
               </div>
             </div>
@@ -874,19 +931,19 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 2: PILARES & ÁREAS DE ATUAÇÃO — [MODO ESCURO]      */}
         {/* ======================================================== */}
-        <section id="servicos" className="border-t border-[#e5b448]/30 bg-[#071126] text-white py-20 lg:py-28">
+        <section id="servicos" className="border-t border-[#d8a84e]/30 bg-[#061120] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="Áreas de Atuação & Soluções Jurídicas"
                 dark={true}
-                description="Expertise sólida e combatividade processual para assegurar seus direitos perante tribunais, órgãos previdenciários e na celebração de acordos."
+                description="Expertise técnica sólida e combatividade processual para resguardar seus direitos em Matozinhos, tribunais de Minas Gerais e órgãos públicos."
               >
                 Pilares de Excelência Jurídica
               </Heading>
 
               <GlowingButton
-                href={getWhatsAppUrl("Olá! Gostaria de consultar sobre a viabilidade da minha causa.")}
+                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre a viabilidade da minha causa.")}
                 target="_blank"
                 variant="gold"
                 size="md"
@@ -903,15 +960,15 @@ export default function Home() {
                 return (
                   <div
                     key={area.id}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448] hover:shadow-xl hover:shadow-[#e5b448]/15"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e] hover:shadow-xl hover:shadow-[#d8a84e]/15"
                   >
                     <div>
                       {/* Icon & Category */}
                       <div className="flex items-center justify-between">
-                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#102859] text-[#e5b448] border border-[#e5b448]/40 transition-colors group-hover:bg-[#e5b448] group-hover:text-[#040914]">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#10294d] text-[#d8a84e] border border-[#d8a84e]/40 transition-colors group-hover:bg-[#d8a84e] group-hover:text-[#030a14]">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full bg-[#102859] px-3 py-1 text-[10px] font-bold text-[#e5b448] uppercase tracking-wider border border-[#e5b448]/30">
+                        <span className="rounded-full bg-[#10294d] px-3 py-1 text-[10px] font-bold text-[#d8a84e] uppercase tracking-wider border border-[#d8a84e]/30">
                           Especialidade
                         </span>
                       </div>
@@ -920,7 +977,7 @@ export default function Home() {
                         {area.title}
                       </h3>
 
-                      <p className="mt-2 text-xs font-semibold text-[#e5b448]">
+                      <p className="mt-2 text-xs font-semibold text-[#d8a84e]">
                         {area.tag}
                       </p>
 
@@ -929,11 +986,11 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div className="mt-6 border-t border-[#e5b448]/25 pt-4">
+                    <div className="mt-6 border-t border-[#d8a84e]/25 pt-4">
                       <button
                         type="button"
                         onClick={() => setSelectedPractice(area)}
-                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#e5b448] transition-colors hover:text-white cursor-pointer"
+                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#d8a84e] transition-colors hover:text-white cursor-pointer"
                       >
                         <span>Ver Procedimentos & Detalhes</span>
                         <ArrowUpRight size={15} />
@@ -947,44 +1004,44 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 3: SOBRE O ESCRITÓRIO & CORPO JURÍDICO — [MODO CLARO] */}
+        {/* DOBRA 3: SOBRE O ADVOGADO & ESCRITÓRIO — [MODO CLARO]    */}
         {/* ======================================================== */}
-        <section id="sobre" className="relative border-t border-slate-200 bg-[#f4f3ee] py-20 lg:py-28 text-[#071126]">
+        <section id="sobre" className="relative border-t border-slate-200 bg-[#f4f3ec] py-20 lg:py-28 text-[#061120]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Column: Equipe Frame */}
+              {/* Left Column: Visual Composition with Photo & Desk Detail */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-md lg:max-w-none">
-                  {/* Frame */}
+                  {/* Main Portrait Frame */}
                   <div className="relative overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
-                    <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
+                    <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-100">
                       <Image
-                        src={FOTO_HERO_SRC}
-                        alt="Ferreira e Bolleli Advogados em Nanuque"
+                        src="/dr-antonio-cesar-portrait.jpg"
+                        alt="Dr. Antônio Cesar - Advogado em Matozinhos"
                         fill
                         sizes="(max-width: 768px) 100vw, 500px"
-                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                        className="object-cover object-top transition-transform duration-700 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#040914]/70 via-transparent to-transparent opacity-70" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#030a14]/75 via-transparent to-transparent opacity-75" />
 
                       {/* Overlay Badge at Bottom of Photo */}
                       <div className="absolute right-4 bottom-4 left-4 rounded-xl border border-slate-200 bg-white/95 p-4 shadow-xl backdrop-blur-md">
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-serif text-sm font-bold text-slate-900">
-                              Ferreira & Bolleli Advogados
+                              Advocacia Antônio Cesar
                             </p>
                             <p className="text-[11px] text-slate-600 mt-0.5">
-                              Sociedade de Advogados · Nanuque - MG
+                              Av. Bento Gonçalves, 40 · Matozinhos - MG
                             </p>
                           </div>
-                          <span className="rounded-md border border-[#e5b448]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#946b23]">
-                            Desde Nanuque
+                          <span className="rounded-md border border-[#d8a84e]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#966c26]">
+                            Centro
                           </span>
                         </div>
                         <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-600">
-                          <span>Ética · Capacidade Técnica · Objetividade</span>
-                          <span className="text-[#1ea952] font-semibold">Avaliação 4,9 ★</span>
+                          <span>Atendimento Presencial e Online</span>
+                          <span className="text-[#1ea952] font-semibold">Nota 5,0 ★ (252 avaliações)</span>
                         </div>
                       </div>
                     </div>
@@ -992,9 +1049,9 @@ export default function Home() {
 
                   {/* Floating Trust Pill */}
                   <div className="absolute -top-4 -right-4 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3.5 py-2 shadow-xl">
-                    <Star size={13} className="fill-[#e5b448] text-[#e5b448]" />
+                    <Star size={13} className="fill-[#d8a84e] text-[#d8a84e]" />
                     <span className="text-[11px] font-bold text-slate-900">
-                      4,9 no Google · 12 Avaliações
+                      5,0 no Google · 252 Avaliações
                     </span>
                   </div>
                 </div>
@@ -1003,71 +1060,71 @@ export default function Home() {
               {/* Right Content */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre o Escritório & Equipe"
+                  eyebrow="Sobre o Advogado & Escritório"
                   dark={false}
-                  description="Uma trajetória de dedicação jurídica, unindo tradição, rigor técnico e proximidade no atendimento a trabalhadores, aposentados e famílias."
+                  description="Uma trajetória alicerçada na seriedade, no estudo aprofundado de cada causa e no acolhimento humano a cada cliente que busca a justiça."
                 >
-                  Ferreira e Bolleli Advogados: Tradição e Excelência em Nanuque
+                  Advocacia Antônio Cesar: Tradição, Ética e Eficiência em Matozinhos
                 </Heading>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
                   <p>
-                    Com sede no Centro de <strong className="text-slate-900 font-bold">Nanuque - MG</strong> (Rua São Lourenço, 410, Sala 03), o escritório <strong className="text-slate-900 font-bold">Ferreira e Bolleli Advogados</strong> consolidou-se como uma referência em assessoria e representação jurídica no Vale do Mucuri e em todo o estado de Minas Gerais.
+                    Com sede no Centro de <strong className="text-slate-900 font-bold">Matozinhos - MG</strong> (Av. Bento Gonçalves, 40, Sala C), a <strong className="text-slate-900 font-bold">Advocacia Antônio Cesar</strong> destaca-se pela excelência processual e pelo tratamento individualizado concedido a cada cidadão e empresa.
                   </p>
                   <p>
-                    Nossa equipe é formada por profissionais com sólida vivência processual que unem a experiência da advocacia clássica à agilidade das ferramentas tecnológicas modernas. Atuamos com destaque nas áreas de <strong className="text-slate-900 font-bold">Direito do Trabalho, Direito Previdenciário (INSS), Cível, Família, Sucessões e Consumidor</strong>.
+                    Liderado pelo <strong className="text-slate-900 font-bold">Dr. Antônio Cesar</strong>, o escritório é amplamente reconhecido pela atuação nas áreas de <strong className="text-slate-900 font-bold">Direito Trabalhista, Direito Previdenciário (INSS) e Direito Civil</strong>, aliando sólida bagagem jurídica ao acompanhamento constante de cada fase do processo.
                   </p>
                   <p>
-                    O compromisso do escritório é oferecer um atendimento baseado na clareza, empatia e resolutividade. Explicamos cada etapa do processo em linguagem simples e acessível, proporcionando a segurança que nossos clientes necessitam para defender seus direitos e alcançar a vitória em suas causas.
+                    O diferencial que consolidou a marca com <strong className="text-slate-900 font-bold">nota máxima de 5,0 estrelas e mais de 250 avaliações no Google</strong> é a postura paciente, transparente e atenciosa. Aqui, o cliente tem suas dúvidas explicadas sem juridiquês e recebe suporte combativo para proteger seus direitos e o seu patrimônio.
                   </p>
                 </div>
 
-                {/* 4 Highlights */}
+                {/* 4 Brand Pillars (From Client Brand Identity) */}
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <HeartHandshake size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
+                    <HeartHandshake size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Receptivos e Pacientes
+                        Atendimento Personalizado
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Ouvimos com atenção cada detalhe e esclarecemos todas as dúvidas com tranquilidade e respeito.
+                        Cada cliente é ouvido com atenção, calma e respeito, entendendo a singularidade de cada história.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <BadgeCheck size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
+                    <Shield size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Alta Capacidade Técnica
+                        Ética e Transparência
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Atuação estratégica com fundamentação jurídica sólida e preparo probatório impecável.
+                        Clareza total sobre os riscos e as reais possibilidades da ação, sem promessas vazias.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <Building2 size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
+                    <BadgeCheck size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Sede Própria em Nanuque
+                        Experiência e Especialização
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Ambiente acolhedor no Centro de Nanuque para receber você e sua família com conforto.
+                        Anos de vivência prática nos tribunais com fundamentação jurídica e preparo probatório refinado.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <Sparkles size={20} className="text-[#e5b448] shrink-0 mt-0.5" />
+                    <Sparkles size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Resolutividade & Ética
+                        Foco em Resultados
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Foco permanente em soluções céleres, transparentes e sem falsas promessas.
+                        Dedicação incansável em cada petição e audiência para alcançar a vitória justa e célere na causa.
                       </p>
                     </div>
                   </div>
@@ -1075,33 +1132,33 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá! Gostaria de falar com os advogados da Ferreira e Bolleli Advogados.")}
+                    href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de conversar sobre o meu caso.")}
                     target="_blank"
                     variant="gold"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Falar com Nossos Advogados</span>
+                    <span>Falar com o Dr. Antônio Cesar</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 transition-colors hover:text-[#946b23]"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 transition-colors hover:text-[#966c26]"
                   >
                     <InstagramIcon size={15} />
                     <span>{INSTAGRAM_HANDLE}</span>
                   </a>
 
                   <a
-                    href={BEACONS_URL}
+                    href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#946b23] transition-colors hover:text-black"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#966c26] transition-colors hover:text-black"
                   >
-                    <ExternalLink size={14} />
-                    <span>Canal Digital de Links</span>
+                    <GoogleIcon size={14} />
+                    <span>Ver Avaliações no Google (5,0 ★)</span>
                   </a>
                 </div>
               </div>
@@ -1110,75 +1167,75 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 4: DIFERENCIAIS — [MODO ESCURO]                    */}
+        {/* DOBRA 4: OS 4 PILARES & DIFERENCIAIS — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="border-t border-[#e5b448]/30 bg-[#040914] text-white py-20 lg:py-28">
+        <section id="diferenciais" className="border-t border-[#d8a84e]/30 bg-[#030a14] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <p className="eyebrow-dark justify-center mb-3">
-                Por que Escolher a Ferreira e Bolleli Advogados
+                Por que Escolher a Advocacia Antônio Cesar
               </p>
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                O Padrão de Confiança com Avaliação 4,9 ★ no Google
+                O Padrão de Excelência Atestado por 252 Clientes
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Princípios praticados no dia a dia por quem já auxiliou centenas de pessoas a conquistarem seus direitos com dignidade.
+                Princípios demonstrados no dia a dia processual e reconhecidos por quem já confiou seus direitos ao Dr. Antônio Cesar.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
+                  <Users size={22} />
+                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold text-white">
+                  Atendimento Personalizado
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                  Escuta paciente e atenta. Suas dúvidas são esclarecidas com calma, sem pressa e com máxima empatia.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
+                  <Shield size={22} />
+                </div>
+                <h3 className="mt-5 font-serif text-lg font-bold text-white">
+                  Ética e Transparência
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                  Compromisso absoluto com a verdade e prestação de contas periódica em cada etapa da sua ação.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
                   <Award size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Resolutividade & Competência
+                  Experiência & Especialização
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Agilidade e capacidade técnica para destrinchar casos difíceis e encontrar o melhor caminho jurídico.
+                  Anos de atuação processual especializada nas áreas Trabalhista, Previdenciária e Civil em Minas Gerais.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
-                  <Heart size={22} />
-                </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Atendimento Humanizado
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Paciência, acolhimento e escuta atenta para orientar sem jargões complicados.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
                   <Scale size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Grande Ética & Objetividade
+                  Foco em Resultados
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Compromisso inegociável com a verdade e clareza total sobre os riscos e possibilidades de cada ação.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#071126] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d224d] text-[#e5b448] border border-[#e5b448]/40">
-                  <Building2 size={22} />
-                </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Presença & Acessibilidade
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Escritório físico no Centro de Nanuque com canal direto pelo WhatsApp para respostas ágeis.
+                  Combatividade estratégica para buscar o melhor resultado financeiro e jurídico para o seu caso.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá! Gostaria de agendar um atendimento personalizado na Ferreira e Bolleli Advogados.")}
+                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar um atendimento personalizado.")}
                 target="_blank"
                 variant="gold"
                 size="md"
@@ -1191,17 +1248,17 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 4,9 ★ — [MODO CLARO] */}
+        {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 5,0 ★ — [MODO CLARO] */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="border-t border-slate-200 bg-[#fbfbf9] py-20 lg:py-28 text-[#071126]">
+        <section id="depoimentos" className="border-t border-slate-200 bg-[#fbfbf9] py-20 lg:py-28 text-[#061120]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <span className="eyebrow mb-3.5">
                   Avaliações Verificadas no Google
                 </span>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#071126] sm:text-4xl">
-                  A Opinião de Quem Confia na Ferreira e Bolleli Advogados
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#061120] sm:text-4xl">
+                  A Confiança de Quem Teve Seus Direitos Defendidos
                 </h2>
                 <div className="mt-3 flex items-center gap-3">
                   <div className="flex items-center gap-1">
@@ -1209,13 +1266,13 @@ export default function Home() {
                       <Star
                         key={i}
                         size={16}
-                        className="fill-[#e5b448] text-[#e5b448]"
+                        className="fill-[#d8a84e] text-[#d8a84e]"
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-bold text-slate-900">4,9 de 5,0</span>
+                  <span className="text-sm font-bold text-slate-900">5,0 de 5,0</span>
                   <span className="text-xs text-slate-500">
-                    · 12 avaliações no Google Meu Negócio em Nanuque - MG
+                    · Mais de 250 avaliações no Google Meu Negócio em Matozinhos - MG
                   </span>
                 </div>
               </div>
@@ -1224,7 +1281,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs transition-colors hover:border-[#e5b448] hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs transition-colors hover:border-[#d8a84e] hover:bg-slate-50"
               >
                 <GoogleIcon size={14} />
                 <span>Ver Perfil e Avaliações no Google</span>
@@ -1237,7 +1294,7 @@ export default function Home() {
               {clientReviews.map((review, idx) => (
                 <div
                   key={idx}
-                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-[#e5b448] hover:shadow-md"
+                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-[#d8a84e] hover:shadow-md"
                 >
                   <div>
                     {/* Stars */}
@@ -1246,7 +1303,7 @@ export default function Home() {
                         <Star
                           key={i}
                           size={13}
-                          className="fill-[#e5b448] text-[#e5b448]"
+                          className="fill-[#d8a84e] text-[#d8a84e]"
                         />
                       ))}
                     </div>
@@ -1266,7 +1323,7 @@ export default function Home() {
                     <p className="font-serif text-xs font-bold text-slate-900">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#946b23] font-semibold">
+                    <p className="text-[10px] text-[#966c26] font-semibold">
                       {review.badge} · {review.date}
                     </p>
                   </div>
@@ -1274,22 +1331,22 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-2xl border border-[#e2e8f0] bg-[#f4f3ee] p-6 text-center sm:p-8">
+            <div className="mt-12 rounded-2xl border border-[#e2e8f0] bg-[#f4f3ec] p-6 text-center sm:p-8">
               <h3 className="font-serif text-lg font-bold text-slate-900 sm:text-xl">
                 Precisa de orientação jurídica segura para o seu caso?
               </h3>
               <p className="mt-2 text-xs text-slate-600 max-w-xl mx-auto">
-                Não enfrente conflitos sozinho ou sem orientação especializada. Conte com a equipe Ferreira e Bolleli Advogados em Nanuque - MG para defender seus direitos.
+                Não enfrente dúvidas ou conflitos jurídicos sozinho. Conte com o Dr. Antônio Cesar para defender seus direitos com total dedicação e competência.
               </p>
               <div className="mt-6 flex justify-center">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá! Li os depoimentos no site e gostaria de agendar uma consulta com a Ferreira e Bolleli Advogados.")}
+                  href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Li os depoimentos no site e gostaria de agendar uma consulta.")}
                   target="_blank"
                   variant="gold"
                   size="md"
                 >
                   <WhatsAppIcon size={15} />
-                  <span>Falar com a Ferreira e Bolleli Advogados no WhatsApp</span>
+                  <span>Falar com o Dr. Antônio Cesar no WhatsApp</span>
                 </GlowingButton>
               </div>
             </div>
@@ -1299,7 +1356,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: COMO FUNCIONA O ATENDIMENTO — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section className="border-t border-[#e5b448]/30 bg-[#071126] text-white py-20 lg:py-24">
+        <section className="border-t border-[#d8a84e]/30 bg-[#061120] text-white py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <span className="eyebrow-dark justify-center mb-3">
@@ -1314,51 +1371,51 @@ export default function Home() {
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <span className="font-serif text-3xl font-bold text-[#e5b448]">
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
                   01
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Primeiro Contato
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Envie sua mensagem pelo WhatsApp ou nos visite na sede em Nanuque para um acolhimento inicial sem compromisso.
+                  Envie sua mensagem pelo WhatsApp ou agende sua visita ao escritório no Centro de Matozinhos para uma triagem inicial.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <span className="font-serif text-3xl font-bold text-[#e5b448]">
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
                   02
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Análise Documental
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Examinamos contratos, rescisões, carteiras de trabalho ou notificações para verificar a viabilidade da demanda.
+                  Examinamos contratos, rescisões, carteiras de trabalho, extratos do CNIS ou notificações para verificar a viabilidade da demanda.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <span className="font-serif text-3xl font-bold text-[#e5b448]">
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
                   03
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Estratégia & Ação
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Construímos a melhor estratégia jurídica, propondo acordo extrajudicial ou ingressando com a ação perante o Judiciário.
+                  Construímos a melhor estratégia jurídica, propondo acordo extrajudicial ou ingressando com a competente ação perante o Judiciário.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#e5b448]/30 bg-[#0d224d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e5b448]">
-                <span className="font-serif text-3xl font-bold text-[#e5b448]">
+              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
+                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
                   04
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Acompanhamento Contínuo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Você recebe atualizações claras sobre o andamento processual até a efetiva conclusão e recebimento dos valores devidos.
+                  Você recebe atualizações claras sobre cada andamento processual até a efetiva conclusão e liberação dos valores devidos.
                 </p>
               </div>
             </div>
@@ -1368,17 +1425,17 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: DÚVIDAS FREQUENTES / FAQ — [MODO CLARO]          */}
         {/* ======================================================== */}
-        <section id="duvidas" className="border-t border-slate-200 bg-[#f4f3ee] py-20 lg:py-28 text-[#071126]">
+        <section id="duvidas" className="border-t border-slate-200 bg-[#f4f3ec] py-20 lg:py-28 text-[#061120]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="eyebrow mb-3.5 justify-center">
                 Esclarecimento de Dúvidas
               </span>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#071126] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#061120] sm:text-4xl">
                 Perguntas Frequentes
               </h2>
               <p className="mt-3 text-sm text-slate-600">
-                Respostas diretas e esclarecedoras sobre consultas, processos trabalhistas, previdenciários e inventários.
+                Respostas diretas e esclarecedoras sobre consultas, causas trabalhistas, previdenciárias e inventários.
               </p>
             </div>
 
@@ -1393,13 +1450,13 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-slate-900 transition-colors hover:text-[#946b23] cursor-pointer"
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-slate-900 transition-colors hover:text-[#966c26] cursor-pointer"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#e5b448]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#d8a84e]" />
                       ) : (
-                        <ChevronDown size={18} className="shrink-0 text-[#e5b448]" />
+                        <ChevronDown size={18} className="shrink-0 text-[#d8a84e]" />
                       )}
                     </button>
 
@@ -1427,13 +1484,13 @@ export default function Home() {
               </p>
               <div className="mt-3">
                 <a
-                  href={getWhatsAppUrl("Olá! Gostaria de tirar uma dúvida que não encontrei no site.")}
+                  href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de tirar uma dúvida que não encontrei no site.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#071126] hover:text-[#946b23] hover:underline"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#061120] hover:text-[#966c26] hover:underline"
                 >
                   <WhatsAppIcon size={14} className="text-[#25D366]" />
-                  <span>Tire sua dúvida diretamente com nossa equipe no WhatsApp</span>
+                  <span>Tire sua dúvida diretamente com o Dr. Antônio Cesar no WhatsApp</span>
                   <ArrowRight size={12} />
                 </a>
               </div>
@@ -1442,39 +1499,39 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 8: LOCALIZAÇÃO, SEDES & CONTATO — [MODO ESCURO]    */}
+        {/* DOBRA 8: LOCALIZAÇÃO, SEDE & CONTATO — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section id="contato" className="border-t border-[#e5b448]/30 bg-[#040914] text-white py-20 lg:py-28">
+        <section id="contato" className="border-t border-[#d8a84e]/30 bg-[#030a14] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Sede info */}
               <div className="lg:col-span-5">
                 <span className="eyebrow-dark mb-3.5">Localização & Atendimento</span>
                 <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Estamos Prontos para Atender Você em Nanuque
+                  Estamos Prontos para Atender Você em Matozinhos
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  Visite nosso escritório no Centro de Nanuque ou receba suporte ágil e confidencial pelo WhatsApp de onde você estiver.
+                  Visite nosso escritório no Centro de Matozinhos ou receba suporte confidencial e ágil pelo WhatsApp de onde você estiver.
                 </p>
 
                 <div className="mt-8 space-y-6">
-                  {/* Sede Nanuque */}
+                  {/* Sede Matozinhos */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
                       <MapPin size={20} />
                     </div>
                     <div>
                       <p className="text-xs font-bold text-white uppercase tracking-wider">
-                        Sede em Nanuque / MG
+                        Sede em Matozinhos / MG
                       </p>
                       <p className="mt-1 text-xs leading-relaxed text-slate-300">
-                        {ADDRESS_NANUQUE}
+                        {ADDRESS_MATOZINHOS}
                       </p>
                       <a
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] text-[#e5b448] font-semibold hover:underline block mt-1"
+                        className="text-[11px] text-[#d8a84e] font-semibold hover:underline block mt-1"
                       >
                         Ver localização e rotas no Google Maps →
                       </a>
@@ -1483,7 +1540,7 @@ export default function Home() {
 
                   {/* Telefone & WhatsApp */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
                       <Phone size={20} />
                     </div>
                     <div>
@@ -1494,19 +1551,34 @@ export default function Home() {
                         Telefone / WhatsApp: <strong className="text-white">{PHONE_DISPLAY}</strong>
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá! Gostaria de agendar um atendimento na Ferreira e Bolleli Advogados.")}
+                        href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar um atendimento.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-bold text-[#e5b448] hover:underline block mt-1"
+                        className="text-[11px] font-bold text-[#d8a84e] hover:underline block mt-1"
                       >
-                        Clique para enviar mensagem direta no WhatsApp
+                        Clique para conversar direto no WhatsApp
                       </a>
+                    </div>
+                  </div>
+
+                  {/* E-mail de Contato */}
+                  <div className="flex items-start gap-4">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
+                      <Mail size={20} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold text-white uppercase tracking-wider">
+                        E-mail de Contato
+                      </p>
+                      <p className="mt-1 text-xs text-slate-300">
+                        Canal direto: <a href={`mailto:${EMAIL_CONTACT}`} className="text-white hover:underline">{EMAIL_CONTACT}</a>
+                      </p>
                     </div>
                   </div>
 
                   {/* Horário */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
                       <Clock size={20} />
                     </div>
                     <div>
@@ -1514,7 +1586,7 @@ export default function Home() {
                         Horário de Atendimento
                       </p>
                       <p className="mt-1 text-xs text-slate-300">
-                        Segunda a Sexta: 08:00 às 11:30 e 13:30 às 18:00
+                        Segunda a Sexta: 08:00 às 18:00
                       </p>
                       <p className="text-[11px] text-[#fad771]">
                         Atendimento ágil pelo WhatsApp para dúvidas urgentes.
@@ -1524,7 +1596,7 @@ export default function Home() {
 
                   {/* Redes Sociais */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#e5b448]/35 bg-[#071126] text-[#e5b448]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
@@ -1541,20 +1613,12 @@ export default function Home() {
                           Instagram Oficial: <span className="font-bold text-white">{INSTAGRAM_HANDLE}</span>
                         </a>
                         <a
-                          href={BEACONS_URL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-slate-300 hover:text-white"
-                        >
-                          Canal Beacons: <span className="font-bold text-white">beacons.ai/ferreiraebolleliadv</span>
-                        </a>
-                        <a
                           href={GOOGLE_SEARCH_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#e5b448] hover:underline"
+                          className="text-[#d8a84e] hover:underline"
                         >
-                          Perfil Google: Ferreira e Bolleli Advogados (4,9 ★)
+                          Perfil Google: Advocacia Antônio Cesar (5,0 ★ · 252 avaliações)
                         </a>
                       </div>
                     </div>
@@ -1564,16 +1628,16 @@ export default function Home() {
 
               {/* Right Column: Interactive Consultation Card */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-[#e5b448]/35 bg-[#071126] p-8 shadow-xl shadow-black/60">
+                <div className="rounded-2xl border border-[#d8a84e]/35 bg-[#061120] p-8 shadow-xl shadow-black/60">
                   <div className="flex items-center gap-3">
                     <span className="flex size-2 rounded-full bg-[#25D366]" />
-                    <span className="text-xs font-bold tracking-wider uppercase text-[#e5b448]">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#d8a84e]">
                       Canal de Atendimento Direto
                     </span>
                   </div>
 
                   <h3 className="mt-4 font-serif text-2xl font-bold text-white sm:text-3xl">
-                    Inicie seu Atendimento com a Ferreira e Bolleli Advogados
+                    Inicie seu Atendimento com a Advocacia Antônio Cesar
                   </h3>
                   <p className="mt-2 text-xs leading-relaxed text-slate-300">
                     Selecione a sua área de interesse para abrir o WhatsApp oficial com a mensagem apropriada:
@@ -1581,76 +1645,76 @@ export default function Home() {
 
                   <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={getWhatsAppUrl("Olá! Preciso de orientação sobre uma causa Trabalhista.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Preciso de orientação sobre uma causa Trabalhista.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
                     >
                       <span>Causa Trabalhista</span>
-                      <ArrowRight size={14} className="text-[#e5b448]" />
+                      <ArrowRight size={14} className="text-[#d8a84e]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá! Gostaria de consultar sobre Aposentadoria ou Benefício do INSS.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre Aposentadoria ou Benefício do INSS.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
                     >
                       <span>Aposentadorias & INSS</span>
-                      <ArrowRight size={14} className="text-[#e5b448]" />
+                      <ArrowRight size={14} className="text-[#d8a84e]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá! Preciso de assessoria em Direito Cível / Contratos / Indenizações.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Preciso de assessoria em Direito Cível / Contratos / Indenizações.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
                     >
                       <span>Cível & Indenizações</span>
-                      <ArrowRight size={14} className="text-[#e5b448]" />
+                      <ArrowRight size={14} className="text-[#d8a84e]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá! Gostaria de orientações sobre Inventário de Bens ou Direito de Família.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de orientações sobre Inventário de Bens ou Direito de Família.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
                     >
                       <span>Inventários & Família</span>
-                      <ArrowRight size={14} className="text-[#e5b448]" />
+                      <ArrowRight size={14} className="text-[#d8a84e]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá! Preciso de ajuda contra uma cobrança indevida, juros bancários ou negativação.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Preciso de ajuda contra uma cobrança indevida, juros bancários ou negativação.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
                     >
                       <span>Consumidor & Bancário</span>
-                      <ArrowRight size={14} className="text-[#e5b448]" />
+                      <ArrowRight size={14} className="text-[#d8a84e]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá! Gostaria de orientações sobre assessoria empresarial ou contratos rurais.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de orientações sobre representação processual estratégica.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0d224d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#e5b448] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
                     >
-                      <span>Empresarial & Agronegócio</span>
-                      <ArrowRight size={14} className="text-[#e5b448]" />
+                      <span>Advocacia Processual</span>
+                      <ArrowRight size={14} className="text-[#d8a84e]" />
                     </a>
                   </div>
 
                   <div className="mt-8 border-t border-slate-700/60 pt-6">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá! Gostaria de conversar com a equipe Ferreira e Bolleli Advogados.")}
+                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de iniciar uma consulta jurídica.")}
                       target="_blank"
                       variant="gold"
                       size="lg"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com Ferreira e Bolleli Advogados</span>
+                      <span>Falar no WhatsApp com Dr. Antônio Cesar</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -1662,7 +1726,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: FOOTER INSTITUCIONAL — [MODO ESCURO]            */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#e5b448]/25 bg-[#030710] pt-16 pb-12 text-slate-400">
+        <footer className="border-t border-[#d8a84e]/25 bg-[#02070f] pt-16 pb-12 text-slate-400">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
               {/* Brand Column */}
@@ -1670,31 +1734,31 @@ export default function Home() {
                 <div className="relative py-1">
                   <Image
                     src={LOGO_SRC}
-                    alt="Ferreira e Bolleli Advogados"
+                    alt="Advocacia Antônio Cesar"
                     width={420}
                     height={140}
                     className="h-14 sm:h-16 md:h-18 w-auto max-w-[280px] sm:max-w-[340px] object-contain object-left drop-shadow-md"
                   />
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-slate-400 max-w-md">
-                  ⚖️ Ferreira e Bolleli Advogados — Advocacia e consultoria jurídica em Nanuque - MG e Vale do Mucuri. Atuação dedicada e experiente em causas Trabalhistas, Previdenciárias, Cíveis, de Família, Sucessões e Direito do Consumidor.
+                  ⚖️ Advocacia Antônio Cesar — Advocacia e assessoria processual em Matozinhos - MG e região metropolitana de Belo Horizonte. Atuação dedicada e experiente nas áreas Trabalhista, Previdenciária (INSS), Cível, Família e Direito do Consumidor.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071126] text-slate-300 transition-colors hover:border-[#e5b448] hover:text-white"
-                    aria-label="Instagram de Ferreira e Bolleli Advogados"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#061120] text-slate-300 transition-colors hover:border-[#d8a84e] hover:text-white"
+                    aria-label="Instagram da Advocacia Antônio Cesar"
                   >
                     <InstagramIcon size={16} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá!")}
+                    href={getWhatsAppUrl("Olá, Dr. Antônio Cesar!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071126] text-slate-300 transition-colors hover:border-[#e5b448] hover:text-white"
-                    aria-label="WhatsApp de Ferreira e Bolleli Advogados"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#061120] text-slate-300 transition-colors hover:border-[#d8a84e] hover:text-white"
+                    aria-label="WhatsApp da Advocacia Antônio Cesar"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1702,7 +1766,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071126] text-slate-300 transition-colors hover:border-[#e5b448] hover:text-white"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#061120] text-slate-300 transition-colors hover:border-[#d8a84e] hover:text-white"
                     aria-label="Avaliações do Google"
                   >
                     <GoogleIcon size={16} />
@@ -1723,7 +1787,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="footer-link">
-                      Sobre o Escritório
+                      Sobre o Advogado
                     </a>
                   </li>
                   <li>
@@ -1733,7 +1797,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#depoimentos" className="footer-link">
-                      Avaliações Google (4,9 ★)
+                      Avaliações Google (5,0 ★)
                     </a>
                   </li>
                   <li>
@@ -1743,7 +1807,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="footer-link">
-                      Sede em Nanuque
+                      Sede em Matozinhos
                     </a>
                   </li>
                 </ul>
@@ -1757,12 +1821,12 @@ export default function Home() {
                 <p className="mt-4 text-[11px] leading-relaxed text-slate-400">
                   Este website possui caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
                 </p>
-                <div className="mt-4 rounded-lg border border-slate-800 bg-[#071126] p-3 text-[11px] text-slate-300">
+                <div className="mt-4 rounded-lg border border-slate-800 bg-[#061120] p-3 text-[11px] text-slate-300">
                   <p className="font-bold text-white">
-                    FERREIRA E BOLLELI ADVOGADOS
+                    ADVOCACIA ANTÔNIO CESAR
                   </p>
-                  <p className="mt-0.5 text-[#e5b448]">
-                    Sede: {ADDRESS_NANUQUE}
+                  <p className="mt-0.5 text-[#d8a84e]">
+                    Sede: {ADDRESS_MATOZINHOS}
                   </p>
                   <p className="mt-0.5 text-xs text-slate-400">
                     Telefone / WhatsApp: {PHONE_DISPLAY}
@@ -1774,10 +1838,10 @@ export default function Home() {
             {/* Bottom Copyright */}
             <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800/80 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
               <p>
-                © {new Date().getFullYear()} FERREIRA E BOLLELI ADVOGADOS. Todos os direitos reservados.
+                © {new Date().getFullYear()} ADVOCACIA ANTÔNIO CESAR. Todos os direitos reservados.
               </p>
-              <p className="text-[#e5b448]">
-                Nanuque · Vale do Mucuri · Minas Gerais · Brasil
+              <p className="text-[#d8a84e]">
+                Matozinhos · Grande Belo Horizonte · Minas Gerais · Brasil
               </p>
             </div>
           </div>
@@ -1786,10 +1850,10 @@ export default function Home() {
         {/* FLOATING WHATSAPP CTA BUTTON */}
         <div className="fixed right-5 bottom-5 z-50 flex items-center gap-2">
           <a
-            href={getWhatsAppUrl("Olá! Gostaria de conversar com um advogado da Ferreira e Bolleli Advogados.")}
+            href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar uma consulta jurídica.")}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar agora pelo WhatsApp com Ferreira e Bolleli Advogados"
+            aria-label="Falar agora pelo WhatsApp com a Advocacia Antônio Cesar"
             className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/60 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
           >
             <WhatsAppIcon size={19} />
@@ -1807,21 +1871,21 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95, y: 15 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
-                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#e5b448]/55 bg-[#071126] p-6 text-white shadow-2xl sm:p-8"
+                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#d8a84e]/55 bg-[#061120] p-6 text-white shadow-2xl sm:p-8"
               >
                 <button
                   type="button"
                   onClick={() => setSelectedPractice(null)}
-                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#0d224d] text-slate-300 hover:border-white hover:text-white cursor-pointer"
+                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#0c203d] text-slate-300 hover:border-white hover:text-white cursor-pointer"
                   aria-label="Fechar modal"
                 >
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center gap-2.5 text-xs font-bold text-[#e5b448] uppercase tracking-wider">
+                <div className="flex items-center gap-2.5 text-xs font-bold text-[#d8a84e] uppercase tracking-wider">
                   <Image
                     src={LOGO_EMBLEM_SRC}
-                    alt="Emblema FB"
+                    alt="Monograma AC"
                     width={24}
                     height={24}
                     className="size-6 object-contain"
@@ -1833,7 +1897,7 @@ export default function Home() {
                   {selectedPractice.title}
                 </h3>
 
-                <p className="mt-2 text-xs font-medium text-[#e5b448]">
+                <p className="mt-2 text-xs font-medium text-[#d8a84e]">
                   {selectedPractice.category}
                 </p>
 
@@ -1853,7 +1917,7 @@ export default function Home() {
                       >
                         <CheckCircle2
                           size={15}
-                          className="text-[#e5b448] shrink-0 mt-0.5"
+                          className="text-[#d8a84e] shrink-0 mt-0.5"
                         />
                         <span>{topic}</span>
                       </li>
@@ -1870,13 +1934,13 @@ export default function Home() {
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Consultar Advogado nesta Área</span>
+                    <span>Consultar Dr. Antônio Cesar nesta Área</span>
                   </GlowingButton>
 
                   <button
                     type="button"
                     onClick={() => setSelectedPractice(null)}
-                    className="w-full rounded-lg border border-slate-700 bg-[#0d224d] px-5 py-3 text-xs font-bold text-slate-300 hover:bg-[#102859] hover:text-white sm:w-auto cursor-pointer"
+                    className="w-full rounded-lg border border-slate-700 bg-[#0c203d] px-5 py-3 text-xs font-bold text-slate-300 hover:bg-[#10294d] hover:text-white sm:w-auto cursor-pointer"
                   >
                     Fechar
                   </button>

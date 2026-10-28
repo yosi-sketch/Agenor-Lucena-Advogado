@@ -1,16 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('=== VERIFYING FERREIRA E BOLLELI ADVOGADOS SITE INTEGRITY ===');
+console.log('=== VERIFYING ADVOCACIA ANTÔNIO CESAR SITE INTEGRITY ===');
 
 // 1. Check Public and App Assets
 const requiredAssets = [
   'public/logo.png',
-  'public/logo-ferreira-bolleli.png',
-  'public/emblema-fb.png',
-  'public/fb-emblem.png',
+  'public/logo-antonio-cesar.png',
+  'public/emblema-ac.png',
+  'public/ac-emblem.png',
+  'public/ac-badge.png',
   'public/hero.jpg',
-  'public/equipe-ferreira-bolleli.jpg',
+  'public/antonio-cesar.jpg',
+  'public/dr-antonio-cesar.jpg',
+  'public/dr-antonio-cesar-portrait.jpg',
+  'public/banner-antonio-cesar.jpg',
+  'public/escritorio-ac.jpg',
   'public/favicon.ico',
   'public/icon.png',
   'public/apple-icon.png',
@@ -46,6 +51,14 @@ const filesToCheck = [
 ];
 
 const oldTerms = [
+  'Ferreira',
+  'Bolleli',
+  'Nanuque',
+  '98715-6234',
+  '987156234',
+  'ferreiraebolleliadv',
+  'Wallace Gustavo',
+  'Vale do Mucuri',
   'FRB',
   'Filipe',
   'Rabelo',
@@ -58,7 +71,9 @@ const oldTerms = [
   '247.321',
   '247321',
   '99806-7570',
-  'Santa Maria do Suaçuí'
+  'Santa Maria do Suaçuí',
+  'São Lourenço',
+  '39860-000'
 ];
 
 let clean = true;
@@ -83,12 +98,12 @@ if (clean) {
 
 // 3. Check New Client Details Presence
 const newRequiredTerms = [
-  'Ferreira',
-  'Bolleli',
-  'Nanuque',
-  '98715-6234',
-  'ferreiraebolleliadv',
-  '4,9'
+  'Antônio Cesar',
+  'Matozinhos',
+  '99699-0842',
+  'drantoniocesaradvocacia',
+  '5,0',
+  '252'
 ];
 
 let newDetailsPresent = true;
