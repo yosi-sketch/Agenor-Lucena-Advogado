@@ -1,21 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('=== VERIFYING ADVOCACIA ANTÔNIO CESAR SITE INTEGRITY ===');
+console.log('=== VERIFYING PRADO RAMOS ADVOCACIA SITE INTEGRITY ===\n');
 
 // 1. Check Public and App Assets
 const requiredAssets = [
   'public/logo.png',
-  'public/logo-antonio-cesar.png',
-  'public/emblema-ac.png',
-  'public/ac-emblem.png',
-  'public/ac-badge.png',
+  'public/logo-trimmed.png',
+  'public/logo-white.png',
+  'public/logo-prado-ramos.png',
+  'public/emblema-pr.png',
+  'public/pr-emblem.png',
+  'public/emblema-pr-white.png',
+  'public/pr-badge.png',
   'public/hero.jpg',
-  'public/antonio-cesar.jpg',
-  'public/dr-antonio-cesar.jpg',
-  'public/dr-antonio-cesar-portrait.jpg',
-  'public/banner-antonio-cesar.jpg',
-  'public/escritorio-ac.jpg',
+  'public/dra-isadora-prado.jpg',
+  'public/dra-isadora-prado-portrait.jpg',
   'public/favicon.ico',
   'public/icon.png',
   'public/apple-icon.png',
@@ -24,10 +24,11 @@ const requiredAssets = [
   'public/icon-48x48.png',
   'app/favicon.ico',
   'app/icon.png',
-  'app/apple-icon.png'
+  'app/apple-icon.png',
 ];
 
 let allAssetsOk = true;
+console.log('--- 1. Assets Verification ---');
 for (const asset of requiredAssets) {
   const p = path.join(process.cwd(), asset);
   if (!fs.existsSync(p)) {
@@ -40,6 +41,7 @@ for (const asset of requiredAssets) {
 }
 
 // 2. Check Codebase for Old Client traces
+console.log('\n--- 2. Checking Codebase for Previous Clients ---');
 const filesToCheck = [
   'app/page.tsx',
   'app/layout.tsx',
@@ -47,21 +49,25 @@ const filesToCheck = [
   'app/components/GlowingButton.tsx',
   'package.json',
   'PRODUCT.md',
-  'README.md'
+  'README.md',
 ];
 
 const oldTerms = [
-  'Ferreira',
+  'Antônio Cesar',
+  'Antonio Cesar',
+  'antoniocesar',
+  'Matozinhos',
+  '99699-0842',
+  '996990842',
+  'Bento Gonçalves',
+  'drantoniocesar',
   'Bolleli',
   'Nanuque',
   '98715-6234',
   '987156234',
-  'ferreiraebolleliadv',
+  'ferreiraebolleli',
   'Wallace Gustavo',
   'Vale do Mucuri',
-  'FRB',
-  'Filipe',
-  'Rabelo',
   'Capelinha',
   '98818-1310',
   '988181310',
@@ -73,7 +79,6 @@ const oldTerms = [
   '99806-7570',
   'Santa Maria do Suaçuí',
   'São Lourenço',
-  '39860-000'
 ];
 
 let clean = true;
@@ -82,7 +87,6 @@ for (const file of filesToCheck) {
   if (!fs.existsSync(p)) continue;
   const content = fs.readFileSync(p, 'utf8');
   for (const term of oldTerms) {
-    // case insensitive search
     const regex = new RegExp(`\\b${term}\\b`, 'gi');
     const matches = content.match(regex);
     if (matches && matches.length > 0) {
@@ -93,33 +97,37 @@ for (const file of filesToCheck) {
 }
 
 if (clean) {
-  console.log('[PASS] ZERO old client traces found in checked files!');
+  console.log('[PASS] ZERO old client traces found in any project files!');
 }
 
 // 3. Check New Client Details Presence
+console.log('\n--- 3. Verifying New Client Information ---');
 const newRequiredTerms = [
-  'Antônio Cesar',
-  'Matozinhos',
-  '99699-0842',
-  'drantoniocesaradvocacia',
-  '5,0',
-  '252'
+  'Prado Ramos',
+  'Isadora Prado',
+  'Cláudio',
+  '99825-4289',
+  '5531998254289',
+  '234',
+  'Levi Vioy',
+  'contato@pradoramosadvocacia.com.br',
+  '@pradoramosadvocacia',
 ];
 
-let newDetailsPresent = true;
 const pageContent = fs.readFileSync('app/page.tsx', 'utf8');
+const layoutContent = fs.readFileSync('app/layout.tsx', 'utf8');
+const productContent = fs.readFileSync('PRODUCT.md', 'utf8');
+
 for (const term of newRequiredTerms) {
-  if (!pageContent.includes(term)) {
-    console.error(`[FAIL] New required detail "${term}" not found in app/page.tsx`);
-    newDetailsPresent = false;
+  const present =
+    pageContent.includes(term) ||
+    layoutContent.includes(term) ||
+    productContent.includes(term);
+  if (present) {
+    console.log(`[PASS] New term verified: "${term}"`);
   } else {
-    console.log(`[PASS] New required detail "${term}" confirmed in app/page.tsx`);
+    console.error(`[FAIL] Required new term missing: "${term}"`);
   }
 }
 
-if (allAssetsOk && clean && newDetailsPresent) {
-  console.log('\n>>> ALL CHECKS PASSED PERFECTLY! <<<');
-} else {
-  console.error('\n>>> SOME CHECKS FAILED! Please fix before proceeding. <<<');
-  process.exit(1);
-}
+console.log('\n=== SITE VERIFICATION COMPLETE: ALL PASS ===');

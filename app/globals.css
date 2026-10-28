@@ -3,59 +3,47 @@
 :root {
   color-scheme: light dark;
   
-  /* Brand Luxury Royal Midnight Navy & Deep Obsidian (Prestige Dark Surfaces) */
-  --brand-obsidian: #030a14;
-  --brand-midnight: #061120;
-  --brand-navy-deep: #08172c;
-  --brand-navy-royal: #0c203d;
-  --brand-navy-surface: #10294d;
-  --brand-navy-card: #153460;
+  /* Brand Luxury Oxford Midnight Navy & Obsidian (Prestige Dark Surfaces) */
+  --brand-obsidian: #040912;
+  --brand-midnight: #071322;
+  --brand-navy-deep: #0b1c31;
+  --brand-navy-surface: #0f2540;
+  --brand-navy-card: #153256;
+  --brand-navy-highlight: #1b3d68;
   --brand-slate-muted: #64748b;
   
-  /* Brand Metallic Gold Spectrum (Extracted directly from AC Monogram, Antônio Cesar and Gold Rule) */
-  --brand-gold-highlight: #fef8ea;
-  --brand-gold-bright: #fad771;
-  --brand-gold-light: #f3ce65;
-  --brand-gold-primary: #d8a84e;
-  --brand-gold-vibrant: #cfa24b;
-  --brand-gold-rich: #b8862d;
-  --brand-gold-deep: #966c26;
-  --brand-gold-bronze: #734e15;
-  --brand-gold-shadow: #4a2e0a;
+  /* Brand Warm Champagne Gold & Burnished Bronze (Professional Legal Authority) */
+  --brand-gold-glow: #fef6e2;
+  --brand-gold-bright: #f5d17a;
+  --brand-gold-light: #ebd08d;
+  --brand-gold-primary: #c59b4c;
+  --brand-gold-vibrant: #b88d3d;
+  --brand-gold-rich: #9e742a;
+  --brand-gold-deep: #7d591c;
+  --brand-gold-shadow: #4a320b;
 
-  /* Brand Champagne & Platinum Spectrum (From "ANTONIO CESAR" logo lettering) */
-  --brand-champagne-highlight: #fefcf8;
-  --brand-champagne-bright: #fcf6ea;
-  --brand-champagne-light: #f4ecd8;
-  --brand-champagne-primary: #e8e0d3;
-  --brand-champagne-mid: #b7aa91;
-  --brand-champagne-deep: #8e6628;
+  /* Brand Metallic Platinum Spectrum (From Logo 3D Bevel & Emboss Highlights) */
+  --brand-platinum-highlight: #ffffff;
+  --brand-platinum-bright: #f8fafc;
+  --brand-platinum-light: #f1f5f9;
+  --brand-platinum-primary: #e2e8f0;
+  --brand-platinum-mid: #cbd5e1;
+  --brand-platinum-deep: #94a3b8;
 
-  /* Aliases for UI components */
-  --brand-gold: #d8a84e;
-  --brand-gold-accent: #cfa24b;
-  --brand-bronze-mid: #966c26;
-  --brand-bronze-dark: #734e15;
-  --brand-bronze-shadow: #4a2e0a;
-
-  /* Accent Emerald (WhatsApp conversion) */
-  --brand-emerald: #25D366;
-  --brand-emerald-dark: #1ea952;
-
-  /* Light Editorial Alabaster / Crisp Warm Ivory for high readability and contrast */
+  /* Light Editorial Canvas / Crisp Alabaster for readability and high contrast */
   --brand-cream-bg: #fbfbf9;
   --brand-cream-alt: #f4f3ec;
   --brand-cream-surface: #ffffff;
   --brand-cream-border: #e2e8f0;
-  --brand-cream-ink: #061120;
+  --brand-cream-ink: #06101e;
   --brand-cream-muted: #475569;
   
   /* Borders & Accents */
-  --brand-border-gold: rgba(216, 168, 78, 0.40);
-  --brand-border-gold-subtle: rgba(216, 168, 78, 0.22);
-  --brand-border-gold-strong: rgba(216, 168, 78, 0.85);
-  --brand-border-champagne: rgba(232, 224, 211, 0.35);
-  --brand-border-dark: rgba(16, 41, 77, 0.65);
+  --brand-border-gold: rgba(197, 155, 76, 0.40);
+  --brand-border-gold-subtle: rgba(197, 155, 76, 0.22);
+  --brand-border-gold-strong: rgba(197, 155, 76, 0.85);
+  --brand-border-platinum: rgba(226, 232, 240, 0.60);
+  --brand-border-dark: rgba(15, 37, 64, 0.70);
 }
 
 @theme inline {
@@ -63,31 +51,29 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-brand-obsidian: #030a14;
-  --color-brand-midnight: #061120;
-  --color-brand-navy-deep: #08172c;
-  --color-brand-navy-royal: #0c203d;
-  --color-brand-surface: #10294d;
-  --color-brand-card: #153460;
+  --color-brand-obsidian: #040912;
+  --color-brand-midnight: #071322;
+  --color-brand-navy-deep: #0b1c31;
+  --color-brand-surface: #0f2540;
+  --color-brand-card: #153256;
   
-  --color-brand-gold: #d8a84e;
-  --color-brand-gold-bright: #fad771;
-  --color-brand-gold-light: #f3ce65;
-  --color-brand-gold-vibrant: #cfa24b;
-  --color-brand-gold-deep: #966c26;
-  --color-brand-gold-shadow: #4a2e0a;
+  --color-brand-gold: #c59b4c;
+  --color-brand-gold-bright: #f5d17a;
+  --color-brand-gold-light: #ebd08d;
+  --color-brand-gold-rich: #9e742a;
+  --color-brand-gold-deep: #7d591c;
   
-  --color-brand-champagne: #e8e0d3;
-  --color-brand-champagne-light: #f4ecd8;
-  --color-brand-champagne-mid: #b7aa91;
+  --color-brand-platinum: #e2e8f0;
+  --color-brand-platinum-light: #f8fafc;
+  --color-brand-platinum-mid: #cbd5e1;
 
   --color-brand-cream-bg: #fbfbf9;
   --color-brand-cream-alt: #f4f3ec;
   --color-brand-cream-surface: #ffffff;
   
-  --shadow-gold: 0 10px 28px -4px rgba(216, 168, 78, 0.28);
-  --shadow-gold-lg: 0 16px 38px -6px rgba(216, 168, 78, 0.38);
-  --shadow-gold-card: 0 20px 45px -10px rgba(3, 10, 20, 0.94);
+  --shadow-gold: 0 10px 28px -4px rgba(197, 155, 76, 0.28);
+  --shadow-gold-lg: 0 16px 38px -6px rgba(197, 155, 76, 0.38);
+  --shadow-gold-card: 0 20px 45px -10px rgba(4, 9, 18, 0.94);
 }
 
 html {
@@ -97,14 +83,14 @@ html {
 
 body {
   background: #fbfbf9;
-  color: #061120;
+  color: #06101e;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d8a84e;
+  caret-color: #c59b4c;
 }
 
 ::selection {
-  background: #d8a84e;
-  color: #030a14;
+  background: #c59b4c;
+  color: #040912;
 }
 
 .font-cinzel {
@@ -120,7 +106,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #966c26;
+  color: #9e742a;
 }
 
 .eyebrow-dark {
@@ -132,14 +118,14 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #fad771;
+  color: #f5d17a;
 }
 
 .eyebrow::before {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: linear-gradient(90deg, #966c26, #d8a84e);
+  background: linear-gradient(90deg, #7d591c, #c59b4c);
   content: "";
 }
 
@@ -147,7 +133,7 @@ body {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: linear-gradient(90deg, #d8a84e, #fad771);
+  background: linear-gradient(90deg, #c59b4c, #f5d17a);
   content: "";
 }
 
@@ -168,7 +154,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #d8a84e;
+  background: #c59b4c;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -176,7 +162,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #061120;
+  color: #06101e;
 }
 
 .nav-link:hover::after {
@@ -200,7 +186,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #d8a84e;
+  background: #c59b4c;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -229,17 +215,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f4f3ec;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f1f5f9;
+  border: 2px solid #f4f3ec;
   border-radius: 999px;
   background: #cbd5e1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d8a84e;
+  background: #c59b4c;
 }
 
 @media (prefers-reduced-motion: reduce) {

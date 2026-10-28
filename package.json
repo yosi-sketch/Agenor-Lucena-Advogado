@@ -1,5 +1,5 @@
 {
-  "name": "advocacia-antonio-cesar",
+  "name": "prado-ramos-advocacia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "sharp": "^0.33.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

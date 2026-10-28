@@ -11,7 +11,6 @@ import {
   Scale,
   Award,
   Shield,
-  HeartHandshake,
   ArrowRight,
   ArrowUpRight,
   Star,
@@ -24,37 +23,45 @@ import {
   ExternalLink,
   Users,
   Briefcase,
-  Gavel,
-  Landmark,
-  BadgeCheck,
+  Plane,
+  CreditCard,
+  FileCheck2,
+  Lock,
+  Headphones,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531996990842";
-const PHONE_DISPLAY = "(31) 99699-0842";
-const EMAIL_CONTACT = "contato@antoniocesaradvocacia.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/drantoniocesaradvocacia/";
-const INSTAGRAM_HANDLE = "@drantoniocesaradvocacia";
+const WHATSAPP_NUMBER = "5531998254289";
+const PHONE_DISPLAY = "(31) 99825-4289";
+const EMAIL_CONTACT = "contato@pradoramosadvocacia.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/pradoramosadvocacia/";
+const INSTAGRAM_HANDLE = "@pradoramosadvocacia";
+const INSTAGRAM_FOLLOWERS = "2.127 seguidores · 290 posts";
 
-const ADDRESS_MATOZINHOS =
-  "Av. Bento Gonçalves, 40 - Sl C - Centro, Matozinhos - MG, 35720-000, Brasil";
+const ADDRESS_CLAUDIO =
+  "Praça Levi Vioy de Freitas, 28, Sl 103 - Centro, Cláudio - MG, 35530-000, Brasil";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Ant%C3%B4nio+Cesar+%E2%80%94+Advocacia%0AMatozinhos+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Prado+Ramos+Advocacia%0ACl%C3%A1udio+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=46301957b105dbed&sxsrf=AKL5yDjRnVyJdurDE_lq-f5ThZudN6EKFA:1793197499410&q=advocacia+ant%C3%B4nio+cesar+matozinhos+endere%C3%A7o&ludocid=13571655095632325030&sa=X&ved=2ahUKEwjThNuf9dyXAxVPrpUCHWzoE0EQ6BN6BAhFEAI";
+  "https://www.google.com/search?sca_esv=e65bf6121730a79e&sxsrf=AKL5yDhYOGYDLgLhEJWBGx3Thl1l-l7FnQ:1793208895679&q=prado+ramos+advocacia+endere%C3%A7o&ludocid=2422573681797867810&sa=X&ved=2ahUKEwjIgPDZn92XAxXRqZUCHXPFHvAQ6BN6BAgmEAI";
 
-const LOGO_SRC = "/logo.png";
-const LOGO_EMBLEM_SRC = "/emblema-ac.png";
-const FOTO_HERO_SRC = "/hero.jpg";
+const GOOGLE_STREET_VIEW_URL =
+  "https://www.google.com/local/place/fid/0xa093d27beccd97:0x219eb5eda1c5a922/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DNDRnPxHcipva3JOUe-GCkA%26cb_client%3Dsearch.gws-prod.grass%26yaw%3D55.53667%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFk5EUm5QeEhjaXB2YTNKT1VlLUdDa0E%3D&sa=X&ved=2ahUKEwjIgPDZn92XAxXRqZUCHXPFHvAQpx96BAgbEBI";
+
+// Official assets uploaded directly by user
+const LOGO_SRC = "/prado-ramos-logo-trimmed.png";
+const LOGO_WHITE_SRC = "/prado-ramos-logo-white.png";
+const FOTO_HERO_SRC = "/isadora-prado-oficial.jpg";
+const FOTO_PORTRAIT_SRC = "/isadora-prado-oficial.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Antônio Cesar! Gostaria de agendar uma consulta jurídica.";
+    "Olá, Dra. Isadora Prado! Gostaria de agendar uma consulta jurídica personalizada com a Prado Ramos Advocacia.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -165,130 +172,130 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-trabalhista",
-    title: "Direito Trabalhista & Relações de Trabalho",
-    category: "Reclamatórias Trabalhistas · Rescisão Indireta · Horas Extras · Acidente de Trabalho · Vínculo Empregatício",
-    icon: Briefcase,
-    tag: "Defesa Combativa · Recuperação de Verbas · Direitos Respeitados",
+    id: "direito-consumidor-aereo",
+    title: "Direito Aéreo & Passageiro Prejudicado",
+    category: "Extravio Definitivo ou Temporário de Bagagem · Voo Atrasado · Voo Cancelado · Overbooking · Conexões Perdidas",
+    icon: Plane,
+    tag: "Sem Custo Inicial · Êxito Comprovado · Indenização Justa",
     summary:
-      "Atuação firme e combativa na defesa dos direitos dos trabalhadores em Matozinhos e região. Cálculos minuciosos de rescisões, horas extras, insalubridade e indenizações por acidente laboral.",
+      "Assessoria jurídica ágil e especializada para quem enfrentou transtornos com companhias aéreas. Reivindicamos indenizações por danos morais e materiais com máxima agilidade e sem burocracia.",
     details:
-      "Muitos profissionais enfrentam demissões injustas, supressão de horas extras, desvio de função, atraso crônico de salários ou condições inadequadas de trabalho sem saber como agir. Na Advocacia Antônio Cesar, analisamos com extrema atenção todo o histórico de trabalho, orientando cada cliente com clareza e paciência sobre os prazos e provas necessárias para pleitear a integralidade dos direitos na Justiça do Trabalho.",
+      "Problemas como malas extraviadas em viagens de negócios ou férias, voos cancelados sem assistência material ou horas intermináveis de espera em aeroportos geram graves prejuízos que a lei brasileira ampara com rigor. Na Prado Ramos Advocacia, examinamos seus bilhetes, protocolos PIR e comprovantes, atuando de forma estratégica para exigir a devida reparação das companhias aéreas sem necessidade de desembolso prévio pelo cliente.",
     topics: [
-      "Reclamatórias trabalhistas para cobrança de horas extras, adicional noturno e descansos semanais",
-      "Rescisão indireta do contrato de trabalho por descumprimento grave das obrigações pelo empregador",
-      "Cobrança integral de verbas rescisórias: saldo de salário, aviso prévio, férias vencidas e proporcionais, 13º e multa de 40% do FGTS",
-      "Ações indenizatórias por acidente de trabalho, sequelas físicas, doenças ocupacionais e danos morais",
-      "Reconhecimento de vínculo de emprego sem carteira assinada com anotação retroativa e recolhimentos devidos",
-      "Adicionais de insalubridade e periculosidade para quem trabalhou exposto a agentes químicos, ruído ou risco físico",
+      "Indenizações por extravio de bagagem temporário ou definitivo com restituição de itens essenciais e danos morais",
+      "Ações judiciais por voos cancelados ou atrasados gerando perda de compromissos ou diárias de hospedagem",
+      "Reparação por preterição de embarque (overbooking) e falta de assistência em solo (alimentação e hotel)",
+      "Reembolso integral de passagens com multas abusivas ou cancelamentos em desacordo com as normas da ANAC",
+      "Atendimento 100% online para passageiros de voos nacionais e internacionais em qualquer estado ou no exterior",
+      "Acompanhamento contínuo via WhatsApp até o pagamento integral e liberação dos valores da condenação",
     ],
     whatsAppText:
-      "Olá, Dr. Antônio Cesar! Gostaria de consultar sobre os meus direitos em uma questão trabalhista.",
+      "Olá, Dra. Isadora Prado! Gostaria de consultar sobre um problema com companhia aérea (extravio de bagagem / atraso / cancelamento de voo).",
   },
   {
-    id: "direito-previdenciario",
-    title: "Direito Previdenciário & Benefícios do INSS",
-    category: "Aposentadorias · Reversão de Benefício Negado · Auxílio por Incapacidade · BPC/LOAS · Atrasados",
-    icon: Scale,
-    tag: "Cálculo do Maior Valor · Reversão Judicial · Pagamento de Atrasados",
+    id: "fraudes-bancarias-golpes",
+    title: "Direito Bancário & Fraudes Eletrônicas",
+    category: "Golpes do Pix · Empréstimos Consignados Não Solicitados · Cartão Clonado · Negativação Indevida · Juros Abusivos",
+    icon: CreditCard,
+    tag: "Liminar Rápida · Exclusão de Dívidas · Repetição em Dobro",
     summary:
-      "Planejamento previdenciário e ações judiciais contra o INSS para reverter negativas, destravar aposentadorias pelas regras mais vantajosas e garantir o pagamento de todos os retroativos.",
+      "Defesa contundente contra falhas de segurança bancária, golpes eletrônicos e empréstimos fraudulentos em contas de aposentados, pensionistas e consumidores.",
     details:
-      "Ter um benefício negado ou cancelado indevidamente pelo INSS coloca a segurança financeira do segurado e de sua família em risco. O Dr. Antônio Cesar realiza um estudo detalhado do extrato do CNIS, carteiras de trabalho, laudos médicos e histórico contributivo, acionando a Justiça Federal com pedidos de tutela de urgência e perícias médicas judiciais para restabelecer seus pagamentos com todos os juros e correções legais.",
+      "O avanço das fraudes digitais e a falta de segurança nos sistemas bancários fazem vítimas diariamente, principalmente com empréstimos consignados não autorizados e fraudes via Pix. A jurisprudência dos tribunais é clara em responsabilizar os bancos. Entramos com pedidos liminares imediatos para suspender cobranças indevidas, limpar o CPF do consumidor e exigir a devolução dos valores e indenização por danos morais.",
     topics: [
-      "Aposentadoria por Idade Urbana, Rural e Híbrida com comprovação documental rigorosa",
-      "Aposentadoria por Tempo de Contribuição e aplicação da melhor regra de transição pós-Reforma da Previdência",
-      "Aposentadoria Especial para trabalhadores com atividade especial sob agentes nocivos ou perigosos",
-      "Reversão na Justiça Federal de benefícios previdenciários e assistenciais indeferidos ou cessados no INSS",
-      "Auxílio por Incapacidade Temporária (antigo auxílio-doença) e conversão em Aposentadoria por Incapacidade Permanente",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos acima de 65 anos e pessoas com deficiência de baixa renda",
+      "Cancelamento imediato de contratos de empréstimo consignado fraudulentos com restituição em dobro",
+      "Ações indenizatórias e de ressarcimento contra fraudes eletrônicas, engenharia social e golpes via Pix",
+      "Exclusão urgente de negativação indevida nos órgãos de proteção ao crédito (SPC, Serasa e Boa Vista)",
+      "Indenizações por danos morais causados por descontos indevidos em aposentadorias ou salários",
+      "Revisão de tarifas ilegais e taxas de juros abusivas que colocam a subsistência do consumidor em risco",
+      "Atendimento especializado com protocolo de segurança reforçado contra golpes digitais",
     ],
     whatsAppText:
-      "Olá, Dr. Antônio Cesar! Preciso de orientações especializadas sobre aposentadoria ou benefício no INSS.",
+      "Olá, Dra. Isadora Prado! Preciso de ajuda contra uma fraude bancária, golpe do Pix ou desconto indevido de empréstimo.",
   },
   {
     id: "direito-civil-indenizacoes",
     title: "Direito Civil, Contratos & Indenizações",
-    category: "Reparação por Danos Morais e Materiais · Cobranças · Disputas Contratuais · Ações Possessórias",
+    category: "Danos Morais e Materiais · Rescisão Contratual · Cobranças Extrajudiciais e Judiciais · Disputas Imobiliárias",
     icon: Shield,
-    tag: "Segurança Jurídica · Resolução de Conflitos · Proteção Patrimonial",
+    tag: "Segurança Jurídica · Resolução Sem Burocracia · Proteção Patrimonial",
     summary:
-      "Proteção jurídica eficaz em controvérsias patrimoniais, cobranças de títulos e créditos, litígios contratuais, disputas imobiliárias e ações de indenização por perdas e danos.",
+      "Proteção jurídica personalizada para controvérsias patrimoniais, descumprimentos de contratos, prejuízos decorrentes de ilícitos e defesa da integridade patrimonial.",
     details:
-      "Descumprimentos contratuais e prejuízos causados por terceiros exigem intervenção técnica ágil. A Advocacia Antônio Cesar atua de forma estratégica tanto na elaboração e revisão preventiva de acordos quanto na representação contenciosa perante o Poder Judiciário, cobrando reparações justas por danos materiais, lucros cessantes e abalos morais.",
+      "Conflitos contratuais e prejuízos causados por terceiros demandam uma condução técnica assertiva, equilibrando diplomacia e firmeza processual. Atuamos tanto na esfera preventiva quanto no contencioso perante o Poder Judiciário, cobrando reparações justas por perdas patrimoniais, lucros cessantes e constrangimentos ilegais.",
     topics: [
-      "Ações indenizatórias por danos morais, materiais e prejuízos decorrentes de atos ilícitos ou acidentes",
-      "Cobrança e execução judicial de dívidas, cheques, notas promissórias e instrumentos contratuais inadimplidos",
-      "Ações possessórias e petitórias: reintegração de posse, manutenção de posse, usucapião e defesa da propriedade",
-      "Rescisão de contratos de compra e venda de bens móveis e imóveis com restituição de quantias pagas",
-      "Elaboração, análise preventiva e repactuação de instrumentos contratuais particulares e comerciais",
-      "Defesa e propositura de medidas judiciais urgentes para proteção de patrimônio em Matozinhos e região",
+      "Ações indenizatórias por danos morais, materiais e abalos à honra ou imagem pessoal e comercial",
+      "Elaboração, análise minuciosa e revisão de instrumentos contratuais particulares e comerciais",
+      "Cobrança e execução judicial de créditos, notas promissórias e instrumentos contratuais não cumpridos",
+      "Ações de rescisão contratual com devolução de quantias pagas e aplicação de multas rescisórias",
+      "Resolução de conflitos de vizinhança, locações e litígios imobiliários na Comarca de Cláudio e região",
+      "Consultoria ágil e personalizada com feedback transparente em cada etapa",
     ],
     whatsAppText:
-      "Olá, Dr. Antônio Cesar! Gostaria de consultar sobre uma questão cível, contratual ou indenizatória.",
+      "Olá, Dra. Isadora Prado! Gostaria de uma consulta sobre uma questão cível, contratual ou indenizatória.",
   },
   {
-    id: "direito-familia-sucessoes",
-    title: "Direito de Família & Sucessões (Inventários)",
-    category: "Inventário Extrajudicial e Judicial · Partilha de Bens · Divórcio · Pensão Alimentícia · Guarda",
+    id: "direito-trabalhista",
+    title: "Direito do Trabalho & Verbas Rescisórias",
+    category: "Reclamatórias Trabalhistas · Rescisão Indireta · Horas Extras · Vínculo Sem Carteira · Acidente Laboral",
+    icon: Briefcase,
+    tag: "Defesa dos Seus Direitos · Cálculos Precisos · Combate a Injustiças",
+    summary:
+      "Atuação dedicada e técnica na proteção dos direitos do trabalhador, garantindo o recebimento justo de verbas rescisórias, horas extras, insalubridade e indenizações.",
+    details:
+      "O trabalhador que dedica anos de esforço a uma empresa não pode ser lesado por demissões arbitrárias, supressão de horas trabalhadas ou falta de anotação da carteira de trabalho. A Prado Ramos Advocacia analisa minuciosamente seu histórico profissional e folhas de ponto, promovendo a reclamatória com fundamentação probatória sólida perante a Justiça do Trabalho.",
+    topics: [
+      "Cobrança integral de verbas rescisórias: saldo de salário, aviso prévio, 13º proporcional, férias e multa do FGTS",
+      "Ações de Rescisão Indireta do Contrato de Trabalho por falta de pagamento ou faltas graves do empregador",
+      "Cálculo rigoroso e cobrança de horas extras, intervalos intrajornada e adicionais noturnos",
+      "Reconhecimento de vínculo empregatício de trabalho informal com anotações e recolhimentos retroativos",
+      "Adicionais de insalubridade e periculosidade para funções expostas a riscos à saúde e integridade",
+      "Indenizações por acidentes de trabalho, danos corporais e assédio moral no ambiente corporativo",
+    ],
+    whatsAppText:
+      "Olá, Dra. Isadora Prado! Gostaria de consultar sobre meus direitos em uma causa trabalhista.",
+  },
+  {
+    id: "direito-familia-inventarios",
+    title: "Direito de Família & Inventários em Cartório",
+    category: "Inventário Extrajudicial · Partilha Consensual de Bens · Divórcio Ágil · Pensão Alimentícia · Guarda",
     icon: Users,
-    tag: "Sensibilidade & Firmeza · Agilidade em Cartório · Partilha Segura",
+    tag: "Agilidade em Cartório · Sensibilidade · Solução Sem Conflito",
     summary:
-      "Condução humanizada, serena e segura de inventários de bens, partilhas de herança, divórcios e questões de família, preservando o patrimônio e os laços dos herdeiros.",
+      "Condução ética, serena e transparente de inventários em cartório de notas e processos de família, descomplicando a partilha de bens e reduzindo custos e desgastes.",
     details:
-      "Momentos de luto ou reorganização familiar demandam acolhimento ético e condução técnica experiente para evitar conflitos desgastantes e perdas patrimoniais. Atuamos com celeridade em inventários extrajudiciais em cartório quando há concordância entre herdeiros capazes, além de prestar defesa combativa em inventários judiciais e causas de família.",
+      "Partilhas de herança e reorganizações familiares exigem atenção humanizada e conhecimento prático dos procedimentos cartorários para evitar que inventários se arrastem por anos. Priorizamos a via extrajudicial em cartório quando há consenso entre herdeiros capazes, entregando agilidade, segurança jurídica e economia patrimonial à família.",
     topics: [
-      "Inventário Extrajudicial em Cartório de Notas: procedimento ágil, econômico e seguro para partilhas consensuais",
-      "Inventário Judicial e arrolamento de bens em processos com menores de idade ou divergências entre herdeiros",
-      "Divórcio Consensual ou Litigioso com definição equilibrada da partilha de bens comuns",
-      "Ações de Fixação, Revisão, Exoneração e Execução de Pensão Alimentícia para filhos e dependentes",
-      "Regulamentação de Guarda Compartilhada e definição do regime de convivência familiar",
-      "Planejamento Sucessório com doação de bens com reserva de usufruto e testamentos",
+      "Inventário Extrajudicial em Cartório de Notas: procedimento descomplicado, célere e seguro",
+      "Planejamento patrimonial familiar e orientação prévia sobre incidência do ITCD e emolumentos",
+      "Inventário Judicial para casos que envolvam herdeiros menores, incapazes ou discordâncias pontuais",
+      "Divórcio Consensual ou Litigioso com definição equilibrada e segura da partilha dos bens",
+      "Ações de fixação, revisão ou execução de pensão alimentícia e guarda de filhos",
+      "Condução sigilosa e transparente com comunicação direta e humanizada",
     ],
     whatsAppText:
-      "Olá, Dr. Antônio Cesar! Gostaria de orientações sobre Inventário de Bens ou Direito de Família.",
+      "Olá, Dra. Isadora Prado! Gostaria de orientações sobre Inventário de Bens em Cartório ou Direito de Família.",
   },
   {
-    id: "direito-consumidor-bancario",
-    title: "Direito do Consumidor & Defesa Bancária",
-    category: "Fraudes Bancárias · Empréstimos Consignados Não Solicitados · Juros Abusivos · Negativação Indevida",
-    icon: Landmark,
-    tag: "Limpeza de Nome · Devolução em Dobro · Cancelamento de Dívidas",
+    id: "solucoes-juridicas-personalizadas",
+    title: "Soluções Jurídicas Personalizadas & Atendimento Online",
+    category: "Atendimento 100% Online em Todo o Brasil · Presencial em Cláudio - MG · Segurança Máxima Contra Golpes",
+    icon: FileCheck2,
+    tag: "Atendimento Humanizado · Transparência Digital · Alcance Nacional",
     summary:
-      "Combate implacável a abusos de bancos, instituições financeiras e concessionárias, com cancelamento de cobranças indevidas, exclusão de restrições de crédito e reparação financeira.",
+      "Consultoria jurídica moderna e sob medida, permitindo que você resolva suas demandas jurídicas sem sair de casa, com segurança digital auditada e acompanhamento em tempo real.",
     details:
-      "Aposentados, pensionistas e consumidores em geral frequentemente sofrem com descontos não autorizados de empréstimos em suas contas, fraudes via Pix e negativações injustas nos órgãos de proteção ao crédito. Ingressamos com medidas judiciais liminares imediatas para suspender os descontos, limpar o CPF e exigir a devolução dos valores com indenização por danos morais.",
+      "A Prado Ramos Advocacia construiu reputação nota 5,0 no Google com clientes atendidos com sucesso em Minas Gerais, Mato Grosso, São Paulo e em todo o Brasil. Você não precisa enfrentar filas, trânsito ou se preocupar com a distância: o envio de documentos, assinatura digital com validade jurídica e reuniões acontecem de forma prática pelo WhatsApp oficial, com conferência rigorosa de segurança para proteger você contra golpes.",
     topics: [
-      "Cancelamento de empréstimos consignados fraudulentos e repetição em dobro dos valores descontados",
-      "Ações judiciais de ressarcimento contra fraudes eletrônicas, golpes do Pix e falhas de segurança bancária",
-      "Exclusão imediata de negativações indevidas nos sistemas do SPC, Serasa e órgãos de proteção ao crédito",
-      "Indenizações por danos morais em razão de cobranças abusivas, humilhantes ou restrições de crédito infundadas",
-      "Revisão de juros abusivos e tarifas ilegais em contratos de financiamento e mútuo bancário",
-      "Reparação civil por corte indevido ou falha grave na prestação de serviços essenciais de telefonia e energia",
+      "Atendimento 100% online por WhatsApp oficial, videochamada e telefone com Dra. Isadora Prado",
+      "Canal com verificação de segurança oficial contra fraudes e cópia de números falsos",
+      "Atendimento presencial na sede própria no Centro de Cláudio - MG (Praça Levi Vioy de Freitas, 28)",
+      "Assinatura eletrônica de procurações e termos aditivos com certificação jurídica oficial",
+      "Prestação de contas clara e atualizações constantes do andamento processual sem juridiquês",
+      "Atuação em tribunais estaduais, federais e órgãos administrativos em todo o território nacional",
     ],
     whatsAppText:
-      "Olá, Dr. Antônio Cesar! Preciso de ajuda contra uma cobrança indevida, fraude bancária ou negativação.",
-  },
-  {
-    id: "advocacia-processual-estrategica",
-    title: "Advocacia Processual & Contencioso Estratégico",
-    category: "Acompanhamento Processual · Recursos nos Tribunais · Sustentações Orais · Audiências · Execuções",
-    icon: Gavel,
-    tag: "Domínio Processual · Acompanhamento Diligente · Foco em Resultados",
-    summary:
-      "Representação processual completa e dedicada perante as varas judiciais de Matozinhos, comarcas da Grande BH, Tribunal de Justiça de Minas Gerais (TJMG) e tribunais superiores.",
-    details:
-      "O sucesso de uma demanda judicial depende da técnica processual, do cumprimento rigoroso de prazos e do preparo aprofundado para audiências e recursos. Com anos de dedicação à advocacia contenciosa, o Dr. Antônio Cesar conduz cada processo com dedicação artesanal, informando o cliente de maneira transparente a cada andamento dos autos.",
-    topics: [
-      "Atuação processual diligente em varas cíveis, trabalhistas, de família e juizados especiais cíveis e federais",
-      "Interposição e sustentação de recursos perante o Tribunal de Justiça de Minas Gerais (TJMG) e TRT da 3ª Região",
-      "Atuação perante os Tribunais Superiores em Brasília (STJ e STF) em matérias constitucionais e infraconstitucionais",
-      "Realização de audiências de instrução e julgamento com preparação prévia de depoimentos e testemunhas",
-      "Fase de cumprimento de sentença e execução de valores com busca patrimonial avançada de devedores",
-      "Atendimento presencial no Centro de Matozinhos e consultoria online para clientes em todo o território nacional",
-    ],
-    whatsAppText:
-      "Olá, Dr. Antônio Cesar! Gostaria de consultar sobre o andamento ou ingresso de uma ação judicial.",
+      "Olá, Dra. Isadora Prado! Gostaria de saber mais sobre as soluções jurídicas personalizadas da Prado Ramos Advocacia.",
   },
 ];
 
@@ -302,112 +309,112 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Nathalia Karoline",
+    name: "Edineis de Carvalho Pires",
     badge: "2 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google · 4 meses atrás",
     highlight:
-      "Fui muito bem atendida. O advogado foi atencioso, esclareceu minhas dúvidas com paciência e demonstrou profissionalismo durante o atendimento. Recomendo.",
+      "No começo fiquei com um certo receio, a gente vê tanto golpe acontecendo. Mas, após o conhecimento e histórias no site, senti confiança. Desde o início ela explicou todo o processo!",
     content:
-      "Fui muito bem atendida. O advogado foi atencioso, esclareceu minhas dúvidas com paciência e demonstrou profissionalismo durante o atendimento. Recomendo.",
+      "No começo fiquei com um certo receio, a gente vê tanto golpe acontecendo. Mas, após o conhecimento e histórias no site, senti confiança. Desde o início, ela explicou todo o processo, como seria, estimativa de decisão, e fases de recurso. A comunicação foi toda por whatsapp, desde o envio dos documentos e retornos do processo. No pagamento, recebi o Termos aditivo também. Fiquei muito satisfeita com o trabalho e parabéns pelo trabalho e pela equipe. Muito obrigada!",
   },
   {
-    name: "Hitalo Santos",
+    name: "Lais Hyasmim",
+    badge: "4 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 1 mês atrás",
+    highlight:
+      "No início fiquei receosa por ser atendimento online, mas a Advocacia Prado Ramos me surpreendeu positivamente. Atendimento profissional, transparente e cuidadoso. Recomendo muito! ⭐⭐⭐⭐⭐",
+    content:
+      "No início fiquei um pouco receosa por ser um atendimento totalmente online, mas a Advocacia Prado Ramos me surpreendeu positivamente. O atendimento é muito profissional, transparente e cuidadoso. Quando foi necessário um atendimento presencial com uma advogada, eles prontamente encaminharam uma excelente profissional, que também nos atendeu com muita atenção e competência. Outro ponto que considero um grande diferencial é a preocupação com a segurança dos clientes. Sempre que acontece algo fora do padrão, eles nos comunicam para evitar golpes. Todo esse cuidado me passou muita confiança!",
+  },
+  {
+    name: "Denis Gomes",
+    badge: "5 avaliações · 3 fotos · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 4 meses atrás",
+    highlight:
+      "Quero agradecer à Dra. Isadora pelo excelente trabalho e dedicação no meu processo de extravio de bagagem. Sempre muito atenciosa, profissional e transparente!",
+    content:
+      "Quero agradecer à Dra. Isadora pelo excelente trabalho e dedicação no meu processo de extravio de bagagem. Sempre muito atenciosa, profissional e transparente durante todo o andamento da ação. Fiquei muito satisfeito com o resultado e recomendo seu trabalho com total confiança.",
+  },
+  {
+    name: "Gracinha Reis",
     badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 8 meses atrás",
+    date: "Avaliação Verificada no Google · 4 meses atrás",
     highlight:
-      "Vim com o intuito de tirar algumas dúvidas trabalhistas e fui muito bem atendido pelo Dr. Antônio. Excelente!!!",
+      "Todo atendimento 100% online, sem precisar investir nada adiantado, o que me trouxe muita segurança. Atualização do processo em tempo recorde!",
     content:
-      "Vim com o intuito de tirar algumas dúvidas trabalhistas e fui muito bem atendido pelo Dr. Antônio. Excelente!!!",
+      "Passando para agradecer. A agilidade e profissionalismo dessa empresa, todo atendimento 100% online, sem precisar investir nada, o que me trouxe muita segurança, atualização do processo em tempo real, só tenho que agradecer pelos serviços recebidos em tempo recorde. Ainda temos profissionais brilhantes e honestos nesse país, muito feliz com o resultado. Obrigada!",
   },
   {
-    name: "Bj do Concórdia",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
-    highlight:
-      "O doutor é bem educado, me ajudou muito, precisamos de mais cidadãos assim no nosso brasil!!!",
-    content:
-      "O doutor é bem educado, me ajudou muito, precisamos de mais cidadãos assim no nosso brasil!!!",
-  },
-  {
-    name: "warley rodrigues",
-    badge: "2 avaliações · 1 foto · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
-    highlight:
-      "Atendimento claro e eficiente, passa segurança nas orientações, recomendo.",
-    content:
-      "Atendimento claro e eficiente, passa segurança nas orientações, recomendo.",
-  },
-  {
-    name: "Alvaro Antonio Fernandes",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 3 meses atrás",
-    highlight:
-      "Excelente atendimento. Ótimo nota 10 Advogado muito atencioso.",
-    content:
-      "Excelente atendimento. Ótimo nota 10 Advogado muito atencioso.",
-  },
-  {
-    name: "Jhonn Ericky",
-    badge: "2 avaliações · 3 fotos · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
-    highlight:
-      "Excelente profissional, e atribui muito em auxiliar seus clientes ...",
-    content:
-      "Excelente profissional, e atribui muito em auxiliar seus clientes ...",
-  },
-  {
-    name: "Vital Veira",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · Recente",
-    highlight:
-      "Gostei, advogado atencioso e competente.",
-    content:
-      "Gostei, advogado atencioso e competente.",
-  },
-  {
-    name: "José Maria",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 6 meses atrás",
-    highlight:
-      "Meu Advogado há muitos anos.",
-    content:
-      "Meu Advogado há muitos anos.",
-  },
-  {
-    name: "Laricia Soares",
+    name: "Karina Passos",
     badge: "1 avaliação · 5 Estrelas",
     date: "Avaliação Verificada no Google · 1 mês atrás",
     highlight:
-      "É muito paciente, educado, compreensivo.",
+      "Só tenho a agradecer, uma equipe maravilhosa e super atenciosa. Ótimas profissionais que resolveram com agilidade meus contratempos com as companhias aéreas.",
     content:
-      "É muito paciente educado compreensivo.",
+      "Só tenho a agradecer, uma equipe maravilhosa e super atenciosa. Ótimas profissionais que com excelência atenderam as minhas expectativas e resolveram com agilidade meus contratempos com as companhias aéreas.",
   },
   {
-    name: "Cesar Elias",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "Avaliação Verificada no Google · 7 meses atrás",
+    name: "Eduarda Stefany",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 3 meses atrás",
     highlight:
-      "Conheço há muito tempo. Advogado competente.",
+      "Recebi todo o suporte necessário durante cada etapa. O processo foi rápido, tranquilo e ocorreu exatamente como combinado!",
     content:
-      "Conheço ha muito tempo. Advogado competente.",
+      "No início, fiquei um pouco receosa por todo o processo ser realizado de forma online, sem precisar ir ao escritório. Porém, recebi todo o suporte necessário durante cada etapa. Todas as minhas dúvidas foram esclarecidas com atenção, e o processo foi rápido, tranquilo e ocorreu exatamente como combinado. Graças a Deus, deu tudo certo. Fiquei muito satisfeita com o atendimento e recomendo bastante!",
   },
   {
-    name: "Vanderley99",
+    name: "Deborah Clasen",
+    badge: "Local Guide · 5 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 8 meses atrás",
+    highlight:
+      "Contratei o escritório de forma on-line e obtivemos êxito nos dois processos! Rápido retorno às dúvidas e transparência em cada etapa.",
+    content:
+      "Contratei o escritório de forma on-line e tive uma experiência extremamente positiva. Obtivemos êxito nos dois processos, o que me deixou muito satisfeita. Destaco especialmente o rápido retorno às minhas dúvidas e a transparência durante todo o andamento, sempre me mantendo informada sobre cada etapa. Recomendo pelo profissionalismo, eficiência e comprometimento.",
+  },
+  {
+    name: "Sandra Azevedo Felix",
+    badge: "1 avaliação · 1 foto · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 1 ano atrás",
+    highlight:
+      "Coloquei a companhia aérea na justiça e ganhei a causa, recebi exatamente o valor devido. Muito atenciosos, correu tudo certinho!",
+    content:
+      "Foi maravilhoso, muito atenciosos, meu processo correu tudo certinho, sempre me colocaram a par do andamento do processo, coloquei a companhia aérea na justiça e ganhei a causa, recebi exatamente o valor devido.",
+  },
+  {
+    name: "Fabiana Aparecida da Silva",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 9 meses atrás",
+    highlight:
+      "A Prado Ramos Advocacia me transmitiu muita segurança. Moro no MT e o escritório mesmo sendo de outro estado foi super resolutivo!",
+    content:
+      "A Prado e Ramos Advocacia me transmitiu muita segurança desde o início do atendimento. Moro no MT e o escritório mesmo sendo de outro estado foi super resolutivo. Recomendo, estou muito satisfeita.",
+  },
+  {
+    name: "Rita de Cássia Ferreira Siquelli",
     badge: "1 avaliação · 5 Estrelas",
     date: "Avaliação Verificada no Google · 6 meses atrás",
     highlight:
-      "Ótimo advogado. Já resolveu causas minhas.",
+      "Adorei contratar os serviços do escritório da Dra. Isadora Prado! Muito eficientes, atenciosos e o processo saiu rapidinho!",
     content:
-      "Ótimo advogado. Já resolveu causas minhas.",
+      "Adorei contratar os serviços do escritório da Dra. Isadora Prado! Eles são muito eficientes, organizados, atenciosos e o mais importante: o processo saiu rapidinho! Muito obrigada!",
   },
   {
-    name: "Natália Oliveira",
-    badge: "1 avaliação · 5 Estrelas",
+    name: "Kellen Paula Mendonça",
+    badge: "Local Guide · 25 avaliações · 5 Estrelas",
+    date: "Avaliação Verificada no Google · 4 meses atrás",
+    highlight:
+      "A equipe do escritório é extremamente capacitada, transmitindo seriedade e confiança em cada atendimento. Agilidade no retorno é diferencial!",
+    content:
+      "A equipe do escritório é extremamente capacitada, transmitindo seriedade e confiança em cada atendimento. Além da excelência profissional, a agilidade no retorno e no atendimento é um grande diferencial, tornando o escritório a melhor escolha para conduzir minhas demandas.",
+  },
+  {
+    name: "Synara Duarte",
+    badge: "2 avaliações · 5 Estrelas",
     date: "Avaliação Verificada no Google · 3 meses atrás",
     highlight:
-      "Ótimo atendimento, excelente profissional.",
+      "Resolveram a minha causa de forma transparente e eficiente, com a comunicação clara e sem burocracias. Recomendo!",
     content:
-      "Ótimo atendimento, excelente profissional.",
+      "Resolveram a minha causa de forma transparente e eficiente, com a comunicação clara e sem burocracias. Obrigada pela parceria. Recomendo.",
   },
 ];
 
@@ -418,34 +425,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "Como funciona a consulta jurídica com o Dr. Antônio Cesar?",
+    question: "Como funciona o atendimento 100% online da Prado Ramos Advocacia? É seguro?",
     answer:
-      "O atendimento pode ser realizado de forma presencial no escritório no Centro de Matozinhos (Av. Bento Gonçalves, 40 - Sala C) ou totalmente online via WhatsApp e videoconferência para qualquer localidade do país. Na conversa inicial, ouvimos atentamente seu relato, analisamos a documentação comprobatória e explicamos com didática e transparência se existe fundamento jurídico para um acordo ou ingresso com ação judicial.",
+      "Sim, é absolutamente seguro e homologado por centenas de clientes em todo o Brasil. Você envia os documentos digitalmente via WhatsApp ou e-mail, e assina os termos e procurações de forma eletrônica direto pelo celular com validade jurídica plena. Nossa equipe mantém você atualizado a cada andamento com relatórios claros e transparentes. Além disso, adotamos protocolos rigorosos de segurança anti-golpe, garantindo que você converse exclusivamente pelo nosso canal oficial verificado.",
   },
   {
-    question: "Tive problemas no trabalho ou rescisão incorreta. O que devo provar?",
+    question: "Tive problemas com voos ou extravio de bagagem. O que tenho direito a receber?",
     answer:
-      "Recomendamos guardar todos os registros: contracheques, mensagens de WhatsApp, extrato analítico do FGTS, relatórios de ponto, fotos e nomes de testemunhas. A legislação trabalhista prevê o prazo prescricional de até 2 anos após a extinção do contrato para pleitear direitos dos últimos 5 anos. Conforme relatam nossos clientes em avaliações reais, o Dr. Antônio Cesar analisa minuciosamente cada cálculo para buscar tudo o que é devido por lei.",
+      "Passageiros que sofrem extravio temporário ou definitivo de malas, cancelamentos ou atrasos injustificados de voos têm direito amparado pelo Código de Defesa do Consumidor e pelas Resoluções da ANAC. Isso inclui ressarcimento de compras emergenciais de roupas e itens básicos, reparação integral por pertences perdidos e indenização por danos morais pela frustração, perda de compromissos ou estresse extremo causado pelas companhias aéreas.",
   },
   {
-    question: "O INSS negou minha aposentadoria ou auxílio-doença. Ainda posso conseguir?",
+    question: "Preciso pagar honorários antecipados para dar entrada no meu processo?",
     answer:
-      "Certamente. As decisões administrativas do INSS frequentemente desconsideram períodos trabalhados ou laudos médicos contundentes. Ter a solicitação negada na agência não tira o seu direito. Ingressamos com a ação adequada na Justiça Federal, onde a perícia é realizada por um perito médico judicial neutro, pleiteando inclusive o pagamento retroativo de todos os valores atrasados desde o primeiro pedido.",
+      "Para diversas demandas consumeristas (como litígios contra companhias aéreas e certas fraudes bancárias), trabalhamos sob a modalidade contratual de êxito: você não precisa desembolsar valores de honorários adiantados para iniciar sua ação. Toda a remuneração profissional é vinculada à vitória e ao recebimento efetivo da sua indenização, conforme combinado de maneira transparente em contrato.",
   },
   {
-    question: "Qual o procedimento para fazer um inventário de herança em Matozinhos?",
+    question: "Moro em outro estado. Posso contratar a Prado Ramos Advocacia?",
     answer:
-      "Quando todos os herdeiros são maiores, capazes e estão de acordo com a partilha dos bens, o inventário pode ser realizado diretamente em cartório de notas (extrajudicial), sendo finalizado em curto prazo e com custos cartorários menores. Havendo discordância ou herdeiro menor, cuidamos de todo o processo judicial de inventário e partilha resguardando os direitos patrimoniais da família.",
+      "Com certeza! Com a digitalização integral dos processos judiciais nos tribunais do Brasil (PJe, Projudi e Eproc), a atuação da Prado Ramos Advocacia é nacional. Atendemos com regularidade clientes no Mato Grosso, São Paulo, Rio de Janeiro, Goiás e em outros estados com a mesma proximidade, agilidade e excelência comprovada nas avaliações verificadas do Google.",
   },
   {
-    question: "Como agendar um horário presencial na sede em Matozinhos / MG?",
+    question: "Como agendar um atendimento presencial na sede em Cláudio - MG?",
     answer:
-      "O agendamento pode ser feito previamente pelo WhatsApp oficial (31) 99699-0842 para garantir que o Dr. Antônio Cesar reserve um horário exclusivo para você. Nosso escritório está localizado na Av. Bento Gonçalves, 40 - Sala C - Centro, Matozinhos - MG (CEP 35720-000), em localização de fácil acesso no centro comercial da cidade.",
+      "Para quem prefere o atendimento físico ou reside na região de Cláudio, Divinópolis, Itaúna, Oliveira e Carmópolis de Minas, nosso escritório está situado na Praça Levi Vioy de Freitas, 28, Sala 103 - Centro, Cláudio - MG (CEP 35530-000). O agendamento é feito pelo WhatsApp (31) 99825-4289 para garantir que a Dra. Isadora Prado e sua equipe reservem um horário exclusivo para você.",
   },
   {
-    question: "Quais são os horários de atendimento da Advocacia Antônio Cesar?",
+    question: "Quais são as garantias contra golpes virtuais ao conversar com o escritório?",
     answer:
-      "O escritório funciona de segunda a sexta-feira, das 08:00 às 18:00. Pelo canal oficial do WhatsApp (31) 99699-0842, você pode enviar sua mensagem e agendar seu atendimento a qualquer hora.",
+      "Essa é uma das nossas maiores prioridades éticas. O único número oficial de WhatsApp da Prado Ramos Advocacia para contato e atendimento é (31) 99825-4289. Nosso perfil no Instagram @pradoramosadvocacia é constantemente atualizado com comunicados de segurança. Jamais solicitamos depósitos estranhos ou transferências prévias em contas de terceiros.",
   },
 ];
 
@@ -469,7 +476,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-          dark ? "text-white" : "text-[#061120]"
+          dark ? "text-white" : "text-[#06101e]"
         }`}
       >
         {children}
@@ -505,19 +512,19 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen bg-[#fbfbf9] text-[#061120] selection:bg-[#d8a84e] selection:text-[#030a14]">
+      <main className="min-h-screen bg-[#fbfbf9] text-[#06101e] selection:bg-[#c59b4c] selection:text-[#040912]">
         {/* ======================================================== */}
-        {/* TOP ANNOUNCEMENT BAR (ROYAL MIDNIGHT WITH GOLD ACCENT)   */}
+        {/* TOP ANNOUNCEMENT BAR (OXFORD MIDNIGHT NAVY & GOLD)      */}
         {/* ======================================================== */}
-        <div className="border-b border-[#0c203d] bg-[#061120] py-2 text-xs text-slate-300">
+        <div className="border-b border-[#0b1c31] bg-[#071322] py-2 text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#fad771] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#d8a84e]" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f5d17a] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#c59b4c]" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                ADVOCACIA ANTÔNIO CESAR · Matozinhos - MG · Atendimento Presencial & Online ⚖️
+                PRADO RAMOS ADVOCACIA · Soluções Jurídicas Personalizadas · Atendimento 100% Online & Presencial ⚖️
               </span>
             </div>
 
@@ -528,12 +535,12 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
-                <Star size={12} className="fill-[#d8a84e] text-[#d8a84e]" />
-                <span className="font-bold text-white">5,0 ★</span> (252 avaliações no Google)
+                <Star size={12} className="fill-[#f59e0b] text-[#f59e0b]" />
+                <span className="font-bold text-white">5,0 ★</span> (234 avaliações no Google)
               </a>
               <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de uma consulta jurídica.")}
+                href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de uma consulta jurídica.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 font-semibold text-slate-200 transition-colors hover:text-white sm:inline-flex"
@@ -546,47 +553,30 @@ export default function Home() {
         </div>
 
         {/* ======================================================== */}
-        {/* STICKY HEADER / NAVBAR                                   */}
+        {/* STICKY HEADER / NAVBAR (OFFICIAL LOGO DIRECTLY USED)     */}
         {/* ======================================================== */}
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
             scrolled
-              ? "border-b border-slate-200/90 bg-white/95 py-3 shadow-md backdrop-blur-md"
+              ? "border-b border-slate-200/90 bg-white/95 py-2.5 shadow-md backdrop-blur-md"
               : "border-b border-slate-200/60 bg-white/90 py-3.5 backdrop-blur-sm"
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-            {/* Left: Brand Logo with Official AC Monogram */}
+            {/* Left: Official Prado Ramos Logo exactly as sent by user */}
             <a
               href="#"
-              className="group flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95"
-              aria-label="Advocacia Antônio Cesar - Início"
+              className="group flex shrink-0 items-center transition-opacity hover:opacity-90"
+              aria-label="Prado Ramos Advocacia - Início"
             >
-              <div className="relative shrink-0">
-                <Image
-                  src={LOGO_EMBLEM_SRC}
-                  alt="Monograma AC - Advocacia Antônio Cesar"
-                  width={140}
-                  height={110}
-                  className="h-11 sm:h-12 md:h-13 w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
-                  priority
-                />
-              </div>
-
-              <div className="flex flex-col justify-center">
-                <span className="font-cinzel text-sm sm:text-base md:text-[1.15rem] font-bold tracking-[0.08em] text-[#061120] uppercase leading-none drop-shadow-xs transition-colors group-hover:text-[#966c26]">
-                  ANTÔNIO CESAR
-                </span>
-                <span className="font-cinzel text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] text-[#966c26] uppercase leading-tight mt-0.5">
-                  ADVOCACIA
-                </span>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="h-px w-4 sm:w-5 bg-gradient-to-r from-[#d8a84e] to-transparent" />
-                  <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.16em] text-slate-500 uppercase leading-none">
-                    Matozinhos - MG · Nota 5,0 ★ (252 reviews)
-                  </span>
-                </div>
-              </div>
+              <Image
+                src={LOGO_SRC}
+                alt="Prado Ramos Advocacia"
+                width={360}
+                height={110}
+                className="h-10 sm:h-12 md:h-13 w-auto object-contain"
+                priority
+              />
             </a>
 
             {/* Center: Desktop Navigation */}
@@ -595,7 +585,7 @@ export default function Home() {
                 Áreas de Atuação
               </a>
               <a href="#sobre" className="nav-link text-[11px] whitespace-nowrap">
-                Sobre o Advogado
+                Sobre a Advogada
               </a>
               <a href="#diferenciais" className="nav-link text-[11px] whitespace-nowrap">
                 Diferenciais
@@ -611,17 +601,17 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: WhatsApp CTA */}
+            {/* Right Action: WhatsApp CTA (Warm Champagne Gold) */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre a viabilidade do meu caso.")}
+                href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de consultar sobre a viabilidade do meu caso.")}
                 target="_blank"
                 variant="gold"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#030a14]" />
-                <span className="hidden 2xl:inline">Atendimento WhatsApp</span>
+                <WhatsAppIcon size={14} className="text-[#040912]" />
+                <span className="hidden 2xl:inline">Converse com uma Advogada</span>
                 <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
 
@@ -629,7 +619,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#d8a84e] hover:text-black xl:hidden cursor-pointer"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#c59b4c] hover:text-[#9e742a] xl:hidden cursor-pointer"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -647,85 +637,75 @@ export default function Home() {
                 className="border-b border-slate-200 bg-white px-5 py-6 xl:hidden shadow-lg"
               >
                 <div className="flex flex-col gap-4">
-                  <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
+                  <div className="flex items-center pb-3 border-b border-slate-100">
                     <Image
-                      src={LOGO_EMBLEM_SRC}
-                      alt="Monograma AC"
-                      width={100}
-                      height={80}
-                      className="h-11 w-auto object-contain"
+                      src={LOGO_SRC}
+                      alt="Prado Ramos Advocacia"
+                      width={280}
+                      height={90}
+                      className="h-10 w-auto object-contain"
+                      priority
                     />
-                    <div className="flex flex-col">
-                      <span className="font-cinzel text-base font-bold tracking-wider text-slate-900 uppercase leading-tight">
-                        Antônio Cesar
-                      </span>
-                      <span className="font-cinzel text-[10px] font-semibold tracking-[0.16em] text-[#966c26] uppercase leading-tight mt-0.5">
-                        Advocacia
-                      </span>
-                      <span className="text-[9px] font-bold tracking-[0.16em] text-slate-500 uppercase mt-1">
-                        Av. Bento Gonçalves, 40 · Matozinhos - MG
-                      </span>
-                    </div>
                   </div>
                   <a
                     href="#servicos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
                   >
                     <span>Áreas de Atuação</span>
-                    <ArrowRight size={14} className="text-[#d8a84e]" />
+                    <ArrowRight size={14} className="text-[#c59b4c]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
                   >
-                    <span>Sobre Dr. Antônio Cesar</span>
-                    <ArrowRight size={14} className="text-[#d8a84e]" />
+                    <span>Sobre Dra. Isadora Prado</span>
+                    <ArrowRight size={14} className="text-[#c59b4c]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
                   >
-                    <span>4 Pilares & Diferenciais</span>
-                    <ArrowRight size={14} className="text-[#d8a84e]" />
+                    <span>Segurança & Diferenciais</span>
+                    <ArrowRight size={14} className="text-[#c59b4c]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
                   >
-                    <span>Avaliações Google (5,0 ★ · 252 reviews)</span>
-                    <ArrowRight size={14} className="text-[#d8a84e]" />
+                    <span>Avaliações Google (5,0 ★ · 234 reviews)</span>
+                    <ArrowRight size={14} className="text-[#c59b4c]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#d8a84e]" />
+                    <ArrowRight size={14} className="text-[#c59b4c]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#966c26]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
                   >
                     <span>Sede & Contato</span>
-                    <ArrowRight size={14} className="text-[#d8a84e]" />
+                    <ArrowRight size={14} className="text-[#c59b4c]" />
                   </a>
 
                   <div className="pt-4 border-t border-slate-100">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar uma consulta sobre o meu caso.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de agendar uma consulta sobre o meu caso.")}
                       target="_blank"
                       variant="gold"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com Dr. Antônio Cesar</span>
+                      <span>Converse com a Dra. Isadora Prado</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -735,12 +715,12 @@ export default function Home() {
         </header>
 
         {/* ======================================================== */}
-        {/* DOBRA 1: HERO SECTION + MÉTRICAS — [MODO CLARO]          */}
+        {/* DOBRA 1: HERO SECTION — COM FOTO EXATA DA DRA. ISADORA    */}
         {/* ======================================================== */}
         <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fbfbf9]">
-          {/* Subtle Ambient Light Glow Background */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#fad771]/20 via-[#f4f3ec]/60 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#e8e6dc]/70 blur-3xl" />
+          {/* Subtle Ambient Light Champagne Glow Background */}
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#f5d17a]/15 via-[#f4f3ec]/60 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#f4ecd8]/40 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -753,20 +733,20 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-5">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#d8a84e]/40 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#966c26] shadow-xs">
-                    <span className="size-1.5 rounded-full bg-[#d8a84e] animate-pulse" />
-                    ADVOCACIA ANTÔNIO CESAR · MATOZINHOS - MG
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#c59b4c]/30 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#9e742a] shadow-xs">
+                    <span className="size-1.5 rounded-full bg-[#c59b4c] animate-pulse" />
+                    PRADO RAMOS ADVOCACIA · SOLUÇÕES JURÍDICAS PERSONALIZADAS
                   </span>
                 </motion.div>
 
-                {/* H1 Headline directly from brand artwork */}
+                {/* H1 Headline */}
                 <motion.h1
                   variants={reveal}
-                  className="font-serif text-3xl leading-[1.15] font-bold tracking-tight text-[#061120] sm:text-5xl lg:text-[3.25rem]"
+                  className="font-serif text-3xl leading-[1.15] font-bold tracking-tight text-[#06101e] sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Soluções Jurídicas Eficientes para Proteger o que{" "}
-                  <span className="bg-gradient-to-r from-[#966c26] via-[#d8a84e] to-[#734e15] bg-clip-text text-transparent">
-                    Realmente Importa.
+                  Soluções Jurídicas Personalizadas para Proteger Seus Direitos com{" "}
+                  <span className="bg-gradient-to-r from-[#7d591c] via-[#c59b4c] to-[#9e742a] bg-clip-text text-transparent">
+                    Agilidade e Total Transparência.
                   </span>
                 </motion.h1>
 
@@ -775,7 +755,7 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg"
                 >
-                  Com nota máxima de <strong className="text-slate-900 font-bold">5,0 ★ no Google e mais de 250 avaliações</strong>, o <strong className="text-slate-900 font-bold">Dr. Antônio Cesar</strong> oferece representação processual ética, experiente e combativa nas áreas <strong className="text-slate-900 font-bold">Trabalhista, Previdenciária (INSS) e Cível</strong>, com sede no Centro de Matozinhos e atendimento online para todo o Brasil.
+                  Com nota máxima de <strong className="text-slate-900 font-bold">5,0 ★ no Google e 234 avaliações</strong>, a <strong className="text-slate-900 font-bold">Prado Ramos Advocacia</strong>, liderada pela <strong className="text-slate-900 font-bold">Dra. Isadora Prado</strong>, oferece assessoria jurídica resolutiva em <strong className="text-slate-900 font-bold">Direito do Consumidor (Aéreo & Bancário), Indenizações, Cível e Trabalhista</strong>. Atendimento 100% online em todo o Brasil e presencial na Comarca de Cláudio - MG, com segurança certificada contra golpes.
                 </motion.p>
 
                 {/* Direct Trust Highlight with Real Client Review */}
@@ -783,9 +763,9 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs"
                 >
-                  <Award size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
+                  <Award size={20} className="text-[#c59b4c] shrink-0 mt-0.5" />
                   <p className="text-xs text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900 font-bold">Reconhecimento comprovado no Google (5,0 ★):</strong> &ldquo;Fui muito bem atendida. O advogado foi atencioso, esclareceu minhas dúvidas com paciência e demonstrou profissionalismo durante o atendimento. Recomendo.&rdquo; (Nathalia Karoline · Avaliação no Google)
+                    <strong className="text-slate-900 font-bold">Reconhecimento comprovado no Google (5,0 ★):</strong> &ldquo;No começo fiquei com receio, mas senti confiança. Desde o início ela explicou todo o processo e fases de recurso. A comunicação foi toda por WhatsApp com transparência e rapidez. Fiquei muito satisfeita!&rdquo; (Edineis de Carvalho Pires · Avaliação no Google)
                   </p>
                 </motion.div>
 
@@ -795,14 +775,14 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre a viabilidade do meu caso.")}
+                    href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de consultar sobre o meu caso pelo WhatsApp.")}
                     target="_blank"
                     variant="gold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Falar no WhatsApp com o Dr. Antônio Cesar</span>
+                    <span>Converse com a Dra. Isadora Prado</span>
                   </GlowingButton>
 
                   <GlowingButton
@@ -817,7 +797,7 @@ export default function Home() {
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Visual Frame (Dr. Antônio Cesar Photo) */}
+              {/* Right Column: Hero Visual Frame (Fotografia Exata da Dra. Isadora Prado) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -830,13 +810,14 @@ export default function Home() {
                     <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-100">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dr. Antônio Cesar - Advogado Especialista em Matozinhos - MG"
+                        alt="Dra. Isadora Prado - Prado Ramos Advocacia"
                         fill
                         sizes="(max-width: 768px) 100vw, 550px"
                         className="object-cover object-top transition-transform duration-700 hover:scale-105"
                         priority
+                        unoptimized
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#030a14]/75 via-transparent to-transparent opacity-80" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#040912]/60 via-transparent to-transparent opacity-75" />
                     </div>
 
                     {/* Overlay Label */}
@@ -844,20 +825,20 @@ export default function Home() {
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="font-serif text-sm font-bold text-slate-900">
-                            Dr. Antônio Cesar
+                            Dra. Isadora Prado
                           </p>
                           <p className="text-[11px] text-slate-600">
-                            Advogado Processual · Matozinhos - MG
+                            Prado Ramos Advocacia · Cláudio - MG
                           </p>
                         </div>
-                        <span className="rounded-md border border-[#d8a84e]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#966c26]">
+                        <span className="rounded-md border border-[#c59b4c]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#9e742a]">
                           OAB/MG
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Floating Stat Badge 1 (Google 5.0 Rating - 252 reviews) */}
+                  {/* Floating Stat Badge 1 (Google 5.0 Rating - 234 reviews) */}
                   <div className="absolute -top-5 -left-5 hidden rounded-xl border border-slate-200 bg-white/95 p-3.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
                     <div className="flex size-10 items-center justify-center rounded-lg bg-slate-50 border border-slate-200">
                       <GoogleIcon size={20} />
@@ -868,21 +849,21 @@ export default function Home() {
                           <Star
                             key={i}
                             size={12}
-                            className="fill-[#d8a84e] text-[#d8a84e]"
+                            className="fill-[#f59e0b] text-[#f59e0b]"
                           />
                         ))}
                       </div>
                       <p className="text-[11px] font-bold text-slate-900 mt-0.5">
-                        5,0 no Google · 252 Avaliações
+                        5,0 no Google · 234 Avaliações
                       </p>
                     </div>
                   </div>
 
                   {/* Floating Stat Badge 2 (Especialidade) */}
                   <div className="absolute -bottom-4 -right-4 hidden rounded-xl border border-slate-200 bg-white/95 px-4 py-2.5 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-2.5">
-                    <Scale size={16} className="text-[#966c26]" />
+                    <Scale size={16} className="text-[#9e742a]" />
                     <span className="text-xs font-bold tracking-wide text-slate-900">
-                      Trabalhista, Civil & INSS ⚖️
+                      Direito Aéreo & Consumidor ⚖️
                     </span>
                   </div>
                 </div>
@@ -893,35 +874,35 @@ export default function Home() {
             <div className="mt-14 border-t border-slate-200/80 pt-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#061120]">
+                  <span className="font-serif text-2xl font-bold text-[#06101e]">
                     5,0 ★
                   </span>
                   <p className="text-xs font-semibold text-slate-900 mt-1">Google Meu Negócio</p>
-                  <p className="text-[11px] text-slate-500">252 avaliações verificadas</p>
+                  <p className="text-[11px] text-slate-500">234 avaliações verificadas</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#061120]">
-                    Matozinhos - MG
+                  <span className="font-serif text-2xl font-bold text-[#06101e]">
+                    Cláudio - MG
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Sede Centralizada</p>
-                  <p className="text-[11px] text-slate-500">Av. Bento Gonçalves, 40 - Sl C</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Sede Própria</p>
+                  <p className="text-[11px] text-slate-500">Pça Levi Vioy de Freitas, 28</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#061120]">
-                    Especializado
+                  <span className="font-serif text-2xl font-bold text-[#06101e]">
+                    100% Online
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Trabalhista, Civil & INSS</p>
-                  <p className="text-[11px] text-slate-500">Atuação processual aprofundada</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Atendimento Nacional</p>
+                  <p className="text-[11px] text-slate-500">MG, MT, SP e todo o Brasil</p>
                 </div>
 
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                  <span className="font-serif text-2xl font-bold text-[#061120]">
-                    Combatividade ⚖️
+                  <span className="font-serif text-2xl font-bold text-[#06101e]">
+                    Sem Burocracia
                   </span>
-                  <p className="text-xs font-semibold text-slate-900 mt-1">Presencial & Online</p>
-                  <p className="text-[11px] text-slate-500">Para Matozinhos e todo o Brasil</p>
+                  <p className="text-xs font-semibold text-slate-900 mt-1">Foco no Êxito</p>
+                  <p className="text-[11px] text-slate-500">Atualizações em tempo real</p>
                 </div>
               </div>
             </div>
@@ -931,19 +912,19 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 2: PILARES & ÁREAS DE ATUAÇÃO — [MODO ESCURO]      */}
         {/* ======================================================== */}
-        <section id="servicos" className="border-t border-[#d8a84e]/30 bg-[#061120] text-white py-20 lg:py-28">
+        <section id="servicos" className="border-t border-[#c59b4c]/30 bg-[#071322] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 eyebrow="Áreas de Atuação & Soluções Jurídicas"
                 dark={true}
-                description="Expertise técnica sólida e combatividade processual para resguardar seus direitos em Matozinhos, tribunais de Minas Gerais e órgãos públicos."
+                description="Expertise técnica especializada e atendimento resolutivo para passageiros aéreos, consumidores, trabalhadores e famílias em todo o Brasil."
               >
                 Pilares de Excelência Jurídica
               </Heading>
 
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre a viabilidade da minha causa.")}
+                href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de consultar sobre a viabilidade da minha causa.")}
                 target="_blank"
                 variant="gold"
                 size="md"
@@ -960,24 +941,24 @@ export default function Home() {
                 return (
                   <div
                     key={area.id}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e] hover:shadow-xl hover:shadow-[#d8a84e]/15"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-[#0f2540] bg-[#0b1c31] p-7 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c] hover:shadow-xl hover:shadow-[#c59b4c]/15"
                   >
                     <div>
                       {/* Icon & Category */}
                       <div className="flex items-center justify-between">
-                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#10294d] text-[#d8a84e] border border-[#d8a84e]/40 transition-colors group-hover:bg-[#d8a84e] group-hover:text-[#030a14]">
+                        <div className="flex size-12 items-center justify-center rounded-xl bg-[#0f2540] text-[#c59b4c] border border-[#c59b4c]/40 transition-colors group-hover:bg-[#c59b4c] group-hover:text-[#040912]">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full bg-[#10294d] px-3 py-1 text-[10px] font-bold text-[#d8a84e] uppercase tracking-wider border border-[#d8a84e]/30">
+                        <span className="rounded-full bg-[#0f2540] px-3 py-1 text-[10px] font-bold text-[#f5d17a] uppercase tracking-wider border border-[#c59b4c]/30">
                           Especialidade
                         </span>
                       </div>
 
-                      <h3 className="mt-5 font-serif text-xl font-bold text-white group-hover:text-[#fad771] transition-colors">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-white group-hover:text-[#f5d17a] transition-colors">
                         {area.title}
                       </h3>
 
-                      <p className="mt-2 text-xs font-semibold text-[#d8a84e]">
+                      <p className="mt-2 text-xs font-semibold text-[#c59b4c]">
                         {area.tag}
                       </p>
 
@@ -986,11 +967,11 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div className="mt-6 border-t border-[#d8a84e]/25 pt-4">
+                    <div className="mt-6 border-t border-[#0f2540] pt-4">
                       <button
                         type="button"
                         onClick={() => setSelectedPractice(area)}
-                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#d8a84e] transition-colors hover:text-white cursor-pointer"
+                        className="inline-flex w-full items-center justify-between text-xs font-bold text-[#c59b4c] transition-colors hover:text-white cursor-pointer"
                       >
                         <span>Ver Procedimentos & Detalhes</span>
                         <ArrowUpRight size={15} />
@@ -1004,44 +985,45 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 3: SOBRE O ADVOGADO & ESCRITÓRIO — [MODO CLARO]    */}
+        {/* DOBRA 3: SOBRE A ADVOGADA & ESCRITÓRIO — [MODO CLARO]    */}
         {/* ======================================================== */}
-        <section id="sobre" className="relative border-t border-slate-200 bg-[#f4f3ec] py-20 lg:py-28 text-[#061120]">
+        <section id="sobre" className="relative border-t border-slate-200 bg-[#f4f3ec] py-20 lg:py-28 text-[#06101e]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Column: Visual Composition with Photo & Desk Detail */}
+              {/* Left Column: Visual Composition with Dra. Isadora Prado Photo */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Main Portrait Frame */}
                   <div className="relative overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white p-2.5 shadow-2xl shadow-slate-300/60">
                     <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-100">
                       <Image
-                        src="/dr-antonio-cesar-portrait.jpg"
-                        alt="Dr. Antônio Cesar - Advogado em Matozinhos"
+                        src={FOTO_PORTRAIT_SRC}
+                        alt="Dra. Isadora Prado - Prado Ramos Advocacia"
                         fill
                         sizes="(max-width: 768px) 100vw, 500px"
                         className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                        unoptimized
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#030a14]/75 via-transparent to-transparent opacity-75" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#040912]/60 via-transparent to-transparent opacity-75" />
 
                       {/* Overlay Badge at Bottom of Photo */}
                       <div className="absolute right-4 bottom-4 left-4 rounded-xl border border-slate-200 bg-white/95 p-4 shadow-xl backdrop-blur-md">
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="font-serif text-sm font-bold text-slate-900">
-                              Advocacia Antônio Cesar
+                              Prado Ramos Advocacia
                             </p>
                             <p className="text-[11px] text-slate-600 mt-0.5">
-                              Av. Bento Gonçalves, 40 · Matozinhos - MG
+                              Dra. Isadora Prado · Cláudio - MG
                             </p>
                           </div>
-                          <span className="rounded-md border border-[#d8a84e]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#966c26]">
-                            Centro
+                          <span className="rounded-md border border-[#c59b4c]/40 bg-[#fdfaf3] px-2.5 py-1 text-[10px] font-bold text-[#9e742a]">
+                            Sede Própria
                           </span>
                         </div>
                         <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-600">
                           <span>Atendimento Presencial e Online</span>
-                          <span className="text-[#1ea952] font-semibold">Nota 5,0 ★ (252 avaliações)</span>
+                          <span className="text-[#9e742a] font-semibold">Nota 5,0 ★ (234 avaliações)</span>
                         </div>
                       </div>
                     </div>
@@ -1049,9 +1031,9 @@ export default function Home() {
 
                   {/* Floating Trust Pill */}
                   <div className="absolute -top-4 -right-4 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3.5 py-2 shadow-xl">
-                    <Star size={13} className="fill-[#d8a84e] text-[#d8a84e]" />
+                    <Star size={13} className="fill-[#f59e0b] text-[#f59e0b]" />
                     <span className="text-[11px] font-bold text-slate-900">
-                      5,0 no Google · 252 Avaliações
+                      5,0 no Google · 234 Avaliações
                     </span>
                   </div>
                 </div>
@@ -1060,71 +1042,71 @@ export default function Home() {
               {/* Right Content */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre o Advogado & Escritório"
+                  eyebrow="Sobre a Advogada & Escritório"
                   dark={false}
-                  description="Uma trajetória alicerçada na seriedade, no estudo aprofundado de cada causa e no acolhimento humano a cada cliente que busca a justiça."
+                  description="Uma advocacia moderna, humana e segura, alicerçada na transparência radical, na agilidade nas respostas e no acolhimento a cada cliente."
                 >
-                  Advocacia Antônio Cesar: Tradição, Ética e Eficiência em Matozinhos
+                  Prado Ramos Advocacia: Excelência, Resolução e Proximidade em Todo o Brasil
                 </Heading>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
                   <p>
-                    Com sede no Centro de <strong className="text-slate-900 font-bold">Matozinhos - MG</strong> (Av. Bento Gonçalves, 40, Sala C), a <strong className="text-slate-900 font-bold">Advocacia Antônio Cesar</strong> destaca-se pela excelência processual e pelo tratamento individualizado concedido a cada cidadão e empresa.
+                    Com sede no Centro de <strong className="text-slate-900 font-bold">Cláudio - MG</strong> (Praça Levi Vioy de Freitas, 28, Sala 103), a <strong className="text-slate-900 font-bold">Prado Ramos Advocacia</strong> destaca-se pela entrega de soluções jurídicas sob medida, combinando o rigor técnico do Direito com uma experiência de atendimento moderna, acessível e sem burocracias.
                   </p>
                   <p>
-                    Liderado pelo <strong className="text-slate-900 font-bold">Dr. Antônio Cesar</strong>, o escritório é amplamente reconhecido pela atuação nas áreas de <strong className="text-slate-900 font-bold">Direito Trabalhista, Direito Previdenciário (INSS) e Direito Civil</strong>, aliando sólida bagagem jurídica ao acompanhamento constante de cada fase do processo.
+                    Liderado pela <strong className="text-slate-900 font-bold">Dra. Isadora Prado</strong>, o escritório conquistou destaque nacional na defesa do passageiro aéreo (<strong className="text-slate-900 font-bold">extravio de bagagens, voos atrasados e cancelamentos</strong>), em litígios bancários por fraudes e golpes do Pix, e em demandas cíveis e trabalhistas com alto índice de resolutividade.
                   </p>
                   <p>
-                    O diferencial que consolidou a marca com <strong className="text-slate-900 font-bold">nota máxima de 5,0 estrelas e mais de 250 avaliações no Google</strong> é a postura paciente, transparente e atenciosa. Aqui, o cliente tem suas dúvidas explicadas sem juridiquês e recebe suporte combativo para proteger seus direitos e o seu patrimônio.
+                    O grande diferencial celebrado nas <strong className="text-slate-900 font-bold">234 avaliações 5,0 estrelas no Google</strong> é a extrema preocupação com a segurança e o conforto do cliente: comunicação direta via WhatsApp, atualizações em tempo real do processo, termos transparentes e proteção ativa contra golpes eletrônicos.
                   </p>
                 </div>
 
-                {/* 4 Brand Pillars (From Client Brand Identity) */}
+                {/* 4 Brand Pillars */}
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <HeartHandshake size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
+                    <Lock size={20} className="text-[#c59b4c] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Atendimento Personalizado
+                        Segurança Certificada Anti-Golpe
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Cada cliente é ouvido com atenção, calma e respeito, entendendo a singularidade de cada história.
+                        Cuidado exemplar com os dados e canais oficiais do cliente, alertando e prevenindo fraudes digitais.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <Shield size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
+                    <Headphones size={20} className="text-[#c59b4c] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Ética e Transparência
+                        Atendimento 100% Online & Humanizado
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Clareza total sobre os riscos e as reais possibilidades da ação, sem promessas vazias.
+                        Processos conduzidos com agilidade de onde você estiver, sem necessidade de deslocamentos ou filas.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <BadgeCheck size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
+                    <Clock size={20} className="text-[#c59b4c] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Experiência e Especialização
+                        Atualizações em Tempo Real
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Anos de vivência prática nos tribunais com fundamentação jurídica e preparo probatório refinado.
+                        Informações claras e periódicas a cada etapa da sua ação pelo WhatsApp, com linguagem simples e acessível.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
-                    <Sparkles size={20} className="text-[#d8a84e] shrink-0 mt-0.5" />
+                    <Sparkles size={20} className="text-[#c59b4c] shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                        Foco em Resultados
+                        Foco no Êxito & Celeridade
                       </h4>
                       <p className="mt-1 text-[11px] text-slate-600">
-                        Dedicação incansável em cada petição e audiência para alcançar a vitória justa e célere na causa.
+                        Trabalho voltado para a vitória e compensação financeira justa, sem cobranças antecipadas em causas consumeristas.
                       </p>
                     </div>
                   </div>
@@ -1132,20 +1114,20 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de conversar sobre o meu caso.")}
+                    href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de conversar sobre o meu caso.")}
                     target="_blank"
                     variant="gold"
                     size="md"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Falar com o Dr. Antônio Cesar</span>
+                    <span>Falar com a Dra. Isadora Prado</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 transition-colors hover:text-[#966c26]"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 transition-colors hover:text-[#9e742a]"
                   >
                     <InstagramIcon size={15} />
                     <span>{INSTAGRAM_HANDLE}</span>
@@ -1155,7 +1137,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#966c26] transition-colors hover:text-black"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#9e742a] transition-colors hover:text-black"
                   >
                     <GoogleIcon size={14} />
                     <span>Ver Avaliações no Google (5,0 ★)</span>
@@ -1169,73 +1151,73 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 4: OS 4 PILARES & DIFERENCIAIS — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="border-t border-[#d8a84e]/30 bg-[#030a14] text-white py-20 lg:py-28">
+        <section id="diferenciais" className="border-t border-[#c59b4c]/30 bg-[#040912] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <p className="eyebrow-dark justify-center mb-3">
-                Por que Escolher a Advocacia Antônio Cesar
+                Por que Escolher a Prado Ramos Advocacia
               </p>
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                O Padrão de Excelência Atestado por 252 Clientes
+                O Padrão de Confiança Atestado por 234 Clientes
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Princípios demonstrados no dia a dia processual e reconhecidos por quem já confiou seus direitos ao Dr. Antônio Cesar.
+                Princípios demonstrados na prática e comprovados por centenas de pessoas que confiaram suas causas à Dra. Isadora Prado.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
+              <div className="rounded-2xl border border-[#0f2540] bg-[#071322] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0b1c31] text-[#c59b4c] border border-[#c59b4c]/40">
                   <Users size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Atendimento Personalizado
+                  Escuta Atenta e Empatia
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Escuta paciente e atenta. Suas dúvidas são esclarecidas com calma, sem pressa e com máxima empatia.
+                  Cada cliente é atendido com atenção minuciosa, tirando todas as dúvidas com paciência e clareza.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
+              <div className="rounded-2xl border border-[#0f2540] bg-[#071322] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0b1c31] text-[#c59b4c] border border-[#c59b4c]/40">
                   <Shield size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Ética e Transparência
+                  Proteção & Transparência
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Compromisso absoluto com a verdade e prestação de contas periódica em cada etapa da sua ação.
+                  Contratos claros, termos aditivos formais e comunicação oficial blindada contra fraudes digitais.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
-                  <Award size={22} />
+              <div className="rounded-2xl border border-[#0f2540] bg-[#071322] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0b1c31] text-[#c59b4c] border border-[#c59b4c]/40">
+                  <Plane size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Experiência & Especialização
+                  Autoridade em Direito Aéreo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Anos de atuação processual especializada nas áreas Trabalhista, Previdenciária e Civil em Minas Gerais.
+                  Especialização consolidada na obtenção rápida de indenizações contra companhias aéreas por bagagem e voos.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#061120] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0c203d] text-[#d8a84e] border border-[#d8a84e]/40">
-                  <Scale size={22} />
+              <div className="rounded-2xl border border-[#0f2540] bg-[#071322] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0b1c31] text-[#c59b4c] border border-[#c59b4c]/40">
+                  <Clock size={22} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  Foco em Resultados
+                  Respostas em Tempo Recorde
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Combatividade estratégica para buscar o melhor resultado financeiro e jurídico para o seu caso.
+                  Agilidade no retorno de mensagens e andamentos processuais transmitidos em tempo real para a sua tranquilidade.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar um atendimento personalizado.")}
+                href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de iniciar meu atendimento com a Prado Ramos Advocacia.")}
                 target="_blank"
                 variant="gold"
                 size="md"
@@ -1250,14 +1232,14 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 5: AVALIAÇÕES GOOGLE MEU NEGÓCIO 5,0 ★ — [MODO CLARO] */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="border-t border-slate-200 bg-[#fbfbf9] py-20 lg:py-28 text-[#061120]">
+        <section id="depoimentos" className="border-t border-slate-200 bg-[#fbfbf9] py-20 lg:py-28 text-[#06101e]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <span className="eyebrow mb-3.5">
                   Avaliações Verificadas no Google
                 </span>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#061120] sm:text-4xl">
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-[#06101e] sm:text-4xl">
                   A Confiança de Quem Teve Seus Direitos Defendidos
                 </h2>
                 <div className="mt-3 flex items-center gap-3">
@@ -1266,13 +1248,13 @@ export default function Home() {
                       <Star
                         key={i}
                         size={16}
-                        className="fill-[#d8a84e] text-[#d8a84e]"
+                        className="fill-[#f59e0b] text-[#f59e0b]"
                       />
                     ))}
                   </div>
                   <span className="text-sm font-bold text-slate-900">5,0 de 5,0</span>
                   <span className="text-xs text-slate-500">
-                    · Mais de 250 avaliações no Google Meu Negócio em Matozinhos - MG
+                    · 234 avaliações verificadas no Google Meu Negócio
                   </span>
                 </div>
               </div>
@@ -1281,7 +1263,7 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs transition-colors hover:border-[#d8a84e] hover:bg-slate-50"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs transition-colors hover:border-[#c59b4c] hover:bg-slate-50"
               >
                 <GoogleIcon size={14} />
                 <span>Ver Perfil e Avaliações no Google</span>
@@ -1294,7 +1276,7 @@ export default function Home() {
               {clientReviews.map((review, idx) => (
                 <div
                   key={idx}
-                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-[#d8a84e] hover:shadow-md"
+                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:border-[#c59b4c] hover:shadow-md"
                 >
                   <div>
                     {/* Stars */}
@@ -1303,7 +1285,7 @@ export default function Home() {
                         <Star
                           key={i}
                           size={13}
-                          className="fill-[#d8a84e] text-[#d8a84e]"
+                          className="fill-[#f59e0b] text-[#f59e0b]"
                         />
                       ))}
                     </div>
@@ -1323,7 +1305,7 @@ export default function Home() {
                     <p className="font-serif text-xs font-bold text-slate-900">
                       {review.name}
                     </p>
-                    <p className="text-[10px] text-[#966c26] font-semibold">
+                    <p className="text-[10px] text-[#9e742a] font-semibold">
                       {review.badge} · {review.date}
                     </p>
                   </div>
@@ -1333,20 +1315,20 @@ export default function Home() {
 
             <div className="mt-12 rounded-2xl border border-[#e2e8f0] bg-[#f4f3ec] p-6 text-center sm:p-8">
               <h3 className="font-serif text-lg font-bold text-slate-900 sm:text-xl">
-                Precisa de orientação jurídica segura para o seu caso?
+                Teve sua bagagem extraviada, voo cancelado ou sofreu um golpe financeiro?
               </h3>
               <p className="mt-2 text-xs text-slate-600 max-w-xl mx-auto">
-                Não enfrente dúvidas ou conflitos jurídicos sozinho. Conte com o Dr. Antônio Cesar para defender seus direitos com total dedicação e competência.
+                Não fique no prejuízo. Conte com a Dra. Isadora Prado e a equipe da Prado Ramos Advocacia para exigir sua indenização com total suporte e segurança.
               </p>
               <div className="mt-6 flex justify-center">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Li os depoimentos no site e gostaria de agendar uma consulta.")}
+                  href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Li os depoimentos no site e gostaria de agendar uma consulta sobre meu caso.")}
                   target="_blank"
                   variant="gold"
                   size="md"
                 >
                   <WhatsAppIcon size={15} />
-                  <span>Falar com o Dr. Antônio Cesar no WhatsApp</span>
+                  <span>Falar com a Dra. Isadora Prado no WhatsApp</span>
                 </GlowingButton>
               </div>
             </div>
@@ -1356,66 +1338,66 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: COMO FUNCIONA O ATENDIMENTO — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section className="border-t border-[#d8a84e]/30 bg-[#061120] text-white py-20 lg:py-24">
+        <section className="border-t border-[#c59b4c]/30 bg-[#071322] text-white py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
               <span className="eyebrow-dark justify-center mb-3">
-                Processo Transparente
+                Processo Transparente & Seguro
               </span>
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Como Funciona o Seu Atendimento
               </h2>
               <p className="mt-3 text-sm text-slate-300">
-                Etapas bem definidas e didáticas, garantindo que você compreenda cada passo com total clareza.
+                Do primeiro contato ao recebimento da indenização, você tem controle total de cada etapa.
               </p>
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
+              <div className="rounded-2xl border border-[#0f2540] bg-[#0b1c31] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <span className="font-serif text-3xl font-bold text-[#c59b4c]">
                   01
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Primeiro Contato
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Envie sua mensagem pelo WhatsApp ou agende sua visita ao escritório no Centro de Matozinhos para uma triagem inicial.
+                  Envie sua mensagem pelo WhatsApp oficial ou agende sua visita à nossa sede no Centro de Cláudio - MG para uma triagem inicial.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
+              <div className="rounded-2xl border border-[#0f2540] bg-[#0b1c31] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <span className="font-serif text-3xl font-bold text-[#c59b4c]">
                   02
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Análise Documental
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Examinamos contratos, rescisões, carteiras de trabalho, extratos do CNIS ou notificações para verificar a viabilidade da demanda.
+                  Examinamos bilhetes aéreos, comprovantes de compra, extratos bancários ou termos para verificar a viabilidade jurídica imediata.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
+              <div className="rounded-2xl border border-[#0f2540] bg-[#0b1c31] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <span className="font-serif text-3xl font-bold text-[#c59b4c]">
                   03
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
                   Estratégia & Ação
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Construímos a melhor estratégia jurídica, propondo acordo extrajudicial ou ingressando com a competente ação perante o Judiciário.
+                  Procuração e termos assinados digitalmente com certificação oficial. Ingressamos com medidas liminares ou ação indenizatória.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#d8a84e]/30 bg-[#0c203d] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#d8a84e]">
-                <span className="font-serif text-3xl font-bold text-[#d8a84e]">
+              <div className="rounded-2xl border border-[#0f2540] bg-[#0b1c31] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b4c]">
+                <span className="font-serif text-3xl font-bold text-[#c59b4c]">
                   04
                 </span>
                 <h3 className="mt-3 font-serif text-base font-bold text-white">
-                  Acompanhamento Contínuo
+                  Repasse & Conclusão
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                  Você recebe atualizações claras sobre cada andamento processual até a efetiva conclusão e liberação dos valores devidos.
+                  Atualizações passo a passo até a liberação e transferência segura do pagamento da sua indenização na sua conta bancária.
                 </p>
               </div>
             </div>
@@ -1425,17 +1407,17 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: DÚVIDAS FREQUENTES / FAQ — [MODO CLARO]          */}
         {/* ======================================================== */}
-        <section id="duvidas" className="border-t border-slate-200 bg-[#f4f3ec] py-20 lg:py-28 text-[#061120]">
+        <section id="duvidas" className="border-t border-slate-200 bg-[#f4f3ec] py-20 lg:py-28 text-[#06101e]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <span className="eyebrow mb-3.5 justify-center">
                 Esclarecimento de Dúvidas
               </span>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#061120] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#06101e] sm:text-4xl">
                 Perguntas Frequentes
               </h2>
               <p className="mt-3 text-sm text-slate-600">
-                Respostas diretas e esclarecedoras sobre consultas, causas trabalhistas, previdenciárias e inventários.
+                Respostas diretas e esclarecedoras sobre consultas, causas contra companhias aéreas, bancos e atendimento online seguro.
               </p>
             </div>
 
@@ -1450,13 +1432,13 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-slate-900 transition-colors hover:text-[#966c26] cursor-pointer"
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-bold text-slate-900 transition-colors hover:text-[#9e742a] cursor-pointer"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#d8a84e]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#c59b4c]" />
                       ) : (
-                        <ChevronDown size={18} className="shrink-0 text-[#d8a84e]" />
+                        <ChevronDown size={18} className="shrink-0 text-[#c59b4c]" />
                       )}
                     </button>
 
@@ -1484,13 +1466,13 @@ export default function Home() {
               </p>
               <div className="mt-3">
                 <a
-                  href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de tirar uma dúvida que não encontrei no site.")}
+                  href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de tirar uma dúvida que não encontrei no site.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#061120] hover:text-[#966c26] hover:underline"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#06101e] hover:text-[#9e742a] hover:underline"
                 >
                   <WhatsAppIcon size={14} className="text-[#25D366]" />
-                  <span>Tire sua dúvida diretamente com o Dr. Antônio Cesar no WhatsApp</span>
+                  <span>Tire sua dúvida diretamente com a Dra. Isadora Prado no WhatsApp</span>
                   <ArrowRight size={12} />
                 </a>
               </div>
@@ -1501,46 +1483,56 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: LOCALIZAÇÃO, SEDE & CONTATO — [MODO ESCURO]     */}
         {/* ======================================================== */}
-        <section id="contato" className="border-t border-[#d8a84e]/30 bg-[#030a14] text-white py-20 lg:py-28">
+        <section id="contato" className="border-t border-[#c59b4c]/30 bg-[#040912] text-white py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Sede info */}
               <div className="lg:col-span-5">
                 <span className="eyebrow-dark mb-3.5">Localização & Atendimento</span>
                 <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Estamos Prontos para Atender Você em Matozinhos
+                  Estamos Prontos para Atender Você
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  Visite nosso escritório no Centro de Matozinhos ou receba suporte confidencial e ágil pelo WhatsApp de onde você estiver.
+                  Visite nosso escritório no Centro de Cláudio - MG ou receba suporte confidencial, seguro e ágil pelo WhatsApp de onde você estiver.
                 </p>
 
                 <div className="mt-8 space-y-6">
-                  {/* Sede Matozinhos */}
+                  {/* Sede Cláudio */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#c59b4c]/35 bg-[#071322] text-[#c59b4c]">
                       <MapPin size={20} />
                     </div>
                     <div>
                       <p className="text-xs font-bold text-white uppercase tracking-wider">
-                        Sede em Matozinhos / MG
+                        Sede em Cláudio / MG
                       </p>
                       <p className="mt-1 text-xs leading-relaxed text-slate-300">
-                        {ADDRESS_MATOZINHOS}
+                        {ADDRESS_CLAUDIO}
                       </p>
-                      <a
-                        href={GOOGLE_MAPS_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[11px] text-[#d8a84e] font-semibold hover:underline block mt-1"
-                      >
-                        Ver localização e rotas no Google Maps →
-                      </a>
+                      <div className="mt-1.5 flex flex-wrap gap-3">
+                        <a
+                          href={GOOGLE_MAPS_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] text-[#c59b4c] font-semibold hover:underline"
+                        >
+                          Ver no Google Maps →
+                        </a>
+                        <a
+                          href={GOOGLE_STREET_VIEW_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] text-[#f5d17a] font-semibold hover:underline"
+                        >
+                          Ver Fachada / Street View →
+                        </a>
+                      </div>
                     </div>
                   </div>
 
                   {/* Telefone & WhatsApp */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#c59b4c]/35 bg-[#071322] text-[#c59b4c]">
                       <Phone size={20} />
                     </div>
                     <div>
@@ -1548,22 +1540,22 @@ export default function Home() {
                         Telefone & WhatsApp
                       </p>
                       <p className="mt-1 text-xs text-slate-300">
-                        Telefone / WhatsApp: <strong className="text-white">{PHONE_DISPLAY}</strong>
+                        Canal Oficial: <strong className="text-white">{PHONE_DISPLAY}</strong>
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar um atendimento.")}
+                        href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de agendar um atendimento.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-bold text-[#d8a84e] hover:underline block mt-1"
+                        className="text-[11px] font-bold text-[#c59b4c] hover:underline block mt-1"
                       >
-                        Clique para conversar direto no WhatsApp
+                        Clique para conversar direto no WhatsApp oficial
                       </a>
                     </div>
                   </div>
 
                   {/* E-mail de Contato */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#c59b4c]/35 bg-[#071322] text-[#c59b4c]">
                       <Mail size={20} />
                     </div>
                     <div>
@@ -1578,7 +1570,7 @@ export default function Home() {
 
                   {/* Horário */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#c59b4c]/35 bg-[#071322] text-[#c59b4c]">
                       <Clock size={20} />
                     </div>
                     <div>
@@ -1586,17 +1578,17 @@ export default function Home() {
                         Horário de Atendimento
                       </p>
                       <p className="mt-1 text-xs text-slate-300">
-                        Segunda a Sexta: 08:00 às 18:00
+                        Segunda a Sexta: 08:00 às 17:00
                       </p>
-                      <p className="text-[11px] text-[#fad771]">
-                        Atendimento ágil pelo WhatsApp para dúvidas urgentes.
+                      <p className="text-[11px] text-[#f5d17a]">
+                        Atendimento ágil pelo WhatsApp para dúvidas e casos urgentes.
                       </p>
                     </div>
                   </div>
 
                   {/* Redes Sociais */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d8a84e]/35 bg-[#061120] text-[#d8a84e]">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#c59b4c]/35 bg-[#071322] text-[#c59b4c]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
@@ -1610,15 +1602,15 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-slate-300 hover:text-white"
                         >
-                          Instagram Oficial: <span className="font-bold text-white">{INSTAGRAM_HANDLE}</span>
+                          Instagram: <span className="font-bold text-white">{INSTAGRAM_HANDLE}</span> ({INSTAGRAM_FOLLOWERS})
                         </a>
                         <a
                           href={GOOGLE_SEARCH_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#d8a84e] hover:underline"
+                          className="text-[#c59b4c] hover:underline"
                         >
-                          Perfil Google: Advocacia Antônio Cesar (5,0 ★ · 252 avaliações)
+                          Perfil Google: Prado Ramos Advocacia (5,0 ★ · 234 avaliações)
                         </a>
                       </div>
                     </div>
@@ -1628,16 +1620,16 @@ export default function Home() {
 
               {/* Right Column: Interactive Consultation Card */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-[#d8a84e]/35 bg-[#061120] p-8 shadow-xl shadow-black/60">
+                <div className="rounded-2xl border border-[#c59b4c]/35 bg-[#071322] p-8 shadow-xl shadow-black/60">
                   <div className="flex items-center gap-3">
                     <span className="flex size-2 rounded-full bg-[#25D366]" />
-                    <span className="text-xs font-bold tracking-wider uppercase text-[#d8a84e]">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#c59b4c]">
                       Canal de Atendimento Direto
                     </span>
                   </div>
 
                   <h3 className="mt-4 font-serif text-2xl font-bold text-white sm:text-3xl">
-                    Inicie seu Atendimento com a Advocacia Antônio Cesar
+                    Inicie seu Atendimento com a Prado Ramos Advocacia
                   </h3>
                   <p className="mt-2 text-xs leading-relaxed text-slate-300">
                     Selecione a sua área de interesse para abrir o WhatsApp oficial com a mensagem apropriada:
@@ -1645,76 +1637,76 @@ export default function Home() {
 
                   <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Preciso de orientação sobre uma causa Trabalhista.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de consultar sobre um problema com companhia aérea (extravio de bagagem / voo cancelado / atraso).")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0b1c31] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#c59b4c] hover:text-white"
                     >
-                      <span>Causa Trabalhista</span>
-                      <ArrowRight size={14} className="text-[#d8a84e]" />
+                      <span>Direito Aéreo & Bagagem</span>
+                      <ArrowRight size={14} className="text-[#c59b4c]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de consultar sobre Aposentadoria ou Benefício do INSS.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Preciso de ajuda contra uma fraude bancária, golpe do Pix ou desconto indevido de empréstimo.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0b1c31] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#c59b4c] hover:text-white"
                     >
-                      <span>Aposentadorias & INSS</span>
-                      <ArrowRight size={14} className="text-[#d8a84e]" />
+                      <span>Golpes & Fraudes Bancárias</span>
+                      <ArrowRight size={14} className="text-[#c59b4c]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Preciso de assessoria em Direito Cível / Contratos / Indenizações.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Preciso de orientação sobre uma causa Cível / Contratos / Indenizações.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0b1c31] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#c59b4c] hover:text-white"
                     >
                       <span>Cível & Indenizações</span>
-                      <ArrowRight size={14} className="text-[#d8a84e]" />
+                      <ArrowRight size={14} className="text-[#c59b4c]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de orientações sobre Inventário de Bens ou Direito de Família.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de orientações sobre direitos em uma Causa Trabalhista.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0b1c31] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#c59b4c] hover:text-white"
                     >
-                      <span>Inventários & Família</span>
-                      <ArrowRight size={14} className="text-[#d8a84e]" />
+                      <span>Causa Trabalhista</span>
+                      <ArrowRight size={14} className="text-[#c59b4c]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Preciso de ajuda contra uma cobrança indevida, juros bancários ou negativação.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de orientações sobre Inventário de Bens em Cartório ou Direito de Família.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0b1c31] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#c59b4c] hover:text-white"
                     >
-                      <span>Consumidor & Bancário</span>
-                      <ArrowRight size={14} className="text-[#d8a84e]" />
+                      <span>Inventários em Cartório</span>
+                      <ArrowRight size={14} className="text-[#c59b4c]" />
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de orientações sobre representação processual estratégica.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de consultar sobre atendimento online seguro para o meu caso.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0c203d] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#d8a84e] hover:text-white"
+                      className="flex items-center justify-between rounded-xl border border-slate-700/60 bg-[#0b1c31] p-4 text-xs font-bold text-slate-200 transition-all hover:border-[#c59b4c] hover:text-white"
                     >
-                      <span>Advocacia Processual</span>
-                      <ArrowRight size={14} className="text-[#d8a84e]" />
+                      <span>Atendimento Online Seguro</span>
+                      <ArrowRight size={14} className="text-[#c59b4c]" />
                     </a>
                   </div>
 
                   <div className="mt-8 border-t border-slate-700/60 pt-6">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de iniciar uma consulta jurídica.")}
+                      href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de iniciar uma consulta jurídica com a Prado Ramos Advocacia.")}
                       target="_blank"
                       variant="gold"
                       size="lg"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Falar no WhatsApp com Dr. Antônio Cesar</span>
+                      <span>Converse com a Dra. Isadora Prado no WhatsApp</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -1724,41 +1716,41 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 9: FOOTER INSTITUCIONAL — [MODO ESCURO]            */}
+        {/* DOBRA 9: FOOTER INSTITUCIONAL — COM LOGO OFICIAL         */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#d8a84e]/25 bg-[#02070f] pt-16 pb-12 text-slate-400">
+        <footer className="border-t border-[#c59b4c]/25 bg-[#020509] pt-16 pb-12 text-slate-400">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
               {/* Brand Column */}
               <div className="lg:col-span-5">
                 <div className="relative py-1">
                   <Image
-                    src={LOGO_SRC}
-                    alt="Advocacia Antônio Cesar"
+                    src={LOGO_WHITE_SRC}
+                    alt="Prado Ramos Advocacia"
                     width={420}
                     height={140}
-                    className="h-14 sm:h-16 md:h-18 w-auto max-w-[280px] sm:max-w-[340px] object-contain object-left drop-shadow-md"
+                    className="h-12 sm:h-14 md:h-16 w-auto max-w-[280px] sm:max-w-[340px] object-contain object-left drop-shadow-md"
                   />
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-slate-400 max-w-md">
-                  ⚖️ Advocacia Antônio Cesar — Advocacia e assessoria processual em Matozinhos - MG e região metropolitana de Belo Horizonte. Atuação dedicada e experiente nas áreas Trabalhista, Previdenciária (INSS), Cível, Família e Direito do Consumidor.
+                  ⚖️ Prado Ramos Advocacia — Liderado pela Dra. Isadora Prado. Soluções jurídicas personalizadas em Direito do Consumidor (Aéreo & Bancário), Indenizações, Cível e Trabalhista. Atendimento 100% online em todo o Brasil e presencial em Cláudio - MG.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#061120] text-slate-300 transition-colors hover:border-[#d8a84e] hover:text-white"
-                    aria-label="Instagram da Advocacia Antônio Cesar"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071322] text-slate-300 transition-colors hover:border-[#c59b4c] hover:text-white"
+                    aria-label="Instagram da Prado Ramos Advocacia"
                   >
                     <InstagramIcon size={16} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dr. Antônio Cesar!")}
+                    href={getWhatsAppUrl("Olá, Dra. Isadora Prado!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#061120] text-slate-300 transition-colors hover:border-[#d8a84e] hover:text-white"
-                    aria-label="WhatsApp da Advocacia Antônio Cesar"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071322] text-slate-300 transition-colors hover:border-[#c59b4c] hover:text-white"
+                    aria-label="WhatsApp da Prado Ramos Advocacia"
                   >
                     <WhatsAppIcon size={16} />
                   </a>
@@ -1766,7 +1758,7 @@ export default function Home() {
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#061120] text-slate-300 transition-colors hover:border-[#d8a84e] hover:text-white"
+                    className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-[#071322] text-slate-300 transition-colors hover:border-[#c59b4c] hover:text-white"
                     aria-label="Avaliações do Google"
                   >
                     <GoogleIcon size={16} />
@@ -1787,12 +1779,12 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="footer-link">
-                      Sobre o Advogado
+                      Sobre a Advogada
                     </a>
                   </li>
                   <li>
                     <a href="#diferenciais" className="footer-link">
-                      Diferenciais do Atendimento
+                      Diferenciais & Segurança
                     </a>
                   </li>
                   <li>
@@ -1807,7 +1799,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="footer-link">
-                      Sede em Matozinhos
+                      Sede em Cláudio - MG
                     </a>
                   </li>
                 </ul>
@@ -1821,12 +1813,12 @@ export default function Home() {
                 <p className="mt-4 text-[11px] leading-relaxed text-slate-400">
                   Este website possui caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da OAB (Ordem dos Advogados do Brasil) e ao Provimento nº 205/2021 do Conselho Federal da OAB. Não visa à captação indevida de clientela nem substitui consulta jurídica formal.
                 </p>
-                <div className="mt-4 rounded-lg border border-slate-800 bg-[#061120] p-3 text-[11px] text-slate-300">
+                <div className="mt-4 rounded-lg border border-slate-800 bg-[#071322] p-3 text-[11px] text-slate-300">
                   <p className="font-bold text-white">
-                    ADVOCACIA ANTÔNIO CESAR
+                    PRADO RAMOS ADVOCACIA
                   </p>
-                  <p className="mt-0.5 text-[#d8a84e]">
-                    Sede: {ADDRESS_MATOZINHOS}
+                  <p className="mt-0.5 text-[#c59b4c]">
+                    Sede: {ADDRESS_CLAUDIO}
                   </p>
                   <p className="mt-0.5 text-xs text-slate-400">
                     Telefone / WhatsApp: {PHONE_DISPLAY}
@@ -1838,10 +1830,10 @@ export default function Home() {
             {/* Bottom Copyright */}
             <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800/80 pt-8 text-center text-[11px] sm:flex-row sm:text-left">
               <p>
-                © {new Date().getFullYear()} ADVOCACIA ANTÔNIO CESAR. Todos os direitos reservados.
+                © {new Date().getFullYear()} PRADO RAMOS ADVOCACIA. Todos os direitos reservados.
               </p>
-              <p className="text-[#d8a84e]">
-                Matozinhos · Grande Belo Horizonte · Minas Gerais · Brasil
+              <p className="text-[#c59b4c]">
+                Cláudio · Minas Gerais · Brasil · Atendimento Online Nacional
               </p>
             </div>
           </div>
@@ -1850,15 +1842,15 @@ export default function Home() {
         {/* FLOATING WHATSAPP CTA BUTTON */}
         <div className="fixed right-5 bottom-5 z-50 flex items-center gap-2">
           <a
-            href={getWhatsAppUrl("Olá, Dr. Antônio Cesar! Gostaria de agendar uma consulta jurídica.")}
+            href={getWhatsAppUrl("Olá, Dra. Isadora Prado! Gostaria de falar no WhatsApp com a Prado Ramos Advocacia.")}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Advocacia Antônio Cesar"
+            aria-label="Falar agora pelo WhatsApp com a Prado Ramos Advocacia"
             className="group flex items-center gap-2.5 rounded-full border-2 border-[#25D366] bg-[#25D366] px-4 py-3 text-xs font-black text-white shadow-xl shadow-black/60 transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a]"
           >
             <WhatsAppIcon size={19} />
             <span className="hidden sm:inline tracking-wide font-bold">
-              Falar no WhatsApp
+              Converse com uma Advogada
             </span>
           </a>
         </div>
@@ -1871,25 +1863,19 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95, y: 15 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
-                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#d8a84e]/55 bg-[#061120] p-6 text-white shadow-2xl sm:p-8"
+                className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-[#c59b4c]/55 bg-[#071322] p-6 text-white shadow-2xl sm:p-8"
               >
                 <button
                   type="button"
                   onClick={() => setSelectedPractice(null)}
-                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#0c203d] text-slate-300 hover:border-white hover:text-white cursor-pointer"
+                  className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-lg border border-slate-700 bg-[#0b1c31] text-slate-300 hover:border-white hover:text-white cursor-pointer"
                   aria-label="Fechar modal"
                 >
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center gap-2.5 text-xs font-bold text-[#d8a84e] uppercase tracking-wider">
-                  <Image
-                    src={LOGO_EMBLEM_SRC}
-                    alt="Monograma AC"
-                    width={24}
-                    height={24}
-                    className="size-6 object-contain"
-                  />
+                <div className="flex items-center gap-2.5 text-xs font-bold text-[#c59b4c] uppercase tracking-wider">
+                  <Scale size={20} className="text-[#c59b4c]" />
                   <span>Área de Atuação Especializada</span>
                 </div>
 
@@ -1897,7 +1883,7 @@ export default function Home() {
                   {selectedPractice.title}
                 </h3>
 
-                <p className="mt-2 text-xs font-medium text-[#d8a84e]">
+                <p className="mt-2 text-xs font-medium text-[#c59b4c]">
                   {selectedPractice.category}
                 </p>
 
@@ -1917,7 +1903,7 @@ export default function Home() {
                       >
                         <CheckCircle2
                           size={15}
-                          className="text-[#d8a84e] shrink-0 mt-0.5"
+                          className="text-[#c59b4c] shrink-0 mt-0.5"
                         />
                         <span>{topic}</span>
                       </li>
@@ -1934,13 +1920,13 @@ export default function Home() {
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={15} />
-                    <span>Consultar Dr. Antônio Cesar nesta Área</span>
+                    <span>Consultar Dra. Isadora Prado nesta Área</span>
                   </GlowingButton>
 
                   <button
                     type="button"
                     onClick={() => setSelectedPractice(null)}
-                    className="w-full rounded-lg border border-slate-700 bg-[#0c203d] px-5 py-3 text-xs font-bold text-slate-300 hover:bg-[#10294d] hover:text-white sm:w-auto cursor-pointer"
+                    className="w-full rounded-lg border border-slate-700 bg-[#0b1c31] px-5 py-3 text-xs font-bold text-slate-300 hover:bg-[#0f2540] hover:text-white sm:w-auto cursor-pointer"
                   >
                     Fechar
                   </button>
