@@ -28,64 +28,65 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#fbfbf9",
+  themeColor: "#051833",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pradoramosadvocacia.com.br"),
+  metadataBase: new URL("https://deboracupertinoadvocacia.com.br"),
   title:
-    "Prado Ramos Advocacia | Soluções Jurídicas Personalizadas · Avaliação 5,0 ★ (234 avaliações)",
+    "Débora Cupertino Advocacia | Direito das Famílias & Previdenciário · 5,0 ★ (106 avaliações)",
   description:
-    "Prado Ramos Advocacia — Liderado pela Dra. Isadora Prado. Soluções jurídicas personalizadas com transparência, agilidade e segurança. Especialistas em Direito do Consumidor (Aéreo & Bancário), Indenizações, Cível e Trabalhista. Atendimento 100% online em todo o Brasil e presencial em Cláudio - MG. WhatsApp: (31) 99825-4289.",
+    "Débora Cupertino Advocacia — Especialista em Direito das Famílias e Previdenciário. Atendimento humanizado e acolhedor em Divórcio, Guarda, Convivência, Pensão Alimentícia, Salário Maternidade, BPC/LOAS e Auxílios do INSS. Sede em Matozinhos - MG e atendimento 100% online para todo o Brasil. WhatsApp: (31) 99766-1362.",
   keywords: [
-    "Prado Ramos Advocacia",
-    "Dra Isadora Prado",
-    "Advocacia Prado Ramos",
-    "Prado e Ramos Advocacia",
-    "Advogado em Cláudio MG",
-    "Advocacia Cláudio MG",
-    "Escritório de Advocacia Cláudio Minas Gerais",
-    "Extravio de bagagem advogado indenização",
-    "Atraso de voo indenização advogado",
-    "Companhias aéreas processo danos morais",
-    "Direito do Consumidor aéreo MG",
-    "Fraudes bancárias e empréstimos indevidos",
-    "Indenização por danos morais",
-    "Advogado online Brasil seguro",
+    "Débora Cupertino Advocacia",
+    "Dra Débora Cupertino",
+    "Advogada em Matozinhos MG",
+    "Advocacia Matozinhos MG",
+    "Direito das Famílias Matozinhos",
+    "Advogado de Família Divórcio Guarda",
+    "Divórcio consensual Matozinhos MG",
+    "Pensão alimentícia advogado Matozinhos",
+    "Guarda compartilhada e convivência familiar",
+    "Direito Previdenciário Matozinhos MG",
+    "Salário Maternidade advogada INSS",
+    "BPC LOAS advogado autismo idoso",
+    "Auxílio doença aposentadoria INSS Matozinhos",
+    "Advocacia humanizada",
+    "Advogada online família e previdenciário Brasil",
   ],
-  authors: [{ name: "Prado Ramos Advocacia" }],
-  creator: "Prado Ramos Advocacia",
-  publisher: "Prado Ramos Advocacia",
+  authors: [{ name: "Débora Cupertino Advocacia" }],
+  creator: "Débora Cupertino Advocacia",
+  publisher: "Débora Cupertino Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=pr1", sizes: "any" },
-      { url: "/icon-32x32.png?v=pr1", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=pr1", type: "image/png", sizes: "16x16" },
-      { url: "/icon-48x48.png?v=pr1", type: "image/png", sizes: "48x48" },
-      { url: "/icon.png?v=pr1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=dc2", sizes: "any" },
+      { url: "/icon-32x32.png?v=dc2", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=dc2", type: "image/png", sizes: "16x16" },
+      { url: "/icon-48x48.png?v=dc2", type: "image/png", sizes: "48x48" },
+      { url: "/icon.png?v=dc2", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=pr1",
-    apple: [{ url: "/apple-icon.png?v=pr1", sizes: "180x180" }],
+    shortcut: "/icon-32x32.png?v=dc2",
+    apple: [{ url: "/apple-icon.png?v=dc2", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://pradoramosadvocacia.com.br",
+    url: "https://deboracupertinoadvocacia.com.br",
     title:
-      "Prado Ramos Advocacia | Soluções Jurídicas Personalizadas · 5,0 ★ (234 avaliações)",
+      "Débora Cupertino Advocacia | Direito das Famílias & Previdenciário · 5,0 ★ (106 avaliações)",
     description:
-      "Soluções jurídicas personalizadas com agilidade, transparência e segurança. Atendimento 100% online em todo o Brasil e presencial em Cláudio - MG. Dra. Isadora Prado. WhatsApp: (31) 99825-4289.",
-    siteName: "Prado Ramos Advocacia",
+      "Protegendo seus direitos, cuidando do que realmente importa: sua família e seu futuro. Especialista em Direito das Famílias e Previdenciário. Atendimento humanizado presencial em Matozinhos - MG e online para todo o Brasil. WhatsApp: (31) 99766-1362.",
+    siteName: "Débora Cupertino Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 341,
-        alt: "Prado Ramos Advocacia — Soluções Jurídicas Personalizadas",
+        height: 356,
+        alt: "Débora Cupertino Advocacia — Direito das Famílias e Previdenciário",
       },
     ],
   },
@@ -99,35 +100,35 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Prado Ramos Advocacia",
-    alternateName: "Advocacia Prado Ramos",
-    telephone: "+55-31-99825-4289",
-    url: "https://pradoramosadvocacia.com.br",
-    image: "https://pradoramosadvocacia.com.br/logo.png",
+    name: "Débora Cupertino Advocacia",
+    alternateName: "Débora Cupertino | Famílias e Previdenciário",
+    telephone: "+55-31-99766-1362",
+    url: "https://deboracupertinoadvocacia.com.br",
+    image: "https://deboracupertinoadvocacia.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Praça Levi Vioy de Freitas, 28, Sl 103 - Centro",
-      addressLocality: "Cláudio",
+      streetAddress: "R. Claudomiro Cupertino, 55 A - Centro",
+      addressLocality: "Matozinhos",
       addressRegion: "MG",
-      postalCode: "35530-000",
+      postalCode: "35720-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "234",
+      reviewCount: "106",
     },
     areaServed: [
-      "Cláudio",
-      "Divinópolis",
-      "Itaúna",
-      "Carmópolis de Minas",
-      "Oliveira",
-      "Nova Serrana",
+      "Matozinhos",
+      "Sete Lagoas",
+      "Pedro Leopoldo",
+      "Capim Branco",
+      "Prudente de Morais",
+      "Vespasiano",
+      "Confins",
       "Belo Horizonte",
       "Minas Gerais",
-      "Mato Grosso",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -140,14 +141,14 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
-        closes: "17:00",
+        opens: "08:30",
+        closes: "17:30",
       },
     ],
     sameAs: [
-      "https://wa.me/5531998254289",
-      "https://www.instagram.com/pradoramosadvocacia/",
-      "https://www.google.com/search?q=Prado+Ramos+Advocacia%0ACl%C3%A1udio+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5531997661362",
+      "https://www.instagram.com/deboracupertinoadvocacia/",
+      "https://www.google.com/search?q=D%C3%A9bora+Cupertino+Advocacia%0AMatozinhos+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -158,19 +159,19 @@ export default function RootLayout({
     >
       <head>
         {/* Favicon & Web App Icons with Cache Busting */}
-        <link rel="icon" href="/favicon.ico?v=pr1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=pr1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=pr1" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=pr1" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=pr1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=pr1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=pr1" />
+        <link rel="icon" href="/favicon.ico?v=dc2" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=dc2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=dc2" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=dc2" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=dc2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=dc2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=dc2" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased min-h-screen selection:bg-[#c59b4c] selection:text-[#040912] bg-[#fbfbf9] text-[#06101e]">
+      <body className="antialiased min-h-screen selection:bg-[#c89b3c] selection:text-[#020b18] bg-[#fcfbfa] text-[#061224]">
         {children}
       </body>
     </html>

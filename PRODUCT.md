@@ -1,49 +1,58 @@
-# PRADO RAMOS ADVOCACIA
-## Soluções Jurídicas Personalizadas · Cláudio - MG · Atendimento Online Nacional · Avaliação 5,0 ★ no Google (234 avaliações)
+# DÉBORA CUPERTINO ADVOCACIA
+## Especialista em Direito das Famílias e Previdenciário · Matozinhos - MG · Atendimento 100% Online Nacional · Avaliação 5,0 ★ no Google (106 avaliações)
 
 ## Plataforma
-Landing page institucional e de alta conversão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, rigorosamente alinhada à nova identidade visual da marca extraída diretamente do logotipo oficial com serifa de alto contraste em relevo metálico (glossy noir/obsidian) e da assinatura visual da Dra. Isadora Prado em verde esmeralda (Emerald Glow & Jade):
-- Topbar institucional com prova social Google 5,0 ★ (234 avaliações) e canal direto via WhatsApp oficial: (31) 99825-4289
-- Header fixo com logotipo PR oficial, emblema monograma de alta resolução e navegação desktop e mobile responsiva
-- Hero imponente com fotografia de alta autoridade da Dra. Isadora Prado no escritório
-- Barra integrada de autoridade e métricas comprovadas (5,0 ★ no Google com 234 avaliações verificadas, sede própria no Centro de Cláudio - MG, atendimento 100% online para todo o Brasil)
-- Áreas de Atuação completas com modal interativo detalhado (Direito Aéreo & Passageiro Prejudicado / Bagagem Extraviada, Fraudes Bancárias & Golpes do Pix, Direito Civil & Indenizações, Direito Trabalhista, Direito de Família & Inventários em Cartório, Soluções Jurídicas Personalizadas)
-- Sobre a Advogada e Escritório com história, princípios éticos, raízes na Comarca de Cláudio e atuação nacional
-- Os 4 Pilares da Marca: Escuta Atenta e Empatia, Proteção e Transparência Anti-Golpe, Autoridade em Direito Aéreo, Respostas em Tempo Recorde
-- Prova Social com avaliações autênticas 5,0 ★ do Google Meu Negócio (234 avaliações reais de clientes com histórias de êxito)
+Landing page institucional e de alta conversão desenvolvida em Next.js 16 (App Router) e Tailwind CSS v4, rigorosamente alinhada à nova identidade visual da marca extraída diretamente do logotipo oficial com monograma "DC" metálico 3D em dourado imperial e balança da justiça, combinada com a paleta nobre em Deep Midnight Sapphire Navy e Nude Champagne Sand:
+- Topbar institucional com prova social Google 5,0 ★ (106 avaliações) e canal direto via WhatsApp oficial: (31) 99766-1362
+- Header fixo com logotipo Débora Cupertino oficial recortado com nitidez máxima e navegação desktop e mobile responsiva
+- Hero imponente com fotografia de alta autoridade da Dra. Débora Cupertino
+- Barra integrada de autoridade e métricas comprovadas (5,0 ★ no Google com 106 avaliações verificadas, especialização em Família e INSS, sede própria no Centro de Matozinhos - MG, atendimento 100% online para todo o Brasil)
+- Áreas de Atuação completas com modal interativo detalhado:
+  1. Direito de Família: Divórcio, Guarda & Convivência
+  2. Direito Previdenciário: Salário Maternidade (inclusive desempregadas)
+  3. Benefício de Prestação Continuada (BPC/LOAS para Autismo, Idosos e Deficiência)
+  4. Pensão Alimentícia: Fixação, Revisão & Cobrança Urgente
+  5. Aposentadorias & Auxílios do INSS (Planejamento Previdenciário)
+  6. Inventários em Cartório & Planejamento Familiar Sucessório
+- Sobre a Advogada e Escritório com história, princípios de atendimento humanizado, escuta sem julgamentos e atuação de destaque na Comarca de Matozinhos e em todo o Brasil
+- Os 4 Pilares da Marca: Atendimento Humanizado Real, Celeridade Sem Juridiquês, Rigor Ético & Sigilo Absoluto, Sede Física & Online Seguro
+- Prova Social com avaliações autênticas 5,0 ★ do Google Meu Negócio (106 avaliações reais de clientes com histórias de êxito)
 - Passo a Passo Transparente do Atendimento
-- FAQ interativo com respostas diretas sobre voos cancelados, extravio de bagagens, golpes do Pix, honorários no êxito e atendimento online seguro
-- Localização & Contato da Sede em Cláudio - MG com link direto para o Google Maps e Street View
+- FAQ interativo com respostas diretas sobre divórcio em cartório, salário maternidade para desempregadas, BPC/LOAS, pensão atrasada e aposentadorias do INSS
+- Localização & Contato da Sede em Matozinhos - MG (R. Claudomiro Cupertino, 55 A) com link direto para o Google Maps
 - Footer institucional em estrita conformidade com o Código de Ética e Disciplina da OAB (Provimento nº 205/2021)
 - Botão flutuante do WhatsApp para conversão rápida e suporte imediato
 
 ## Público
-Passageiros prejudicados por companhias aéreas (extravio de bagagem, voo cancelado, atraso injustificado, overbooking), consumidores vítimas de golpes do Pix e fraudes bancárias, trabalhadores em busca de direitos rescisórios, famílias em inventários e partilhas consensuais de bens em cartório, e cidadãos de todo o Brasil em busca de assessoria jurídica ágil, ética e descomplicada.
+Famílias em momentos de reorganização (divórcio, partilha, regulamentação de guarda e convivência de filhos, pensão alimentícia), gestantes e mães recentes em busca do Salário Maternidade (inclusive desempregadas), pessoas com deficiência ou famílias com filhos no espectro autista (TEA) e idosos necessitando do BPC/LOAS, trabalhadores em busca de aposentadorias justas e auxílios do INSS, herdeiros em inventários consensuais em cartório e cidadãos de todo o Brasil que valorizam atendimento humanizado e competente.
 
 ## Proposta de Valor
-Apresentar a advocacia resolutiva liderada pela Dra. Isadora Prado, destacando a nota máxima de **5,0 estrelas com 234 avaliações no Google**, o atendimento online ágil e a reputação de segurança: **"Soluções Jurídicas Personalizadas para Proteger Seus Direitos com Agilidade e Total Transparência"**, com canal oficial e verificado via WhatsApp: **(31) 99825-4289**.
+Apresentar a advocacia humanizada e resolutiva liderada pela Dra. Débora Cupertino, destacando a nota máxima de **5,0 estrelas com 106 avaliações no Google**, o atendimento acolhedor e a segurança técnica: **"Protegendo Seus Direitos, Cuidando do Que Realmente Importa: Sua Família e Seu Futuro"**, com canal oficial e verificado via WhatsApp: **(31) 99766-1362**.
 
 ## Identidade Visual & Cores (Extraída Diretamente do Logotipo & Assets)
-- **Marca:** Prado Ramos Advocacia.
-- **Símbolo:** Monograma "PR" e logotipo com serifa clássica de alto contraste e acabamento em relevo metálico/glossy noir.
+- **Marca:** Débora Cupertino Advocacia.
+- **Símbolo:** Monograma "DC" e balança da justiça em dourado 3D metálico com textura nobre e acabamento em relevo.
 - **Paleta de Cores:**
-  - **Luxury Obsidian Onyx & Deep Noir (Fundos & Superfícies de Autoridade):** `#050a0d`, `#0a1317`, `#0e1a20`, `#12222a`, `#172c36`.
-  - **Signature Emerald Spectrum (Extraído da fotografia da Dra. Isadora Prado):** `#05c472`, `#04a760`, `#059669`, `#047857`, `#34d399`, `#6ee7b7`, `#064e3b`.
-  - **Metallic Platinum Spectrum (Relevo e chanfros 3D do Logotipo):** `#ffffff`, `#f8fafc`, `#f1f5f9`, `#e2e8f0`, `#cbd5e1`, `#94a3b8`.
-  - **Warm Gold & Amber (Avaliações 5,0 ★ do Google & Badges):** `#f59e0b`, `#fcd34d`, `#d97706`.
-  - **Light Editorial Canvas (Superfícies Claras & Contraste Editorial):** `#f8faf9`, `#f1f5f2`, `#ffffff`, bordas em `#e2e8f0` e textos em `#071116` e `#475569`.
+  - **Noble Imperial Gold (Extraído diretamente do Logotipo DC e Balança da Justiça):**
+    `#fef6e2` (Glow), `#f6e3a1` (Bright Gold), `#edd486` (Light Gold), `#c89b3c` (Ouro Nobre Primário), `#be9031`, `#9e742a` (Bronze Dourado), `#7d591c` (Ouro Profundo), `#4a3008` (Sombra).
+  - **Deep Midnight Sapphire & Obsidian Navy (Identidade da Campanha e Foto da Dra. Débora):**
+    `#020b18` (Obsidian Blue), `#051833` (Deep Midnight Sapphire), `#082144` (Navy Surface), `#0d2f5e`, `#133d77` (Card Surface), `#1a4c92` (Highlight).
+  - **Metallic Platinum Spectrum (Chanfros 3D e Brilho das Letras):**
+    `#ffffff`, `#f8fafc`, `#f1f5f9`, `#e2e8f0`, `#cbd5e1`, `#94a3b8`.
+  - **Warm Champagne Sand & Linho Claro (Acolhimento e Atendimento Humanizado):**
+    `#fcfbfa` (Canvas Off-White), `#f7f4ed` (Champagne Sand), `#ffffff` (Superfícies de Leitura), bordas em `#e8dfcd` e `#e2e8f0`, textos em `#061224` e `#4a5568`.
   - **WhatsApp Emerald:** `#25D366` para conversão imediata.
 - **Tipografia:**
-  - `Cinzel`: Para títulos e cabeçalhos imponentes, alinhados à inscrição clássica em capitais romanas do logotipo oficial.
+  - `Cinzel`: Para títulos e cabeçalhos imponentes, alinhados à grafia clássica em capitais romanas do logotipo oficial ("DÉBORA CUPERTINO ADVOCACIA").
   - `Playfair Display`: Para títulos editoriais clássicos e elegantes.
   - `Plus Jakarta Sans`: Para leitura moderna, ágil e altamente legível em todos os dispositivos.
 
 ## Conteúdo e Mídia
-- Logotipo oficial: `public/logo.png`, `public/logo-trimmed.png`, `public/logo-white.png`, `public/logo-prado-ramos.png`, `public/emblema-pr.png`, `public/pr-badge.png`.
+- Logotipo oficial: `public/debora-cupertino-logo-trimmed.png`, `public/logo-trimmed.png`, `public/logo.png`, `public/debora-cupertino-logo-white.png`, `public/logo-white.png`, `public/emblema-dc.png`.
 - Favicon e App Icons: `public/favicon.ico`, `app/favicon.ico`, `public/icon.png`, `app/icon.png`, `public/apple-icon.png`, `app/apple-icon.png`, `public/icon-32x32.png`, `public/icon-16x16.png`, `public/icon-48x48.png`.
-- Fotos da Dra. Isadora Prado: `public/hero.jpg`, `public/dra-isadora-prado.jpg`, `public/isadora-prado.jpg`, `public/dra-isadora-prado-portrait.jpg`, `public/isadora-prado-square.jpg`.
-- Telefone / WhatsApp oficial: (31) 99825-4289 (`5531998254289`).
-- E-mail: `contato@pradoramosadvocacia.com.br`.
-- Instagram Oficial: `@pradoramosadvocacia` (https://www.instagram.com/pradoramosadvocacia/) — 290 posts · 2.127 seguidores.
-- Localização Sede: Praça Levi Vioy de Freitas, 28, Sl 103 - Centro, Cláudio - MG, 35530-000, Brasil.
-- Prova Social: 5,0 estrelas com 234 avaliações verificadas no Google em Cláudio - MG.
+- Fotos da Dra. Débora Cupertino: `public/debora-cupertino-hero.jpg`, `public/hero.jpg`, `public/dra-debora-cupertino.jpg`, `public/debora-cupertino-portrait.jpg`, `public/debora-cupertino-square.jpg`.
+- Telefone / WhatsApp oficial: (31) 99766-1362 (`5531997661362`).
+- E-mail: `contato@deboracupertinoadvocacia.com.br`.
+- Instagram Oficial: `@deboracupertinoadvocacia` (https://www.instagram.com/deboracupertinoadvocacia/) — 678 posts · 4.441 seguidores.
+- Localização Sede: R. Claudomiro Cupertino, 55 A - Centro, Matozinhos - MG, 35720-000, Brasil.
+- Prova Social: 5,0 estrelas com 106 avaliações verificadas no Google em Matozinhos - MG.

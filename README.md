@@ -1,9 +1,27 @@
-# PRADO RAMOS ADVOCACIA
-## Soluções Jurídicas Personalizadas · Cláudio - MG · Avaliação 5,0 ★ no Google (234 avaliações)
+# Débora Cupertino Advocacia — Landing Page Oficial
 
-Site institucional e landing page responsiva de altíssimo padrão da **Prado Ramos Advocacia**, sediada em Cláudio - MG e com atuação online em todo o Brasil. Advocacia estratégica, ética e resolutiva liderada pela **Dra. Isadora Prado**, especialista em **Direito do Consumidor (Aéreo & Bancário), Indenizações, Cível e Trabalhista**. Avaliação máxima de 5,0 ★ com 234 avaliações verificadas no Google Meu Negócio, atendimento presencial na sede e assessoria jurídica digital com segurança anti-golpe certificada para todo o Brasil.
+Landing page de alta conversão e presença institucional para **Débora Cupertino Advocacia**, escritório de referência em **Direito das Famílias e Previdenciário (INSS)** com sede própria em **Matozinhos - MG** e atendimento 100% online em todo o Brasil.
 
-- **Telefone / WhatsApp:** [(31) 99825-4289](https://wa.me/5531998254289)
-- **Sede Principal:** Praça Levi Vioy de Freitas, 28, Sl 103 - Centro, Cláudio - MG, 35530-000, Brasil.
-- **Instagram Oficial:** [@pradoramosadvocacia](https://www.instagram.com/pradoramosadvocacia/)
-- **Perfil Google Meu Negócio:** [Prado Ramos Advocacia | Serviços jurídicos em Cláudio - MG](https://www.google.com/search?q=Prado+Ramos+Advocacia%0ACl%C3%A1udio+%C2%B7+MG&sourceid=chrome&ie=UTF-8#)
+## Principais Recursos
+
+- **Identidade Visual Fiel ao Logo:** Extraída diretamente do logotipo oficial com monograma "DC" metálico 3D e balança da justiça em Ouro Nobre (`#c89b3c`), Midnight Sapphire Navy (`#051833`) e Champagne Sand.
+- **Tipografia Nobre & Harmônica:** Combinação de `Cinzel`, `Playfair Display` e `Plus Jakarta Sans`.
+- **Áreas de Atuação Especializadas:** 6 seções completas com modal interativo detalhado (Divórcio, Guarda, Pensão Alimentícia, Salário Maternidade, BPC/LOAS e Aposentadorias do INSS).
+- **Prova Social Google 5,0 ★:** 106 avaliações verificadas de clientes de Matozinhos e do Brasil.
+- **Atendimento Humanizado:** Copywriting sensível e acolhedor alinhado aos princípios da Dra. Débora Cupertino.
+- **Total Conformidade OAB:** De acordo com o Código de Ética e Disciplina e Provimento 205/2021.
+- **Conversão Otimizada:** Botões de WhatsApp com mensagens pré-formatadas para conversão imediata: (31) 99766-1362.
+- **Favicon Multi-resolução:** Favicon e web app icons de alto contraste em todas as resoluções (16x16, 32x32, 48x48, 180x180, 512x512).
+
+## Como Executar
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento (porta 3009)
+npm run dev
+
+# Gerar build de produção
+npm run build
+```
