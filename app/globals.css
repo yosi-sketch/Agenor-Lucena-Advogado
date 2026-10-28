@@ -1,68 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark light;
+  color-scheme: light dark;
   
-  /* Brand Luxury Deep Wine Noir & Velvet Burgundy (Prestige Background & Surfaces) */
-  /* Directly extracted from Dra. Rhayssa Lima de Souza Oliveira Official Logo */
-  --brand-obsidian: #0f0305;
-  --brand-midnight: #16060a;
-  --brand-surface: #1d090e;
-  --brand-card: #260d14;
-  --brand-elevated: #32121a;
-  --brand-slate-muted: #5e3c45;
+  /* Brand Luxury Royal Midnight & Obsidian (Prestige Background & Surfaces) */
+  --brand-obsidian: #080a0f;
+  --brand-midnight: #0c0f17;
+  --brand-surface: #121622;
+  --brand-card: #181e2b;
+  --brand-elevated: #202838;
+  --brand-slate-muted: #64748b;
   
-  /* Brand Metallic Wine, Marsala & Rose Specular Luster (Directly extracted from Logo Emblem & Lettering) */
-  --brand-wine-highlight: #fbeae8;
-  --brand-wine-bright: #f5d0cb;
-  --brand-wine-rose: #ee9492;
-  --brand-wine-accent: #d46f73;
-  --brand-wine-primary: #8a1b2c;
-  --brand-wine-metallic: #721422;
-  --brand-wine-deep: #5a0e19;
-  --brand-wine-shadow: #33050d;
+  /* Brand Imperial Gold & Antique Bronze Spectrum (Reserved for Accents, Badges, Borders & Highlights) */
+  --brand-gold-highlight: #fbf3d1;
+  --brand-gold-bright: #f5e49e;
+  --brand-gold-light: #edd585;
+  --brand-gold-primary: #caa24d;
+  --brand-gold-vibrant: #d4af37;
+  --brand-gold-rich: #b8860b;
+  --brand-gold-deep: #936937;
+  --brand-gold-bronze: #7a5426;
+  --brand-gold-shadow: #331f0a;
 
-  /* Aliases for backwards compatibility & components */
-  --brand-champagne-highlight: #fbeae8;
-  --brand-champagne-bright: #f5d0cb;
-  --brand-champagne-light: #fbeae8;
-  --brand-champagne-gold: #f5d0cb;
-  --brand-bronze-mid: #8a1b2c;
-  --brand-bronze-dark: #721422;
-  --brand-bronze-shadow: #33050d;
-
-  --brand-rose-highlight: #ffffff;
-  --brand-rose-bright: #fbeae8;
-  --brand-rose-light: #f5d0cb;
-  --brand-rose-champagne: #ee9492;
-  --brand-rose-metallic: #d46f73;
-  --brand-rose-mauve: #8a1b2c;
-  --brand-rose-wine: #721422;
-  --brand-rose-deep: #5a0e19;
-  --brand-rose-shadow: #33050d;
-
-  --brand-gold: #8a1b2c;
-  --brand-gold-bright: #f5d0cb;
-  --brand-gold-light: #fbeae8;
-  --brand-gold-deep: #5a0e19;
+  /* Aliases for components */
+  --brand-gold: #caa24d;
+  --brand-champagne-highlight: #fbf3d1;
+  --brand-champagne-bright: #f5e49e;
+  --brand-champagne-light: #edd585;
+  --brand-champagne-gold: #caa24d;
+  --brand-bronze-mid: #936937;
+  --brand-bronze-dark: #7a5426;
+  --brand-bronze-shadow: #331f0a;
 
   /* Accent Emerald (WhatsApp conversion) */
   --brand-emerald: #25D366;
   --brand-emerald-dark: #1ea952;
 
   /* Light Editorial Alabaster / Warm Ivory for balanced, elegant sections */
-  --brand-cream-bg: #fcfaf7;
-  --brand-cream-alt: #f6f0e8;
+  --brand-cream-bg: #fbfaf8;
+  --brand-cream-alt: #f6f3ed;
   --brand-cream-surface: #ffffff;
-  --brand-cream-border: #ebdccd;
-  --brand-cream-ink: #1c070a;
-  --brand-cream-muted: #5c3d44;
+  --brand-cream-border: #e5e7eb;
+  --brand-cream-ink: #0f172a;
+  --brand-cream-muted: #475569;
   
   /* Borders & Accents */
-  --brand-border-wine: rgba(138, 27, 44, 0.35);
-  --brand-border-wine-subtle: rgba(238, 148, 146, 0.22);
-  --brand-border-wine-strong: rgba(245, 208, 203, 0.85);
-  --brand-border-dark: rgba(38, 13, 20, 0.65);
+  --brand-border-gold: rgba(202, 162, 77, 0.35);
+  --brand-border-gold-subtle: rgba(202, 162, 77, 0.20);
+  --brand-border-gold-strong: rgba(202, 162, 77, 0.85);
+  --brand-border-dark: rgba(24, 30, 43, 0.65);
 }
 
 @theme inline {
@@ -70,26 +56,26 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-brand-obsidian: #0f0305;
-  --color-brand-midnight: #16060a;
-  --color-brand-surface: #1d090e;
-  --color-brand-card: #260d14;
-  --color-brand-elevated: #32121a;
+  --color-brand-obsidian: #080a0f;
+  --color-brand-midnight: #0c0f17;
+  --color-brand-surface: #121622;
+  --color-brand-card: #181e2b;
+  --color-brand-elevated: #202838;
   
-  --color-brand-wine: #8a1b2c;
-  --color-brand-wine-bright: #f5d0cb;
-  --color-brand-wine-rose: #ee9492;
-  --color-brand-wine-accent: #d46f73;
-  --color-brand-wine-deep: #5a0e19;
-  --color-brand-wine-shadow: #33050d;
+  --color-brand-gold: #caa24d;
+  --color-brand-gold-bright: #f5e49e;
+  --color-brand-gold-light: #edd585;
+  --color-brand-gold-vibrant: #d4af37;
+  --color-brand-gold-deep: #936937;
+  --color-brand-gold-shadow: #331f0a;
   
-  --color-brand-cream-bg: #fcfaf7;
-  --color-brand-cream-alt: #f6f0e8;
+  --color-brand-cream-bg: #fbfaf8;
+  --color-brand-cream-alt: #f6f3ed;
   --color-brand-cream-surface: #ffffff;
   
-  --shadow-wine: 0 10px 28px -4px rgba(138, 27, 44, 0.35);
-  --shadow-wine-lg: 0 16px 38px -6px rgba(138, 27, 44, 0.48);
-  --shadow-wine-card: 0 20px 45px -10px rgba(15, 3, 5, 0.92);
+  --shadow-gold: 0 10px 28px -4px rgba(202, 162, 77, 0.25);
+  --shadow-gold-lg: 0 16px 38px -6px rgba(202, 162, 77, 0.35);
+  --shadow-gold-card: 0 20px 45px -10px rgba(8, 10, 15, 0.92);
 }
 
 html {
@@ -98,15 +84,15 @@ html {
 }
 
 body {
-  background: #16060a;
-  color: #fcf8f6;
+  background: #fbfaf8;
+  color: #0f172a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #d46f73;
+  caret-color: #caa24d;
 }
 
 ::selection {
-  background: #8a1b2c;
-  color: #ffffff;
+  background: #caa24d;
+  color: #0c0f17;
 }
 
 .font-cinzel {
@@ -122,7 +108,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #8a1b2c;
+  color: #936937;
 }
 
 .eyebrow-dark {
@@ -134,22 +120,29 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #f5d0cb;
+  color: #d4af37;
 }
 
-.eyebrow::before,
+.eyebrow::before {
+  width: 1.75rem;
+  height: 2px;
+  flex: none;
+  background: linear-gradient(90deg, #936937, #caa24d);
+  content: "";
+}
+
 .eyebrow-dark::before {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: linear-gradient(90deg, #8a1b2c, #f5d0cb);
+  background: linear-gradient(90deg, #caa24d, #f5e49e);
   content: "";
 }
 
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #5c3d44;
+  color: #475569;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -163,7 +156,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #8a1b2c;
+  background: #caa24d;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -171,7 +164,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #1c070a;
+  color: #0f172a;
 }
 
 .nav-link:hover::after {
@@ -181,7 +174,7 @@ body {
 .nav-link-dark {
   position: relative;
   padding-block: 0.5rem;
-  color: #f5d0cb;
+  color: #cbd5e1;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -195,7 +188,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #ee9492;
+  background: #caa24d;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -211,11 +204,12 @@ body {
 }
 
 .footer-link {
+  color: #94a3b8;
   transition: color 180ms ease;
 }
 
 .footer-link:hover {
-  color: #f5d0cb;
+  color: #f1f5f9;
 }
 
 ::-webkit-scrollbar {
@@ -223,17 +217,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0305;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0f0305;
+  border: 2px solid #f1f5f9;
   border-radius: 999px;
-  background: #260d14;
+  background: #cbd5e1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a1b2c;
+  background: #caa24d;
 }
 
 @media (prefers-reduced-motion: reduce) {
