@@ -22,52 +22,49 @@ import {
   ChevronUp,
   ExternalLink,
   Users,
-  Baby,
-  HeartHandshake,
-  Landmark,
+  Briefcase,
   FileCheck2,
   FileText,
   Lock,
-  Headphones,
-  Home as HomeIcon,
+  Landmark,
   Building2,
-  Compass,
+  BookOpen,
+  MessageCircle,
+  Gavel,
+  BadgeCheck,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-// Client & Firm Information — Santos Teixeira Advogados Associados
-const WHATSAPP_NUMBER = "5537999674308";
-const PHONE_DISPLAY = "(37) 99967-4308";
-const EMAIL_CONTACT = "contato@santosteixeiraadvogados.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/santosteixeiraadvogados/";
-const INSTAGRAM_HANDLE = "@santosteixeiraadvogados";
-const INSTAGRAM_STATS = "3.047 seguidores · 126 posts";
-const LAWYER_INSTAGRAM_URL = "https://www.instagram.com/wesleysantos.adv/";
-const LAWYER_INSTAGRAM_HANDLE = "@wesleysantos.adv";
+// Client & Firm Information — Agenor Lucena Advocacia / Dr. Alexandre Abreu Lúcio
+const WHATSAPP_NUMBER = "5537999710510";
+const PHONE_DISPLAY = "(37) 99971-0510";
+const EMAIL_CONTACT = "contato@agenorlucena.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/agenor_lucena/";
+const INSTAGRAM_HANDLE = "@agenor_lucena";
+const INSTAGRAM_STATS = "1.669 seguidores · 39 posts";
 
-const ADDRESS_OLIVEIRA =
-  "Praça XV de Novembro, 20 - 2° andar - Sala 202 (Condomínio Shopping XV) - Centro, Oliveira - MG, 35540-000";
+const ADDRESS_PITANGUI =
+  "Praça Dr. Isauro Epifânio, 141 - Bairro São Francisco, Pitangui - MG, 35650-000";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Santos+Teixeira+Advogados+Associados%0AOliveira+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Alexandre+Abreu+L%C3%BAcio+%E2%80%94+Advocacia%0APitangui+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=8e995f6d8e2c150c&sxsrf=AKL5yDiJB6PFucVIxkFghHZVsSc9sXhIRw:1793284906329&q=santos+teixeira+advogados+associados+oliveira+endere%C3%A7o&ludocid=3790791552436941517&sa=X&ved=2ahUKEwi-gsruut-XAxUuFbkGHWhUKSwQ6BN6BAg0EAI";
+  "https://www.google.com/search?sca_esv=34388a73116c39a8&sxsrf=AKL5yDjKhYjAaGUP_nWraMg-9e1TPu6VoQ:1793289988992&q=escrit%C3%B3rio+de+advocacia+-+dr.+alexandre+abreu+l%C3%BAcio+pitangui+endere%C3%A7o&ludocid=2858374849778695354&sa=X&ved=2ahUKEwiTjZfmzd-XAxWdqZUCHV4xPYsQ6BN6BAg2EAI";
 
 // Official assets generated from the new client logo & photoshoot
-const LOGO_SRC = "/santos-teixeira-logo-trimmed.png";
-const LOGO_WHITE_SRC = "/santos-teixeira-logo-white.png";
-const EMBLEM_SRC = "/emblema-st.png";
-const FOTO_HERO_SRC = "/dr-wesley-santos.jpg";
-const FOTO_PORTRAIT_SRC = "/wesley-santos-portrait.jpg";
-const FOTO_OFFICE_SRC = "/escritorio-santos-teixeira.jpg";
+const LOGO_SRC = "/logo-trimmed.png";
+const LOGO_WHITE_SRC = "/logo-white.png";
+const EMBLEM_SRC = "/emblema-al.png";
+const FOTO_HERO_SRC = "/dr-alexandre-lucena.jpg";
+const FOTO_PORTRAIT_SRC = "/dr-alexandre-portrait.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Wesley Santos / Santos Teixeira Advogados! Gostaria de agendar uma consulta jurídica especializada sobre meu caso.";
+    "Olá, Dr. Alexandre Abreu Lúcio / Agenor Lucena Advocacia! Gostaria de agendar uma consulta jurídica especializada sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -178,112 +175,131 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-previdenciario-inss",
-    title: "Direito Previdenciário: Aposentadorias & Benefícios do INSS",
-    category: "Aposentadorias Urbanas e Rurais · Planejamento Previdenciário · BPC/LOAS · Auxílios · Salário Maternidade",
-    icon: Landmark,
-    tag: "Concessão Mais Vantajosa · Cálculos de Transição · Atrasados na Justiça Federal",
+    id: "direito-do-trabalho-estrategico",
+    title: "Direito Trabalhista Estratégico (Trabalhador & Empresa)",
+    category: "Rescisão Indireta · Horas Extras · Verbas Rescisórias · Insalubridade · Danos Morais",
+    icon: Briefcase,
+    tag: "Defesa Combativa · Cálculos Trabalhistas Precisos · Acordos & Ações Judiciais",
     summary:
-      "Garantia dos seus direitos previdenciários com planejamento individualizado, revisão de CNIS e ação judicial ágil para reverter indeferimentos do INSS com recebimento de todos os atrasados.",
+      "Atuação intransigente na garantia integral dos direitos do trabalhador e na assessoria preventiva empresarial. Reversão de demissões injustas, cobrança de horas extras e recebimento de verbas retidas.",
     details:
-      "Com as constantes alterações legislativas e a complexidade das regras de transição da Reforma da Previdência, dar entrada sozinho no INSS frequentemente resulta em perda substancial de renda mensal ou indeferimentos indevidos. Na Santos Teixeira Advogados, realizamos a análise técnica minuciosa de todo o seu histórico contributivo, computamos tempo rural e especial insalubre e definimos a regra que concederá o benefício de maior valor possível para você e sua família.",
+      "As relações de trabalho exigem técnica jurídica apurada, agilidade e comprovação documental rigorosa. Sob o comando do Dr. Alexandre Abreu Lúcio, defendemos com firmeza o trabalhador que teve seus direitos violados — seja por demissão sem quitação de verbas, acúmulo de função, horas extras não remuneradas, adicionais de insalubridade ou periculosidade e assédio moral no ambiente corporativo. Também prestamos consultoria consultiva e contenciosa a micro e pequenas empresas, prevenindo passivos trabalhistas com segurança.",
     topics: [
-      "Planejamento Previdenciário Estratégico: saiba a data exata e o melhor momento para se aposentar com a renda máxima",
-      "Aposentadoria por Tempo de Contribuição e por Idade (regras de transição, pedágios 50% e 100%, pontos e idade mínima)",
-      "Aposentadoria Rural e Segurado Especial com comprovação documental do trabalho na lavoura",
-      "Benefício de Prestação Continuada (BPC/LOAS) para idosos acima de 65 anos e pessoas com deficiência (PcD/Autismo)",
-      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Incapacidade Permanente",
-      "Salário Maternidade para desempregadas, autônomas (MEI) e trabalhadoras do campo",
-      "Pensão por Morte com habilitação rápida para cônjuges, companheiros e dependentes",
-      "Ação Judicial perante a Justiça Federal para combater decisões injustas do INSS com cobrança de parcelas retroativas",
+      "Rescisão Indireta do Contrato de Trabalho: saída da empresa recebendo todas as indenizações como se fosse demitido sem justa causa",
+      "Cobrança de Horas Extras não pagas, intervalos intrajornada suprimidos e banco de horas irregular",
+      "Verbas Rescisórias em atraso: aviso prévio, férias vencidas/proporcionais, 13º salário e multa de 40% do FGTS",
+      "Adicionais de Insalubridade e Periculosidade com perícia técnica oficial nos locais de trabalho",
+      "Estabilidade da Gestante, cipeiros e acidentados: garantia de reintegração ou indenização substitutiva imediata",
+      "Indenização por Acidente de Trabalho, Doenças Ocupacionais, Burnout e LER/DORT",
+      "Ação por Danos Morais em virtude de Assédio Moral, humilhação, perseguição ou condições degradantes",
+      "Defesa de Empresas e Mediação de Acordos vantajosos perante as Varas do Trabalho",
     ],
     whatsAppText:
-      "Olá, Dr. Wesley Santos! Gostaria de consultar sobre Aposentadoria, Planejamento Previdenciário ou Benefício do INSS.",
+      "Olá, Dr. Alexandre Abreu Lúcio! Gostaria de consultar sobre meus Direitos Trabalhistas (rescisão, horas extras ou rescisão indireta).",
   },
   {
-    id: "usucapiao-regularizacao-imobiliaria",
-    title: "Usucapião & Regularização Imobiliária",
-    category: "Usucapião Extrajudicial em Cartório · Usucapião Judicial · Imóveis Sem Escritura · REURB · Adjudicação Compulsória",
-    icon: HomeIcon,
-    tag: "Escritura Definitiva · Segurança Patrimonial · Valorização do Imóvel",
+    id: "direito-civel-indenizacoes",
+    title: "Direito Cível & Responsabilidade Civil (Ações Indenizatórias)",
+    category: "Danos Morais & Materiais · Negativação Indevida no SPC/Serasa · Fraudes Bancárias · Acidentes",
+    icon: Scale,
+    tag: "Reparação Integral · Liminar para Limpeza de Nome · Indenização Justa",
     summary:
-      "Transforme a posse do seu imóvel em propriedade definitiva com matrícula no Cartório de Registro de Imóveis. Mais segurança jurídica, facilidade para venda, financiamento e herança.",
+      "Defesa contra prejuízos patrimoniais e ofensas à sua honra. Pedido liminar urgente para retirada imediata do seu nome de órgãos de proteção ao crédito e indenização por atos ilícitos.",
     details:
-      "Milhares de proprietários em Oliveira e no interior de Minas possuem imóveis adquiridos por 'contrato de gaveta', herança não partilhada ou posse mansa de longos anos, sem a devida escritura registrada. Isso gera enorme desvalorização do imóvel e risco patrimonial constante. Nossa equipe é especializada em Usucapião Extrajudicial (feito diretamente no Cartório de Imóveis, com rapidez e sem processo judicial) e Usucapião Judicial para terrenos urbanos, casas, sítios e fazendas.",
+      "Quando uma pessoa ou empresa causa um prejuízo injusto a você, o ordenamento jurídico impõe o dever de reparação integral. Atuamos com celeridade máxima para suspender restrições indevidas em cadastros como SPC, Serasa e cartórios de protesto, além de combater fraudes de instituições financeiras (golpes do Pix, empréstimos não autorizados) e pleitear ressarcimento por danos emergentes e lucros cessantes decorrentes de acidentes e inadimplementos.",
     topics: [
-      "Usucapião Extrajudicial em Cartório de Registro de Imóveis: procedimento célere e sem litígio",
-      "Usucapião Judicial (Extraordinária, Ordinária, Especial Urbana e Rural) para regularização de áreas contestadas",
-      "Adjudicação Compulsória Extrajudicial para contratos quitados quando o vendedor faleceu ou desapareceu",
-      "Regularização Fundiária Urbana e Rural (REURB) para regularização de loteamentos e áreas consolidadas",
-      "Assessoria Completa na Compra e Venda de Imóveis: Due Diligence, levantamento de certidões e análise de riscos",
-      "Retificação de Área e Desmembramento de Terrenos com averbação na matrícula imobiliária",
+      "Retirada Liminar de Inscrição Indevida no SPC e Serasa com pedido de indenização por dano moral in re ipsa",
+      "Fraudes Bancárias e Golpes Virtuais: recuperação de valores em transferências indevidas e cancelamento de consignados",
+      "Indenização por Acidentes de Trânsito: conserto de veículo, despesas médicas, lucros cessantes e dano estético",
+      "Execução de Dívidas e Cobrança Judicial/Extrajudicial de cheques, notas promissórias e contratos inadimplidos",
+      "Ações de Despejo e Cobrança de Aluguéis residenciais e comerciais em atraso",
+      "Reparação por Danos à Honra, Calúnia, Difamação e Violação da Imagem pessoal ou profissional",
     ],
     whatsAppText:
-      "Olá, Dr. Wesley Santos! Gostaria de orientações sobre Usucapião e Regularização de Imóvel.",
+      "Olá, Dr. Alexandre! Gostaria de consultar sobre Ação Indenizatória / Negativação Indevida / Danos Morais.",
   },
   {
-    id: "direito-de-familia-divorcio",
-    title: "Direito de Família: Divórcio, Guarda & Pensão Alimentícia",
-    category: "Divórcio Consensual em Cartório · Divórcio Litigioso · Guarda Compartilhada · Pensão Alimentícia Urgente",
-    icon: Users,
-    tag: "Atendimento Humanizado · Resguardo dos Filhos · Condução Pacificadora",
-    summary:
-      "Condução acolhedora e resolutiva para encerrar ciclos com segurança patrimonial e resguardar integralmente o bem-estar psicológico e material dos seus filhos.",
-    details:
-      "Disputas familiares exigem um olhar sensível somado a uma postura jurídica firme e pacificadora. Atuamos com extrema agilidade em divórcios em cartório de notas para casais que buscam uma solução consensual e pacífica, e com defesa intransigente em divórcios litigiosos onde há partilha complexa de bens, empresas ou disputas de guarda e pensão alimentícia.",
-    topics: [
-      "Divórcio Consensual em Cartório de Notas: celeridade máxima, sem audiências e em poucos dias",
-      "Divórcio Litigioso Estratégico com blindagem e divisão justa do patrimônio do casal",
-      "Guarda Compartilhada ou Unilateral estruturada com foco exclusivo no bem-estar dos filhos",
-      "Regulamentação de Regime de Convivência, férias escolares e períodos comemorativos",
-      "Fixação de Pensão Alimentícia Provisória urgente e cobrança de valores em atraso (prisão ou penhora)",
-      "Ação Revisional de Alimentos para readequação de valores por alteração na renda familiar",
-      "Dissolução de União Estável com reconhecimento de direitos sucessórios e patrimoniais",
-    ],
-    whatsAppText:
-      "Olá, Dr. Wesley Santos! Preciso de orientações sobre Divórcio, Guarda ou Pensão Alimentícia.",
-  },
-  {
-    id: "inventarios-planejamento-sucessorio",
-    title: "Sucessões & Inventários: Planejamento Familiar",
-    category: "Inventário Extrajudicial em Cartório · Inventário Judicial · Partilha Amigável · Testamentos · Economia Tributária",
+    id: "contratos-negociacoes-estrategicas",
+    title: "Contratos & Negociações Estratégicas",
+    category: "Elaboração e Revisão Contratual · Compra e Venda de Imóveis · Locação · Notificações Extrajudiciais",
     icon: FileText,
-    tag: "Descomplicação em Cartório · Economia de ITCD · Preservação do Patrimônio",
+    tag: "Blindagem Jurídica · Direito Explicado · Segurança nos Negócios",
     summary:
-      "Condução transparente e pacífica da sucessão familiar. Agilidade em cartório de notas para transferência rápida de herança com menor custo de impostos e sem desgaste entre herdeiros.",
+      "Assessoria contratual minuciosa para garantir validade jurídica inquestionável. Cláusulas claras, prevenção de litígios e equilíbrio patrimonial em negócios comerciais e imobiliários.",
     details:
-      "O falecimento de um ente querido é um momento delicado que não deve ser agravado por conflitos patrimoniais ou anos de espera na justiça comum. Havendo consenso entre herdeiros capazes, realizamos o inventário extrajudicial em cartório com rapidez incomparável, calculando com precisão os tributos (ITCD) para evitar pagamentos indevidos e garantindo que cada herdeiro receba seu quinhão de forma segura.",
+      "A melhor maneira de vencer um processo é estruturar um contrato tão blindado e claro que impeça qualquer controvérsia judicial futura. Aplicamos o compromisso do 'Direito Explicado' para que você entenda minuciosamente cada obrigação e penalidade contratual antes de assinar. Elaboramos instrumentos de compra e venda de imóveis rurais e urbanos, contratos de locação comercial, termos de cessão e notificações com força probatória.",
     topics: [
-      "Inventário Extrajudicial em Cartório de Notas: partilha concluída em poucas semanas",
-      "Planejamento Tributário Sucessório com redução legal dos custos de ITCD e taxas cartorárias",
-      "Inventário Judicial quando há herdeiros menores, testamento ou litígio patrimonial pontual",
-      "Sobrepartilha de bens sonegados ou descobertos após o inventário original",
-      "Planejamento Sucessório Familiar: doações em vida com reserva de usufruto e testamentos públicos",
-      "Alvarás Judiciais para liberação de saldos bancários, FGTS e PIS de falecidos",
+      "Elaboração e Análise Técnica de Contratos de Compra e Venda e Promessa de Compra e Venda de Imóveis",
+      "Contratos de Locação Residencial e Comercial com cláusulas de garantia sólidas (fiança, caução, seguro)",
+      "Contratos de Prestação de Serviços, Parcerias Comerciais e Acordos entre Sócios",
+      "Notificações Extrajudiciais para constituição formal em mora, rescisão contratual e cobrança de multas",
+      "Análise de Riscos Imobiliários (Due Diligence): levantamento de certidões judiciais, fiscais e cartorárias",
+      "Renegociação de Dívidas e Acordos Extrajudiciais com efeito de título executivo",
     ],
     whatsAppText:
-      "Olá, Dr. Wesley Santos! Gostaria de uma consulta sobre Inventário em Cartório ou Sucessões.",
+      "Olá, Dr. Alexandre Abreu Lúcio! Gostaria de suporte para Elaboração ou Revisão de Contrato.",
   },
   {
-    id: "assessoria-juridica-contratos",
-    title: "Contratos & Assessoria Jurídica Estratégica",
-    category: "Contratos de Compra e Venda · Locação Comercial · Cessão de Direitos · Acordos Extrajudiciais",
+    id: "direito-do-consumidor",
+    title: "Direito do Consumidor & Defesa de Direitos",
+    category: "Planos de Saúde · Atraso e Cancelamento de Voos · Cobranças Abusivas · Concessionárias · Vício de Produto",
     icon: Shield,
-    tag: "Prevenção de Riscos · Validade Jurídica Inquestionável · Notificações Extrajudiciais",
+    tag: "Equilíbrio na Relação · Medidas de Urgência · Devolução em Dobro",
     summary:
-      "Assessoria contratual estratégica para proteger seus negócios e aquisições imobiliárias, blindando seu patrimônio contra cláusulas abusivas e insegurança jurídica.",
+      "Combate intransigente a práticas abusivas praticadas por bancos, companhias aéreas, planos de saúde e fornecedores. Aplicação rigorosa do Código de Defesa do Consumidor.",
     details:
-      "A melhor forma de vencer uma disputa jurídica é preveni-la antes que aconteça. Elaboramos e revisamos contratos complexos de compra e venda de imóveis rurais e urbanos, contratos de locação comercial, contratos de prestação de serviços e termos de acordo extrajudicial, assegurando clareza irrevogável e equilíbrio contratual para que você durma tranquilo.",
+      "O consumidor não pode ser prejudicado pelo poder econômico de grandes corporações. Se você teve uma cirurgia negada pelo plano de saúde, seu voo cancelado gerando perda de compromissos ou férias, sua bagagem extraviada, ou recebeu cobranças indevidas de operadoras de telefonia e energia, ingressamos imediatamente com pedidos liminares para resguardar sua saúde, sua dignidade e seu dinheiro.",
     topics: [
-      "Elaboração e Revisão de Contratos de Compra e Venda e Promessa de Compra e Venda de Imóveis",
-      "Contratos de Locação Comercial e Residencial com cláusulas de garantia sólidas",
-      "Contratos de Cessão de Direitos Possessórios e Instrumentos Particulares",
-      "Elaboração de Notificações Extrajudiciais com valor formal para constituição em mora",
-      "Mediação e Negociação Extrajudicial de débitos e controvérsias patrimoniais",
-      "Consultoria preventiva para famílias, produtores rurais e empreendedores locais",
+      "Ações Urgentes contra Planos de Saúde: liberação de cirurgias, próteses, exames e fornecimento de remédios de alto custo",
+      "Direito Aéreo: indenização por cancelamento e atraso excessivo de voos, perda de conexões e extravio de bagagens",
+      "Cobranças Indevidas de tarifas bancárias, planos de telefonia, contas de energia ou água com devolução em dobro",
+      "Vício do Produto e Veículos com Defeito não solucionados pelos fabricantes ou concessionárias no prazo legal",
+      "Cancelamento de compras com estorno de valores e combate a cláusulas contratuais abusivas",
     ],
     whatsAppText:
-      "Olá, Dr. Wesley Santos! Gostaria de consultar sobre Elaboração/Revisão de Contratos ou Assessoria Jurídica.",
+      "Olá, Dr. Alexandre! Preciso de auxílio jurídico em uma causa de Direito do Consumidor.",
+  },
+  {
+    id: "direito-de-familia-sucessoes",
+    title: "Direito de Família & Sucessões (Cível)",
+    category: "Divórcio Consensual em Cartório · Guarda & Visitas · Pensão Alimentícia Urgente · Inventário Extrajudicial",
+    icon: Users,
+    tag: "Atendimento Humanizado · Resguardo dos Filhos · Celeridade em Cartório",
+    summary:
+      "Condução pacificadora e ágil de questões familiares e partilha de bens. Divórcio e inventário em cartório de notas, minimizando desgastes emocionais e custos desnecessários.",
+    details:
+      "Assuntos de família exigem um acolhimento empático somado à técnica jurídica firme. Priorizamos sempre a via consensual para solucionar divórcios e inventários diretamente em cartório em questão de semanas, reduzindo custos de impostos (ITCD) e poupando os envolvidos de audiências dolorosas. Na via litigiosa, defendemos intransigentemente o resguardo dos filhos e a divisão justa do patrimônio.",
+    topics: [
+      "Divórcio Consensual em Cartório de Notas: procedimento descomplicado, seguro e concluído em poucos dias",
+      "Divórcio Litigioso Estratégico com blindagem e divisão proporcional dos bens do casal",
+      "Fixação de Pensão Alimentícia Provisória urgente e cobrança de débitos em atraso (sob pena de prisão)",
+      "Regulamentação e Alteração de Guarda Compartilhada e Regime de Convivência dos Filhos",
+      "Ação Revisional e Exoneração de Alimentos fundamentada na mudança da capacidade financeira",
+      "Inventário Extrajudicial em Cartório de Notas com partilha pacífica de herança e economia de taxas",
+      "Planejamento Sucessório Familiar: doações com reserva de usufruto e testamentos públicos",
+    ],
+    whatsAppText:
+      "Olá, Dr. Alexandre Abreu Lúcio! Gostaria de orientações sobre Divórcio, Pensão ou Inventário em Cartório.",
+  },
+  {
+    id: "direito-explicado-consultoria",
+    title: "Consultoria Preventiva & O Conceito de 'Direito Explicado'",
+    category: "Direito Sem Juridiquês · Pareceres Acessíveis · Prevenção de Conflitos · Mediação Extrajudicial",
+    icon: BookOpen,
+    tag: "Linguagem Clara · Decisões Conscientes · Transparência Inegociável",
+    summary:
+      "O diferencial de entender exatamente cada detalhe do seu caso. Tradução da linguagem jurídica técnica para que você saiba com segurança seus riscos, prazos e chances reais de sucesso.",
+    details:
+      "Uma das marcas mais reconhecidas do Dr. Alexandre Abreu Lúcio (Agenor Lucena) nas redes sociais e na advocacia prática é o projeto 'Direito Explicado'. Acreditamos que a justiça só é plena quando o cliente compreende o que está acontecendo sem barreiras de juridiquês. Realizamos consultas preventivas esclarecedoras para solucionar disputas de forma amigável antes de se tornarem litígios judiciais demorados.",
+    topics: [
+      "Consultoria Jurídica Estratégica com análise de viabilidade processual e explicações em linguagem simples",
+      "Mediação Extrajudicial de conflitos entre familiares, sócios, vizinhos e parceiros comerciais",
+      "Elaboração de Acordos Extrajudiciais com força de título executivo homologável em juízo",
+      "Orientação preventiva para empreendedores sobre conformidade trabalhista e contratual",
+      "Acompanhamento em reuniões de conciliação e negociações de alto impacto",
+    ],
+    whatsAppText:
+      "Olá, Dr. Alexandre! Gostaria de agendar uma consulta preventiva baseada no 'Direito Explicado'.",
   },
 ];
 
@@ -292,11 +308,11 @@ interface Review {
   badge: string;
   date: string;
   category:
-    | "Dr. Wesley Santos (dr)"
-    | "Eficiência & Rapidez (efficiency)"
-    | "Atencioso & Dedicado (attentive)"
-    | "Recepção & Ambiente (reception)"
-    | "Imóveis & Contratos";
+    | "Ética & Respeito (ethics)"
+    | "Competência (lawyer)"
+    | "Inteligente & Perspicaz (inteligente)"
+    | "Atencioso & Dedicado"
+    | "Cível & Trabalhista";
   highlight: string;
   content: string;
   ownerReply?: string;
@@ -305,276 +321,172 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Neide",
-    badge: "2 avaliações · 5 Estrelas",
+    name: "Fabíola Juliani",
+    badge: "1 avaliação · 5 Estrelas",
     date: "1 mês atrás",
-    category: "Imóveis & Contratos",
-    highlight: "Santos Teixeira Advogados Associados realizou uma análise contratual minuciosa e precisa. Extrema segurança jurídica!",
-    content: "Santos Teixeira Advogados Associados realizou uma análise contratual minuciosa e precisa. Sua atuação técnica trouxe extrema segurança jurídica, com apontamentos claros e total transparência. Recomendo os seus serviços pela seriedade, competência e agilidade.",
+    category: "Competência (lawyer)",
+    highlight: "Excelente profissional muito atencioso, sempre fui bem atendida e minha família também. Ótimo advogado! Parabéns Alexandre pelo seu excelente trabalho!",
+    content: "Excelente profissional muito atencioso sempre fui bem atendida e minha família tbm ótimo advogado Parabéns Alexandre pelo seu excelente trabalho",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
+    ownerDate: "1 mês atrás",
   },
   {
-    name: "Sebastião Silva",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Imóveis & Contratos",
-    highlight: "Advogado muito eficiente. Muito bom trabalho na regularização do bem imóvel!",
-    content: "advogado muito eficiente. muito bom trabalho",
-    ownerReply: "Foi uma honra poder contribuir para a efetivação da tão almejada regularização do bem imóvel, concretizando um importante passo na garantia da segurança jurídica e do direito à propriedade.",
-    ownerDate: "1 ano atrás",
+    name: "Nayara",
+    badge: "3 avaliações · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Competência (lawyer)",
+    highlight: "Excelente profissional! Competente, atencioso e muito seguro no que faz. Super recomendo!",
+    content: "Excelente profissional! Competente, atencioso e muito seguro no que faz. Super recomendo!",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
+    ownerDate: "1 mês atrás",
   },
   {
-    name: "Cris Borges",
+    name: "Rebeka Luiza",
     badge: "1 avaliação · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Inteligente & Perspicaz (inteligente)",
+    highlight: "Excelente profissional, atendimento humanizado, inteligente, perspicaz, comunica com a linguagem do cliente!",
+    content: "Excelente profissional, atendimento humanizado, inteligente, perpiscaz, comunica com a linguagem do cliente",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
+    ownerDate: "1 mês atrás",
+  },
+  {
+    name: "Angela Queiroz",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Atencioso & Dedicado",
+    highlight: "Advogado com experiência e atenção que fazem a diferença. Atendimento com dedicação, agilidade e cordialidade. Recomendo!",
+    content: "Advogado com experiência e atenção que fazem a diferença. Atendimento realizado com dedicação, agilidade e cordialidade. Recomendo.",
+    ownerReply: "Obrigado pelo carinho e atenção.",
+    ownerDate: "5 meses atrás",
+  },
+  {
+    name: "Wesley Fernando",
+    badge: "2 avaliações · 1 foto · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Inteligente & Perspicaz (inteligente)",
+    highlight: "Cara inteligente demais, experiente no que faz!",
+    content: "Cara inteligente dms , experiente no que faz .",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
+    ownerDate: "1 mês atrás",
+  },
+  {
+    name: "criduarte criduarte",
+    badge: "3 avaliações · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Ética & Respeito (ethics)",
+    highlight: "Muito atencioso, ágil e de muita seriedade!",
+    content: "Muito atencioso, ágil e de muita seriedade.",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
+    ownerDate: "1 mês atrás",
+  },
+  {
+    name: "Renata Queiroz",
+    badge: "4 avaliações · 5 Estrelas",
     date: "5 meses atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Profissional extremamente competente, ético e disponível. Recomendo a todos o serviço do escritório SANTOS TEIXEIRA!",
-    content: "Quero deixar aqui meu agradecimento ao Dr. Wesley. Ele é um excelente advogado, profissional extremamente competente, ético e disponível. Esclareceu todas as minhas dúvidas e cuidou do meu caso com muita responsabilidade. Recomendo a todos o serviço do escritório \"SANTOS TEIXEIRA ADVOGADOS ASSOCIADOS\".",
+    category: "Ética & Respeito (ethics)",
+    highlight: "Grande advogado. Super atencioso, ético e competente!",
+    content: "Grande advogado. Super atencioso,ético e competente.",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
+    ownerDate: "5 meses atrás",
   },
   {
-    name: "Amanda Resende",
-    badge: "4 avaliações · 5 Estrelas",
-    date: "3 meses atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Excelente advogado, dá toda atenção e é super correto, só tenho a agradecer!",
-    content: "Excelente advogado, da toda atenção e é super correto , só tenho a agradecer",
-    ownerReply: "Muito obrigado pelas palavras de reconhecimento! Fico muito feliz em saber que meu atendimento correspondeu às suas expectativas. Trabalho sempre com dedicação, transparência e compromisso para oferecer o melhor suporte possível aos meus clientes. Conte comigo sempre que precisar.",
-    ownerDate: "3 meses atrás",
-  },
-  {
-    name: "Suely Algusta",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "O Dr. Wesley é um excelente profissional, muito atencioso e competente, só tenho a agradecer pela dedicação!",
-    content: "Minha experiência foi ótima pois,o Dr Weslley é um excelente profissional muito atencioso e competente só tenho a agradecer pela dedicação , que Deus o abençoa sempre muito obrigada por tudo 🙏🏼",
-  },
-  {
-    name: "Jose Antonio Queiroz",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Recepção & Ambiente (reception)",
-    highlight: "Ambiente acolhedor na recepção aos clientes. Competente, justo, honesto e transparente. Rapidez na solução!",
-    content: "Ambiente acolhedor na recepção aos clientes. Excelente profissional do Direito. Competente, justo, honesto, transparente. Rapidez na solução dos processos.",
-    ownerReply: "Sr. Antônio, estamos felizes em poder atender suas necessidades e pela oportunidade de fazê-lo satisfeito.",
-    ownerDate: "4 anos atrás",
-  },
-  {
-    name: "Marlon Ribeiro",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Recepção & Ambiente (reception)",
-    highlight: "A melhor recepção que já tive, um excelente profissional. Que Deus abençoe sempre!",
-    content: "A melhor recepção que já tive, um excelente profissional. Que Deus abençoe sempre.",
-    ownerReply: "Foi um prazer poder solucionar seu problema meu caro!",
-    ownerDate: "4 anos atrás",
-  },
-  {
-    name: "Rosângela De paula",
-    badge: "1 avaliação · 5 Estrelas",
+    name: "Joice Lopes",
+    badge: "3 avaliações · 5 Estrelas",
     date: "3 anos atrás",
-    category: "Eficiência & Rapidez (efficiency)",
-    highlight: "Ótimos profissionais, atenciosos e rápidos. Estou muito satisfeita com o serviço prestado, recomendo muito!",
-    content: "Ótimos profissionais, atenciosos e rápidos, estou muito satisfeita com o serviço que eles me prestaram, recomendo muito",
-    ownerReply: "Foi um prazer atuar em sua causa, conseguimos fazer com que à JUSTIÇA fosse feita.",
-    ownerDate: "3 anos atrás",
-  },
-  {
-    name: "Daiane Ribeiro",
-    badge: "4 avaliações · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Excelentes profissionais. Trabalham com empatia, zelo e prontidão para sanar dúvidas minhas e da minha empresa!",
-    content: "Excelentes profissionais. Trabalham com empatia, zelo e sempre com prontidão para sanar minhas dúvidas e da minha empresa.",
-    ownerReply: "É sempre um prazer atendê-la e lhe ter como cliente.",
-    ownerDate: "4 anos atrás",
-  },
-  {
-    name: "Nilson Dutra",
-    badge: "3 avaliações · 11 fotos · 5 Estrelas",
-    date: "2 anos atrás",
-    category: "Eficiência & Rapidez (efficiency)",
-    highlight: "Total satisfação. No momento em que precisei, pude contar com a equipe de excelentes pessoas e profissionais!",
-    content: "Total satisfação. No momento em que precisei, pude contar com a equipe de excelentes pessoas e profissionais.",
-    ownerReply: "Foi um prazer ajudá-lo.",
+    category: "Competência (lawyer)",
+    highlight: "Profissional de excelência. Ótimo atendimento, muito claro nas suas explicações e eficiência nos resultados. Recomendo!",
+    content: "Profissional de excelência. Ótimo atendimento, muito claro nas suas explicações e eficiência nos resultados. Recomendo!",
+    ownerReply: "Obrigado pelo carinho.",
     ownerDate: "2 anos atrás",
   },
   {
-    name: "Ivani Teixeira",
-    badge: "Local Guide · 67 avaliações · 31 fotos · 5 Estrelas",
-    date: "2 meses atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Super recomendo! Seriedade e dedicação. Ótimos advogados! 👏🏼👏🏼👏🏼",
-    content: "Super recomendo! Seriedade e dedicação. Ótimos advogados! 👏🏼👏🏼👏🏼",
-  },
-  {
-    name: "Maria do Carmo Ananias",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Adorei o serviço, muito atencioso e com certeza quando precisar procurarei, indicarei a todos!",
-    content: "Adorei o serviço,muito atencioso e com certeza quando precisar procurarei, indicarei a todos muito obrigada",
-    ownerReply: "Maria do Carmo, foi um prazer atendê-la.",
-    ownerDate: "1 ano atrás",
-  },
-  {
-    name: "Wilson Diniz",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "2 anos atrás",
-    category: "Eficiência & Rapidez (efficiency)",
-    highlight: "Dr. muito atencioso. Resolveu o que precisava com total competência!",
-    content: "Dr. Muito atencioso. Resolveu o que precisava",
-    ownerReply: "Foi um prazer atendê-lo!",
-    ownerDate: "2 anos atrás",
-  },
-  {
-    name: "Fernando Jose",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Lugar justo, profissional muito qualificado!",
-    content: "Lugar justo , profissional muito qualificado",
-    ownerReply: "Conte com nossos serviços sempre que precisar 🤝",
-    ownerDate: "1 ano atrás",
-  },
-  {
-    name: "Rubens Avelar Barcelos",
-    badge: "Local Guide · 10 avaliações · 4 fotos · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Excelente profissional e com preço justo!!!",
-    content: "Excelente profissional e com preço justo!!!",
-    ownerReply: "É um prazer tê-lo conosco meu caro!",
-    ownerDate: "4 anos atrás",
-  },
-  {
-    name: "Carolina Veloso",
-    badge: "2 avaliações · 5 fotos · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Recepção & Ambiente (reception)",
-    highlight: "Fui muito bem atendida, escritório de confiança.",
-    content: "Fui muito bem atendida, escritório de confiança.",
-    ownerReply: "Estamos muito felizes com o seu feedback!",
-    ownerDate: "3 anos atrás",
-  },
-  {
-    name: "Eduardo Carvalho",
+    name: "Marcos Dias",
     badge: "8 avaliações · 5 Estrelas",
-    date: "2 anos atrás",
-    category: "Eficiência & Rapidez (efficiency)",
-    highlight: "Atendimento sério e eficiente!!",
-    content: "Atendimento sério e eficiente!!",
-    ownerReply: "Conte com nossos serviços sempre que precisar 🤝",
-    ownerDate: "1 ano atrás",
+    date: "4 anos atrás",
+    category: "Competência (lawyer)",
+    highlight: "Excelente profissional, super recomendo seu serviço. Esse ama o que faz, parabéns!",
+    content: "Excelente profissional, super recomendo seu serviço. Esse ama o que faz, parabéns!!!",
+    ownerReply: "Obrigado pelo carinho!",
+    ownerDate: "2 anos atrás",
   },
   {
-    name: "Maria rita Silva",
+    name: "Marcia Mourão",
     badge: "1 avaliação · 5 Estrelas",
-    date: "4 semanas atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Muito bom, excelente profissional.",
-    content: "Muito bom excelente profissional.",
+    date: "1 mês atrás",
+    category: "Atencioso & Dedicado",
+    highlight: "Um profissional que recomendo sempre 👏",
+    content: "Um profissional que recomendo sempre👏",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
+    ownerDate: "1 mês atrás",
   },
   {
-    name: "Barbara Lopes",
+    name: "Marley Stéfanie",
+    badge: "2 avaliações · 1 foto · 5 Estrelas",
+    date: "5 meses atrás",
+    category: "Atencioso & Dedicado",
+    highlight: "Ótimo advogado! Super recomendo!",
+    content: "Ótimo advogado! Super recomendo!",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
+    ownerDate: "5 meses atrás",
+  },
+  {
+    name: "Elaine Almas",
+    badge: "7 avaliações · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Atencioso & Dedicado",
+    highlight: "Muito bom advogado. Bem atencioso!",
+    content: "Muito bom advogado. Bem atencioso",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
+    ownerDate: "1 mês atrás",
+  },
+  {
+    name: "Magna Regina",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Competência (lawyer)",
+    highlight: "Excelente profissional! Super indico!",
+    content: "Excelente profissional Super indico",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
+    ownerDate: "1 mês atrás",
+  },
+  {
+    name: "Adma Queiroz Xavier",
+    badge: "2 avaliações · 1 foto · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Ética & Respeito (ethics)",
+    highlight: "Excelente profissional, dedicado e ético. Super recomendo!",
+    content: "Excelente profissional, dedicado e ético. Super recomendo.",
+    ownerReply: "Obrigado pelo retorno positivo.",
+    ownerDate: "2 anos atrás",
+  },
+  {
+    name: "Raquel Lobato",
     badge: "3 avaliações · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Atendimento excepcional e trabalho incrível.",
-    content: "Atendimento excepcional e trabalho incrível.",
-    ownerReply: "Sua satisfação é nosso principal objetivo! Obrigado por fazer parte da nossa jornada!",
-    ownerDate: "3 anos atrás",
+    date: "1 mês atrás",
+    category: "Cível & Trabalhista",
+    highlight: "Ótima experiência! Atendimento nota 10!",
+    content: "Ótima!",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
+    ownerDate: "1 mês atrás",
   },
   {
-    name: "Raquel lopes de souza",
+    name: "Ana Carolina Xavier",
     badge: "1 avaliação · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Recepção & Ambiente (reception)",
-    highlight: "Muito bem recebida, excelentes profissionais, muito agradecida.",
-    content: "Muito bem recebida, excelentes profissionais, muito agradecida..",
-    ownerReply: "Obrigado pela confiança!",
-    ownerDate: "3 anos atrás",
+    date: "1 mês atrás",
+    category: "Atencioso & Dedicado",
+    highlight: "Ótimo atendimento, dedicação e seriedade com o cliente.",
+    content: "Ótimo atendimento.",
+    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
+    ownerDate: "1 mês atrás",
   },
   {
-    name: "Sofisticasa Planejados",
+    name: "Neliton Junior",
     badge: "1 avaliação · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Sempre dispostos a nos atender! Recomendo.",
-    content: "Sempre dispostos a nos atender! Recomendo.",
-    ownerReply: "É um prazer tê-los como cliente.",
-    ownerDate: "3 anos atrás",
-  },
-  {
-    name: "Maria Luísa Coimbra S.",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Eficiência & Rapidez (efficiency)",
-    highlight: "Excelência e presteza sempre.",
-    content: "Excelência e presteza sempre.",
-    ownerReply: "Foi um prazer poder ajudar nossa colega de trabalho e futura colega de profissão.",
-    ownerDate: "3 anos atrás",
-  },
-  {
-    name: "Jair Antonio Silva",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Advogado atencioso e prestativo.",
-    content: "Advogado atencioso e prestativo.",
-    ownerReply: "Temos um imenso prazer eu tê-lo como cliente.",
-    ownerDate: "3 anos atrás",
-  },
-  {
-    name: "Juliano Araujo",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Excelente profissional.",
-    content: "Exelente profissional",
-    ownerReply: "Agradecido meu caro! Conte sempre conosco.",
-    ownerDate: "1 ano atrás",
-  },
-  {
-    name: "Alessandra Mara Dos Santos",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Atencioso & Dedicado (attentive)",
-    highlight: "Excelentes profissionais, atendimento com presteza!",
-    content: "Excelentes profissionais",
-    ownerReply: "Você é uma cliente valiosa para nós! É sempre um prazer te atender.",
-    ownerDate: "4 anos atrás",
-  },
-  {
-    name: "Sebastião Antônio Santos",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Eficiência & Rapidez (efficiency)",
-    highlight: "Vocês são muito bons, continuem assim, obrigado!",
-    content: "Voceis são muito bom continua asim obrigado",
-  },
-  {
-    name: "Mirian Imaculada",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "11 meses atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Excelente profissional.",
-    content: "Excelente profissional",
-  },
-  {
-    name: "Gabriela Rodrigues",
-    badge: "2 avaliações · 5 Estrelas",
-    date: "11 meses atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Excelente profissional, recomendo!",
-    content: "Excelente profissional recomendo!",
-  },
-  {
-    name: "Dinilson Felix",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Dr. Wesley Santos (dr)",
-    highlight: "Profissional capacitado!",
-    content: "Profissional capacitado!",
+    date: "1 mês atrás",
+    category: "Cível & Trabalhista",
+    highlight: "Excelente! Atuação impecável e de confiança.",
+    content: "Excelente",
   },
 ];
 
@@ -585,34 +497,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "O que é Usucapião e quando vale a pena fazer diretamente no Cartório (Extrajudicial)?",
+    question: "Fui demitido ou não recebi meus direitos trabalhistas. Quanto tempo tenho para agir?",
     answer:
-      "A Usucapião é a forma jurídica de obter a propriedade definitiva e a matrícula no Cartório de Registro de Imóveis para quem tem a posse mansa, pacífica e contínua de um imóvel (urbano ou rural) por determinado período previsto em lei. A modalidade Extrajudicial, realizada diretamente em cartório com o auxílio do nosso escritório, é a mais recomendada quando não há oposição dos confrontantes, pois costuma ser muito mais rápida do que uma ação judicial, regularizando a escritura definitiva sem longos anos de espera.",
+      "A Constituição Federal estabelece o prazo prescricional de até 2 (dois) anos após o término do vínculo de trabalho para ingressar com a Reclamatória Trabalhista, podendo cobrar as verbas dos últimos 5 (cinco) anos trabalhados. Contudo, quanto antes você consultar nosso escritório e recolher os documentos (contracheques, extrato analítico do FGTS, mensagens e testemunhas), mais rápida e robusta será a instrução processual para reaver aviso prévio, horas extras, adicionais e multas.",
   },
   {
-    question: "O INSS negou meu pedido de Aposentadoria ou BPC/LOAS. Ainda posso reverter?",
+    question: "O que é Rescisão Indireta e quando o trabalhador pode 'demitir o patrão'?",
     answer:
-      "Com certeza! A negativa administrativa da agência do INSS não é a palavra final. Na maioria esmagadora dos casos, o INSS indefere pedidos por falhas cadastrais no CNIS, falta de cômputo de vínculos rurais/insalubres ou avaliações periciais superficiais. Nosso escritório analisa o processo indeferido e ingressa com Ação Judicial na Justiça Federal, onde as provas são reavaliadas por um juiz imparcial e perito oficial. Caso concedido, você recebe o benefício mensal e todas as parcelas atrasadas desde a data do primeiro pedido.",
+      "A rescisão indireta (artigo 483 da CLT) ocorre quando a empresa comete faltas graves contra o empregado — tais como atraso reiterado de salários, não recolhimento de FGTS, exposição a perigos graves sem equipamentos de segurança, exigência de tarefas alheias ao contrato ou assédio moral. Nessa modalidade, o trabalhador pode rescindir o contrato recebendo todas as indenizações como se tivesse sido demitido sem justa causa (aviso prévio, saque do FGTS com 40% e seguro-desemprego).",
   },
   {
-    question: "Como funciona o Divórcio e o Inventário em Cartório? É mais rápido do que na Justiça?",
+    question: "Tive meu nome negativado indevidamente no SPC/Serasa ou sofri fraude bancária. O que fazer?",
     answer:
-      "Sim, é significativamente mais rápido e menos oneroso! Quando as partes estão em consenso sobre a partilha dos bens (no divórcio ou inventário) e inexistem conflitos irreconciliáveis, todo o procedimento é lavrado por escritura pública em Cartório de Notas na presença do advogado. O divórcio consensual ou o inventário extrajudicial podem ser finalizados em semanas, com total economia de taxas tributárias (ITCD) e sem a necessidade de audiências desgastantes.",
+      "A inscrição indevida nos órgãos de proteção ao crédito (quando você nunca contratou o serviço ou quando a dívida já foi paga) gera dano moral presumido ('in re ipsa'). Entramos com Ação Judicial com pedido de liminar para determinar a exclusão do seu CPF dos cadastros restritivos no prazo de poucas horas ou dias, sob pena de multa diária, cumulado com indenização pelos abalos morais e eventuais prejuízos causados.",
   },
   {
-    question: "O que pode ser feito imediatamente em caso de atraso na Pensão Alimentícia?",
+    question: "Como funciona o atendimento com o Dr. Alexandre Abreu Lúcio em Pitangui e para outras cidades?",
     answer:
-      "Quando há atraso injustificado no pagamento da pensão alimentícia, a lei garante mecanismos rigorosos e prioritários. Ingressamos com a Ação de Execução de Alimentos de urgência. O devedor é citado judicialmente para pagar os últimos meses em até 3 dias sob pena de decretação de prisão civil em regime fechado (de 1 a 3 meses), além da possibilidade de bloqueio de contas bancárias (Sisbajud), penhora de bens e negativação do nome em cartórios de protesto.",
+      "Oferecemos máxima conveniência e sigilo. Para clientes de Pitangui, Conceição do Pará, Leandro Ferreira, Nova Serrana, Pará de Minas e região, realizamos atendimento presencial em nossa sede na Praça Dr. Isauro Epifânio, 141 (bairro São Francisco). Para clientes de outras localidades ou que preferem praticidade, nosso atendimento é 100% digital via WhatsApp oficial, com envio de fotos de documentos e assinatura eletrônica pelo celular, com a mesma segurança jurídica e acompanhamento passo a passo.",
   },
   {
-    question: "Comprei um imóvel com 'contrato de gaveta' e o antigo dono sumiu. Como consigo a escritura?",
+    question: "Como funciona o divórcio e o inventário em cartório? Realmente é mais rápido do que na Justiça?",
     answer:
-      "Essa é uma situação muito comum em Oliveira e região. Se você possui o contrato de compra e venda e os comprovantes de quitação, mas o vendedor faleceu, mudou-se ou se recusa a outorgar a escritura pública, é possível ingressar com a Ação de Adjudicação Compulsória (que hoje também pode ser requerida diretamente no Cartório de Registro de Imóveis) ou com a Usucapião para garantir que o juiz ou o registrador transfira a titularidade do imóvel para o seu nome.",
+      "Sim, é incomparavelmente mais rápido! Havendo acordo amigável entre os herdeiros ou entre o casal e preenchidos os requisitos legais, todo o procedimento é lavrado por escritura pública em Cartório de Notas na presença do advogado. Um divórcio ou inventário extrajudicial pode ser concluído em poucas semanas, com menor custo de taxas e sem a necessidade de esperar anos em disputas judiciais desgastantes.",
   },
   {
-    question: "Como funciona o atendimento presencial no Shopping XV em Oliveira - MG e o atendimento online?",
+    question: "O que significa na prática o compromisso com o 'Direito Explicado'?",
     answer:
-      "Oferecemos a máxima comodidade e segurança aos nossos clientes. Para quem reside em Oliveira, Campo Belo, Carmópolis de Minas, Passa Tempo, Santo Antônio do Amparo e região, temos atendimento presencial e privativo em nossa sede na Praça XV de Novembro, 20, 2° andar, sala 202 (Condomínio Shopping XV). Para quem reside em outras comarcas ou prefere a praticidade do celular, nosso atendimento é 100% digital via WhatsApp oficial, com assinatura digital criptografada, envio de fotos de documentos e acompanhamento transparente em tempo real.",
+      "O conceito de 'Direito Explicado', amplamente difundido pelo Dr. Alexandre Abreu Lúcio (Agenor Lucena) em suas publicações e atuação profissional, é o compromisso ético de traduzir termos jurídicos complexos para a linguagem do cliente. Você nunca ficará sem entender o que o juiz decidiu, quais são os riscos do processo ou como o acordo será pago. Você participa ativamente das decisões fundamentais do seu caso.",
   },
 ];
 
@@ -675,11 +587,11 @@ export default function Home() {
 
   const reviewCategories = [
     "Todas",
-    "Dr. Wesley Santos (dr)",
-    "Eficiência & Rapidez (efficiency)",
-    "Atencioso & Dedicado (attentive)",
-    "Recepção & Ambiente (reception)",
-    "Imóveis & Contratos",
+    "Ética & Respeito (ethics)",
+    "Competência (lawyer)",
+    "Inteligente & Perspicaz (inteligente)",
+    "Atencioso & Dedicado",
+    "Cível & Trabalhista",
   ];
 
   const filteredReviews =
@@ -705,7 +617,7 @@ export default function Home() {
                 <span className="relative inline-flex size-2 rounded-full bg-[#c59b27]" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                SANTOS TEIXEIRA ADVOGADOS · Previdenciário l Família e Sucessões l Usucapião ⚖️
+                AGENOR LUCENA ADVOCACIA · Cível & Trabalhista · OAB/MG 217.363 ⚖️
               </span>
             </div>
 
@@ -717,11 +629,11 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
                 <Star size={12} className="fill-[#f59e0b] text-[#f59e0b]" />
-                <span className="font-bold text-white">5,0 ★</span> (41 avaliações no Google · Oliveira - MG)
+                <span className="font-bold text-white">5,0 ★</span> (39 avaliações no Google · Pitangui - MG)
               </a>
               <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de consultar sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Alexandre Lúcio! Gostaria de uma consulta sobre o meu caso.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 font-semibold text-slate-200 transition-colors hover:text-white sm:inline-flex"
@@ -734,7 +646,7 @@ export default function Home() {
         </div>
 
         {/* ======================================================== */}
-        {/* STICKY HEADER / NAVBAR (OFFICIAL SANTOS TEIXEIRA LOGO)   */}
+        {/* STICKY HEADER / NAVBAR (OFFICIAL AGENOR LUCENA LOGO)     */}
         {/* ======================================================== */}
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
@@ -744,18 +656,18 @@ export default function Home() {
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-            {/* Left: Official Santos Teixeira Logo */}
+            {/* Left: Official Agenor Lucena Logo */}
             <a
               href="#"
               className="group flex shrink-0 items-center transition-opacity hover:opacity-90"
-              aria-label="Santos Teixeira Advogados Associados - Início"
+              aria-label="Agenor Lucena Advocacia - Início"
             >
               <Image
                 src={LOGO_SRC}
-                alt="Santos Teixeira Advogados Associados"
+                alt="Agenor Lucena Advocacia — OAB/MG 217.363"
                 width={480}
-                height={160}
-                className="h-[52px] sm:h-[62px] md:h-[68px] w-auto object-contain"
+                height={240}
+                className="h-[54px] sm:h-[64px] md:h-[70px] w-auto object-contain"
                 priority
               />
             </a>
@@ -766,13 +678,13 @@ export default function Home() {
                 Áreas de Atuação
               </a>
               <a href="#sobre" className="nav-link text-[11px] whitespace-nowrap">
-                Sobre o Escritório
+                Sobre Dr. Alexandre Lúcio
               </a>
               <a href="#diferenciais" className="nav-link text-[11px] whitespace-nowrap">
-                Diferenciais
+                Direito Explicado
               </a>
               <a href="#depoimentos" className="nav-link text-[11px] whitespace-nowrap">
-                Avaliações (5,0 ★)
+                Avaliações Google (5,0 ★)
               </a>
               <a href="#duvidas" className="nav-link text-[11px] whitespace-nowrap">
                 Dúvidas Frequentes
@@ -785,14 +697,14 @@ export default function Home() {
             {/* Right Action: WhatsApp CTA (Imperial Warm Gold) */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de consultar sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta sobre o meu caso.")}
                 target="_blank"
                 variant="gold"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
                 <WhatsAppIcon size={14} className="text-[#080c14]" />
-                <span className="hidden 2xl:inline">Converse com Dr. Wesley</span>
+                <span className="hidden 2xl:inline">Converse com Dr. Alexandre</span>
                 <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
 
@@ -821,9 +733,9 @@ export default function Home() {
                   <div className="flex items-center pb-3 border-b border-slate-100">
                     <Image
                       src={LOGO_SRC}
-                      alt="Santos Teixeira Advogados Associados"
+                      alt="Agenor Lucena Advocacia"
                       width={360}
-                      height={120}
+                      height={180}
                       className="h-[52px] w-auto object-contain"
                       priority
                     />
@@ -833,7 +745,7 @@ export default function Home() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Áreas de Atuação</span>
+                    <span>Áreas de Atuação (Cível & Trabalhista)</span>
                     <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
@@ -841,7 +753,7 @@ export default function Home() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Sobre Dr. Wesley Santos</span>
+                    <span>Sobre Dr. Alexandre Abreu Lúcio</span>
                     <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
@@ -849,7 +761,7 @@ export default function Home() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Nossos Diferenciais</span>
+                    <span>Pilares & Direito Explicado</span>
                     <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
@@ -857,7 +769,7 @@ export default function Home() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Avaliações Google (5,0 ★ · 41 reviews)</span>
+                    <span>Avaliações Google (5,0 ★ · 39 reviews)</span>
                     <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
@@ -873,20 +785,20 @@ export default function Home() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Sede & Contato (Shopping XV)</span>
+                    <span>Sede & Contato (Pitangui - MG)</span>
                     <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
 
                   <div className="pt-4 border-t border-slate-100">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de agendar uma consulta sobre o meu caso.")}
+                      href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta jurídica.")}
                       target="_blank"
                       variant="gold"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Fale com o Dr. Wesley Santos</span>
+                      <span>Fale com o Dr. Alexandre no WhatsApp</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -896,7 +808,7 @@ export default function Home() {
         </header>
 
         {/* ======================================================== */}
-        {/* DOBRA 1: HERO SECTION — COM FOTO DO DR. WESLEY SANTOS    */}
+        {/* DOBRA 1: HERO SECTION — COM FOTO DO DR. ALEXANDRE LÚCIO  */}
         {/* ======================================================== */}
         <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fcfbf9]">
           {/* Subtle Ambient Light Champagne & Golden Glow */}
@@ -916,7 +828,7 @@ export default function Home() {
                 <motion.div variants={reveal} className="mb-5">
                   <span className="inline-flex items-center gap-2 rounded-full border border-[#c59b27]/35 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#9e7420] shadow-xs">
                     <span className="size-1.5 rounded-full bg-[#c59b27] animate-pulse" />
-                    SANTOS TEIXEIRA ADVOGADOS · OLIVEIRA - MG
+                    AGENOR LUCENA ADVOCACIA · PITANGUI - MG · OAB/MG 217.363
                   </span>
                 </motion.div>
 
@@ -925,9 +837,9 @@ export default function Home() {
                   variants={reveal}
                   className="font-serif text-3xl leading-[1.16] font-bold tracking-tight text-[#0a0e17] sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Segurança Jurídica Para Proteger{" "}
+                  Defesa Estratégica e Resolutiva nas Áreas{" "}
                   <span className="bg-gradient-to-r from-[#785813] via-[#c59b27] to-[#9e7420] bg-clip-text text-transparent">
-                    Seu Patrimônio, Sua Família e Sua Aposentadoria.
+                    Cível e Trabalhista.
                   </span>
                 </motion.h1>
 
@@ -936,13 +848,10 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg lg:max-w-xl"
                 >
-                  Advocacia estratégica e resolutiva liderada pelo{" "}
-                  <strong className="font-semibold text-slate-900">Dr. Wesley Santos</strong>{" "}
-                  e equipe de associados. Especialização comprovada em{" "}
-                  <strong className="font-semibold text-slate-900">
-                    Direito Previdenciário (INSS), Família & Sucessões e Usucapião / Regularização Imobiliária
-                  </strong>
-                  . Sede própria no Centro de Oliveira - MG e atendimento online para todo o Brasil.
+                  Advocacia moderna, ética e combativa liderada pelo{" "}
+                  <strong className="font-semibold text-slate-900">Dr. Alexandre Abreu Lúcio (Agenor Lucena)</strong>,{" "}
+                  <span className="text-slate-800 font-medium">Presidente da Comissão da OAB Jovem de Pitangui</span>. Atendimento humanizado com o conceito de{" "}
+                  <strong className="font-semibold text-slate-900">Direito Explicado</strong> — clareza, combatividade e sem juridiquês para proteger o seu trabalho, sua família e seu patrimônio.
                 </motion.p>
 
                 {/* Quick Highlights Pills */}
@@ -952,19 +861,19 @@ export default function Home() {
                 >
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
                     <CheckCircle2 size={13} className="text-[#c59b27]" />
-                    Aposentadorias & BPC/LOAS
+                    Rescisão Indireta & Horas Extras
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
                     <CheckCircle2 size={13} className="text-[#c59b27]" />
-                    Usucapião & Imóveis Sem Escritura
+                    Contratos & Cobranças Cíveis
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
                     <CheckCircle2 size={13} className="text-[#c59b27]" />
-                    Divórcio, Guarda & Pensão
+                    Danos Morais & Negativação Indevida
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
                     <CheckCircle2 size={13} className="text-[#c59b27]" />
-                    Inventários em Cartório
+                    Divórcio & Inventário em Cartório
                   </span>
                 </motion.div>
 
@@ -974,14 +883,14 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de agendar uma consulta sobre meu caso de Previdenciário / Usucapião / Família.")}
+                    href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta sobre meu caso Cível ou Trabalhista.")}
                     target="_blank"
                     variant="gold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={18} />
-                    <span>Fale com o Dr. Wesley Santos no WhatsApp</span>
+                    <span>Fale com o Dr. Alexandre no WhatsApp</span>
                   </GlowingButton>
 
                   <GlowingButton
@@ -990,7 +899,7 @@ export default function Home() {
                     size="lg"
                     className="w-full sm:w-auto"
                   >
-                    <span>Conheça Nossas Especialidades</span>
+                    <span>Conheça Nossas Atuações</span>
                     <ArrowRight size={15} />
                   </GlowingButton>
                 </motion.div>
@@ -1013,13 +922,13 @@ export default function Home() {
                       </span>
                     </div>
                     <p className="mt-0.5 text-slate-600">
-                      Avaliação máxima comprovada com <strong className="font-semibold text-slate-900">41 avaliações de clientes verificados</strong> em Oliveira - MG e região.
+                      Avaliação máxima com <strong className="font-semibold text-slate-900">39 avaliações de clientes verificados</strong> em Pitangui - MG e região.
                     </p>
                   </div>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Photo of Dr. Wesley Santos */}
+              {/* Right Column: Hero Photo of Dr. Alexandre Abreu Lúcio */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.96, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -1032,9 +941,9 @@ export default function Home() {
                     <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#0c121e]">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dr. Wesley Santos — Santos Teixeira Advogados Associados"
+                        alt="Dr. Alexandre Abreu Lúcio — Agenor Lucena Advocacia Pitangui MG"
                         fill
-                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-102"
+                        className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-102"
                         priority
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 480px"
                       />
@@ -1042,37 +951,37 @@ export default function Home() {
                       {/* Subtle Bottom Vignette */}
                       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080c14]/85 via-transparent to-transparent" />
 
-                      {/* Floating Badge on Photo: Dr. Wesley Santos */}
+                      {/* Floating Badge on Photo: Dr. Alexandre Abreu Lúcio */}
                       <div className="absolute right-3.5 bottom-3.5 left-3.5 rounded-xl border border-white/20 bg-[#0c121e]/92 p-3.5 text-white shadow-xl backdrop-blur-md">
                         <div className="flex items-center justify-between gap-2">
                           <div>
                             <p className="font-serif text-sm font-bold tracking-wide text-white">
-                              Dr. Wesley Santos
+                              Dr. Alexandre Abreu Lúcio
                             </p>
                             <p className="text-[11px] font-medium text-[#f5de88]">
-                              Sócio-Fundador · Santos Teixeira Advogados
+                              OAB/MG 217.363 · Pres. OAB Jovem Pitangui
                             </p>
                           </div>
                           <div className="flex items-center gap-1.5">
                             <a
-                              href={LAWYER_INSTAGRAM_URL}
+                              href={INSTAGRAM_URL}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex size-8 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20"
-                              aria-label="Instagram do Dr. Wesley Santos"
-                              title="@wesleysantos.adv"
+                              aria-label="Instagram do Dr. Alexandre Abreu Lúcio"
+                              title="@agenor_lucena"
                             >
                               <InstagramIcon size={16} />
                             </a>
                             <a
-                              href={INSTAGRAM_URL}
+                              href={GOOGLE_SEARCH_URL}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex size-8 items-center justify-center rounded-lg bg-[#c59b27]/20 text-[#f5de88] transition-colors hover:bg-[#c59b27]/30"
-                              aria-label="Instagram da Santos Teixeira Advogados"
-                              title="@santosteixeiraadvogados"
+                              aria-label="Google Meu Negócio"
+                              title="5,0 no Google"
                             >
-                              <Scale size={16} />
+                              <GoogleIcon size={15} />
                             </a>
                           </div>
                         </div>
@@ -1083,11 +992,11 @@ export default function Home() {
                   {/* Floating Trust Card Badge (Top Right) */}
                   <div className="absolute -top-4 -right-4 hidden rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg sm:flex items-center gap-2.5">
                     <div className="flex size-9 items-center justify-center rounded-lg bg-[#fdf8eb] text-[#9e7420]">
-                      <Building2 size={18} />
+                      <Landmark size={18} />
                     </div>
                     <div>
-                      <p className="text-[11px] font-bold text-slate-900">Shopping XV</p>
-                      <p className="text-[10px] text-slate-500">Oliveira · MG</p>
+                      <p className="text-[11px] font-bold text-slate-900">Praça Dr. Isauro Epifânio</p>
+                      <p className="text-[10px] text-slate-500">Pitangui · MG</p>
                     </div>
                   </div>
 
@@ -1122,49 +1031,49 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  41 Avaliações no Google
+                  39 Avaliações no Google
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Nota máxima de satisfação em Oliveira - MG
+                  Nota máxima de satisfação em Pitangui - MG
                 </p>
               </div>
 
               {/* Stat 2 */}
               <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  Previdenciário
+                  Trabalhista
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Aposentadorias & INSS
+                  Defesa de Direitos
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Planejamento e ações na Justiça Federal
+                  Rescisões, horas extras e acordos na Justiça
                 </p>
               </div>
 
               {/* Stat 3 */}
               <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  Usucapião
+                  Cível
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Regularização Imobiliária
+                  Contratos & Indenizações
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Cartório de Imóveis e Escritura Definitiva
+                  Danos morais, consumidor, família e cartório
                 </p>
               </div>
 
               {/* Stat 4 */}
               <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  Shopping XV
+                  OAB Jovem
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Sede em Oliveira - MG
+                  Liderança em Pitangui
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Praça XV de Novembro, 20 · Sala 202
+                  Presidente da Comissão · OAB/MG 217.363
                 </p>
               </div>
             </div>
@@ -1179,14 +1088,14 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-12">
               <Heading
                 eyebrow="Áreas de Atuação Especializada"
-                description="Soluções jurídicas estratégicas focadas em resolver suas pendências com o INSS, blindar seu patrimônio imobiliário e harmonizar a sucessão familiar. Clique em qualquer área para ver os detalhes completos."
+                description="Soluções jurídicas combativas focadas nas áreas Cível e Trabalhista, com clareza, transparência e sem burocracia inútil. Clique em qualquer área para ver os detalhes e procedimentos inclusos."
               >
-                Excelência Jurídica Para Proteger Você, Seu Patrimônio e Sua Família
+                Defesa Técnica e Resolutiva Para Você, Seu Trabalho e Sua Empresa
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de consultar sobre a viabilidade do meu caso.")}
+                  href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de consultar sobre a viabilidade do meu caso.")}
                   target="_blank"
                   variant="gold"
                   size="md"
@@ -1321,7 +1230,7 @@ export default function Home() {
                 {/* Modal Footer CTAs */}
                 <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3 items-center justify-between">
                   <p className="text-xs text-slate-500 text-center sm:text-left">
-                    Sede no Shopping XV (Oliveira - MG) ou 100% Online Nacional
+                    Sede em Pitangui - MG ou Atendimento Online Nacional
                   </p>
                   <GlowingButton
                     href={getWhatsAppUrl(selectedPractice.whatsAppText)}
@@ -1331,7 +1240,7 @@ export default function Home() {
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Consultar Dr. Wesley</span>
+                    <span>Consultar Dr. Alexandre</span>
                   </GlowingButton>
                 </div>
               </motion.div>
@@ -1340,7 +1249,7 @@ export default function Home() {
         </AnimatePresence>
 
         {/* ======================================================== */}
-        {/* DOBRA 4: SOBRE O ESCRITÓRIO & DR. WESLEY SANTOS          */}
+        {/* DOBRA 4: SOBRE O ESCRITÓRIO & DR. ALEXANDRE ABREU LÚCIO  */}
         {/* ======================================================== */}
         <section id="sobre" className="py-20 sm:py-26 border-t border-slate-200 bg-[#f6f3eb]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1351,10 +1260,10 @@ export default function Home() {
                   <div className="relative overflow-hidden rounded-2xl border-2 border-[#c59b27]/40 bg-[#0c121e] p-2 shadow-xl shadow-slate-300">
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#121929]">
                       <Image
-                        src={FOTO_OFFICE_SRC}
-                        alt="Escritório Santos Teixeira Advogados Associados em Oliveira - MG"
+                        src={FOTO_PORTRAIT_SRC}
+                        alt="Dr. Alexandre Abreu Lúcio — Agenor Lucena Advocacia"
                         fill
-                        className="object-cover object-center"
+                        className="object-cover object-top"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 420px"
                       />
                     </div>
@@ -1363,10 +1272,10 @@ export default function Home() {
                   {/* Decorative Badge */}
                   <div className="absolute -bottom-5 -right-5 hidden sm:block rounded-xl border border-[#c59b27]/50 bg-[#0c121e] p-4 text-white shadow-xl max-w-xs">
                     <p className="text-[11px] font-bold text-[#f5de88] uppercase tracking-wider">
-                      Santos Teixeira Advogados
+                      Agenor Lucena Advocacia
                     </p>
                     <p className="mt-1 text-xs text-slate-300 leading-snug">
-                      &quot;Previdenciário l Família e Sucessões l Usucapião com rigor técnico e proximidade.&quot;
+                      &quot;Cível e Trabalhista com rigor técnico, atendimento humanizado e Direito Explicado.&quot;
                     </p>
                   </div>
                 </div>
@@ -1375,38 +1284,41 @@ export default function Home() {
               {/* Text Column */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre o Escritório & Liderança"
-                  description="Com atuação ética, combativa e altamente especializada, a Santos Teixeira Advogados Associados consolidou-se como referência jurídica em Oliveira, no Centro-Oeste mineiro e em todo o Brasil."
+                  eyebrow="Sobre o Profissional & Liderança"
+                  description="Com atuação ética, inteligente e combativa, o Dr. Alexandre Abreu Lúcio consolidou-se como referência na advocacia Cível e Trabalhista em Pitangui e na região centro-oeste mineira."
                 >
-                  Santos Teixeira Advogados: Rigor Técnico, Estratégia e Confiança
+                  Dr. Alexandre Abreu Lúcio: Rigor Técnico, Clareza e Proximidade
                 </Heading>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700 sm:text-base">
                   <p>
-                    A <strong className="font-semibold text-slate-900">Santos Teixeira Advogados Associados</strong> nasceu com a missão de entregar uma advocacia de alta performance, transparente e desprovida de juridiquês inútil. Sob a liderança do <strong className="font-semibold text-slate-900">Dr. Wesley Santos</strong> e de uma seleta equipe de associados, o escritório se destaca pelo tratamento personalizado de cada caso.
+                    O <strong className="font-semibold text-slate-900">Dr. Alexandre Abreu Lúcio (Agenor Lucena) · OAB/MG 217.363</strong> atua com a convicção de que a verdadeira advocacia de excelência une preparação jurídica de ponta, combatividade nos tribunais e comunicação clara com o cliente.
                   </p>
                   <p>
-                    Sabemos que por trás de um pedido de aposentadoria, de uma usucapião para legalizar a casa própria, de um inventário ou de uma partilha familiar, existem o <strong className="font-semibold text-slate-900">esforço de décadas, a estabilidade financeira e a tranquilidade de famílias inteiras</strong>. Por isso, não tratamos clientes como números: desenhamos a estratégia processual ou extrajudicial mais ágil e segura para o seu caso.
+                    Como <strong className="font-semibold text-slate-900">Presidente da Comissão da OAB Jovem da 47ª Subseção de Pitangui / MG</strong>, exerce papel ativo no fortalecimento da classe jurídica e na defesa incansável das prerrogativas profissionais, trazendo essa mesma energia e seriedade para cada causa sob seus cuidados.
                   </p>
                   <p>
-                    Com sede física moderna e privativa no <strong className="font-semibold text-slate-900">Condomínio Shopping XV (Centro de Oliveira - MG)</strong> e infraestrutura digital preparada para atender com eficiência clientes de toda Minas Gerais e do Brasil, mantemos a nota máxima e unânime de <strong className="font-semibold text-slate-900">5,0 estrelas no Google (41 avaliações)</strong> e forte presença nas redes sociais.
+                    Reconhecido pelos próprios clientes pela <strong className="font-semibold text-slate-900">inteligência, perspicácia e capacidade de se comunicar na linguagem de quem precisa de suporte</strong>, desenvolveu o projeto <strong className="font-semibold text-slate-900">&quot;📚 Direito Explicado&quot;</strong>, desmistificando o juridiquês e assegurando que cada cliente compreenda exatamente seus direitos e participe conscientemente das estratégias do processo.
+                  </p>
+                  <p>
+                    Com sede própria localizada na <strong className="font-semibold text-slate-900">Praça Dr. Isauro Epifânio, 141 (Bairro São Francisco, Pitangui - MG)</strong> e infraestrutura digital para atendimento online em todo o Brasil, mantém a nota unânime de <strong className="font-semibold text-slate-900">5,0 estrelas no Google (39 avaliações)</strong>.
                   </p>
                 </div>
 
                 {/* Key Points */}
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3.5 shadow-2xs">
-                    <Landmark size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
+                    <Briefcase size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 uppercase">Previdência & INSS</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">Planejamento, aposentadorias e BPC/LOAS com celeridade.</p>
+                      <h4 className="text-xs font-bold text-slate-900 uppercase">Cível & Trabalhista</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Defesa ampla do trabalhador, empresas, contratos e indenizações.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3.5 shadow-2xs">
-                    <HomeIcon size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
+                    <BookOpen size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 uppercase">Usucapião & Família</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">Escritura definitiva de imóveis, divórcio e inventário em cartório.</p>
+                      <h4 className="text-xs font-bold text-slate-900 uppercase">📚 Direito Explicado</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Explicação transparente e linguagem descomplicada em cada etapa.</p>
                     </div>
                   </div>
                 </div>
@@ -1414,14 +1326,14 @@ export default function Home() {
                 {/* CTA Buttons */}
                 <div className="mt-8 pt-4 flex flex-col sm:flex-row gap-3.5 items-center">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de conversar diretamente sobre a minha demanda.")}
+                    href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de conversar diretamente sobre a minha demanda.")}
                     target="_blank"
                     variant="gold"
                     size="md"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Falar com o Dr. Wesley Santos</span>
+                    <span>Falar com o Dr. Alexandre no WhatsApp</span>
                   </GlowingButton>
 
                   <a
@@ -1440,42 +1352,42 @@ export default function Home() {
         </section>
 
         {/* ======================================================== */}
-        {/* DOBRA 5: OS 4 PILARES / DIFERENCIAIS DA ADVOCACIA        */}
+        {/* DOBRA 5: OS 4 PILARES DA ADVOCACIA                       */}
         {/* ======================================================== */}
         <section id="diferenciais" className="py-20 sm:py-26 bg-[#0c121e] text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Heading
               eyebrow="Nossos Diferenciais"
-              description="Os pilares institucionais que fundamentam a reputação ilibada e os resultados consistentes da Santos Teixeira Advogados."
+              description="Os pilares que sustentam a reputação ilibada, a satisfação máxima e os resultados expressivos de Agenor Lucena Advocacia."
               dark
             >
-              Os 4 Pilares da Santos Teixeira Advogados
+              Os 4 Pilares da Agenor Lucena Advocacia
             </Heading>
 
             <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {/* Pillar 1 */}
               <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
                 <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
-                  <Scale size={24} />
+                  <BookOpen size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  1. Especialização Focada
+                  1. Direito Explicado Sem Juridiquês
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Foco rigoroso em Previdenciário, Usucapião e Direito Familiar. Conhecimento aprofundado dos procedimentos locais e das teses mais recentes.
+                  Comunicação clara, acessível e direta. Você entende cada movimento do seu processo sem palavras difíceis ou termos ininteligíveis.
                 </p>
               </div>
 
               {/* Pillar 2 */}
               <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
                 <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
-                  <Sparkles size={24} />
+                  <Gavel size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  2. Celeridade Sem Juridiquês
+                  2. Combatividade & Agilidade
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Comunicação clara, acessível e direta pelo WhatsApp oficial. Você compreende cada etapa do seu processo sem palavras difíceis ou enrolação.
+                  Postura firme perante as Varas do Trabalho e Varas Cíveis. Estratégias processuais assertivas para alcançar o melhor resultado no menor tempo.
                 </p>
               </div>
 
@@ -1485,23 +1397,23 @@ export default function Home() {
                   <Shield size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  3. Sigilo & Ética Profissional
+                  3. Ética & Atendimento Humanizado
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Proteção absoluta dos seus dados pessoais e patrimoniais em total conformidade com o Código de Ética da OAB e a legislação vigente.
+                  Respeito absoluto à sua história, confidencialidade total e atendimento acolhedor reconhecido por dezenas de avaliações espontâneas.
                 </p>
               </div>
 
               {/* Pillar 4 */}
               <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
                 <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
-                  <Building2 size={24} />
+                  <Landmark size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  4. Sede no Shopping XV & Online
+                  4. Sede em Pitangui & Online
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Estrutura física acolhedora no Centro de Oliveira - MG e atendimento digital com assinatura pelo celular para clientes de todo o país.
+                  Escritório presencial na Praça Dr. Isauro Epifânio, 141 (Bairro São Francisco) e estrutura digital para atender clientes de qualquer comarca.
                 </p>
               </div>
             </div>
@@ -1516,9 +1428,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6">
               <Heading
                 eyebrow="Prova Social Verificada"
-                description="Confira avaliações 100% autênticas e espontâneas de clientes que tiveram seus direitos garantidos pela Santos Teixeira Advogados Associados."
+                description="Confira avaliações 100% autênticas e espontâneas de clientes atendidos pelo Escritório de Advocacia - Dr. Alexandre Abreu Lúcio no Google Meu Negócio."
               >
-                Avaliações com Nota Máxima de 5,0 ★ no Google em Oliveira · MG
+                Avaliações com Nota Máxima de 5,0 ★ no Google em Pitangui · MG
               </Heading>
 
               <div className="flex flex-wrap items-center gap-3">
@@ -1535,25 +1447,25 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Google Badges Extracted directly from Google Maps */}
+            {/* Google Badges Extracted directly from Google Reviews Keywords */}
             <div className="flex flex-wrap items-center gap-2 pt-2 pb-8 border-b border-slate-100">
               <span className="text-xs font-bold text-slate-500 mr-1">
                 Destaques Google:
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ⚖️ Dr. Wesley Santos (dr)
+                ⚖️ Ética & Respeito (ethics)
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ⚡ Eficiência (efficiency)
+                👨‍💼 Competência (lawyer)
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                🤝 Atencioso (attentive)
+                💡 Inteligente & Perspicaz (inteligente)
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                🏢 Recepção (reception · Shopping XV)
+                🗣️ Comunicação Humanizada
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ⭐ 100% Avaliações 5 Estrelas
+                ⭐ 100% Avaliações 5 Estrelas (39 reviews)
               </span>
             </div>
 
@@ -1617,7 +1529,7 @@ export default function Home() {
                         </div>
 
                         <span className="rounded-full bg-[#fdf8eb] px-2 py-0.5 text-[10px] font-bold text-[#8e6319] shrink-0">
-                          {review.category}
+                          {review.category.split("(")[0].trim()}
                         </span>
                       </div>
 
@@ -1648,7 +1560,7 @@ export default function Home() {
                         <div className="mt-4 rounded-xl border border-[#c59b27]/20 bg-[#f6f3eb] p-3.5 text-xs text-slate-700">
                           <div className="flex items-center gap-1.5 font-bold text-[#8e6319] mb-1 text-[11px]">
                             <Sparkles size={13} className="text-[#c59b27]" />
-                            <span>Santos Teixeira Advogados (proprietário)</span>
+                            <span>Dr. Alexandre Abreu Lúcio (proprietário)</span>
                             {review.ownerDate && (
                               <span className="text-[10px] text-slate-400 font-normal">
                                 · {review.ownerDate}
@@ -1699,7 +1611,7 @@ export default function Home() {
                 size="md"
               >
                 <GoogleIcon size={15} />
-                <span>Ver Todas as 41 Avaliações no Google Maps</span>
+                <span>Ver Todas as 39 Avaliações no Google Maps</span>
                 <ExternalLink size={13} />
               </GlowingButton>
             </div>
@@ -1713,9 +1625,9 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Heading
               eyebrow="Como Funciona"
-              description="Um processo transparente, ágil e seguro desde o primeiro contato no WhatsApp até a conclusão da sua demanda."
+              description="Um processo transparente, ágil e descomplicado desde o primeiro contato pelo WhatsApp até a solução definitiva da sua causa."
             >
-              Seu Atendimento em 4 Passos Simples
+              Seu Atendimento Jurídico em 4 Passos Simples
             </Heading>
 
             <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -1725,10 +1637,10 @@ export default function Home() {
                   01
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Contato Inicial
+                  Contato & Sigilo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Você entra em contato pelo nosso WhatsApp oficial relatando sua situação previdenciária, imobiliária ou familiar com total sigilo.
+                  Você envia uma mensagem pelo nosso WhatsApp oficial relatando sua situação trabalhista ou cível com total confidencialidade.
                 </p>
               </div>
 
@@ -1738,10 +1650,10 @@ export default function Home() {
                   02
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Análise Técnica e Documental
+                  Direito Explicado
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  O Dr. Wesley Santos analisa seus documentos, certidões e histórico contributivo do CNIS, definindo a melhor estratégia (cartorária ou judicial).
+                  O Dr. Alexandre analisa documentos e explica seus direitos em linguagem clara, detalhando chances, riscos e opções de acordo.
                 </p>
               </div>
 
@@ -1751,10 +1663,10 @@ export default function Home() {
                   03
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Protocolo & Ação Rápida
+                  Ação Célere & Protocolo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Assinatura prática pelo celular ou presencialmente no Shopping XV em Oliveira, com protocolo imediato no Cartório, INSS ou Justiça Federal.
+                  Assinatura prática pelo celular ou presencialmente em Pitangui, com protocolo imediato na Justiça ou negociação extrajudicial.
                 </p>
               </div>
 
@@ -1764,17 +1676,17 @@ export default function Home() {
                   04
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Acompanhamento & Conclusão
+                  Acompanhamento Transparente
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Atualizações transparentes a cada movimentação até a efetiva concessão da aposentadoria, registro da escritura ou homologação do acordo.
+                  Você é avisado a cada movimentação e decisão, acompanhando o recebimento das verbas, alvarás ou homologação final do acordo.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de dar o primeiro passo e tirar dúvidas sobre meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de dar o primeiro passo e tirar dúvidas sobre meu caso.")}
                 target="_blank"
                 variant="gold"
                 size="lg"
@@ -1794,7 +1706,7 @@ export default function Home() {
             <div className="text-center">
               <Heading
                 eyebrow="Tire Suas Dúvidas"
-                description="Respostas diretas e esclarecedoras para as principais dúvidas de clientes sobre Aposentadorias, Usucapião e Direito Familiar."
+                description="Respostas diretas e esclarecedoras para as principais questões sobre causas trabalhistas, indenizações, contratos e direito de família."
               >
                 Perguntas Frequentes
               </Heading>
@@ -1841,14 +1753,14 @@ export default function Home() {
 
             <div className="mt-10 rounded-xl border border-[#c59b27]/30 bg-[#fdf8eb] p-6 text-center">
               <p className="text-sm font-bold text-[#8e6319]">
-                Ficou com alguma dúvida pontual sobre o seu caso?
+                Tem uma dúvida específica sobre a sua situação?
               </p>
               <p className="mt-1 text-xs text-slate-600">
-                O Dr. Wesley Santos e a equipe estão disponíveis para responder diretamente no WhatsApp.
+                O Dr. Alexandre Abreu Lúcio está disponível para responder diretamente no WhatsApp.
               </p>
               <div className="mt-4">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dr. Wesley! Gostaria de tirar uma dúvida específica.")}
+                  href={getWhatsAppUrl("Olá, Dr. Alexandre! Gostaria de tirar uma dúvida pontual sobre o meu caso.")}
                   target="_blank"
                   variant="gold"
                   size="sm"
@@ -1871,7 +1783,7 @@ export default function Home() {
               <div className="lg:col-span-6">
                 <Heading
                   eyebrow="Onde Estamos & Contato"
-                  description="Venha nos visitar em nossa sede no Condomínio Shopping XV em Oliveira - MG ou converse agora mesmo pelo canal oficial de atendimento online."
+                  description="Venha nos visitar em nossa sede em Pitangui - MG ou converse agora mesmo pelo canal oficial de atendimento online."
                   dark
                 >
                   Estamos Prontos para Atender Sua Demanda
@@ -1888,7 +1800,7 @@ export default function Home() {
                         Endereço / Sede Física
                       </p>
                       <p className="mt-1 text-slate-300">
-                        {ADDRESS_OLIVEIRA}
+                        {ADDRESS_PITANGUI}
                       </p>
                       <a
                         href={GOOGLE_MAPS_URL}
@@ -1915,7 +1827,7 @@ export default function Home() {
                         {PHONE_DISPLAY}
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de agendar uma consulta.")}
+                        href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta.")}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#25D366] hover:underline"
@@ -1936,10 +1848,10 @@ export default function Home() {
                         Horário de Funcionamento
                       </p>
                       <p className="mt-1 text-slate-300">
-                        Segunda a Sexta · Abre às 12:00 (12:00 às 18:00)
+                        Segunda a Sexta · 08:30 às 18:30 (Aberto · Fecha 18:30)
                       </p>
                       <p className="text-[11px] text-slate-400">
-                        Atendimento presencial no Shopping XV com agendamento prévio para seu total conforto e discrição.
+                        Atendimento presencial com agendamento prévio para seu conforto e total discrição.
                       </p>
                     </div>
                   </div>
@@ -1958,19 +1870,10 @@ export default function Home() {
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 font-semibold text-slate-200 hover:text-white"
+                          className="inline-flex items-center gap-1.5 font-semibold text-[#f5de88] hover:text-white"
                         >
                           <span>{INSTAGRAM_HANDLE}</span>
-                          <span className="text-[11px] text-slate-400">({INSTAGRAM_STATS})</span>
-                        </a>
-                        <a
-                          href={LAWYER_INSTAGRAM_URL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 font-semibold text-[#f5de88] hover:text-white text-xs"
-                        >
-                          <span>{LAWYER_INSTAGRAM_HANDLE}</span>
-                          <span className="text-[11px] text-slate-400">(Perfil Dr. Wesley Santos)</span>
+                          <span className="text-[11px] text-slate-400">({INSTAGRAM_STATS} · Cível e Trabalhista)</span>
                         </a>
                       </div>
                     </div>
@@ -1984,10 +1887,10 @@ export default function Home() {
                   <div className="flex items-center justify-between pb-4 border-b border-slate-700">
                     <div>
                       <h4 className="font-serif text-lg font-bold text-white">
-                        Santos Teixeira Advogados Associados
+                        Escritório de Advocacia - Dr. Alexandre Abreu Lúcio
                       </h4>
                       <p className="text-xs text-[#f5de88]">
-                        Condomínio Shopping XV · Oliveira - MG
+                        Praça Dr. Isauro Epifânio, 141 · Pitangui - MG
                       </p>
                     </div>
                     <div className="flex items-center gap-1 rounded-md bg-[#0c121e] px-3 py-1 text-xs font-bold text-[#f59e0b]">
@@ -1997,7 +1900,7 @@ export default function Home() {
                   </div>
 
                   <p className="mt-4 text-xs text-slate-300 leading-relaxed">
-                    Localização privilegiada no Centro de Oliveira (Praça XV de Novembro, 20 - 2° andar, sala 202 - Shopping XV), com estacionamento próximo e sala executiva privativa para cuidar das suas questões mais importantes com o respeito que seu patrimônio merece.
+                    Sede acolhedora no Bairro São Francisco em Pitangui - MG, com fácil acesso, estacionamento e sala de reuniões privativa para analisar sua demanda cível ou trabalhista com o rigor ético que seus direitos exigem.
                   </p>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -2012,7 +1915,7 @@ export default function Home() {
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Wesley! Gostaria de agendar um horário presencial na sede no Shopping XV em Oliveira.")}
+                      href={getWhatsAppUrl("Olá, Dr. Alexandre! Gostaria de agendar um horário presencial no escritório em Pitangui.")}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-[#0c121e] px-4 py-3 text-xs font-bold uppercase text-white hover:bg-slate-800 transition-colors"
@@ -2037,13 +1940,13 @@ export default function Home() {
               <div className="lg:col-span-1">
                 <Image
                   src={LOGO_WHITE_SRC}
-                  alt="Santos Teixeira Advogados Associados"
+                  alt="Agenor Lucena Advocacia"
                   width={340}
-                  height={110}
-                  className="h-[52px] w-auto object-contain opacity-95"
+                  height={170}
+                  className="h-[56px] w-auto object-contain opacity-95"
                 />
                 <p className="mt-4 text-xs text-slate-400 leading-relaxed">
-                  Advocacia especializada em Direito Previdenciário (INSS), Família & Sucessões e Usucapião / Regularização Imobiliária. Sede no Shopping XV em Oliveira - MG e atendimento online para todo o Brasil.
+                  Advocacia especializada em Direito Cível e Trabalhista. Liderado pelo Dr. Alexandre Abreu Lúcio · OAB/MG 217.363, Presidente da Comissão da OAB Jovem de Pitangui - MG. Sede na Praça Dr. Isauro Epifânio, 141 e atendimento online para todo o Brasil.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
@@ -2051,12 +1954,12 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
-                    aria-label="Instagram da Santos Teixeira Advogados"
+                    aria-label="Instagram de Agenor Lucena Advocacia"
                   >
                     <InstagramIcon size={15} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dr. Wesley Santos!")}
+                    href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio!")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-[#25D366] hover:bg-slate-700 transition-colors"
@@ -2089,12 +1992,12 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="hover:text-white transition-colors">
-                      Sobre o Escritório
+                      Sobre Dr. Alexandre Lúcio
                     </a>
                   </li>
                   <li>
                     <a href="#diferenciais" className="hover:text-white transition-colors">
-                      Diferenciais
+                      Direito Explicado
                     </a>
                   </li>
                   <li>
@@ -2109,7 +2012,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="hover:text-white transition-colors">
-                      Sede em Oliveira - MG
+                      Sede em Pitangui - MG
                     </a>
                   </li>
                 </ul>
@@ -2123,32 +2026,32 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Aposentadorias e Benefícios do INSS
+                      Direito do Trabalho & Rescisão
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Benefício BPC/LOAS (Idosos & Autismo)
+                      Horas Extras & Verbas Retidas
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Usucapião Extrajudicial e Judicial
+                      Danos Morais & Negativação Indevida
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Divórcio Consensual e em Cartório
+                      Elaboração e Revisão de Contratos
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Pensão Alimentícia & Cobrança
+                      Direito do Consumidor & Bancário
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Inventários em Cartório de Notas
+                      Divórcio e Inventário em Cartório
                     </a>
                   </li>
                 </ul>
@@ -2162,7 +2065,7 @@ export default function Home() {
                 <ul className="space-y-2.5 text-xs">
                   <li className="flex items-start gap-2">
                     <MapPin size={14} className="text-[#c59b27] shrink-0 mt-0.5" />
-                    <span>Praça XV de Novembro, 20 - Sala 202 (Shopping XV) - Centro, Oliveira - MG</span>
+                    <span>Praça Dr. Isauro Epifânio, 141 - Bairro São Francisco, Pitangui - MG</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <WhatsAppIcon size={14} className="text-[#25D366] shrink-0" />
@@ -2170,11 +2073,11 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <Clock size={14} className="text-[#c59b27] shrink-0" />
-                    <span>Seg. a Sex. · Abre às 12:00</span>
+                    <span>Seg. a Sex. · 08:30 às 18:30</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Star size={14} className="text-[#f59e0b] shrink-0 fill-[#f59e0b]" />
-                    <span>5,0 ★ no Google (41 avaliações)</span>
+                    <span>5,0 ★ no Google (39 avaliações)</span>
                   </li>
                 </ul>
               </div>
@@ -2183,11 +2086,11 @@ export default function Home() {
             {/* OAB Compliance Disclaimer */}
             <div className="pt-8 text-[11px] leading-relaxed text-slate-500">
               <p>
-                <strong>Aviso Legal & Ética Profissional da Advocacia:</strong> Este website tem caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da Ordem dos Advogados do Brasil (OAB) e ao Provimento nº 205/2021 do Conselho Federal da OAB. As informações aqui prestadas não configuram promessa de resultado nem substituem a consulta jurídica individualizada com profissional devidamente inscrito na OAB.
+                <strong>Aviso Legal & Ética Profissional da Advocacia:</strong> Este website tem caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da Ordem dos Advogados do Brasil (OAB) e ao Provimento nº 205/2021 do Conselho Federal da OAB. As informações aqui prestadas não configuram promessa de resultado nem substituem a consulta jurídica individualizada com profissional devidamente inscrito na OAB. Dr. Alexandre Abreu Lúcio · OAB/MG 217.363.
               </p>
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-600">
-                <p>© {new Date().getFullYear()} Santos Teixeira Advogados Associados. Todos os direitos reservados. CNPJ / OAB-MG.</p>
-                <p>Oliveira - MG · Shopping XV · Atendimento Nacional</p>
+                <p>© {new Date().getFullYear()} Agenor Lucena Advocacia. Todos os direitos reservados. Dr. Alexandre Abreu Lúcio · OAB/MG 217.363.</p>
+                <p>Pitangui - MG · Praça Dr. Isauro Epifânio, 141 · Atendimento Nacional</p>
               </div>
             </div>
           </div>
@@ -2198,11 +2101,11 @@ export default function Home() {
         {/* ======================================================== */}
         <div className="fixed right-5 bottom-5 z-40 flex items-center gap-2.5">
           <a
-            href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de tirar uma dúvida sobre o meu caso.")}
+            href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de tirar uma dúvida sobre o meu caso.")}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#25D366]/60 cursor-pointer"
-            aria-label="Converse pelo WhatsApp com o Dr. Wesley Santos"
+            aria-label="Converse pelo WhatsApp com o Dr. Alexandre Abreu Lúcio"
           >
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#25D366] opacity-30" />
             <WhatsAppIcon size={30} />

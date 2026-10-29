@@ -3,7 +3,7 @@
 :root {
   color-scheme: light dark;
   
-  /* Brand Deep Obsidian Graphite & Midnight Navy (Santos Teixeira Advogados Contrast Canvas) */
+  /* Brand Deep Obsidian Noir & Midnight Navy (Agenor Lucena Advocacia Contrast Canvas) */
   --brand-obsidian: #080c14;
   --brand-midnight: #0c121e;
   --brand-navy-deep: #121929;
@@ -12,7 +12,7 @@
   --brand-navy-highlight: #283756;
   --brand-slate-muted: #526071;
   
-  /* Brand Imperial Warm Gold & Burnished Bronze (Extracted directly from ST 3D Logo) */
+  /* Brand Imperial Warm Gold & Burnished Bronze (Extracted directly from AL 3D Metallic Logo) */
   --brand-gold-glow: #fdf8eb;
   --brand-gold-bright: #f5de88;
   --brand-gold-light: #e8c55e;

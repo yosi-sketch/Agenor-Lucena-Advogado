@@ -34,8 +34,8 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Santos Teixeira Advogados Associados
-  // Imperial Warm Gold, Obsidian Navy & Warm Linen Sand
+  // Visual identity based on Agenor Lucena Advocacia (AL)
+  // Imperial Warm Gold, Obsidian Midnight & Warm Linen Sand
   const variantClasses = {
     gold:
       "border border-[#fdf8eb]/80 bg-gradient-to-r from-[#9e7420] via-[#f5de88] to-[#b88d22] text-[#080c14] font-black shadow-md shadow-[#9e7420]/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(245,222,136,0.55)]",
