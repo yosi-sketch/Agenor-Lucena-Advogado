@@ -29,38 +29,45 @@ import {
   FileText,
   Lock,
   Headphones,
+  Home as HomeIcon,
+  Building2,
+  Compass,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531997661362";
-const PHONE_DISPLAY = "(31) 99766-1362";
-const EMAIL_CONTACT = "contato@deboracupertinoadvocacia.com.br";
-const INSTAGRAM_URL = "https://www.instagram.com/deboracupertinoadvocacia/";
-const INSTAGRAM_HANDLE = "@deboracupertinoadvocacia";
-const INSTAGRAM_STATS = "4.441 seguidores · 678 posts";
+// Client & Firm Information — Santos Teixeira Advogados Associados
+const WHATSAPP_NUMBER = "5537999674308";
+const PHONE_DISPLAY = "(37) 99967-4308";
+const EMAIL_CONTACT = "contato@santosteixeiraadvogados.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/santosteixeiraadvogados/";
+const INSTAGRAM_HANDLE = "@santosteixeiraadvogados";
+const INSTAGRAM_STATS = "3.047 seguidores · 126 posts";
+const LAWYER_INSTAGRAM_URL = "https://www.instagram.com/wesleysantos.adv/";
+const LAWYER_INSTAGRAM_HANDLE = "@wesleysantos.adv";
 
-const ADDRESS_MATOZINHOS =
-  "R. Claudomiro Cupertino, 55 A - Centro, Matozinhos - MG, 35720-000, Brasil";
+const ADDRESS_OLIVEIRA =
+  "Praça XV de Novembro, 20 - 2° andar - Sala 202 (Condomínio Shopping XV) - Centro, Oliveira - MG, 35540-000";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=D%C3%A9bora+Cupertino+Advocacia%0AMatozinhos+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Santos+Teixeira+Advogados+Associados%0AOliveira+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=e65bf6121730a79e&sxsrf=AKL5yDilS4TTndihKypmKh6nFrLUjESSNQ:1793211884046&q=d%C3%A9bora+cupertino+advocacia+matozinhos+endere%C3%A7o&ludocid=11987737474599740864&sa=X&ved=2ahUKEwi81Ovqqt2XAxXQELkGHUB_FAIQ6BN6BAg6EAI";
+  "https://www.google.com/search?sca_esv=8e995f6d8e2c150c&sxsrf=AKL5yDiJB6PFucVIxkFghHZVsSc9sXhIRw:1793284906329&q=santos+teixeira+advogados+associados+oliveira+endere%C3%A7o&ludocid=3790791552436941517&sa=X&ved=2ahUKEwi-gsruut-XAxUuFbkGHWhUKSwQ6BN6BAg0EAI";
 
-// Official assets uploaded directly by client
-const LOGO_SRC = "/debora-cupertino-logo-trimmed.png";
-const LOGO_WHITE_SRC = "/debora-cupertino-logo-white.png";
-const EMBLEM_SRC = "/emblema-dc.png";
-const FOTO_HERO_SRC = "/debora-cupertino-hero.jpg";
-const FOTO_PORTRAIT_SRC = "/dra-debora-cupertino.jpg";
+// Official assets generated from the new client logo & photoshoot
+const LOGO_SRC = "/santos-teixeira-logo-trimmed.png";
+const LOGO_WHITE_SRC = "/santos-teixeira-logo-white.png";
+const EMBLEM_SRC = "/emblema-st.png";
+const FOTO_HERO_SRC = "/dr-wesley-santos.jpg";
+const FOTO_PORTRAIT_SRC = "/wesley-santos-portrait.jpg";
+const FOTO_OFFICE_SRC = "/escritorio-santos-teixeira.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Débora Cupertino! Gostaria de agendar uma consulta jurídica especializada sobre meu caso.";
+    "Olá, Dr. Wesley Santos / Santos Teixeira Advogados! Gostaria de agendar uma consulta jurídica especializada sobre meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -171,130 +178,112 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-familia-divorcio",
-    title: "Direito de Família: Divórcio, Guarda & Convivência",
-    category: "Divórcio Consensual e Litigioso · Guarda Compartilhada · Convivência com Filhos · Partilha de Bens",
-    icon: Users,
-    tag: "Atendimento Humanizado · Respeito à Família · Condução Pacífica",
-    summary:
-      "Condução acolhedora e estrategicamente segura para encerrar ciclos com dignidade e resguardar a harmonia dos seus filhos. Menos desgaste emocional, mais clareza para o futuro.",
-    details:
-      "O divórcio ou a reorganização familiar não precisa ser um campo de batalha. Na Débora Cupertino Advocacia, tratamos cada caso com sensibilidade ímpar e alto rigor técnico. Priorizamos a mediação consensual em cartório ou judicial para garantir que a partilha de bens seja justa, sem prejuízos, e que a guarda compartilhada e os horários de convivência protejam prioritariamente a estabilidade psicológica e emocional dos seus filhos.",
-    topics: [
-      "Divórcio Consensual em Cartório de Notas: celeridade máxima, sem burocracia e em poucos dias",
-      "Divórcio Litigioso Estratégico: proteção patrimonial absoluta e defesa firme dos seus interesses",
-      "Guarda Compartilhada ou Unilateral estruturada com foco no bem-estar dos filhos",
-      "Regulamentação de Regime de Convivência, férias escolares e feriados com os genitores",
-      "Partilha amigável de imóveis, veículos, contas bancárias e investimentos do casal",
-      "Dissolução de União Estável com reconhecimento de direitos e partilha patrimonial",
-    ],
-    whatsAppText:
-      "Olá, Dra. Débora Cupertino! Gostaria de orientações sobre Divórcio, Guarda e Convivência com os filhos.",
-  },
-  {
-    id: "salario-maternidade",
-    title: "Direito Previdenciário: Salário Maternidade",
-    category: "Mães Desempregadas · Trabalhadoras Urbanas e Rurais · Autônomas / MEI · Adoção e Guarda",
-    icon: Baby,
-    tag: "Concessão Rápida · Período de Graça · Direitos da Mãe e do Bebê",
-    summary:
-      "Garantia integral do Salário Maternidade para acolher seu bebê com tranquilidade financeira, inclusive para mães que estavam desempregadas no momento do parto.",
-    details:
-      "Muitas mulheres desconhecem que mesmo estando sem carteira assinada há meses podem ter direito a receber o Salário Maternidade pelo INSS através do período de graça previdenciário. Analisamos detalhadamente seu histórico de contribuições, preparamos a documentação correta e combatemos exigências indevidas da agência do INSS para que você receba todas as parcelas a que tem direito sem dor de cabeça.",
-    topics: [
-      "Salário Maternidade para mulheres desempregadas durante o período de graça previdenciário",
-      "Benefício para Microempreendedoras Individuais (MEI) e Contribuintes Individuais (autônomas)",
-      "Salário Maternidade para trabalhadoras da zona rural e seguradas especiais",
-      "Amparo legal e financeiro em casos de adoção de crianças ou guarda judicial para fins de adoção",
-      "Correção de divergências no CNIS e reversão de pedidos indeferidos indevidamente pelo INSS",
-      "Acompanhamento acolhedor durante todo o processo administrativo ou ação judicial",
-    ],
-    whatsAppText:
-      "Olá, Dra. Débora Cupertino! Gostaria de consultar sobre a liberação do meu Salário Maternidade junto ao INSS.",
-  },
-  {
-    id: "bpc-loas-deficiencia-idoso",
-    title: "Benefício de Prestação Continuada (BPC/LOAS)",
-    category: "Autismo (TEA) · Idosos 65+ · Pessoas com Deficiência (PcD) · Sem Necessidade de Contribuição",
-    icon: HeartHandshake,
-    tag: "1 Salário Mínimo Mensal · Defesa Social · Pagamento de Retroativos",
-    summary:
-      "Conquista do benefício de 1 salário mínimo mensal para idosos e pessoas com deficiência de baixa renda, com suporte técnico humanizado para superar laudos e perícias do INSS.",
-    details:
-      "O BPC da Lei Orgânica da Assistência Social garante 1 salário mínimo mensal a quem não possui condições de sustento próprio. É um direito de pessoas com deficiência (física, mental ou sensorial, incluindo Transtorno do Espectro Autista - TEA em qualquer grau) e idosos acima de 65 anos. Apoiamos a família na adequação do CadÚnico, cálculo da renda per capita real e contestação de laudos periciais desfavoráveis do INSS perante a Justiça Federal com recebimento dos retroativos desde a DER.",
-    topics: [
-      "BPC/LOAS para crianças e adultos diagnosticados com TEA (Autismo), Síndrome de Down e paralisias",
-      "BPC Idoso para quem tem 65 anos ou mais e não conseguiu tempo suficiente de aposentadoria",
-      "Desconto de despesas com medicamentos, fraldas e terapias para comprovação da hipossuficiência",
-      "Reversão na Justiça Federal de indeferimentos de perícia médica e social do INSS",
-      "Cobrança de todos os atrasados devidos desde a data do primeiro requerimento administrativo",
-      "Atendimento sensível e acolhedor para as famílias que mais necessitam de apoio",
-    ],
-    whatsAppText:
-      "Olá, Dra. Débora Cupertino! Preciso de ajuda para solicitar ou recorrer de um pedido de BPC/LOAS (Autismo / Idoso / Deficiência).",
-  },
-  {
-    id: "pensao-alimenticia-revisao",
-    title: "Pensão Alimentícia: Fixação, Revisão & Cobrança Urgente",
-    category: "Alimentos para Filhos · Alimentos Gravídicos · Execução de Dívida · Prisão e Penhora · Revisional",
-    icon: Scale,
-    tag: "Cobrança Imediata · Segurança dos Filhos · Cálculos Justos",
-    summary:
-      "Proteção incondicional do sustento e da dignidade dos seus filhos. Ações rápidas de fixação de alimentos, cobrança rígida de atrasados e revisões proporcionais.",
-    details:
-      "A alimentação, saúde, educação e moradia dos seus filhos não podem esperar. Quando a outra parte atrasa ou se recusa a pagar a pensão estipulada, agimos com rigor processual pedindo liminares sob pena de prisão ou bloqueio de contas e bens. Da mesma forma, quando houver mudança comprovada na renda de quem paga ou nas necessidades de quem recebe, ingressamos com a Ação Revisional para reequilibrar o valor.",
-    topics: [
-      "Fixação célere de Alimentos Provisórios para o sustento imediato da criança",
-      "Execução de alimentos em atraso pelo rito de prisão civil do devedor inadimplente",
-      "Bloqueio judicial de contas bancárias (Sisbajud), veículos e penhora de patrimônio do devedor",
-      "Ação Revisional para aumento ou redução proporcional do valor da pensão alimentícia",
-      "Alimentos Gravídicos: amparo financeiro à gestante durante toda a gravidez e parto",
-      "Exoneração de pensão quando o filho atinge maioridade com plena independência econômica",
-    ],
-    whatsAppText:
-      "Olá, Dra. Débora Cupertino! Preciso de orientação urgente sobre Pensão Alimentícia (fixação / atraso / revisão).",
-  },
-  {
-    id: "aposentadorias-auxilios-inss",
-    title: "Aposentadorias & Auxílios do INSS",
-    category: "Aposentadoria por Idade e Tempo · Auxílio-Doença · Invalidez · Pensão por Morte · Planejamento",
+    id: "direito-previdenciario-inss",
+    title: "Direito Previdenciário: Aposentadorias & Benefícios do INSS",
+    category: "Aposentadorias Urbanas e Rurais · Planejamento Previdenciário · BPC/LOAS · Auxílios · Salário Maternidade",
     icon: Landmark,
-    tag: "Planejamento Estratégico · Análise de CNIS · Maior Benefício Possível",
+    tag: "Concessão Mais Vantajosa · Cálculos de Transição · Atrasados na Justiça Federal",
     summary:
-      "Planejamento detalhado e requerimento dos seus benefícios do INSS. Obtenha a melhor renda mensal e reverta laudos e perícias negadas pela Previdência Social.",
+      "Garantia dos seus direitos previdenciários com planejamento individualizado, revisão de CNIS e ação judicial ágil para reverter indeferimentos do INSS com recebimento de todos os atrasados.",
     details:
-      "Após uma vida de trabalho e contribuições, você merece desfrutar de um benefício justo e seguro. Com as constantes mudanças da Reforma da Previdência, uma análise prévia e estratégica evita que você receba um valor menor ou perca anos de contribuição rural ou tempo especial insalubre. Atuamos também com agilidade em casos de incapacidade médica temporária ou permanente e na concessão de pensão por morte para dependentes.",
+      "Com as constantes alterações legislativas e a complexidade das regras de transição da Reforma da Previdência, dar entrada sozinho no INSS frequentemente resulta em perda substancial de renda mensal ou indeferimentos indevidos. Na Santos Teixeira Advogados, realizamos a análise técnica minuciosa de todo o seu histórico contributivo, computamos tempo rural e especial insalubre e definimos a regra que concederá o benefício de maior valor possível para você e sua família.",
     topics: [
-      "Aposentadoria por Idade Urbana e Rural com cômputo de períodos de trabalho na lavoura",
-      "Aposentadoria por Tempo de Contribuição aplicando a melhor regra de transição pós-Reforma",
+      "Planejamento Previdenciário Estratégico: saiba a data exata e o melhor momento para se aposentar com a renda máxima",
+      "Aposentadoria por Tempo de Contribuição e por Idade (regras de transição, pedágios 50% e 100%, pontos e idade mínima)",
+      "Aposentadoria Rural e Segurado Especial com comprovação documental do trabalho na lavoura",
+      "Benefício de Prestação Continuada (BPC/LOAS) para idosos acima de 65 anos e pessoas com deficiência (PcD/Autismo)",
       "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Incapacidade Permanente",
-      "Conversão de tempo especial exercido em condições insalubres ou perigosas",
-      "Pensão por Morte: concessão ágil para cônjuges, companheiros e filhos menores",
-      "Planejamento Previdenciário Individual: saiba a data exata e o valor ideal para se aposentar",
+      "Salário Maternidade para desempregadas, autônomas (MEI) e trabalhadoras do campo",
+      "Pensão por Morte com habilitação rápida para cônjuges, companheiros e dependentes",
+      "Ação Judicial perante a Justiça Federal para combater decisões injustas do INSS com cobrança de parcelas retroativas",
     ],
     whatsAppText:
-      "Olá, Dra. Débora Cupertino! Gostaria de consultar sobre Aposentadoria, Auxílio-Doença ou Pensão por Morte do INSS.",
+      "Olá, Dr. Wesley Santos! Gostaria de consultar sobre Aposentadoria, Planejamento Previdenciário ou Benefício do INSS.",
+  },
+  {
+    id: "usucapiao-regularizacao-imobiliaria",
+    title: "Usucapião & Regularização Imobiliária",
+    category: "Usucapião Extrajudicial em Cartório · Usucapião Judicial · Imóveis Sem Escritura · REURB · Adjudicação Compulsória",
+    icon: HomeIcon,
+    tag: "Escritura Definitiva · Segurança Patrimonial · Valorização do Imóvel",
+    summary:
+      "Transforme a posse do seu imóvel em propriedade definitiva com matrícula no Cartório de Registro de Imóveis. Mais segurança jurídica, facilidade para venda, financiamento e herança.",
+    details:
+      "Milhares de proprietários em Oliveira e no interior de Minas possuem imóveis adquiridos por 'contrato de gaveta', herança não partilhada ou posse mansa de longos anos, sem a devida escritura registrada. Isso gera enorme desvalorização do imóvel e risco patrimonial constante. Nossa equipe é especializada em Usucapião Extrajudicial (feito diretamente no Cartório de Imóveis, com rapidez e sem processo judicial) e Usucapião Judicial para terrenos urbanos, casas, sítios e fazendas.",
+    topics: [
+      "Usucapião Extrajudicial em Cartório de Registro de Imóveis: procedimento célere e sem litígio",
+      "Usucapião Judicial (Extraordinária, Ordinária, Especial Urbana e Rural) para regularização de áreas contestadas",
+      "Adjudicação Compulsória Extrajudicial para contratos quitados quando o vendedor faleceu ou desapareceu",
+      "Regularização Fundiária Urbana e Rural (REURB) para regularização de loteamentos e áreas consolidadas",
+      "Assessoria Completa na Compra e Venda de Imóveis: Due Diligence, levantamento de certidões e análise de riscos",
+      "Retificação de Área e Desmembramento de Terrenos com averbação na matrícula imobiliária",
+    ],
+    whatsAppText:
+      "Olá, Dr. Wesley Santos! Gostaria de orientações sobre Usucapião e Regularização de Imóvel.",
+  },
+  {
+    id: "direito-de-familia-divorcio",
+    title: "Direito de Família: Divórcio, Guarda & Pensão Alimentícia",
+    category: "Divórcio Consensual em Cartório · Divórcio Litigioso · Guarda Compartilhada · Pensão Alimentícia Urgente",
+    icon: Users,
+    tag: "Atendimento Humanizado · Resguardo dos Filhos · Condução Pacificadora",
+    summary:
+      "Condução acolhedora e resolutiva para encerrar ciclos com segurança patrimonial e resguardar integralmente o bem-estar psicológico e material dos seus filhos.",
+    details:
+      "Disputas familiares exigem um olhar sensível somado a uma postura jurídica firme e pacificadora. Atuamos com extrema agilidade em divórcios em cartório de notas para casais que buscam uma solução consensual e pacífica, e com defesa intransigente em divórcios litigiosos onde há partilha complexa de bens, empresas ou disputas de guarda e pensão alimentícia.",
+    topics: [
+      "Divórcio Consensual em Cartório de Notas: celeridade máxima, sem audiências e em poucos dias",
+      "Divórcio Litigioso Estratégico com blindagem e divisão justa do patrimônio do casal",
+      "Guarda Compartilhada ou Unilateral estruturada com foco exclusivo no bem-estar dos filhos",
+      "Regulamentação de Regime de Convivência, férias escolares e períodos comemorativos",
+      "Fixação de Pensão Alimentícia Provisória urgente e cobrança de valores em atraso (prisão ou penhora)",
+      "Ação Revisional de Alimentos para readequação de valores por alteração na renda familiar",
+      "Dissolução de União Estável com reconhecimento de direitos sucessórios e patrimoniais",
+    ],
+    whatsAppText:
+      "Olá, Dr. Wesley Santos! Preciso de orientações sobre Divórcio, Guarda ou Pensão Alimentícia.",
   },
   {
     id: "inventarios-planejamento-sucessorio",
-    title: "Inventários em Cartório & Planejamento Familiar",
-    category: "Inventário Extrajudicial · Partilha Amigável · Testamentos · Pacto Antenupcial · Economia Tributária",
+    title: "Sucessões & Inventários: Planejamento Familiar",
+    category: "Inventário Extrajudicial em Cartório · Inventário Judicial · Partilha Amigável · Testamentos · Economia Tributária",
     icon: FileText,
-    tag: "Descomplicação em Cartório · Rapidez · Proteção do Patrimônio da Família",
+    tag: "Descomplicação em Cartório · Economia de ITCD · Preservação do Patrimônio",
     summary:
-      "Condução transparente e sem litígios da sucessão familiar. Agilidade em cartório de notas para transferência de bens com menor incidência de impostos e sem desgaste.",
+      "Condução transparente e pacífica da sucessão familiar. Agilidade em cartório de notas para transferência rápida de herança com menor custo de impostos e sem desgaste entre herdeiros.",
     details:
-      "A partida de um ente querido é um momento de luto e reorganização profunda. Conduzir o inventário não precisa ser sinônimo de anos de espera na justiça comum. Havendo consenso entre herdeiros capazes, realizamos o inventário extrajudicial em cartório com rapidez, clareza e economia nos custos de ITCD e emolumentos, protegendo o legado construído pela sua família.",
+      "O falecimento de um ente querido é um momento delicado que não deve ser agravado por conflitos patrimoniais ou anos de espera na justiça comum. Havendo consenso entre herdeiros capazes, realizamos o inventário extrajudicial em cartório com rapidez incomparável, calculando com precisão os tributos (ITCD) para evitar pagamentos indevidos e garantindo que cada herdeiro receba seu quinhão de forma segura.",
     topics: [
-      "Inventário Extrajudicial em Cartório: partilha rápida e conclusão em semanas",
-      "Orientação tributária estratégica para redução legal do imposto sobre herança (ITCD)",
-      "Inventário Judicial quando há testamento, herdeiros menores ou divergências pontuais",
-      "Elaboração de Pactos Antenupciais e Contratos de Convivência personalizados",
-      "Reconhecimento de Paternidade ou Maternidade Socioafetiva e Adoção",
-      "Curatela e Interdição para proteção jurídica e financeira de idosos enfermos",
+      "Inventário Extrajudicial em Cartório de Notas: partilha concluída em poucas semanas",
+      "Planejamento Tributário Sucessório com redução legal dos custos de ITCD e taxas cartorárias",
+      "Inventário Judicial quando há herdeiros menores, testamento ou litígio patrimonial pontual",
+      "Sobrepartilha de bens sonegados ou descobertos após o inventário original",
+      "Planejamento Sucessório Familiar: doações em vida com reserva de usufruto e testamentos públicos",
+      "Alvarás Judiciais para liberação de saldos bancários, FGTS e PIS de falecidos",
     ],
     whatsAppText:
-      "Olá, Dra. Débora Cupertino! Gostaria de uma consulta sobre Inventário em Cartório ou Planejamento Familiar.",
+      "Olá, Dr. Wesley Santos! Gostaria de uma consulta sobre Inventário em Cartório ou Sucessões.",
+  },
+  {
+    id: "assessoria-juridica-contratos",
+    title: "Contratos & Assessoria Jurídica Estratégica",
+    category: "Contratos de Compra e Venda · Locação Comercial · Cessão de Direitos · Acordos Extrajudiciais",
+    icon: Shield,
+    tag: "Prevenção de Riscos · Validade Jurídica Inquestionável · Notificações Extrajudiciais",
+    summary:
+      "Assessoria contratual estratégica para proteger seus negócios e aquisições imobiliárias, blindando seu patrimônio contra cláusulas abusivas e insegurança jurídica.",
+    details:
+      "A melhor forma de vencer uma disputa jurídica é preveni-la antes que aconteça. Elaboramos e revisamos contratos complexos de compra e venda de imóveis rurais e urbanos, contratos de locação comercial, contratos de prestação de serviços e termos de acordo extrajudicial, assegurando clareza irrevogável e equilíbrio contratual para que você durma tranquilo.",
+    topics: [
+      "Elaboração e Revisão de Contratos de Compra e Venda e Promessa de Compra e Venda de Imóveis",
+      "Contratos de Locação Comercial e Residencial com cláusulas de garantia sólidas",
+      "Contratos de Cessão de Direitos Possessórios e Instrumentos Particulares",
+      "Elaboração de Notificações Extrajudiciais com valor formal para constituição em mora",
+      "Mediação e Negociação Extrajudicial de débitos e controvérsias patrimoniais",
+      "Consultoria preventiva para famílias, produtores rurais e empreendedores locais",
+    ],
+    whatsAppText:
+      "Olá, Dr. Wesley Santos! Gostaria de consultar sobre Elaboração/Revisão de Contratos ou Assessoria Jurídica.",
   },
 ];
 
@@ -302,7 +291,12 @@ interface Review {
   name: string;
   badge: string;
   date: string;
-  category: "Tratamento Humanizado" | "Ambiente Acolhedor" | "Rapidez & Tempo Hábil" | "Planejamento Previdenciário" | "Audiências & Competência";
+  category:
+    | "Dr. Wesley Santos (dr)"
+    | "Eficiência & Rapidez (efficiency)"
+    | "Atencioso & Dedicado (attentive)"
+    | "Recepção & Ambiente (reception)"
+    | "Imóveis & Contratos";
   highlight: string;
   content: string;
   ownerReply?: string;
@@ -311,152 +305,276 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Jaqueline Jorge",
+    name: "Neide",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "1 mês atrás",
+    category: "Imóveis & Contratos",
+    highlight: "Santos Teixeira Advogados Associados realizou uma análise contratual minuciosa e precisa. Extrema segurança jurídica!",
+    content: "Santos Teixeira Advogados Associados realizou uma análise contratual minuciosa e precisa. Sua atuação técnica trouxe extrema segurança jurídica, com apontamentos claros e total transparência. Recomendo os seus serviços pela seriedade, competência e agilidade.",
+  },
+  {
+    name: "Sebastião Silva",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "1 ano atrás",
+    category: "Imóveis & Contratos",
+    highlight: "Advogado muito eficiente. Muito bom trabalho na regularização do bem imóvel!",
+    content: "advogado muito eficiente. muito bom trabalho",
+    ownerReply: "Foi uma honra poder contribuir para a efetivação da tão almejada regularização do bem imóvel, concretizando um importante passo na garantia da segurança jurídica e do direito à propriedade.",
+    ownerDate: "1 ano atrás",
+  },
+  {
+    name: "Cris Borges",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "5 meses atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Profissional extremamente competente, ético e disponível. Recomendo a todos o serviço do escritório SANTOS TEIXEIRA!",
+    content: "Quero deixar aqui meu agradecimento ao Dr. Wesley. Ele é um excelente advogado, profissional extremamente competente, ético e disponível. Esclareceu todas as minhas dúvidas e cuidou do meu caso com muita responsabilidade. Recomendo a todos o serviço do escritório \"SANTOS TEIXEIRA ADVOGADOS ASSOCIADOS\".",
+  },
+  {
+    name: "Amanda Resende",
     badge: "4 avaliações · 5 Estrelas",
-    date: "2 semanas atrás · Novo",
-    category: "Rapidez & Tempo Hábil",
-    highlight: "Gostei muito do atendimento e da rapidez da minha solicitação, com certeza indicarei pra todas as pessoas!",
-    content: "Gostei muito do atendimento e da rapidez da minha solicitação,com certeza indicarei pra todas as pessoas que me solicitarem! Muito obrigada!",
-    ownerReply: "Agradecemos imensamente seu feedback e nos colocamos à disposição para que precisar. Conte sempre conosco!",
-    ownerDate: "2 semanas atrás",
+    date: "3 meses atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Excelente advogado, dá toda atenção e é super correto, só tenho a agradecer!",
+    content: "Excelente advogado, da toda atenção e é super correto , só tenho a agradecer",
+    ownerReply: "Muito obrigado pelas palavras de reconhecimento! Fico muito feliz em saber que meu atendimento correspondeu às suas expectativas. Trabalho sempre com dedicação, transparência e compromisso para oferecer o melhor suporte possível aos meus clientes. Conte comigo sempre que precisar.",
+    ownerDate: "3 meses atrás",
   },
   {
-    name: "Tais Brandao De Andrade",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "8 meses atrás",
-    category: "Tratamento Humanizado",
-    highlight: "Tratamento humanizado, com explicações claras. Cuidado e carinho individualizados a cada um dos clientes.",
-    content: "Excelente atendimento, comprometimento e dedicação! Tratamento humanizado, com explicações claras . Cuidado e carinho individualizados a cada um dos clientes. Estou muito satisfeita. Meu processo foi resolvido em tempo hábil.",
-    ownerReply: "Agradecemos imensamente por sua generosa e calorosa avaliação. Estamos sempre em busca de melhorar e priorizar nossos serviços de maneira humanizada e eficiente. Seguiremos à disposição!",
-    ownerDate: "8 meses atrás",
-  },
-  {
-    name: "Daniela Marques",
+    name: "Suely Algusta",
     badge: "2 avaliações · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Audiências & Competência",
-    highlight: "Aceitou o meu caso como um desafio e obteve sucesso com todos os recursos, provas e argumentos convincentes!",
-    content: "Excelente profissional ! Aceitou o meu caso como um desafio e obteve sucesso com todos os recursos, provas e argumentos convincentes que ela adotou! Agradeço a ela imensamente pois me ajudou num momento delicado e importante na minha vida! Indico com toda segurança o seus serviços!",
-    ownerReply: "Estamos imensamente gratos por sua avaliação e lisonjeados por suas palavras. Seguimos tentando aperfeiçoar nossos serviços e humanizar nosso atendimento. Conte sempre conosco! Deus abençoe você e sua família!",
-    ownerDate: "1 ano atrás",
+    date: "1 mês atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "O Dr. Wesley é um excelente profissional, muito atencioso e competente, só tenho a agradecer pela dedicação!",
+    content: "Minha experiência foi ótima pois,o Dr Weslley é um excelente profissional muito atencioso e competente só tenho a agradecer pela dedicação , que Deus o abençoa sempre muito obrigada por tudo 🙏🏼",
   },
   {
-    name: "Jussara Correa",
-    badge: "Local Guide · 14 avaliações · 3 fotos · 5 Estrelas",
-    date: "2 anos atrás",
-    category: "Planejamento Previdenciário",
-    highlight: "Meu planejamento previdenciário elaborado por ela me deu a segurança para eu tomar a decisão de pedir a aposentadoria.",
-    content: "Excelente profissional! Recomendo. Meu planejamento previdenciário elaborado por ela me deu a segurança para eu tomar a decisão de pedir a aposentadoria. Gratidão.",
-    ownerReply: "Agradecemos imensamente o feedback e nos colocamos à disposição, para o que precisar. Deus abençoe você e sua família!! Gratidão!!",
-    ownerDate: "2 anos atrás",
+    name: "Jose Antonio Queiroz",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Recepção & Ambiente (reception)",
+    highlight: "Ambiente acolhedor na recepção aos clientes. Competente, justo, honesto e transparente. Rapidez na solução!",
+    content: "Ambiente acolhedor na recepção aos clientes. Excelente profissional do Direito. Competente, justo, honesto, transparente. Rapidez na solução dos processos.",
+    ownerReply: "Sr. Antônio, estamos felizes em poder atender suas necessidades e pela oportunidade de fazê-lo satisfeito.",
+    ownerDate: "4 anos atrás",
   },
   {
-    name: "Poliana Silva Celestino",
+    name: "Marlon Ribeiro",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Recepção & Ambiente (reception)",
+    highlight: "A melhor recepção que já tive, um excelente profissional. Que Deus abençoe sempre!",
+    content: "A melhor recepção que já tive, um excelente profissional. Que Deus abençoe sempre.",
+    ownerReply: "Foi um prazer poder solucionar seu problema meu caro!",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Rosângela De paula",
     badge: "1 avaliação · 5 Estrelas",
     date: "3 anos atrás",
-    category: "Ambiente Acolhedor",
-    highlight: "Ótima Profissional! Clareza nas informações, Ambiente aconchegante, Humana, Empenhada. Atingiu o objetivo com Êxito!",
-    content: "Ótima Profissional! Clareza nas informações, Ambiente aconchegante, Humana,Empenhada. Atingiu o objetivo com Êxito, Muito satisfeita com o resultado.",
-  },
-  {
-    name: "Márcio Antônio",
-    badge: "5 avaliações · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Rapidez & Tempo Hábil",
-    highlight: "A advogada acompanha o desenrolar do processo comunicando cada fase e esclarecendo todas as dúvidas levantadas. Fidelizarei!",
-    content: "Excelente atendimento desde o primeiro contato até a conclusão do serviço. A advogada acompanha o desenrolar do processo comunicando cada fase ao cliente e esclarecendo todas as dúvidas levantadas. Não só recomendo como fidelizarei.",
-    ownerReply: "Agradecemos imensamente pelo feedback e ficamos imensamente lisonjeados pelas palavras! A confiança e o carinho de vocês, nos fazem querer ser melhores a cada dia! Deus te abençoe sempre! Estaremos sempre à disposição!",
+    category: "Eficiência & Rapidez (efficiency)",
+    highlight: "Ótimos profissionais, atenciosos e rápidos. Estou muito satisfeita com o serviço prestado, recomendo muito!",
+    content: "Ótimos profissionais, atenciosos e rápidos, estou muito satisfeita com o serviço que eles me prestaram, recomendo muito",
+    ownerReply: "Foi um prazer atuar em sua causa, conseguimos fazer com que à JUSTIÇA fosse feita.",
     ownerDate: "3 anos atrás",
   },
   {
-    name: "Gabriel",
-    badge: "Local Guide · 31 avaliações · 8 fotos · 5 Estrelas",
+    name: "Daiane Ribeiro",
+    badge: "4 avaliações · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Excelentes profissionais. Trabalham com empatia, zelo e prontidão para sanar dúvidas minhas e da minha empresa!",
+    content: "Excelentes profissionais. Trabalham com empatia, zelo e sempre com prontidão para sanar minhas dúvidas e da minha empresa.",
+    ownerReply: "É sempre um prazer atendê-la e lhe ter como cliente.",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Nilson Dutra",
+    badge: "3 avaliações · 11 fotos · 5 Estrelas",
     date: "2 anos atrás",
-    category: "Audiências & Competência",
-    highlight: "Extremamente profissional, ética, clareza nas informações. Realmente uma profissional que ampara seus clientes, Sucesso Dra.",
-    content: "Somente Elogios a tecer a sua Pessoa, Extremante profissional, ética, clareza nas informações. Realmente uma profissional que ampara seus clientes, Sucesso Dra.",
-    ownerReply: "Estamos extremamente gratas e lisonjeadas com o seu feedback! Conte conosco para o que precisar, pois será sempre uma honra atendê-lo. Deus o abençoe pelo carinho!",
+    category: "Eficiência & Rapidez (efficiency)",
+    highlight: "Total satisfação. No momento em que precisei, pude contar com a equipe de excelentes pessoas e profissionais!",
+    content: "Total satisfação. No momento em que precisei, pude contar com a equipe de excelentes pessoas e profissionais.",
+    ownerReply: "Foi um prazer ajudá-lo.",
     ownerDate: "2 anos atrás",
   },
   {
-    name: "André",
-    badge: "3 avaliações · 5 Estrelas",
+    name: "Ivani Teixeira",
+    badge: "Local Guide · 67 avaliações · 31 fotos · 5 Estrelas",
+    date: "2 meses atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Super recomendo! Seriedade e dedicação. Ótimos advogados! 👏🏼👏🏼👏🏼",
+    content: "Super recomendo! Seriedade e dedicação. Ótimos advogados! 👏🏼👏🏼👏🏼",
+  },
+  {
+    name: "Maria do Carmo Ananias",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "1 ano atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Adorei o serviço, muito atencioso e com certeza quando precisar procurarei, indicarei a todos!",
+    content: "Adorei o serviço,muito atencioso e com certeza quando precisar procurarei, indicarei a todos muito obrigada",
+    ownerReply: "Maria do Carmo, foi um prazer atendê-la.",
+    ownerDate: "1 ano atrás",
+  },
+  {
+    name: "Wilson Diniz",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "2 anos atrás",
+    category: "Eficiência & Rapidez (efficiency)",
+    highlight: "Dr. muito atencioso. Resolveu o que precisava com total competência!",
+    content: "Dr. Muito atencioso. Resolveu o que precisava",
+    ownerReply: "Foi um prazer atendê-lo!",
+    ownerDate: "2 anos atrás",
+  },
+  {
+    name: "Fernando Jose",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "1 ano atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Lugar justo, profissional muito qualificado!",
+    content: "Lugar justo , profissional muito qualificado",
+    ownerReply: "Conte com nossos serviços sempre que precisar 🤝",
+    ownerDate: "1 ano atrás",
+  },
+  {
+    name: "Rubens Avelar Barcelos",
+    badge: "Local Guide · 10 avaliações · 4 fotos · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Excelente profissional e com preço justo!!!",
+    content: "Excelente profissional e com preço justo!!!",
+    ownerReply: "É um prazer tê-lo conosco meu caro!",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Carolina Veloso",
+    badge: "2 avaliações · 5 fotos · 5 Estrelas",
     date: "3 anos atrás",
-    category: "Audiências & Competência",
-    highlight: "Suporte incrível antes, durante e após o processo. Ressalto a competência técnica durante a audiência!",
-    content: "Excelente profissional, suporte incrivel, antes durante e após o processo. Super indico, ressalto tambem a competência técnca da Doutora Débora durante a audiência, e na condução das demandas durante a mesma.",
-    ownerReply: "Olá André, agradeço imensamente pelas palavras de carinho! Estamos sempre em busca de melhorar nossos serviços e atendimento ao cliente! O seu feedback nos traz a certeza que estamos trilhando o caminho certo. Conte sempre conosco!",
+    category: "Recepção & Ambiente (reception)",
+    highlight: "Fui muito bem atendida, escritório de confiança.",
+    content: "Fui muito bem atendida, escritório de confiança.",
+    ownerReply: "Estamos muito felizes com o seu feedback!",
     ownerDate: "3 anos atrás",
   },
   {
-    name: "PAULO RICARDO DE SOUZA #",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Audiências & Competência",
-    highlight: "Excelente profissional, além de muito atenciosa, é muito competente, sem dúvida uma das melhores da nossa região!!!",
-    content: "Excelente profissional, além de muito atenciosa, é muito competente, sem dúvida uma das melhores da nossa região!!!",
-    ownerReply: "Agradecemos imensamente sua avaliação! Estamos sempre em busca de otimizar e humanizar nossos serviços. Conte sempre conosco!",
+    name: "Eduardo Carvalho",
+    badge: "8 avaliações · 5 Estrelas",
+    date: "2 anos atrás",
+    category: "Eficiência & Rapidez (efficiency)",
+    highlight: "Atendimento sério e eficiente!!",
+    content: "Atendimento sério e eficiente!!",
+    ownerReply: "Conte com nossos serviços sempre que precisar 🤝",
     ownerDate: "1 ano atrás",
   },
   {
-    name: "Renata Almeida",
+    name: "Maria rita Silva",
     badge: "1 avaliação · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Ambiente Acolhedor",
-    highlight: "Dra Débora é carinhosa, dedicada e educada; tratamento realmente humanitário num ambiente super acolhedor.",
-    content: "Dra Débora, além de inteligente pespicaz honesta é extremamente carinhosa dedicada e educada com seus clientes;tratamento realmente humanitário num ambiente super acolhedor .",
-    ownerReply: "Agradecemos imensamente por sua avaliação! Que continuemos com nossa parceria de sucesso e amizade! Conte sempre conosco. Abraços.",
-    ownerDate: "4 anos atrás",
+    date: "4 semanas atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Muito bom, excelente profissional.",
+    content: "Muito bom excelente profissional.",
   },
   {
-    name: "Tatiana Costa",
+    name: "Barbara Lopes",
     badge: "3 avaliações · 5 Estrelas",
-    date: "1 ano atrás",
-    category: "Rapidez & Tempo Hábil",
-    highlight: "Foi uma experiência muito boa, fui muito bem atendida e tive o meu processo resolvido muito rápido. Agradeço o atendimento!",
-    content: "Foi uma experiência muito boa, fui muito bem atendia e assessorada pela Dra. Débora na qual tive o meu processo resolvido muito rápido. Agradeço o atendimento",
-    ownerReply: "Agradecemos imensamente a sua avaliação e seguimos à disposição!",
-    ownerDate: "1 ano atrás",
+    date: "3 anos atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Atendimento excepcional e trabalho incrível.",
+    content: "Atendimento excepcional e trabalho incrível.",
+    ownerReply: "Sua satisfação é nosso principal objetivo! Obrigado por fazer parte da nossa jornada!",
+    ownerDate: "3 anos atrás",
   },
   {
-    name: "Cinthia Santos",
-    badge: "6 avaliações · 8 fotos · 5 Estrelas",
-    date: "4 anos atrás",
-    category: "Tratamento Humanizado",
-    highlight: "Super profissional, muito atenciosa, educada e muito prestativa. Eu super indico!",
-    content: "Entrei com um processo com outra advogada, não estava satisfeita. Foi aí que contatei a doutora Débora Cupertino. Ela além de ser super profissional premiada é muito atenciosa, educada e muito prestativa. Eu super indico.",
-    ownerReply: "Muito obrigada por sua avaliação, Cínthia. Estamos sempre em busca de aprimorar nossos serviços. Conte sempre conosco! Abraços.",
-    ownerDate: "4 anos atrás",
+    name: "Raquel lopes de souza",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Recepção & Ambiente (reception)",
+    highlight: "Muito bem recebida, excelentes profissionais, muito agradecida.",
+    content: "Muito bem recebida, excelentes profissionais, muito agradecida..",
+    ownerReply: "Obrigado pela confiança!",
+    ownerDate: "3 anos atrás",
   },
   {
-    name: "Meire Lucia Marques De Lacerda Marques",
+    name: "Sofisticasa Planejados",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Sempre dispostos a nos atender! Recomendo.",
+    content: "Sempre dispostos a nos atender! Recomendo.",
+    ownerReply: "É um prazer tê-los como cliente.",
+    ownerDate: "3 anos atrás",
+  },
+  {
+    name: "Maria Luísa Coimbra S.",
     badge: "2 avaliações · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Eficiência & Rapidez (efficiency)",
+    highlight: "Excelência e presteza sempre.",
+    content: "Excelência e presteza sempre.",
+    ownerReply: "Foi um prazer poder ajudar nossa colega de trabalho e futura colega de profissão.",
+    ownerDate: "3 anos atrás",
+  },
+  {
+    name: "Jair Antonio Silva",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Advogado atencioso e prestativo.",
+    content: "Advogado atencioso e prestativo.",
+    ownerReply: "Temos um imenso prazer eu tê-lo como cliente.",
+    ownerDate: "3 anos atrás",
+  },
+  {
+    name: "Juliano Araujo",
+    badge: "1 avaliação · 5 Estrelas",
     date: "1 ano atrás",
-    category: "Ambiente Acolhedor",
-    highlight: "Atendimento impecável! Agradeço pelo empenho e carinho com os clientes. Escritório super agradável.",
-    content: "Atendimento impecável! Agradeço pelo empenho e carinho com os clientes . Escritório super agradável.",
-    ownerReply: "Agradecemos imensamente por sua avaliação!! Conte sempre conosco! Deus abençoe você e sua família!",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Excelente profissional.",
+    content: "Exelente profissional",
+    ownerReply: "Agradecido meu caro! Conte sempre conosco.",
     ownerDate: "1 ano atrás",
   },
   {
-    name: "Magela Taveira",
-    badge: "1 avaliação · 5 Estrelas",
+    name: "Alessandra Mara Dos Santos",
+    badge: "3 avaliações · 5 Estrelas",
     date: "4 anos atrás",
-    category: "Tratamento Humanizado",
-    highlight: "A melhor possível! Atenciosa e muito profissional... sem falar que exerce um pouco de psicologia em seus atendimentos.",
-    content: "A melhor possível!!! Atenciosa e muito profissional .. E mais!!! sem falar que exerce um pouco de psicologia em seus atendimentos. Parabéns.",
-    ownerReply: "Muito obrigada, lisonjeada com os elogios! Amei o final...rs. Sempre às ordens.",
+    category: "Atencioso & Dedicado (attentive)",
+    highlight: "Excelentes profissionais, atendimento com presteza!",
+    content: "Excelentes profissionais",
+    ownerReply: "Você é uma cliente valiosa para nós! É sempre um prazer te atender.",
     ownerDate: "4 anos atrás",
   },
   {
-    name: "SEIMOS",
-    badge: "3 avaliações · 5 Estrelas",
+    name: "Sebastião Antônio Santos",
+    badge: "1 avaliação · 5 Estrelas",
     date: "4 anos atrás",
-    category: "Tratamento Humanizado",
-    highlight: "Atende a gente muito bem, procura ajudar a gente a solucionar nossos problemas. Super recomendo!",
-    content: "A doutora Débora Cupertino atende a gente muito bem, procura ajudar a gente a solucionar os nossos problemas mesmo sem contratar o seu serviço. Oferece um bom preço e garante resultados positivos na causa. Super recomendo o seu trabalho!",
-    ownerReply: "Muito obrigada por sua avaliação! Estamos sempre em busca de aprimoramentos para melhor atender vocês. Conte sempre conosco. Abraços.",
-    ownerDate: "4 anos atrás",
+    category: "Eficiência & Rapidez (efficiency)",
+    highlight: "Vocês são muito bons, continuem assim, obrigado!",
+    content: "Voceis são muito bom continua asim obrigado",
+  },
+  {
+    name: "Mirian Imaculada",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "11 meses atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Excelente profissional.",
+    content: "Excelente profissional",
+  },
+  {
+    name: "Gabriela Rodrigues",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "11 meses atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Excelente profissional, recomendo!",
+    content: "Excelente profissional recomendo!",
+  },
+  {
+    name: "Dinilson Felix",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Dr. Wesley Santos (dr)",
+    highlight: "Profissional capacitado!",
+    content: "Profissional capacitado!",
   },
 ];
 
@@ -467,34 +585,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "Mães que estavam desempregadas têm direito ao Salário Maternidade do INSS?",
+    question: "O que é Usucapião e quando vale a pena fazer diretamente no Cartório (Extrajudicial)?",
     answer:
-      "Sim! Muitas mulheres desconhecem esse direito fundamental. Se você trabalhou de carteira assinada, contribuiu como MEI ou facultativo e ficou desempregada, a lei previdenciária concede o chamado 'período de graça' (que pode variar de 12 a até 36 meses). Se o bebê nasceu ou foi adotado dentro desse período, você tem direito integral às 4 parcelas do Salário Maternidade pagas pelo INSS. Analisamos gratuitamente sua carteira de trabalho para verificar sua elegibilidade.",
+      "A Usucapião é a forma jurídica de obter a propriedade definitiva e a matrícula no Cartório de Registro de Imóveis para quem tem a posse mansa, pacífica e contínua de um imóvel (urbano ou rural) por determinado período previsto em lei. A modalidade Extrajudicial, realizada diretamente em cartório com o auxílio do nosso escritório, é a mais recomendada quando não há oposição dos confrontantes, pois costuma ser muito mais rápida do que uma ação judicial, regularizando a escritura definitiva sem longos anos de espera.",
   },
   {
-    question: "O que é o BPC/LOAS e quem tem direito a receber 1 salário mínimo por mês?",
+    question: "O INSS negou meu pedido de Aposentadoria ou BPC/LOAS. Ainda posso reverter?",
     answer:
-      "O Benefício de Prestação Continuada (BPC/LOAS) é garantido por lei para pessoas com deficiência de qualquer idade (incluindo crianças e adultos com Transtorno do Espectro Autista - TEA, síndrome de Down, paralisias ou doenças crônicas incapacitantes) e idosos com 65 anos ou mais, que estejam em situação de vulnerabilidade econômica familiar. Uma grande vantagem é que não exige tempo de contribuição prévio ao INSS.",
+      "Com certeza! A negativa administrativa da agência do INSS não é a palavra final. Na maioria esmagadora dos casos, o INSS indefere pedidos por falhas cadastrais no CNIS, falta de cômputo de vínculos rurais/insalubres ou avaliações periciais superficiais. Nosso escritório analisa o processo indeferido e ingressa com Ação Judicial na Justiça Federal, onde as provas são reavaliadas por um juiz imparcial e perito oficial. Caso concedido, você recebe o benefício mensal e todas as parcelas atrasadas desde a data do primeiro pedido.",
   },
   {
-    question: "Como funciona o Divórcio em Cartório? É mais rápido do que na Justiça?",
+    question: "Como funciona o Divórcio e o Inventário em Cartório? É mais rápido do que na Justiça?",
     answer:
-      "Com certeza! O Divórcio Extrajudicial realizado diretamente no Cartório de Notas é célere, discreto e pode ser finalizado em questão de dias, desde que haja consenso entre o casal sobre a partilha dos bens e o término da união. Caso haja filhos menores, é possível formalizar a guarda e a pensão previamente ou homologar o acordo judicialmente com total agilidade e sem audiências desgastantes.",
+      "Sim, é significativamente mais rápido e menos oneroso! Quando as partes estão em consenso sobre a partilha dos bens (no divórcio ou inventário) e inexistem conflitos irreconciliáveis, todo o procedimento é lavrado por escritura pública em Cartório de Notas na presença do advogado. O divórcio consensual ou o inventário extrajudicial podem ser finalizados em semanas, com total economia de taxas tributárias (ITCD) e sem a necessidade de audiências desgastantes.",
   },
   {
-    question: "O pai ou a mãe não está pagando a pensão alimentícia. O que pode ser feito?",
+    question: "O que pode ser feito imediatamente em caso de atraso na Pensão Alimentícia?",
     answer:
-      "Quando há atraso injustificado na pensão alimentícia, é possível ingressar imediatamente com a Ação de Execução de Alimentos. A lei prevê mecanismos rígidos: o devedor pode ser intimado para quitar em até 3 dias sob pena de prisão civil imediata de 1 a 3 meses, ou sofrer penhora de contas bancárias (Sisbajud), veículos, salários e negativação do nome em órgãos de proteção ao crédito.",
+      "Quando há atraso injustificado no pagamento da pensão alimentícia, a lei garante mecanismos rigorosos e prioritários. Ingressamos com a Ação de Execução de Alimentos de urgência. O devedor é citado judicialmente para pagar os últimos meses em até 3 dias sob pena de decretação de prisão civil em regime fechado (de 1 a 3 meses), além da possibilidade de bloqueio de contas bancárias (Sisbajud), penhora de bens e negativação do nome em cartórios de protesto.",
   },
   {
-    question: "O INSS negou meu pedido de aposentadoria ou auxílio-doença. O que fazer?",
+    question: "Comprei um imóvel com 'contrato de gaveta' e o antigo dono sumiu. Como consigo a escritura?",
     answer:
-      "A negativa administrativa do INSS não é a palavra final! Na grande maioria das vezes, o INSS indefere pedidos por falhas cadastrais no CNIS ou perícias médicas superficiais. Nós examinamos o processo administrativo e ingressamos com Ação Judicial perante a Justiça Federal, onde a perícia é realizada por um perito médico independente nomeado pelo juiz. Se aprovado, você recebe todas as parcelas retroativas desde a data do primeiro pedido.",
+      "Essa é uma situação muito comum em Oliveira e região. Se você possui o contrato de compra e venda e os comprovantes de quitação, mas o vendedor faleceu, mudou-se ou se recusa a outorgar a escritura pública, é possível ingressar com a Ação de Adjudicação Compulsória (que hoje também pode ser requerida diretamente no Cartório de Registro de Imóveis) ou com a Usucapião para garantir que o juiz ou o registrador transfira a titularidade do imóvel para o seu nome.",
   },
   {
-    question: "Como funciona o atendimento na sede em Matozinhos - MG e o atendimento online?",
+    question: "Como funciona o atendimento presencial no Shopping XV em Oliveira - MG e o atendimento online?",
     answer:
-      "Oferecemos o melhor dos dois mundos. Para quem reside em Matozinhos, Sete Lagoas, Pedro Leopoldo, Capim Branco, Vespasiano e região metropolitana, temos atendimento presencial e acolhedor em nossa sede própria na R. Claudomiro Cupertino, 55 A - Centro, Matozinhos - MG (agendado previamente para seu conforto e privacidade). Para clientes de outras cidades e estados, nosso atendimento é 100% online via WhatsApp oficial com assinatura digital válida, envio simplificado de fotos de documentos e acompanhamento em tempo real.",
+      "Oferecemos a máxima comodidade e segurança aos nossos clientes. Para quem reside em Oliveira, Campo Belo, Carmópolis de Minas, Passa Tempo, Santo Antônio do Amparo e região, temos atendimento presencial e privativo em nossa sede na Praça XV de Novembro, 20, 2° andar, sala 202 (Condomínio Shopping XV). Para quem reside em outras comarcas ou prefere a praticidade do celular, nosso atendimento é 100% digital via WhatsApp oficial, com assinatura digital criptografada, envio de fotos de documentos e acompanhamento transparente em tempo real.",
   },
 ];
 
@@ -518,7 +636,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-          dark ? "text-white" : "text-[#061224]"
+          dark ? "text-white" : "text-[#0a0e17]"
         }`}
       >
         {children}
@@ -557,11 +675,11 @@ export default function Home() {
 
   const reviewCategories = [
     "Todas",
-    "Tratamento Humanizado",
-    "Ambiente Acolhedor",
-    "Rapidez & Tempo Hábil",
-    "Planejamento Previdenciário",
-    "Audiências & Competência",
+    "Dr. Wesley Santos (dr)",
+    "Eficiência & Rapidez (efficiency)",
+    "Atencioso & Dedicado (attentive)",
+    "Recepção & Ambiente (reception)",
+    "Imóveis & Contratos",
   ];
 
   const filteredReviews =
@@ -575,19 +693,19 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen bg-[#fcfbfa] text-[#061224] selection:bg-[#c89b3c] selection:text-[#020b18]">
+      <main className="min-h-screen bg-[#fcfbf9] text-[#0a0e17] selection:bg-[#c59b27] selection:text-[#080c14]">
         {/* ======================================================== */}
-        {/* TOP ANNOUNCEMENT BAR (MIDNIGHT SAPPHIRE NAVY & GOLD)    */}
+        {/* TOP ANNOUNCEMENT BAR (OBSIDIAN GRAPHITE & WARM GOLD)     */}
         {/* ======================================================== */}
-        <div className="border-b border-[#082144] bg-[#051833] py-2 text-xs text-slate-300">
+        <div className="border-b border-[#172136] bg-[#0c121e] py-2 text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f6e3a1] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#c89b3c]" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f5de88] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#c59b27]" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                DÉBORA CUPERTINO ADVOCACIA · Direito das Famílias & Previdenciário · Atendimento Humanizado ⚖️
+                SANTOS TEIXEIRA ADVOGADOS · Previdenciário l Família e Sucessões l Usucapião ⚖️
               </span>
             </div>
 
@@ -599,11 +717,11 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
                 <Star size={12} className="fill-[#f59e0b] text-[#f59e0b]" />
-                <span className="font-bold text-white">5,0 ★</span> (106 avaliações no Google)
+                <span className="font-bold text-white">5,0 ★</span> (41 avaliações no Google · Oliveira - MG)
               </a>
               <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de uma consulta jurídica.")}
+                href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de consultar sobre o meu caso.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 font-semibold text-slate-200 transition-colors hover:text-white sm:inline-flex"
@@ -616,7 +734,7 @@ export default function Home() {
         </div>
 
         {/* ======================================================== */}
-        {/* STICKY HEADER / NAVBAR (OFFICIAL LOGO DIRECTLY USED)     */}
+        {/* STICKY HEADER / NAVBAR (OFFICIAL SANTOS TEIXEIRA LOGO)   */}
         {/* ======================================================== */}
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
@@ -626,17 +744,17 @@ export default function Home() {
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-            {/* Left: Official Débora Cupertino Logo exactly as sent by user */}
+            {/* Left: Official Santos Teixeira Logo */}
             <a
               href="#"
               className="group flex shrink-0 items-center transition-opacity hover:opacity-90"
-              aria-label="Débora Cupertino Advocacia - Início"
+              aria-label="Santos Teixeira Advogados Associados - Início"
             >
               <Image
                 src={LOGO_SRC}
-                alt="Débora Cupertino Advocacia"
-                width={460}
-                height={155}
+                alt="Santos Teixeira Advogados Associados"
+                width={480}
+                height={160}
                 className="h-[52px] sm:h-[62px] md:h-[68px] w-auto object-contain"
                 priority
               />
@@ -648,7 +766,7 @@ export default function Home() {
                 Áreas de Atuação
               </a>
               <a href="#sobre" className="nav-link text-[11px] whitespace-nowrap">
-                Sobre a Advogada
+                Sobre o Escritório
               </a>
               <a href="#diferenciais" className="nav-link text-[11px] whitespace-nowrap">
                 Diferenciais
@@ -664,17 +782,17 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: WhatsApp CTA (Noble Imperial Gold) */}
+            {/* Right Action: WhatsApp CTA (Imperial Warm Gold) */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de consultar sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de consultar sobre o meu caso.")}
                 target="_blank"
                 variant="gold"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#020b18]" />
-                <span className="hidden 2xl:inline">Converse com a Dra. Débora</span>
+                <WhatsAppIcon size={14} className="text-[#080c14]" />
+                <span className="hidden 2xl:inline">Converse com Dr. Wesley</span>
                 <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
 
@@ -682,7 +800,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#c89b3c] hover:text-[#9e742a] xl:hidden cursor-pointer"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#c59b27] hover:text-[#9e7420] xl:hidden cursor-pointer"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -703,7 +821,7 @@ export default function Home() {
                   <div className="flex items-center pb-3 border-b border-slate-100">
                     <Image
                       src={LOGO_SRC}
-                      alt="Débora Cupertino Advocacia"
+                      alt="Santos Teixeira Advogados Associados"
                       width={360}
                       height={120}
                       className="h-[52px] w-auto object-contain"
@@ -713,62 +831,62 @@ export default function Home() {
                   <a
                     href="#servicos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
                     <span>Áreas de Atuação</span>
-                    <ArrowRight size={14} className="text-[#c89b3c]" />
+                    <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Sobre Dra. Débora Cupertino</span>
-                    <ArrowRight size={14} className="text-[#c89b3c]" />
+                    <span>Sobre Dr. Wesley Santos</span>
+                    <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Atendimento Humanizado</span>
-                    <ArrowRight size={14} className="text-[#c89b3c]" />
+                    <span>Nossos Diferenciais</span>
+                    <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Avaliações Google (5,0 ★ · 106 reviews)</span>
-                    <ArrowRight size={14} className="text-[#c89b3c]" />
+                    <span>Avaliações Google (5,0 ★ · 41 reviews)</span>
+                    <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#c89b3c]" />
+                    <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e742a]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
                   >
-                    <span>Sede & Contato</span>
-                    <ArrowRight size={14} className="text-[#c89b3c]" />
+                    <span>Sede & Contato (Shopping XV)</span>
+                    <ArrowRight size={14} className="text-[#c59b27]" />
                   </a>
 
                   <div className="pt-4 border-t border-slate-100">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de agendar uma consulta sobre o meu caso.")}
+                      href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de agendar uma consulta sobre o meu caso.")}
                       target="_blank"
                       variant="gold"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Fale com a Dra. Débora Cupertino</span>
+                      <span>Fale com o Dr. Wesley Santos</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -778,12 +896,12 @@ export default function Home() {
         </header>
 
         {/* ======================================================== */}
-        {/* DOBRA 1: HERO SECTION — COM FOTO OFICIAL DA DRA. DÉBORA  */}
+        {/* DOBRA 1: HERO SECTION — COM FOTO DO DR. WESLEY SANTOS    */}
         {/* ======================================================== */}
-        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fcfbfa]">
-          {/* Subtle Ambient Light Champagne & Royal Glow */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#f6e3a1]/20 via-[#f7f4ed]/70 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#e8dfcd]/40 blur-3xl" />
+        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fcfbf9]">
+          {/* Subtle Ambient Light Champagne & Golden Glow */}
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#f5de88]/20 via-[#f6f3eb]/70 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#e6dfd1]/40 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -796,20 +914,20 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-5">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#c89b3c]/35 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#9e742a] shadow-xs">
-                    <span className="size-1.5 rounded-full bg-[#c89b3c] animate-pulse" />
-                    DÉBORA CUPERTINO ADVOCACIA · FAMÍLIA & PREVIDENCIÁRIO
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#c59b27]/35 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#9e7420] shadow-xs">
+                    <span className="size-1.5 rounded-full bg-[#c59b27] animate-pulse" />
+                    SANTOS TEIXEIRA ADVOGADOS · OLIVEIRA - MG
                   </span>
                 </motion.div>
 
-                {/* H1 Headline - Directly extracted from client brief & campaign visual */}
+                {/* H1 Headline */}
                 <motion.h1
                   variants={reveal}
-                  className="font-serif text-3xl leading-[1.16] font-bold tracking-tight text-[#061224] sm:text-5xl lg:text-[3.25rem]"
+                  className="font-serif text-3xl leading-[1.16] font-bold tracking-tight text-[#0a0e17] sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Protegendo Seus Direitos, Cuidando do Que Realmente Importa:{" "}
-                  <span className="bg-gradient-to-r from-[#7d591c] via-[#c89b3c] to-[#9e742a] bg-clip-text text-transparent">
-                    Sua Família e Seu Futuro.
+                  Segurança Jurídica Para Proteger{" "}
+                  <span className="bg-gradient-to-r from-[#785813] via-[#c59b27] to-[#9e7420] bg-clip-text text-transparent">
+                    Seu Patrimônio, Sua Família e Sua Aposentadoria.
                   </span>
                 </motion.h1>
 
@@ -818,11 +936,13 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg lg:max-w-xl"
                 >
-                  Assessoria jurídica altamente especializada e verdadeiramente humanizada em{" "}
+                  Advocacia estratégica e resolutiva liderada pelo{" "}
+                  <strong className="font-semibold text-slate-900">Dr. Wesley Santos</strong>{" "}
+                  e equipe de associados. Especialização comprovada em{" "}
                   <strong className="font-semibold text-slate-900">
-                    Direito das Famílias e Previdenciário (INSS)
+                    Direito Previdenciário (INSS), Família & Sucessões e Usucapião / Regularização Imobiliária
                   </strong>
-                  . Conquiste seu divórcio com paz de espírito, garanta a guarda e o sustento dos seus filhos e acesse seus benefícios e aposentadorias com segurança e agilidade.
+                  . Sede própria no Centro de Oliveira - MG e atendimento online para todo o Brasil.
                 </motion.p>
 
                 {/* Quick Highlights Pills */}
@@ -831,20 +951,20 @@ export default function Home() {
                   className="mt-6 flex flex-wrap gap-2.5 sm:gap-3"
                 >
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c89b3c]" />
+                    <CheckCircle2 size={13} className="text-[#c59b27]" />
+                    Aposentadorias & BPC/LOAS
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
+                    <CheckCircle2 size={13} className="text-[#c59b27]" />
+                    Usucapião & Imóveis Sem Escritura
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
+                    <CheckCircle2 size={13} className="text-[#c59b27]" />
                     Divórcio, Guarda & Pensão
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c89b3c]" />
-                    Salário Maternidade & BPC/LOAS
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c89b3c]" />
-                    Atendimento Humanizado
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c89b3c]" />
-                    Presencial & Online Nacional
+                    <CheckCircle2 size={13} className="text-[#c59b27]" />
+                    Inventários em Cartório
                   </span>
                 </motion.div>
 
@@ -854,14 +974,14 @@ export default function Home() {
                   className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de agendar uma consulta sobre meu caso de Família / Previdenciário.")}
+                    href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de agendar uma consulta sobre meu caso de Previdenciário / Usucapião / Família.")}
                     target="_blank"
                     variant="gold"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={18} />
-                    <span>Fale com a Dra. Débora no WhatsApp</span>
+                    <span>Fale com o Dr. Wesley Santos no WhatsApp</span>
                   </GlowingButton>
 
                   <GlowingButton
@@ -870,7 +990,7 @@ export default function Home() {
                     size="lg"
                     className="w-full sm:w-auto"
                   >
-                    <span>Conheça as Áreas de Atuação</span>
+                    <span>Conheça Nossas Especialidades</span>
                     <ArrowRight size={15} />
                   </GlowingButton>
                 </motion.div>
@@ -880,7 +1000,7 @@ export default function Home() {
                   variants={reveal}
                   className="mt-10 flex items-center gap-4 rounded-xl border border-slate-200/80 bg-white/95 p-3.5 shadow-xs backdrop-blur-xs max-w-lg"
                 >
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#051833] text-white">
+                  <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#0c121e] text-white">
                     <GoogleIcon size={20} />
                   </div>
                   <div className="text-xs">
@@ -893,13 +1013,13 @@ export default function Home() {
                       </span>
                     </div>
                     <p className="mt-0.5 text-slate-600">
-                      Mais de <strong className="font-semibold text-slate-900">106 avaliações verificadas</strong> de clientes em Matozinhos - MG e em todo o Brasil.
+                      Avaliação máxima comprovada com <strong className="font-semibold text-slate-900">41 avaliações de clientes verificados</strong> em Oliveira - MG e região.
                     </p>
                   </div>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Photo of Dra. Débora Cupertino */}
+              {/* Right Column: Hero Photo of Dr. Wesley Santos */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.96, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -908,11 +1028,11 @@ export default function Home() {
               >
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Outer Frame with Gold Rim Accent */}
-                  <div className="group relative overflow-hidden rounded-2xl border-2 border-[#c89b3c]/40 bg-gradient-to-b from-[#082144] to-[#020b18] p-2 shadow-2xl shadow-[#051833]/25 transition-all duration-300 hover:border-[#c89b3c]">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#051833]">
+                  <div className="group relative overflow-hidden rounded-2xl border-2 border-[#c59b27]/40 bg-gradient-to-b from-[#172136] to-[#080c14] p-2 shadow-2xl shadow-[#0c121e]/25 transition-all duration-300 hover:border-[#c59b27]">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#0c121e]">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dra. Débora Cupertino — Especialista em Direito das Famílias e Previdenciário"
+                        alt="Dr. Wesley Santos — Santos Teixeira Advogados Associados"
                         fill
                         className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-102"
                         priority
@@ -920,28 +1040,41 @@ export default function Home() {
                       />
 
                       {/* Subtle Bottom Vignette */}
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#020b18]/85 via-transparent to-transparent" />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080c14]/85 via-transparent to-transparent" />
 
-                      {/* Floating Badge on Photo: Dra. Débora Cupertino */}
-                      <div className="absolute right-3.5 bottom-3.5 left-3.5 rounded-xl border border-white/20 bg-[#051833]/92 p-3.5 text-white shadow-xl backdrop-blur-md">
+                      {/* Floating Badge on Photo: Dr. Wesley Santos */}
+                      <div className="absolute right-3.5 bottom-3.5 left-3.5 rounded-xl border border-white/20 bg-[#0c121e]/92 p-3.5 text-white shadow-xl backdrop-blur-md">
                         <div className="flex items-center justify-between gap-2">
                           <div>
                             <p className="font-serif text-sm font-bold tracking-wide text-white">
-                              Dra. Débora Cupertino
+                              Dr. Wesley Santos
                             </p>
-                            <p className="text-[11px] font-medium text-[#f6e3a1]">
-                              Especialista em Famílias & Previdenciário
+                            <p className="text-[11px] font-medium text-[#f5de88]">
+                              Sócio-Fundador · Santos Teixeira Advogados
                             </p>
                           </div>
-                          <a
-                            href={INSTAGRAM_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex size-8 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20"
-                            aria-label="Instagram da Dra. Débora Cupertino"
-                          >
-                            <InstagramIcon size={16} />
-                          </a>
+                          <div className="flex items-center gap-1.5">
+                            <a
+                              href={LAWYER_INSTAGRAM_URL}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex size-8 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20"
+                              aria-label="Instagram do Dr. Wesley Santos"
+                              title="@wesleysantos.adv"
+                            >
+                              <InstagramIcon size={16} />
+                            </a>
+                            <a
+                              href={INSTAGRAM_URL}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex size-8 items-center justify-center rounded-lg bg-[#c59b27]/20 text-[#f5de88] transition-colors hover:bg-[#c59b27]/30"
+                              aria-label="Instagram da Santos Teixeira Advogados"
+                              title="@santosteixeiraadvogados"
+                            >
+                              <Scale size={16} />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -949,12 +1082,12 @@ export default function Home() {
 
                   {/* Floating Trust Card Badge (Top Right) */}
                   <div className="absolute -top-4 -right-4 hidden rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg sm:flex items-center gap-2.5">
-                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#fef6e2] text-[#9e742a]">
-                      <Scale size={18} />
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#fdf8eb] text-[#9e7420]">
+                      <Building2 size={18} />
                     </div>
                     <div>
-                      <p className="text-[11px] font-bold text-slate-900">Atendimento Humanizado</p>
-                      <p className="text-[10px] text-slate-500">Matozinhos · MG</p>
+                      <p className="text-[11px] font-bold text-slate-900">Shopping XV</p>
+                      <p className="text-[10px] text-slate-500">Oliveira · MG</p>
                     </div>
                   </div>
 
@@ -977,11 +1110,11 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 2: BARRA DE AUTORIDADE & MÉTRICAS COMPROVADAS      */}
         {/* ======================================================== */}
-        <section className="border-y border-[#082144] bg-[#051833] py-9 text-white">
+        <section className="border-y border-[#121929] bg-[#0c121e] py-9 text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
               {/* Stat 1 */}
-              <div className="flex flex-col border-l-2 border-[#c89b3c] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <div className="flex items-center gap-1 text-[#f59e0b]">
                   <Star size={16} className="fill-[#f59e0b]" />
                   <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
@@ -989,49 +1122,49 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  106 Avaliações no Google
+                  41 Avaliações no Google
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Nota máxima concedida por clientes verificados
+                  Nota máxima de satisfação em Oliveira - MG
                 </p>
               </div>
 
               {/* Stat 2 */}
-              <div className="flex flex-col border-l-2 border-[#c89b3c] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  Família & INSS
+                  Previdenciário
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Especialização Focada
+                  Aposentadorias & INSS
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Divórcio, guarda, pensão, maternidade e BPC
+                  Planejamento e ações na Justiça Federal
                 </p>
               </div>
 
               {/* Stat 3 */}
-              <div className="flex flex-col border-l-2 border-[#c89b3c] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  Matozinhos - MG
+                  Usucapião
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Sede Própria no Centro
+                  Regularização Imobiliária
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  R. Claudomiro Cupertino, 55 A
+                  Cartório de Imóveis e Escritura Definitiva
                 </p>
               </div>
 
               {/* Stat 4 */}
-              <div className="flex flex-col border-l-2 border-[#c89b3c] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  100% Online
+                  Shopping XV
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Alcance Nacional
+                  Sede em Oliveira - MG
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Atendimento ágil em qualquer estado do Brasil
+                  Praça XV de Novembro, 20 · Sala 202
                 </p>
               </div>
             </div>
@@ -1041,19 +1174,19 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 3: ÁREAS DE ATUAÇÃO (SERVIÇOS COM MODAL DETALHADO)  */}
         {/* ======================================================== */}
-        <section id="servicos" className="py-20 sm:py-26 bg-[#fcfbfa]">
+        <section id="servicos" className="py-20 sm:py-26 bg-[#fcfbf9]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-12">
               <Heading
                 eyebrow="Áreas de Atuação Especializada"
-                description="Soluções jurídicas estruturadas com foco na proteção da sua família e na garantia dos seus benefícios previdenciários junto ao INSS. Clique em qualquer área para ver todos os detalhes."
+                description="Soluções jurídicas estratégicas focadas em resolver suas pendências com o INSS, blindar seu patrimônio imobiliário e harmonizar a sucessão familiar. Clique em qualquer área para ver os detalhes completos."
               >
-                Como a Dra. Débora Cupertino Pode Proteger Você e Sua Família
+                Excelência Jurídica Para Proteger Você, Seu Patrimônio e Sua Família
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de consultar sobre a viabilidade do meu caso.")}
+                  href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de consultar sobre a viabilidade do meu caso.")}
                   target="_blank"
                   variant="gold"
                   size="md"
@@ -1074,21 +1207,21 @@ export default function Home() {
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2 }}
                     onClick={() => setSelectedPractice(area)}
-                    className="group relative flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:border-[#c89b3c]/60 hover:shadow-lg cursor-pointer"
+                    className="group relative flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:border-[#c59b27]/60 hover:shadow-lg cursor-pointer"
                   >
                     <div>
                       {/* Top Bar: Icon + Category Tag */}
                       <div className="flex items-start justify-between gap-4 mb-5">
-                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#051833] text-[#f6e3a1] shadow-xs transition-colors group-hover:bg-[#082144]">
+                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#0c121e] text-[#f5de88] shadow-xs transition-colors group-hover:bg-[#172136]">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full bg-[#fef6e2] px-2.5 py-1 text-[10px] font-bold text-[#8e6319]">
+                        <span className="rounded-full bg-[#fdf8eb] px-2.5 py-1 text-[10px] font-bold text-[#8e6319]">
                           {area.tag.split("·")[0].trim()}
                         </span>
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-serif text-xl font-bold tracking-tight text-[#061224] group-hover:text-[#9e742a] transition-colors">
+                      <h3 className="font-serif text-xl font-bold tracking-tight text-[#0a0e17] group-hover:text-[#9e7420] transition-colors">
                         {area.title}
                       </h3>
 
@@ -1104,8 +1237,8 @@ export default function Home() {
                     </div>
 
                     {/* Bottom CTA trigger */}
-                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#9e742a]">
-                      <span>Ver detalhes e tópicos</span>
+                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#9e7420]">
+                      <span>Ver detalhes e procedimentos</span>
                       <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </div>
                   </motion.div>
@@ -1127,7 +1260,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setSelectedPractice(null)}
-                className="absolute inset-0 bg-[#020b18]/80 backdrop-blur-sm"
+                className="absolute inset-0 bg-[#080c14]/80 backdrop-blur-sm"
               />
 
               {/* Modal Box */}
@@ -1150,10 +1283,10 @@ export default function Home() {
 
                 {/* Modal Header */}
                 <div className="pr-10">
-                  <span className="inline-block rounded-full bg-[#fef6e2] px-3 py-1 text-xs font-bold text-[#8e6319]">
+                  <span className="inline-block rounded-full bg-[#fdf8eb] px-3 py-1 text-xs font-bold text-[#8e6319]">
                     {selectedPractice.tag}
                   </span>
-                  <h3 className="font-serif text-2xl font-bold tracking-tight text-[#061224] sm:text-3xl mt-3">
+                  <h3 className="font-serif text-2xl font-bold tracking-tight text-[#0a0e17] sm:text-3xl mt-3">
                     {selectedPractice.title}
                   </h3>
                   <p className="mt-1.5 text-xs text-slate-500">
@@ -1171,13 +1304,13 @@ export default function Home() {
                   </p>
 
                   <div className="pt-2">
-                    <h4 className="font-serif text-sm font-bold tracking-wider text-[#061224] uppercase mb-3">
+                    <h4 className="font-serif text-sm font-bold tracking-wider text-[#0a0e17] uppercase mb-3">
                       Atuação e Procedimentos Inclusos:
                     </h4>
                     <ul className="space-y-2.5">
                       {selectedPractice.topics.map((topic, i) => (
                         <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                          <CheckCircle2 size={16} className="text-[#c89b3c] shrink-0 mt-0.5" />
+                          <CheckCircle2 size={16} className="text-[#c59b27] shrink-0 mt-0.5" />
                           <span>{topic}</span>
                         </li>
                       ))}
@@ -1188,7 +1321,7 @@ export default function Home() {
                 {/* Modal Footer CTAs */}
                 <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3 items-center justify-between">
                   <p className="text-xs text-slate-500 text-center sm:text-left">
-                    Atendimento humanizado · Sede em Matozinhos ou 100% Online
+                    Sede no Shopping XV (Oliveira - MG) ou 100% Online Nacional
                   </p>
                   <GlowingButton
                     href={getWhatsAppUrl(selectedPractice.whatsAppText)}
@@ -1198,7 +1331,7 @@ export default function Home() {
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Consultar Dra. Débora</span>
+                    <span>Consultar Dr. Wesley</span>
                   </GlowingButton>
                 </div>
               </motion.div>
@@ -1207,33 +1340,33 @@ export default function Home() {
         </AnimatePresence>
 
         {/* ======================================================== */}
-        {/* DOBRA 4: SOBRE A ADVOGADA & ESCRITÓRIO                   */}
+        {/* DOBRA 4: SOBRE O ESCRITÓRIO & DR. WESLEY SANTOS          */}
         {/* ======================================================== */}
-        <section id="sobre" className="py-20 sm:py-26 border-t border-slate-200 bg-[#f7f4ed]">
+        <section id="sobre" className="py-20 sm:py-26 border-t border-slate-200 bg-[#f6f3eb]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
               {/* Photo Column */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-md lg:max-w-none">
-                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#c89b3c]/40 bg-[#051833] p-2 shadow-xl shadow-slate-300">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#082144]">
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#c59b27]/40 bg-[#0c121e] p-2 shadow-xl shadow-slate-300">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#121929]">
                       <Image
-                        src={FOTO_PORTRAIT_SRC}
-                        alt="Dra. Débora Cupertino no escritório"
+                        src={FOTO_OFFICE_SRC}
+                        alt="Escritório Santos Teixeira Advogados Associados em Oliveira - MG"
                         fill
-                        className="object-cover object-top"
+                        className="object-cover object-center"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 420px"
                       />
                     </div>
                   </div>
 
                   {/* Decorative Badge */}
-                  <div className="absolute -bottom-5 -right-5 hidden sm:block rounded-xl border border-[#c89b3c]/50 bg-[#051833] p-4 text-white shadow-xl max-w-xs">
-                    <p className="text-[11px] font-bold text-[#f6e3a1] uppercase tracking-wider">
-                      Atendimento Humanizado
+                  <div className="absolute -bottom-5 -right-5 hidden sm:block rounded-xl border border-[#c59b27]/50 bg-[#0c121e] p-4 text-white shadow-xl max-w-xs">
+                    <p className="text-[11px] font-bold text-[#f5de88] uppercase tracking-wider">
+                      Santos Teixeira Advogados
                     </p>
                     <p className="mt-1 text-xs text-slate-300 leading-snug">
-                      &quot;Cuidando do que realmente importa: sua família e seu futuro.&quot;
+                      &quot;Previdenciário l Família e Sucessões l Usucapião com rigor técnico e proximidade.&quot;
                     </p>
                   </div>
                 </div>
@@ -1242,60 +1375,60 @@ export default function Home() {
               {/* Text Column */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre a Advogada"
-                  description="Com atuação ética, combativa e sensível, a Dra. Débora Cupertino consolidou-se como referência em Direito das Famílias e Previdenciário em Matozinhos - MG e em todo o país."
+                  eyebrow="Sobre o Escritório & Liderança"
+                  description="Com atuação ética, combativa e altamente especializada, a Santos Teixeira Advogados Associados consolidou-se como referência jurídica em Oliveira, no Centro-Oeste mineiro e em todo o Brasil."
                 >
-                  Dra. Débora Cupertino: Advocacia Humanizada, Resolutiva e Ética
+                  Santos Teixeira Advogados: Rigor Técnico, Estratégia e Confiança
                 </Heading>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700 sm:text-base">
                   <p>
-                    No escritório <strong className="font-semibold text-slate-900">Débora Cupertino Advocacia</strong>, temos a convicção de que por trás de um divórcio doloroso, de uma regulamentação de guarda, de um pedido de pensão alimentícia ou de um benefício do INSS negado existem <strong className="font-semibold text-slate-900">vidas reais, mães, crianças, idosos e famílias inteiras</strong> que necessitam de amparo sincero e competente.
+                    A <strong className="font-semibold text-slate-900">Santos Teixeira Advogados Associados</strong> nasceu com a missão de entregar uma advocacia de alta performance, transparente e desprovida de juridiquês inútil. Sob a liderança do <strong className="font-semibold text-slate-900">Dr. Wesley Santos</strong> e de uma seleta equipe de associados, o escritório se destaca pelo tratamento personalizado de cada caso.
                   </p>
                   <p>
-                    Nossa missão profissional é aliar <strong className="font-semibold text-slate-900">rigor técnico impecável</strong> com <strong className="font-semibold text-slate-900">empatia e escuta sem julgamentos</strong>. Você não é tratado como um simples número de processo, mas como prioridade, recebendo orientações claras em cada etapa, sem termos técnicos complicados.
+                    Sabemos que por trás de um pedido de aposentadoria, de uma usucapião para legalizar a casa própria, de um inventário ou de uma partilha familiar, existem o <strong className="font-semibold text-slate-900">esforço de décadas, a estabilidade financeira e a tranquilidade de famílias inteiras</strong>. Por isso, não tratamos clientes como números: desenhamos a estratégia processual ou extrajudicial mais ágil e segura para o seu caso.
                   </p>
                   <p>
-                    Com sede própria e acolhedora no Centro de <strong className="font-semibold text-slate-900">Matozinhos - MG</strong> e estrutura digital moderna para atendimento 100% online em qualquer estado brasileiro, construímos uma reputação avaliada com nota máxima de <strong className="font-semibold text-slate-900">5,0 estrelas no Google (106 avaliações)</strong> e uma comunidade ativa com milhares de seguidores em nossas redes sociais.
+                    Com sede física moderna e privativa no <strong className="font-semibold text-slate-900">Condomínio Shopping XV (Centro de Oliveira - MG)</strong> e infraestrutura digital preparada para atender com eficiência clientes de toda Minas Gerais e do Brasil, mantemos a nota máxima e unânime de <strong className="font-semibold text-slate-900">5,0 estrelas no Google (41 avaliações)</strong> e forte presença nas redes sociais.
                   </p>
                 </div>
 
                 {/* Key Points */}
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3.5 shadow-2xs">
-                    <Scale size={18} className="text-[#c89b3c] shrink-0 mt-0.5" />
+                    <Landmark size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 uppercase">Especialista em Famílias</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">Divórcio, guarda e pensão com foco na paz familiar.</p>
+                      <h4 className="text-xs font-bold text-slate-900 uppercase">Previdência & INSS</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Planejamento, aposentadorias e BPC/LOAS com celeridade.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3.5 shadow-2xs">
-                    <Award size={18} className="text-[#c89b3c] shrink-0 mt-0.5" />
+                    <HomeIcon size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 uppercase">Previdência & INSS</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">Salário Maternidade, BPC/LOAS e aposentadorias.</p>
+                      <h4 className="text-xs font-bold text-slate-900 uppercase">Usucapião & Família</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Escritura definitiva de imóveis, divórcio e inventário em cartório.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Dra. Debora CTA */}
+                {/* CTA Buttons */}
                 <div className="mt-8 pt-4 flex flex-col sm:flex-row gap-3.5 items-center">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de conversar diretamente sobre a minha demanda.")}
+                    href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de conversar diretamente sobre a minha demanda.")}
                     target="_blank"
                     variant="gold"
                     size="md"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Falar Diretamente com a Dra. Débora</span>
+                    <span>Falar com o Dr. Wesley Santos</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-[#9e742a] transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-[#9e7420] transition-colors"
                   >
                     <InstagramIcon size={16} />
                     <span>Seguir {INSTAGRAM_HANDLE} ({INSTAGRAM_STATS})</span>
@@ -1309,66 +1442,66 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 5: OS 4 PILARES / DIFERENCIAIS DA ADVOCACIA        */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="py-20 sm:py-26 bg-[#051833] text-white">
+        <section id="diferenciais" className="py-20 sm:py-26 bg-[#0c121e] text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Heading
               eyebrow="Nossos Diferenciais"
-              description="Por que tantas famílias em Minas Gerais e no Brasil confiam suas demandas mais importantes ao nosso escritório."
+              description="Os pilares institucionais que fundamentam a reputação ilibada e os resultados consistentes da Santos Teixeira Advogados."
               dark
             >
-              Os 4 Pilares da Débora Cupertino Advocacia
+              Os 4 Pilares da Santos Teixeira Advogados
             </Heading>
 
             <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {/* Pillar 1 */}
-              <div className="rounded-xl border border-[#0d2f5e] bg-[#082144]/80 p-6 transition-all duration-300 hover:border-[#c89b3c]/50 hover:bg-[#082144]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d2f5e] text-[#f6e3a1]">
-                  <HeartHandshake size={24} />
+              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
+                  <Scale size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  1. Atendimento Humanizado Real
+                  1. Especialização Focada
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Escuta sensível e sem julgamentos. Entendemos a dor e o desgaste emocional de quem passa por separações ou disputas previdenciárias.
+                  Foco rigoroso em Previdenciário, Usucapião e Direito Familiar. Conhecimento aprofundado dos procedimentos locais e das teses mais recentes.
                 </p>
               </div>
 
               {/* Pillar 2 */}
-              <div className="rounded-xl border border-[#0d2f5e] bg-[#082144]/80 p-6 transition-all duration-300 hover:border-[#c89b3c]/50 hover:bg-[#082144]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d2f5e] text-[#f6e3a1]">
+              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
                   <Sparkles size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
                   2. Celeridade Sem Juridiquês
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Explicamos cada fase processual de forma transparente e clara, sem palavras difíceis, com respostas rápidas pelo WhatsApp oficial.
+                  Comunicação clara, acessível e direta pelo WhatsApp oficial. Você compreende cada etapa do seu processo sem palavras difíceis ou enrolação.
                 </p>
               </div>
 
               {/* Pillar 3 */}
-              <div className="rounded-xl border border-[#0d2f5e] bg-[#082144]/80 p-6 transition-all duration-300 hover:border-[#c89b3c]/50 hover:bg-[#082144]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d2f5e] text-[#f6e3a1]">
+              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
                   <Shield size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  3. Rigor Ético & Sigilo Absoluto
+                  3. Sigilo & Ética Profissional
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Seus dados e documentos familiares são protegidos com absoluto sigilo profissional e rigorosa conformidade com o Código de Ética da OAB.
+                  Proteção absoluta dos seus dados pessoais e patrimoniais em total conformidade com o Código de Ética da OAB e a legislação vigente.
                 </p>
               </div>
 
               {/* Pillar 4 */}
-              <div className="rounded-xl border border-[#0d2f5e] bg-[#082144]/80 p-6 transition-all duration-300 hover:border-[#c89b3c]/50 hover:bg-[#082144]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#0d2f5e] text-[#f6e3a1]">
-                  <MapPin size={24} />
+              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
+                  <Building2 size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  4. Sede Física & Online Seguro
+                  4. Sede no Shopping XV & Online
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Sede própria no Centro de Matozinhos - MG e plataforma digital 100% segura para quem prefere resolver tudo no celular sem sair de casa.
+                  Estrutura física acolhedora no Centro de Oliveira - MG e atendimento digital com assinatura pelo celular para clientes de todo o país.
                 </p>
               </div>
             </div>
@@ -1378,14 +1511,14 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: PROVA SOCIAL & DEPOIMENTOS REAIS GOOGLE 5,0 ★   */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="py-20 sm:py-26 bg-[#fcfbfa]">
+        <section id="depoimentos" className="py-20 sm:py-26 bg-[#fcfbf9]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6">
               <Heading
-                eyebrow="Prova Social Comprovada"
-                description="Veja avaliações 100% autênticas e espontâneas de clientes que confiaram na atuação da Dra. Débora Cupertino em Matozinhos e em todo o Brasil."
+                eyebrow="Prova Social Verificada"
+                description="Confira avaliações 100% autênticas e espontâneas de clientes que tiveram seus direitos garantidos pela Santos Teixeira Advogados Associados."
               >
-                106 Avaliações com Nota Máxima de 5,0 ★ no Google
+                Avaliações com Nota Máxima de 5,0 ★ no Google em Oliveira · MG
               </Heading>
 
               <div className="flex flex-wrap items-center gap-3">
@@ -1393,35 +1526,38 @@ export default function Home() {
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs hover:border-[#c89b3c] hover:text-[#9e742a] transition-colors"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs hover:border-[#c59b27] hover:text-[#9e7420] transition-colors"
                 >
                   <GoogleIcon size={16} />
-                  <span>Ver perfil no Google Maps</span>
+                  <span>Ver perfil no Google Meu Negócio</span>
                   <ExternalLink size={13} />
                 </a>
               </div>
             </div>
 
-            {/* Google Badges Extracted directly from client profile */}
+            {/* Google Badges Extracted directly from Google Maps */}
             <div className="flex flex-wrap items-center gap-2 pt-2 pb-8 border-b border-slate-100">
               <span className="text-xs font-bold text-slate-500 mr-1">
                 Destaques Google:
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c89b3c]/30 bg-[#fef6e2] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ☕ Ambiente Acolhedor (4 menções)
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
+                ⚖️ Dr. Wesley Santos (dr)
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c89b3c]/30 bg-[#fef6e2] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ⏱️ Tempo Hábil (3 menções)
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
+                ⚡ Eficiência (efficiency)
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c89b3c]/30 bg-[#fef6e2] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ✨ Presteza & Atenção (2 menções)
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
+                🤝 Atencioso (attentive)
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c89b3c]/30 bg-[#fef6e2] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                🎯 Resultados Rápidos (2 menções)
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
+                🏢 Recepção (reception · Shopping XV)
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
+                ⭐ 100% Avaliações 5 Estrelas
               </span>
             </div>
 
-            {/* Interactive Category Filter Pills */}
+            {/* Category Filter Pills */}
             <div className="mt-8 flex flex-wrap gap-2">
               {reviewCategories.map((cat) => {
                 const isActive = selectedReviewCategory === cat;
@@ -1435,8 +1571,8 @@ export default function Home() {
                     }}
                     className={`rounded-lg px-3.5 py-1.5 text-xs font-bold transition-all cursor-pointer ${
                       isActive
-                        ? "bg-[#051833] text-white shadow-xs"
-                        : "border border-slate-200 bg-white text-slate-600 hover:border-[#c89b3c] hover:text-slate-900"
+                        ? "bg-[#0c121e] text-white shadow-xs"
+                        : "border border-slate-200 bg-white text-slate-600 hover:border-[#c59b27] hover:text-slate-900"
                     }`}
                   >
                     {cat}
@@ -1461,13 +1597,13 @@ export default function Home() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: idx * 0.05 }}
-                    className="flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all hover:border-[#c89b3c]/50 hover:shadow-md"
+                    className="flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all hover:border-[#c59b27]/50 hover:shadow-md"
                   >
                     <div>
                       {/* Top Bar: Author, Status, Rating & Date */}
                       <div className="flex items-start justify-between gap-3 mb-4">
                         <div className="flex items-center gap-2.5">
-                          <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#051833] text-xs font-bold text-[#f6e3a1] border border-[#c89b3c]/40">
+                          <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0c121e] text-xs font-bold text-[#f5de88] border border-[#c59b27]/40">
                             {initials}
                           </div>
                           <div>
@@ -1480,7 +1616,7 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <span className="rounded-full bg-[#fef6e2] px-2 py-0.5 text-[10px] font-bold text-[#8e6319] shrink-0">
+                        <span className="rounded-full bg-[#fdf8eb] px-2 py-0.5 text-[10px] font-bold text-[#8e6319] shrink-0">
                           {review.category}
                         </span>
                       </div>
@@ -1498,7 +1634,7 @@ export default function Home() {
                       </div>
 
                       {/* Highlight Quote */}
-                      <p className="font-serif text-sm font-bold text-[#061224] leading-snug">
+                      <p className="font-serif text-sm font-bold text-[#0a0e17] leading-snug">
                         &quot;{review.highlight}&quot;
                       </p>
 
@@ -1507,12 +1643,12 @@ export default function Home() {
                         {review.content}
                       </p>
 
-                      {/* Owner Reply Box (If provided by Google) */}
+                      {/* Owner Reply Box */}
                       {review.ownerReply && (
-                        <div className="mt-4 rounded-xl border border-[#c89b3c]/20 bg-[#f7f4ed] p-3.5 text-xs text-slate-700">
+                        <div className="mt-4 rounded-xl border border-[#c59b27]/20 bg-[#f6f3eb] p-3.5 text-xs text-slate-700">
                           <div className="flex items-center gap-1.5 font-bold text-[#8e6319] mb-1 text-[11px]">
-                            <Sparkles size={13} className="text-[#c89b3c]" />
-                            <span>Débora Cupertino Advocacia (proprietário)</span>
+                            <Sparkles size={13} className="text-[#c59b27]" />
+                            <span>Santos Teixeira Advogados (proprietário)</span>
                             {review.ownerDate && (
                               <span className="text-[10px] text-slate-400 font-normal">
                                 · {review.ownerDate}
@@ -1544,7 +1680,7 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => setShowAllReviews(!showAllReviews)}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 shadow-xs hover:border-[#c89b3c] hover:bg-slate-50 transition-colors cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 shadow-xs hover:border-[#c59b27] hover:bg-slate-50 transition-colors cursor-pointer"
                 >
                   {showAllReviews ? (
                     <span>Recolher Avaliações</span>
@@ -1563,7 +1699,7 @@ export default function Home() {
                 size="md"
               >
                 <GoogleIcon size={15} />
-                <span>Ver Todas as 106 Avaliações no Google Maps</span>
+                <span>Ver Todas as 41 Avaliações no Google Maps</span>
                 <ExternalLink size={13} />
               </GlowingButton>
             </div>
@@ -1573,11 +1709,11 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: PASSO A PASSO DO ATENDIMENTO                    */}
         {/* ======================================================== */}
-        <section className="border-t border-slate-200 py-20 sm:py-26 bg-[#f7f4ed]">
+        <section className="border-t border-slate-200 py-20 sm:py-26 bg-[#f6f3eb]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Heading
               eyebrow="Como Funciona"
-              description="Um processo descomplicado, acolhedor e transparente desde a primeira mensagem até a conquista do seu direito."
+              description="Um processo transparente, ágil e seguro desde o primeiro contato no WhatsApp até a conclusão da sua demanda."
             >
               Seu Atendimento em 4 Passos Simples
             </Heading>
@@ -1585,60 +1721,60 @@ export default function Home() {
             <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {/* Step 1 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c89b3c]/40">
+                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
                   01
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Primeiro Contato
+                  Contato Inicial
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Você nos envia uma mensagem no WhatsApp oficial relatando sua situação familiar ou previdenciária com total sigilo.
+                  Você entra em contato pelo nosso WhatsApp oficial relatando sua situação previdenciária, imobiliária ou familiar com total sigilo.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c89b3c]/40">
+                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
                   02
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Análise Cuidadosa
+                  Análise Técnica e Documental
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  A Dra. Débora analisa seus documentos e define a melhor estratégia (consensual, cartorária, administrativa no INSS ou judicial).
+                  O Dr. Wesley Santos analisa seus documentos, certidões e histórico contributivo do CNIS, definindo a melhor estratégia (cartorária ou judicial).
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c89b3c]/40">
+                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
                   03
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Ação Ágil & Protocolo
+                  Protocolo & Ação Rápida
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Assinatura digital prática no celular ou atendimento presencial no escritório, com protocolo imediato da sua demanda.
+                  Assinatura prática pelo celular ou presencialmente no Shopping XV em Oliveira, com protocolo imediato no Cartório, INSS ou Justiça Federal.
                 </p>
               </div>
 
               {/* Step 4 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c89b3c]/40">
+                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
                   04
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Acompanhamento Contínuo
+                  Acompanhamento & Conclusão
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Você recebe atualizações periódicas a cada andamento processual até a efetiva liberação dos valores ou homologação do acordo.
+                  Atualizações transparentes a cada movimentação até a efetiva concessão da aposentadoria, registro da escritura ou homologação do acordo.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dra. Débora! Gostaria de dar o primeiro passo e tirar dúvidas sobre meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de dar o primeiro passo e tirar dúvidas sobre meu caso.")}
                 target="_blank"
                 variant="gold"
                 size="lg"
@@ -1653,12 +1789,12 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: FAQ — PERGUNTAS FREQUENTES                      */}
         {/* ======================================================== */}
-        <section id="duvidas" className="py-20 sm:py-26 bg-[#fcfbfa]">
+        <section id="duvidas" className="py-20 sm:py-26 bg-[#fcfbf9]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <Heading
                 eyebrow="Tire Suas Dúvidas"
-                description="Respostas claras para as principais dúvidas de clientes sobre Direito de Família e Previdenciário."
+                description="Respostas diretas e esclarecedoras para as principais dúvidas de clientes sobre Aposentadorias, Usucapião e Direito Familiar."
               >
                 Perguntas Frequentes
               </Heading>
@@ -1675,11 +1811,11 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-[#061224] transition-colors hover:text-[#9e742a] cursor-pointer"
+                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-[#0a0e17] transition-colors hover:text-[#9e7420] cursor-pointer"
                     >
                       <span className="pr-4">{item.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#c89b3c]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#c59b27]" />
                       ) : (
                         <ChevronDown size={18} className="shrink-0 text-slate-400" />
                       )}
@@ -1703,16 +1839,16 @@ export default function Home() {
               })}
             </div>
 
-            <div className="mt-10 rounded-xl border border-[#c89b3c]/30 bg-[#fef6e2] p-6 text-center">
+            <div className="mt-10 rounded-xl border border-[#c59b27]/30 bg-[#fdf8eb] p-6 text-center">
               <p className="text-sm font-bold text-[#8e6319]">
-                Ficou com alguma dúvida específica sobre o seu caso?
+                Ficou com alguma dúvida pontual sobre o seu caso?
               </p>
               <p className="mt-1 text-xs text-slate-600">
-                A Dra. Débora Cupertino está disponível para responder diretamente no WhatsApp.
+                O Dr. Wesley Santos e a equipe estão disponíveis para responder diretamente no WhatsApp.
               </p>
               <div className="mt-4">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dra. Débora! Gostaria de tirar uma dúvida específica.")}
+                  href={getWhatsAppUrl("Olá, Dr. Wesley! Gostaria de tirar uma dúvida específica.")}
                   target="_blank"
                   variant="gold"
                   size="sm"
@@ -1728,37 +1864,37 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: SEDE, LOCALIZAÇÃO & CONTATO                     */}
         {/* ======================================================== */}
-        <section id="contato" className="py-20 sm:py-26 bg-[#051833] text-white">
+        <section id="contato" className="py-20 sm:py-26 bg-[#0c121e] text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
               {/* Contact Info Column */}
               <div className="lg:col-span-6">
                 <Heading
                   eyebrow="Onde Estamos & Contato"
-                  description="Venha nos visitar em nossa sede em Matozinhos - MG ou converse agora mesmo pelo canal oficial de atendimento online."
+                  description="Venha nos visitar em nossa sede no Condomínio Shopping XV em Oliveira - MG ou converse agora mesmo pelo canal oficial de atendimento online."
                   dark
                 >
-                  Estamos Prontos para Acolher Sua Demanda
+                  Estamos Prontos para Atender Sua Demanda
                 </Heading>
 
                 <div className="mt-8 space-y-5 text-sm">
                   {/* Address */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#0d2f5e] text-[#f6e3a1]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#f5de88]">
                       <MapPin size={20} />
                     </div>
                     <div>
                       <p className="font-bold text-white text-xs uppercase tracking-wider">
-                        Endereço / Sede Própria
+                        Endereço / Sede Física
                       </p>
                       <p className="mt-1 text-slate-300">
-                        {ADDRESS_MATOZINHOS}
+                        {ADDRESS_OLIVEIRA}
                       </p>
                       <a
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#f6e3a1] hover:underline"
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#f5de88] hover:underline"
                       >
                         <span>Traçar rota no Google Maps</span>
                         <ArrowUpRight size={13} />
@@ -1768,7 +1904,7 @@ export default function Home() {
 
                   {/* Phone / WhatsApp */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#0d2f5e] text-[#25D366]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#25D366]">
                       <WhatsAppIcon size={20} />
                     </div>
                     <div>
@@ -1779,7 +1915,7 @@ export default function Home() {
                         {PHONE_DISPLAY}
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de agendar uma consulta.")}
+                        href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de agendar uma consulta.")}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#25D366] hover:underline"
@@ -1792,40 +1928,51 @@ export default function Home() {
 
                   {/* Hours */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#0d2f5e] text-[#f6e3a1]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#f5de88]">
                       <Clock size={20} />
                     </div>
                     <div>
                       <p className="font-bold text-white text-xs uppercase tracking-wider">
-                        Horário de Atendimento
+                        Horário de Funcionamento
                       </p>
                       <p className="mt-1 text-slate-300">
-                        Segunda a Sexta · Aberto das 08:30 às 17:30
+                        Segunda a Sexta · Abre às 12:00 (12:00 às 18:00)
                       </p>
                       <p className="text-[11px] text-slate-400">
-                        Atendimento presencial com agendamento prévio para sua total privacidade.
+                        Atendimento presencial no Shopping XV com agendamento prévio para seu total conforto e discrição.
                       </p>
                     </div>
                   </div>
 
                   {/* Instagram */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#0d2f5e] text-[#f6e3a1]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#f5de88]">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
                       <p className="font-bold text-white text-xs uppercase tracking-wider">
-                        Instagram Oficial
+                        Redes Sociais Oficiais
                       </p>
-                      <a
-                        href={INSTAGRAM_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-1 inline-flex items-center gap-1.5 font-semibold text-slate-200 hover:text-white"
-                      >
-                        <span>{INSTAGRAM_HANDLE}</span>
-                        <span className="text-[11px] text-slate-400">({INSTAGRAM_STATS})</span>
-                      </a>
+                      <div className="mt-1 flex flex-col gap-1">
+                        <a
+                          href={INSTAGRAM_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-semibold text-slate-200 hover:text-white"
+                        >
+                          <span>{INSTAGRAM_HANDLE}</span>
+                          <span className="text-[11px] text-slate-400">({INSTAGRAM_STATS})</span>
+                        </a>
+                        <a
+                          href={LAWYER_INSTAGRAM_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-semibold text-[#f5de88] hover:text-white text-xs"
+                        >
+                          <span>{LAWYER_INSTAGRAM_HANDLE}</span>
+                          <span className="text-[11px] text-slate-400">(Perfil Dr. Wesley Santos)</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1833,24 +1980,24 @@ export default function Home() {
 
               {/* Map / Route Card */}
               <div className="lg:col-span-6 flex flex-col justify-center">
-                <div className="overflow-hidden rounded-2xl border border-[#0d2f5e] bg-[#082144] p-6 sm:p-8 shadow-xl">
+                <div className="overflow-hidden rounded-2xl border border-[#172136] bg-[#121929] p-6 sm:p-8 shadow-xl">
                   <div className="flex items-center justify-between pb-4 border-b border-slate-700">
                     <div>
                       <h4 className="font-serif text-lg font-bold text-white">
-                        Débora Cupertino Advocacia
+                        Santos Teixeira Advogados Associados
                       </h4>
-                      <p className="text-xs text-[#f6e3a1]">
-                        Centro · Matozinhos - MG
+                      <p className="text-xs text-[#f5de88]">
+                        Condomínio Shopping XV · Oliveira - MG
                       </p>
                     </div>
-                    <div className="flex items-center gap-1 rounded-md bg-[#051833] px-3 py-1 text-xs font-bold text-[#f59e0b]">
+                    <div className="flex items-center gap-1 rounded-md bg-[#0c121e] px-3 py-1 text-xs font-bold text-[#f59e0b]">
                       <Star size={13} className="fill-[#f59e0b]" />
                       <span>5,0 ★</span>
                     </div>
                   </div>
 
                   <p className="mt-4 text-xs text-slate-300 leading-relaxed">
-                    Localização central de fácil acesso em Matozinhos, com estacionamento nas proximidades e ambiente privativo e acolhedor para cuidar das suas questões mais importantes com o respeito que sua família merece.
+                    Localização privilegiada no Centro de Oliveira (Praça XV de Novembro, 20 - 2° andar, sala 202 - Shopping XV), com estacionamento próximo e sala executiva privativa para cuidar das suas questões mais importantes com o respeito que seu patrimônio merece.
                   </p>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -1858,17 +2005,17 @@ export default function Home() {
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c89b3c] px-4 py-3 text-xs font-bold uppercase text-[#020b18] hover:bg-[#edd486] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c59b27] px-4 py-3 text-xs font-bold uppercase text-[#080c14] hover:bg-[#e8c55e] transition-colors"
                     >
                       <MapPin size={16} />
                       <span>Abrir no Google Maps</span>
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dra. Débora! Gostaria de agendar um horário presencial na sede em Matozinhos.")}
+                      href={getWhatsAppUrl("Olá, Dr. Wesley! Gostaria de agendar um horário presencial na sede no Shopping XV em Oliveira.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-[#051833] px-4 py-3 text-xs font-bold uppercase text-white hover:bg-slate-800 transition-colors"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-[#0c121e] px-4 py-3 text-xs font-bold uppercase text-white hover:bg-slate-800 transition-colors"
                     >
                       <WhatsAppIcon size={16} className="text-[#25D366]" />
                       <span>Agendar Horário Presencial</span>
@@ -1883,20 +2030,20 @@ export default function Home() {
         {/* ======================================================== */}
         {/* FOOTER INSTITUCIONAL EM CONFORMIDADE COM A OAB           */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#041328] bg-[#020b18] py-14 text-slate-400 text-xs">
+        <footer className="border-t border-[#121929] bg-[#080c14] py-14 text-slate-400 text-xs">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 pb-12 border-b border-slate-800/80">
               {/* Brand Column */}
               <div className="lg:col-span-1">
                 <Image
                   src={LOGO_WHITE_SRC}
-                  alt="Débora Cupertino Advocacia"
+                  alt="Santos Teixeira Advogados Associados"
                   width={340}
                   height={110}
                   className="h-[52px] w-auto object-contain opacity-95"
                 />
                 <p className="mt-4 text-xs text-slate-400 leading-relaxed">
-                  Advocacia humanizada e especializada em Direito das Famílias e Previdenciário. Sede própria em Matozinhos - MG e atendimento online para todo o Brasil.
+                  Advocacia especializada em Direito Previdenciário (INSS), Família & Sucessões e Usucapião / Regularização Imobiliária. Sede no Shopping XV em Oliveira - MG e atendimento online para todo o Brasil.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
@@ -1904,16 +2051,16 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
-                    aria-label="Instagram"
+                    aria-label="Instagram da Santos Teixeira Advogados"
                   >
                     <InstagramIcon size={15} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Débora Cupertino!")}
+                    href={getWhatsAppUrl("Olá, Dr. Wesley Santos!")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-[#25D366] hover:bg-slate-700 transition-colors"
-                    aria-label="WhatsApp"
+                    aria-label="WhatsApp Oficial"
                   >
                     <WhatsAppIcon size={15} />
                   </a>
@@ -1922,7 +2069,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
-                    aria-label="Google"
+                    aria-label="Google Meu Negócio"
                   >
                     <GoogleIcon size={14} />
                   </a>
@@ -1942,12 +2089,12 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="hover:text-white transition-colors">
-                      Sobre a Advogada
+                      Sobre o Escritório
                     </a>
                   </li>
                   <li>
                     <a href="#diferenciais" className="hover:text-white transition-colors">
-                      Atendimento Humanizado
+                      Diferenciais
                     </a>
                   </li>
                   <li>
@@ -1962,7 +2109,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="hover:text-white transition-colors">
-                      Sede em Matozinhos
+                      Sede em Oliveira - MG
                     </a>
                   </li>
                 </ul>
@@ -1976,12 +2123,22 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Divórcio Consensual e Litigioso
+                      Aposentadorias e Benefícios do INSS
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Guarda e Convivência com Filhos
+                      Benefício BPC/LOAS (Idosos & Autismo)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#servicos" className="hover:text-white transition-colors">
+                      Usucapião Extrajudicial e Judicial
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#servicos" className="hover:text-white transition-colors">
+                      Divórcio Consensual e em Cartório
                     </a>
                   </li>
                   <li>
@@ -1991,17 +2148,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Salário Maternidade (INSS)
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#servicos" className="hover:text-white transition-colors">
-                      Benefício BPC/LOAS (Autismo / Idosos)
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#servicos" className="hover:text-white transition-colors">
-                      Aposentadorias & Auxílios do INSS
+                      Inventários em Cartório de Notas
                     </a>
                   </li>
                 </ul>
@@ -2014,20 +2161,20 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2.5 text-xs">
                   <li className="flex items-start gap-2">
-                    <MapPin size={14} className="text-[#c89b3c] shrink-0 mt-0.5" />
-                    <span>R. Claudomiro Cupertino, 55 A - Centro, Matozinhos - MG</span>
+                    <MapPin size={14} className="text-[#c59b27] shrink-0 mt-0.5" />
+                    <span>Praça XV de Novembro, 20 - Sala 202 (Shopping XV) - Centro, Oliveira - MG</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <WhatsAppIcon size={14} className="text-[#25D366] shrink-0" />
                     <span>{PHONE_DISPLAY}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Clock size={14} className="text-[#c89b3c] shrink-0" />
-                    <span>Seg. a Sex. · 08:30 às 17:30</span>
+                    <Clock size={14} className="text-[#c59b27] shrink-0" />
+                    <span>Seg. a Sex. · Abre às 12:00</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Star size={14} className="text-[#f59e0b] shrink-0 fill-[#f59e0b]" />
-                    <span>5,0 ★ no Google (106 avaliações)</span>
+                    <span>5,0 ★ no Google (41 avaliações)</span>
                   </li>
                 </ul>
               </div>
@@ -2036,11 +2183,11 @@ export default function Home() {
             {/* OAB Compliance Disclaimer */}
             <div className="pt-8 text-[11px] leading-relaxed text-slate-500">
               <p>
-                <strong>Aviso Legal & Ética Profissional da Advocacia:</strong> Este website tem caráter exclusivamente informativo e institucional, em estrita conformidade com o Código de Ética e Disciplina da Ordem dos Advogados do Brasil (OAB) e com o Provimento nº 205/2021 do Conselho Federal da OAB. As informações aqui contidas não configuram promessa de resultado nem substituem a consulta jurídica individualizada com uma advogada devidamente inscrita na OAB.
+                <strong>Aviso Legal & Ética Profissional da Advocacia:</strong> Este website tem caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da Ordem dos Advogados do Brasil (OAB) e ao Provimento nº 205/2021 do Conselho Federal da OAB. As informações aqui prestadas não configuram promessa de resultado nem substituem a consulta jurídica individualizada com profissional devidamente inscrito na OAB.
               </p>
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-600">
-                <p>© {new Date().getFullYear()} Débora Cupertino Advocacia. Todos os direitos reservados. CNPJ / OAB-MG.</p>
-                <p>Matozinhos - MG · Atendimento Online Nacional</p>
+                <p>© {new Date().getFullYear()} Santos Teixeira Advogados Associados. Todos os direitos reservados. CNPJ / OAB-MG.</p>
+                <p>Oliveira - MG · Shopping XV · Atendimento Nacional</p>
               </div>
             </div>
           </div>
@@ -2051,11 +2198,11 @@ export default function Home() {
         {/* ======================================================== */}
         <div className="fixed right-5 bottom-5 z-40 flex items-center gap-2.5">
           <a
-            href={getWhatsAppUrl("Olá, Dra. Débora Cupertino! Gostaria de tirar uma dúvida sobre o meu caso.")}
+            href={getWhatsAppUrl("Olá, Dr. Wesley Santos! Gostaria de tirar uma dúvida sobre o meu caso.")}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#25D366]/60 cursor-pointer"
-            aria-label="Converse pelo WhatsApp com a Dra. Débora Cupertino"
+            aria-label="Converse pelo WhatsApp com o Dr. Wesley Santos"
           >
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#25D366] opacity-30" />
             <WhatsAppIcon size={30} />

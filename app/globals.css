@@ -3,24 +3,24 @@
 :root {
   color-scheme: light dark;
   
-  /* Brand Deep Midnight Sapphire & Obsidian Navy (Extracted from Brand Campaign & Photo) */
-  --brand-obsidian: #020b18;
-  --brand-midnight: #051833;
-  --brand-navy-deep: #082144;
-  --brand-navy-surface: #0d2f5e;
-  --brand-navy-card: #133d77;
-  --brand-navy-highlight: #1a4c92;
+  /* Brand Deep Obsidian Graphite & Midnight Navy (Santos Teixeira Advogados Contrast Canvas) */
+  --brand-obsidian: #080c14;
+  --brand-midnight: #0c121e;
+  --brand-navy-deep: #121929;
+  --brand-navy-surface: #172136;
+  --brand-navy-card: #1f2b45;
+  --brand-navy-highlight: #283756;
   --brand-slate-muted: #526071;
   
-  /* Brand Noble Imperial Gold & Burnished Bronze (Extracted directly from DC 3D Logo) */
-  --brand-gold-glow: #fef6e2;
-  --brand-gold-bright: #f6e3a1;
-  --brand-gold-light: #edd486;
-  --brand-gold-primary: #c89b3c;
-  --brand-gold-vibrant: #be9031;
-  --brand-gold-rich: #9e742a;
-  --brand-gold-deep: #7d591c;
-  --brand-gold-shadow: #4a3008;
+  /* Brand Imperial Warm Gold & Burnished Bronze (Extracted directly from ST 3D Logo) */
+  --brand-gold-glow: #fdf8eb;
+  --brand-gold-bright: #f5de88;
+  --brand-gold-light: #e8c55e;
+  --brand-gold-primary: #c59b27;
+  --brand-gold-vibrant: #b88d22;
+  --brand-gold-rich: #9e7420;
+  --brand-gold-deep: #785813;
+  --brand-gold-shadow: #443008;
 
   /* Brand Metallic Platinum Spectrum (From Logo 3D Bevel & Emboss Highlights) */
   --brand-platinum-highlight: #ffffff;
@@ -30,20 +30,20 @@
   --brand-platinum-mid: #cbd5e1;
   --brand-platinum-deep: #94a3b8;
 
-  /* Warm Champagne Sand & Crisp Alabaster (Humanized, welcoming aesthetic) */
-  --brand-cream-bg: #fcfbfa;
-  --brand-cream-alt: #f7f4ed;
+  /* Warm Linen Sand & Crisp Alabaster (Sophisticated, welcoming aesthetic) */
+  --brand-cream-bg: #fcfbf9;
+  --brand-cream-alt: #f6f3eb;
   --brand-cream-surface: #ffffff;
-  --brand-cream-border: #e8dfcd;
-  --brand-cream-ink: #061224;
-  --brand-cream-muted: #4a5568;
+  --brand-cream-border: #e6dfd1;
+  --brand-cream-ink: #0a0e17;
+  --brand-cream-muted: #475467;
   
   /* Borders & Accents */
-  --brand-border-gold: rgba(200, 155, 60, 0.45);
-  --brand-border-gold-subtle: rgba(200, 155, 60, 0.22);
-  --brand-border-gold-strong: rgba(200, 155, 60, 0.88);
+  --brand-border-gold: rgba(197, 155, 39, 0.45);
+  --brand-border-gold-subtle: rgba(197, 155, 39, 0.22);
+  --brand-border-gold-strong: rgba(197, 155, 39, 0.88);
   --brand-border-platinum: rgba(226, 232, 240, 0.65);
-  --brand-border-dark: rgba(13, 47, 94, 0.70);
+  --brand-border-dark: rgba(23, 33, 54, 0.70);
 }
 
 @theme inline {
@@ -51,29 +51,29 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-brand-obsidian: #020b18;
-  --color-brand-midnight: #051833;
-  --color-brand-navy-deep: #082144;
-  --color-brand-surface: #0d2f5e;
-  --color-brand-card: #133d77;
+  --color-brand-obsidian: #080c14;
+  --color-brand-midnight: #0c121e;
+  --color-brand-navy-deep: #121929;
+  --color-brand-surface: #172136;
+  --color-brand-card: #1f2b45;
   
-  --color-brand-gold: #c89b3c;
-  --color-brand-gold-bright: #f6e3a1;
-  --color-brand-gold-light: #edd486;
-  --color-brand-gold-rich: #9e742a;
-  --color-brand-gold-deep: #7d591c;
+  --color-brand-gold: #c59b27;
+  --color-brand-gold-bright: #f5de88;
+  --color-brand-gold-light: #e8c55e;
+  --color-brand-gold-rich: #9e7420;
+  --color-brand-gold-deep: #785813;
   
   --color-brand-platinum: #e2e8f0;
   --color-brand-platinum-light: #f8fafc;
   --color-brand-platinum-mid: #cbd5e1;
 
-  --color-brand-cream-bg: #fcfbfa;
-  --color-brand-cream-alt: #f7f4ed;
+  --color-brand-cream-bg: #fcfbf9;
+  --color-brand-cream-alt: #f6f3eb;
   --color-brand-cream-surface: #ffffff;
   
-  --shadow-gold: 0 10px 28px -4px rgba(200, 155, 60, 0.30);
-  --shadow-gold-lg: 0 16px 38px -6px rgba(200, 155, 60, 0.40);
-  --shadow-gold-card: 0 20px 45px -10px rgba(2, 11, 24, 0.94);
+  --shadow-gold: 0 10px 28px -4px rgba(197, 155, 39, 0.30);
+  --shadow-gold-lg: 0 16px 38px -6px rgba(197, 155, 39, 0.40);
+  --shadow-gold-card: 0 20px 45px -10px rgba(8, 12, 20, 0.94);
 }
 
 html {
@@ -82,15 +82,15 @@ html {
 }
 
 body {
-  background: #fcfbfa;
-  color: #061224;
+  background: #fcfbf9;
+  color: #0a0e17;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c89b3c;
+  caret-color: #c59b27;
 }
 
 ::selection {
-  background: #c89b3c;
-  color: #020b18;
+  background: #c59b27;
+  color: #080c14;
 }
 
 .font-cinzel {
@@ -106,7 +106,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #9e742a;
+  color: #9e7420;
 }
 
 .eyebrow-dark {
@@ -118,14 +118,14 @@ body {
   line-height: 1.4;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #f6e3a1;
+  color: #f5de88;
 }
 
 .eyebrow::before {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: linear-gradient(90deg, #7d591c, #c89b3c);
+  background: linear-gradient(90deg, #785813, #c59b27);
   content: "";
 }
 
@@ -133,14 +133,14 @@ body {
   width: 1.75rem;
   height: 2px;
   flex: none;
-  background: linear-gradient(90deg, #c89b3c, #f6e3a1);
+  background: linear-gradient(90deg, #c59b27, #f5de88);
   content: "";
 }
 
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #4a5568;
+  color: #475467;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -154,7 +154,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #c89b3c;
+  background: #c59b27;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -162,7 +162,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #061224;
+  color: #0a0e17;
 }
 
 .nav-link:hover::after {
@@ -186,7 +186,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #c89b3c;
+  background: #c59b27;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -215,17 +215,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f7f4ed;
+  background: #f6f3eb;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f7f4ed;
+  border: 2px solid #f6f3eb;
   border-radius: 999px;
   background: #cbd5e1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c89b3c;
+  background: #c59b27;
 }
 
 @media (prefers-reduced-motion: reduce) {
